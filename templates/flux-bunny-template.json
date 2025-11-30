@@ -1,15 +1,12 @@
 {
   "$schema"     : "vscode://schemas/color-theme"
-, "name"        : "Flux Bunny Lite"
 
 , "colors":
   { "foreground"                                          : "#FG__NORM"
   , "selection.background"                                : "#VIO_BGND"
   , "errorForeground"                                     : "#FG__INVL"
   , "focusBorder"                                         : "#CYA_BGND"
-  //, "window.activeBorder"                                 : "#CYA_BGND"
   , "widget.border"                                       : "#GRN_BGND"
-
 
   , "editor.background"                                   : "#BG__NORM"
   , "editor.foreground"                                   : "#FG__NORM"
@@ -93,7 +90,8 @@
   , "list.inactiveSelectionForeground"                    : "#BLU_BGND"
   , "list.hoverBackground"                                : "#CYA_BGND5f"
   , "list.hoverForeground"                                : "#FG__NORM"
-  , "list.dropBackground"                                 : "#YEL_BOLD"
+  , "list.dropBackground"                                 : "#GRN_BGND"
+  , "list.dropBetweenBackground"                          : "#GRN_BGND"
 
   , "list.highlightForeground"                            : "#GRN_NORM"
   , "list.focusBackground"                                : "#BLU_BGND"
@@ -426,13 +424,13 @@
   // These properties override tokenColors
 , "semanticTokenColors":
   {
-    "enumMember"    : "#YEL_NORM" // Class member variables
-  //"variable"      : "#BLU_NORM"
+    "enumMember"    : "#YEL_NORM" // Enum member variables
+  //, "variable"      : "#BLU_NORM" // Local variables
   //, "property"      : "#BLU_NORM" // Class member variables
   //, "parameter"     : "#BLU_NORM" // Function parameters
   //, "enumMember"    : "#BLU_NORM" // Class member variables
   //, "macro"         : "#WHT_BOLD" // PI in #define PI
-  //, "type"          : "#87d7d7" // Don't set this
+  //, "type"          : "#BLU_NORM "// Don't set this
   }
 
 

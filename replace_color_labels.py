@@ -1,31 +1,38 @@
 #_______________________________________________________________________
-#       _   __   _   _ _   _   _   _         _
-#  |   |_| | _  | | | V | | | | / |_/ |_| | /
-#  |__ | | |__| |_| |   | |_| | \ |   | | | \_
-#   _  _         _ ___  _       _ ___   _                        / /
-#  /  | | |\ |  \   |  | / | | /   |   \                        (^^)
-#  \_ |_| | \| _/   |  | \ |_| \_  |  _/                        (____)o
+#_______________________________________________________________________
+#        _   __   _   _ _   _   _   _         _
+#   |   |_| | _  | | | V | | | | / |_/ |_| | /
+#   |__ | | |__| |_| |   | |_| | \ |   | | | \_
+#    _  _         _ ___  _       _ ___   _                    / /
+#   /  | | |\ |  \   |  | / | | /   |   \                    (^^)
+#   \_ |_| | \| _/   |  | \ |_| \_  |  _/                    (____)o
 #_______________________________________________________________________
 #
 #-----------------------------------------------------------------------
-#  Copyright 2025, Rebecca Rashkin
-#  -------------------------------
-#  This code may be copied, redistributed, transformed, or built upon in
-#  any format for educational, non-commercial purposes.
+#   Copyright 2025, Rebecca Rashkin
+#   -------------------------------
+#   This code may be copied, redistributed, transformed, or built
+#   upon in any format for educational, non-commercial purposes.
 #
-#  Please give me appropriate credit should you choose to modify this
-#  code. Thank you :)
+#   Please give me appropriate credit should you choose to modify this
+#   code. Thank you :)
 #-----------------------------------------------------------------------
 #
 #_______________________________________________________________________
-#  //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\
+#   //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\
 #_______________________________________________________________________
-# DESCRIPTION
-# Replaces color labels in a VSCode template file with actual color
-# values.
+#_______________________________________________________________________
+#   DESCRIPTION
+#   Replaces color labels in a VSCode template file with actual color
+#   values.
 #_______________________________________________________________________
 
 from os import path
+
+is_dark: bool = True
+
+profile_name: str =\
+  'flux-bunny-dark.json' if is_dark else 'flux-bunny-lite.json'
 
 # TODO: Add command line arguments for template file and output file.
 # TODO: Add option for dark vs light color scheme.
@@ -102,7 +109,10 @@ def get_color_label_map() -> dict:
   , 'ORN_BGND': 'ff875f'
   }
 
-  return color_label_map_lite
+  if is_dark:
+    return color_label_map_dark
+  else:
+    return color_label_map_lite
 
 if __name__ == '__main__':
 
@@ -144,7 +154,7 @@ if __name__ == '__main__':
     , '.vscode'
     , 'extensions'
     , 'flux-bunny-color-themes'
-    , 'flux-bunny-lite.json'
+    , profile_name
     )
 
   with open(out_file, 'w') as file:

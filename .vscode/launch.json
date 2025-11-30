@@ -88,5 +88,13 @@
     , "program" : "${workspaceFolder}/replace_color_labels.py"
     , "console" : "integratedTerminal"
     }
+  , { "name"      : "test-rgb-color"
+    , "type"      : "debugpy"
+    , "request"   : "launch"
+    , "module"    : "pytest"
+    , "args"      : [ "test"]
+    , "justMyCode": false
+    , "console"   : "integratedTerminal"
+    }
   ]
 }
