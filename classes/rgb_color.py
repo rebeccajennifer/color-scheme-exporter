@@ -27,6 +27,8 @@
 #_______________________________________________________________________
 
 from math import floor
+
+from classes.ansi256_colors import Ansi256Colors
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
 #_______________________________________________________________________
@@ -196,7 +198,7 @@ class RgbColor:
     rgb_color - 24 bit RGB color as integer
 
     Returns
-    Nearest ANSI 256 color as integer
+    Nearest ANSI 256 color index as integer
     """
 
     valid_rgb_values: list[int] =\
@@ -241,3 +243,17 @@ class RgbColor:
       ansi_index = 16 + (r_scaled * 36) + (g_scaled * 6) + b_scaled
 
     return ansi_index
+
+  #_____________________________________________________________________
+  def rgb_from_ansi_256(ansi_256_index: int) -> int:
+    """
+    Converts ANSI 256 color index to 24 bit RGB color.
+
+    Parameters
+    ansi_256_index - ANSI 256 color index as integer
+
+    Returns
+    24 bit RGB color as integer
+    """
+
+    return Ansi256Colors.rgb_list[ansi_256_index]

@@ -58,3 +58,12 @@ def test_ansii_256_from_rgb():
     rgb_val = Ansi256Colors.rgb_list[i]
     ansi_256_val = RgbColor.ansi_256_from_rgb(rgb_val)
     assert ansi_256_val == i
+
+#_______________________________________________________________________
+def test_rgb_from_ansi_256():
+
+  for i in range(16, len(Ansi256Colors.rgb_list)):
+    ansi_256_val = i
+    rgb_val = RgbColor.rgb_from_ansi_256(ansi_256_val)
+    expected_rgb_val = Ansi256Colors.rgb_list[i]
+    assert rgb_val == expected_rgb_val
