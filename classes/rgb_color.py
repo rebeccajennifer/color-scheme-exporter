@@ -1,28 +1,29 @@
 #_______________________________________________________________________
-#       _   __   _   _ _   _   _   _         _
-#  |   |_| | _  | | | V | | | | / |_/ |_| | /
-#  |__ | | |__| |_| |   | |_| | \ |   | | | \_
-#   _  _         _ ___  _       _ ___   _                        / /
-#  /  | | |\ |  \   |  | / | | /   |   \                        (^^)
-#  \_ |_| | \| _/   |  | \ |_| \_  |  _/                        (____)o
+#_______________________________________________________________________
+#        _   __   _   _ _   _   _   _         _
+#   |   |_| | _  | | | V | | | | / |_/ |_| | /
+#   |__ | | |__| |_| |   | |_| | \ |   | | | \_
+#    _  _         _ ___  _       _ ___   _                    / /
+#   /  | | |\ |  \   |  | / | | /   |   \                    (^^)
+#   \_ |_| | \| _/   |  | \ |_| \_  |  _/                    (____)o
 #_______________________________________________________________________
 #
 #-----------------------------------------------------------------------
-#  Copyright 2024, Rebecca Rashkin
-#  -------------------------------
-#  This code may be copied, redistributed, transformed, or built upon in
-#  any format for educational, non-commercial purposes.
+#   Copyright 2025, Rebecca Rashkin
+#   -------------------------------
+#   This code may be copied, redistributed, transformed, or built
+#   upon in any format for educational, non-commercial purposes.
 #
-#  Please give me appropriate credit should you choose to modify this
-#  code. Thank you :)
+#   Please give me appropriate credit should you choose to modify this
+#   code. Thank you :)
 #-----------------------------------------------------------------------
 #
 #_______________________________________________________________________
-#  //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\   //\^.^/\\
+#   //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\
 #_______________________________________________________________________
-
 #_______________________________________________________________________
-# Contains operations related to RGB colors
+#   DESCRIPTION
+#   Contains operations related to RGB colors
 #_______________________________________________________________________
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
