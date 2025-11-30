@@ -27,6 +27,11 @@
 
 from os import path
 
+is_dark: bool = True
+
+profile_name: str =\
+  'flux-bunny-dark.json' if is_dark else 'flux-bunny-lite.json'
+
 # TODO: Add command line arguments for template file and output file.
 # TODO: Add option for dark vs light color scheme.
 # TODO: Read from input json file
@@ -102,7 +107,10 @@ def get_color_label_map() -> dict:
   , 'ORN_BGND': 'ff875f'
   }
 
-  return color_label_map_lite
+  if is_dark:
+    return color_label_map_dark
+  else:
+    return color_label_map_lite
 
 if __name__ == '__main__':
 
@@ -144,7 +152,7 @@ if __name__ == '__main__':
     , '.vscode'
     , 'extensions'
     , 'flux-bunny-color-themes'
-    , 'flux-bunny-lite.json'
+    , profile_name
     )
 
   with open(out_file, 'w') as file:
