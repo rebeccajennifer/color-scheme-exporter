@@ -233,9 +233,9 @@ class RgbColor:
       blu_near: int = min(valid_rgb_values
         , key=lambda x: abs(x - blu))
 
-      r_scaled = floor((red_near / 256.0) * 6)
-      g_scaled = floor((grn_near / 256.0) * 6)
-      b_scaled = floor((blu_near / 256.0) * 6)
+      r_scaled = floor((red_near / 255.0) * 5)
+      g_scaled = floor((grn_near / 255.0) * 5)
+      b_scaled = floor((blu_near / 255.0) * 5)
 
       # Compute ANSI 256 color value
       ansi_index = 16 + (r_scaled * 36) + (g_scaled * 6) + b_scaled
