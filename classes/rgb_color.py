@@ -26,6 +26,7 @@
 #   Contains operations related to RGB colors
 #_______________________________________________________________________
 
+from math import floor
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
 #_______________________________________________________________________
@@ -185,3 +186,58 @@ class RgbColor:
     , bg_grn=bg_grn
     , bg_blu=bg_blu
     )
+
+  #_____________________________________________________________________
+  def ansi_256_from_rgb(rgb_color: int) -> int:
+    """
+    Converts 24 bit RGB color to nearest ANSI 256 color.
+
+    Parameters
+    rgb_color - 24 bit RGB color as integer
+
+    Returns
+    Nearest ANSI 256 color as integer
+    """
+
+    valid_rgb_values: list[int] =\
+    [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
+
+    # Get RGB components
+    rgb_map: dict = RgbColor.get_rgb_from_hex(rgb_color)
+
+    red: int = rgb_map[RgbConst.RED_STR]
+    grn: int = rgb_map[RgbConst.GRN_STR]
+    blu: int = rgb_map[RgbConst.BLU_STR]
+
+    # If greyscale, handle separately
+    if (red == blu and red == grn and red not in valid_rgb_values):
+
+      valid_greyscale_values: list[int] =\
+      [ 0x08, 0x12, 0x1c, 0x26, 0x30, 0x3a
+      , 0x44, 0x4e, 0x58, 0x62, 0x6c, 0x76
+      , 0x80, 0x8a, 0x94, 0x9e, 0xa8, 0xb2
+      , 0xbc, 0xc6, 0xd0, 0xda, 0xe4, 0xee
+      ]
+
+      grey_near: int = min(valid_greyscale_values
+        , key=lambda x: abs(x - red))
+
+      ansi_index = 232 + ((grey_near - 8) // 10)
+
+    else:
+      # Find nearest valid value for each component
+      red_near: int = min(valid_rgb_values
+        , key=lambda x: abs(x - red))
+      grn_near: int = min(valid_rgb_values
+        , key=lambda x: abs(x - grn))
+      blu_near: int = min(valid_rgb_values
+        , key=lambda x: abs(x - blu))
+
+      r_scaled = floor((red_near / 256.0) * 6)
+      g_scaled = floor((grn_near / 256.0) * 6)
+      b_scaled = floor((blu_near / 256.0) * 6)
+
+      # Compute ANSI 256 color value
+      ansi_index = 16 + (r_scaled * 36) + (g_scaled * 6) + b_scaled
+
+    return ansi_index

@@ -22,9 +22,8 @@
 #   //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\  //\^.^/\\
 #_______________________________________________________________________
 #_______________________________________________________________________
-
-#_______________________________________________________________________
-# Tests for utility functions.
+#   DESCRIPTION
+#   Tests for RGB color related functions.
 #_______________________________________________________________________
 
 from classes.rgb_color import RgbColor
@@ -50,3 +49,8 @@ def test_get_rgb_from_hex():
   assert rgb_dict[RgbConst.RED_STR] == TestConst.RED_VAL
   assert rgb_dict[RgbConst.GRN_STR] == TestConst.GRN_VAL
   assert rgb_dict[RgbConst.BLU_STR] == TestConst.BLU_VAL
+
+#_______________________________________________________________________
+def test_ansii_256_from_rgb():
+  ansi_256_val = RgbColor.ansi_256_from_rgb(0)
+  assert ansi_256_val == 16
