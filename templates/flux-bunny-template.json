@@ -12,8 +12,13 @@
   , "editorCursor.background"                             : "#FG__NORM"
   , "editorCursor.foreground"                             : "#GRN_BGND"
   , "editor.selectionBackground"                          : "#BLU_BGND5f"
-  , "editor.wordHighlightTextBackground"                  : "#VIO_BGND5f"
   , "editorRuler.foreground"                              : "#BG__WEAK"
+
+  //____________________________________________________________________
+  // HIGHLIGHTING AND SELECTION
+  //____________________________________________________________________
+  , "editor.wordHighlightTextBackground"                  : "#VIO_BGND5f"
+  , "editor.lineHighlightBackground"                      : "#BG__BOLD"
 
   //____________________________________________________________________
   // TERMINAL
@@ -67,10 +72,13 @@
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#BG__WEAK"
-  , "tab.inactiveForeground"                              : "#FG__WEAK"
-  , "tab.unfocusedActiveForeground"                       : "#CYA_BOLD"
-  , "tab.unfocusedInactiveForeground"                     : "#FG__NORM"
+  , "tab.inactiveForeground"                              : "#878787"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_BGND"
+  , "tab.unfocusedInactiveForeground"                     : "#878787"
 
+  //____________________________________________________________________
+  // PANELS
+  //____________________________________________________________________
   , "panel.background"                                    : "#BG__WEAK"
   , "panel.border"                                        : "#BG__WEAK"
   , "panelTitle.activeForeground"                         : "#FG__BOLD"
@@ -150,7 +158,7 @@
   //____________________________________________________________________
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
   , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
-  , "gitDecoration.untrackedResourceForeground"           : "#GRN_NORM"
+  , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
   , "gitDecoration.deletedResourceForeground"             : "#FG__INVL"
 
   , "scmGraph.foreground1"                                : "#YEL_NORM"
@@ -159,6 +167,9 @@
   , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
   , "diffEditor.insertedLineBackground"                   : "#GRN_BGND5f"
   , "diffEditor.removedLineBackground"                    : "#FG__INVL5f"
+
+  , "diffEditor.insertedTextBackground"                   : "#GRN_BGND5f"
+  , "diffEditor.removedTextBackground"                    : "#BG__INVL5f"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BGND"
   //, "scmGraph.historyItemHoverDefaultLabelForeground"     : "#FG__NORM"
@@ -211,9 +222,9 @@
   , "symbolIcon.constantForeground"                       : "#YEL_NORM"
   , "symbolIcon.constructorForeground"                    : "#VIO_NORM"
   , "symbolIcon.enumeratorForeground"                     : "#VIO_NORM"
-  //, "symbolIcon.enumeratorMemberForeground"               : "#"
+  , "symbolIcon.enumeratorMemberForeground"               : "#YEL_NORM"
   //, "symbolIcon.eventForeground"                          : "#"
-  //, "symbolIcon.fieldForeground"                          : "#"
+  , "symbolIcon.fieldForeground"                          : "#BLU_NORM"
   //, "symbolIcon.fileForeground"                           : "#"
   //, "symbolIcon.folderForeground"                         : "#"
   , "symbolIcon.functionForeground"                       : "#CYA_BOLD"
@@ -222,7 +233,7 @@
   //, "symbolIcon.keywordForeground"                        : "#"
   , "symbolIcon.methodForeground"                         : "#CYA_BOLD"
   , "symbolIcon.moduleForeground"                         : "#YEL_NORM"
-  //, "symbolIcon.namespaceForeground"                      : "#"
+  , "symbolIcon.namespaceForeground"                      : "#VIO_NORM"
   //, "symbolIcon.nullForeground"                           : "#"
   //, "symbolIcon.numberForeground"                         : "#"
   //, "symbolIcon.objectForeground"                         : "#"
@@ -340,6 +351,7 @@
       , "meta.separator"
       , "punctuation.separator.continuation.line"
       , "storage.modifier"                            // const, static
+      , "support.constant.font-name"
       , ""
       ], "settings": { "foreground": "#YEL_NORM"}
     }
@@ -378,6 +390,8 @@
       , "markup.underline.link.image"
       , "meta.definition.variable.name"
       , "meta.method.return-type"
+      , "support.constant.color"                    // red
+      , "support.constant.property-value"           // css none
       , "support.type"
       , "storage.type.built-in"                     // int
       , "storage.type.function"                     // def in python
@@ -446,11 +460,8 @@
 
   , { "name"  : "CSS property value"
     , "scope" : [ ""
-      , "support.constant.property-value"
-      , "support.constant.font-name"
       , "support.constant.media-type"
       , "support.constant.media"
-      , "support.constant.color"
       ]
     , "settings": { "foreground": "#BLU_BOLD" }
     }
