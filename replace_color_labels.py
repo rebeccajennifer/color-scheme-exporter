@@ -45,9 +45,12 @@ def get_color_label_map() -> dict:
 
   color_label_map_dark: dict =\
   { 'FG__NORM': 'c6c6c6'
+  , 'FG__WEAK': 'bcbcbc'
   , 'BG__NORM': '262626'
-  , 'FG__BOLD': 'afafaf'
-  , 'BG__BOLD': '303030'
+  , 'BG__BOLD': '1c1c1c'
+  , 'BG__WEAK': '303030'
+
+  , 'GRY_NORM': '878787'
 
   , 'BLK_NORM': '1c1c1c'
   , 'RED_NORM': 'd787af'
@@ -62,12 +65,12 @@ def get_color_label_map() -> dict:
   , 'GRN_BOLD': '87af5f'
   , 'YEL_BOLD': 'ffd787'
   , 'BLU_BOLD': '00afd7'
-  , 'VIO_BOLD': 'af87af'
+  , 'VIO_BOLD': 'af5faf'
   , 'CYA_BOLD': '5fafaf'
   , 'WHT_BOLD': 'd0d0d0'
 
   , 'FG__INVL': 'ff5f87'
-  , 'BG__INVL': 'af5f87'
+  , 'BG__INVL': '87005f'
 
   , 'BLU_BGND': '005f87'
   , 'CYA_BGND': '005f5f'
@@ -78,9 +81,12 @@ def get_color_label_map() -> dict:
 
   color_label_map_lite: dict =\
   { 'FG__NORM': '262626'
+  , 'FG__WEAK': '303030'
   , 'BG__NORM': 'e4e4e4'
-  , 'FG__BOLD': '303030'
   , 'BG__BOLD': 'dadada'
+  , 'BG__WEAK': 'eeeeee'
+
+  , 'GRY_NORM': '878787'
 
   , 'BLK_NORM': '121212'
   , 'RED_NORM': 'af005f'
@@ -153,7 +159,7 @@ if __name__ == '__main__':
     , 'flux'
     , '.vscode'
     , 'extensions'
-    , 'flux-bunny-color-themes'
+    , 'flux-bunny-themes'
     , profile_name
     )
 

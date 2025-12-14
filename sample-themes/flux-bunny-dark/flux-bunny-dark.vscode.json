@@ -14,7 +14,7 @@
   , "terminal.ansiBrightGreen"  : "#87af5f"
   , "terminal.ansiBrightYellow" : "#ffd787"
   , "terminal.ansiBrightBlue"   : "#00afd7"
-  , "terminal.ansiBrightMagenta": "#af87af"
+  , "terminal.ansiBrightMagenta": "#af5faf"
   , "terminal.ansiBrightCyan"   : "#5fafaf"
   , "terminal.ansiBrightWhite"  : "#d0d0d0"
   }
