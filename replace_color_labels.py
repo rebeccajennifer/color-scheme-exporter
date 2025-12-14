@@ -50,6 +50,8 @@ def get_color_label_map() -> dict:
   , 'BG__BOLD': '1c1c1c'
   , 'BG__WEAK': '303030'
 
+  , 'GRY_NORM': '878787'
+
   , 'BLK_NORM': '1c1c1c'
   , 'RED_NORM': 'd787af'
   , 'GRN_NORM': 'afd787'
@@ -79,9 +81,12 @@ def get_color_label_map() -> dict:
 
   color_label_map_lite: dict =\
   { 'FG__NORM': '262626'
+  , 'FG__WEAK': '303030'
   , 'BG__NORM': 'e4e4e4'
   , 'BG__BOLD': 'dadada'
-  , 'BG__WEAK': 'afafaf'
+  , 'BG__WEAK': 'eeeeee'
+
+  , 'GRY_NORM': '878787'
 
   , 'BLK_NORM': '121212'
   , 'RED_NORM': 'af005f'

@@ -18,7 +18,11 @@
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
   , "editor.wordHighlightTextBackground"                  : "#VIO_BGND5f"
+  , "editor.wordHighlightBackground"                      : "#BG__WEAKaf"
   , "editor.lineHighlightBackground"                      : "#BG__BOLD"
+
+  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
+  , "editorLineNumber.foreground"                         : "#GRY_NORM"
 
   //____________________________________________________________________
   // TERMINAL
@@ -55,11 +59,8 @@
   , "editorBracketHighlight.unexpectedBracket.foreground" : "#FG__INVL"
 
   //____________________________________________________________________
-  // BRACKETS
+  // DROPDOWN
   //____________________________________________________________________
-  , "editor.wordHighlightBackground"                      : "#BG__WEAKaf"
-  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
-  , "editorLineNumber.foreground"                         : "#878787"
 
   , "dropdown.background"                                 : "#BG__WEAK"
   , "dropdown.foreground"                                 : "#FG__NORM"
@@ -72,16 +73,16 @@
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#BG__WEAK"
-  , "tab.inactiveForeground"                              : "#878787"
+  , "tab.inactiveForeground"                              : "#GRY_NORM"
   , "tab.unfocusedActiveForeground"                       : "#BLU_BGND"
-  , "tab.unfocusedInactiveForeground"                     : "#878787"
+  , "tab.unfocusedInactiveForeground"                     : "#GRY_NORM"
 
   //____________________________________________________________________
   // PANELS
   //____________________________________________________________________
   , "panel.background"                                    : "#BG__WEAK"
   , "panel.border"                                        : "#BG__WEAK"
-  , "panelTitle.activeForeground"                         : "#FG__BOLD"
+  , "panelTitle.activeForeground"                         : "#FG__WEAK"
   , "panelTitle.inactiveForeground"                       : "#FG__NORM"
   , "panelTitle.border"                                   : "#BG__NORM"
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
@@ -97,10 +98,12 @@
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
   //____________________________________________________________________
+  , "activityBar.foreground"                              : "#FG__WEAK"
   , "activityBar.background"                              : "#BG__BOLD"
   , "activityBar.activeBackground"                        : "#CYA_BGND"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
+  , "icon.foreground"                                     : "#GRY_NORM"
 
   //____________________________________________________________________
   // SIDEBAR (PROJECT EXLPORER, ETC)
@@ -287,7 +290,7 @@
     , "scope": [ ""
       , "keyword.control.ternary" // Java - : in Circle: "circle"
       , ""
-      ], "settings": { "foreground": "#FG__BOLD" }
+      ], "settings": { "foreground": "#FG__WEAK" }
     }
 
   , { "name"  : "Color 1: Pink"
@@ -455,7 +458,7 @@
       , "comment"
       , "punctuation.definition.comment" // Comment specifier e.g. //
       , ""
-      ], "settings": { "foreground": "#6c6c6c" }
+      ], "settings": { "foreground": "#GRY_NORM" }
     }
 
   , { "name"  : "CSS property value"
