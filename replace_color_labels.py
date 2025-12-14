@@ -68,7 +68,7 @@ def get_color_label_map() -> dict:
   , 'WHT_BOLD': 'd0d0d0'
 
   , 'FG__INVL': 'ff5f87'
-  , 'BG__INVL': 'af5f87'
+  , 'BG__INVL': '87005f'
 
   , 'BLU_BGND': '005f87'
   , 'CYA_BGND': '005f5f'
