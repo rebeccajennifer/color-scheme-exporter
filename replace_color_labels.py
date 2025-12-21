@@ -48,8 +48,6 @@ def get_color_label_map() -> dict:
   , 'BG__NORM': '262626'
   , 'BG__BOLD': '1c1c1c'
 
-  , 'GRY_NORM': '878787'
-
   , 'BLK_NORM': '1c1c1c'
   , 'RED_NORM': 'd787af'
   , 'GRN_NORM': 'afd787'
@@ -58,7 +56,7 @@ def get_color_label_map() -> dict:
   , 'VIO_NORM': 'af87d7'
   , 'CYA_NORM': '87d7af'
   , 'WHT_NORM': 'd7d7d7'
-  , 'BLK_BOLD': '121212'
+  , 'BLK_BOLD': '878787'
   , 'RED_BOLD': 'd75f87'
   , 'GRN_BOLD': '87af5f'
   , 'YEL_BOLD': 'ffd787'
@@ -76,8 +74,6 @@ def get_color_label_map() -> dict:
   { 'FG__NORM': '262626'
   , 'BG__NORM': 'e4e4e4'
   , 'BG__BOLD': 'dadada'
-
-  , 'GRY_NORM': '878787'
 
   , 'BLK_NORM': '121212'
   , 'RED_NORM': 'af005f'

@@ -24,7 +24,7 @@
   , "editor.lineHighlightBackground"                      : "#BG__BOLD"
 
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
-  , "editorLineNumber.foreground"                         : "#GRY_NORM"
+  , "editorLineNumber.foreground"                         : "#BLK_BOLD"
 
   , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD7f"
 
@@ -92,9 +92,9 @@
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#FG__NORM0f"
-  , "tab.inactiveForeground"                              : "#GRY_NORM"
+  , "tab.inactiveForeground"                              : "#BLK_BOLD"
   , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD7f"
-  , "tab.unfocusedInactiveForeground"                     : "#GRY_NORM"
+  , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
 
   //____________________________________________________________________
   // PANELS
@@ -123,7 +123,7 @@
   , "activityBar.activeBackground"                        : "#VIO_BOLD5f"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
-  , "icon.foreground"                                     : "#GRY_NORM"
+  , "icon.foreground"                                     : "#BLK_BOLD"
 
   //____________________________________________________________________
   // SIDEBAR (PROJECT EXLPORER, ETC)
@@ -480,7 +480,7 @@
       , "comment"
       , "punctuation.definition.comment" // Comment specifier e.g. //
       , ""
-      ], "settings": { "foreground": "#GRY_NORM" }
+      ], "settings": { "foreground": "#BLK_BOLD" }
     }
 
   , { "name"  : "CSS property value"
