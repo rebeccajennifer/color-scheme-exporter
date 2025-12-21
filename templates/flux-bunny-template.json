@@ -3,51 +3,53 @@
 
 , "colors":
   { "foreground"                                          : "#FG__NORM"
-  , "selection.background"                                : "#VIO_BGND"
+  , "selection.background"                                : "#VIO_BOLD5f"
   , "errorForeground"                                     : "#FG__INVL"
-  , "focusBorder"                                         : "#CYA_BGND"
+  , "focusBorder"                                         : "#CYA_BOLD"
 
   , "editor.background"                                   : "#BG__NORM"
   , "editor.foreground"                                   : "#FG__NORM"
-  , "editorCursor.background"                             : "#FG__NORM"
-  , "editorCursor.foreground"                             : "#GRN_BGND"
-  , "editor.selectionBackground"                          : "#BLU_BGND5f"
-  , "editorRuler.foreground"                              : "#BG__WEAK"
+  , "editorCursor.background"                             : "#BG__NORM"
+  , "editorCursor.foreground"                             : "#GRN_NORM"
+  , "editor.selectionBackground"                          : "#BLU_BOLD5f"
+  , "editor.selectionForeground"                          : "#BG__NORM"
+  , "editorRuler.foreground"                              : "#FG__NORM0f"
 
+  , "menu.background"                                    : "#BG__BOLD"
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#VIO_BGND5f"
-  , "editor.wordHighlightBackground"                      : "#BG__WEAKaf"
+  , "editor.wordHighlightTextBackground"                  : "#VIO_BOLD5f"
+  , "editor.wordHighlightBackground"                      : "#FG__NORM0f"
   , "editor.lineHighlightBackground"                      : "#BG__BOLD"
 
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#GRY_NORM"
 
-  , "editor.findMatchHighlightBackground"                 : "#BLU_BGND5f"
+  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD7f"
 
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#BLU_BGND"
-  , "peekViewEditor.matchHighlightBackground"             : "#VIO_BGND"
-  , "peekViewResult.matchHighlightBackground"             : "#VIO_BGND"
-  , "peekView.border"                                     : "#CYA_BGND"
+  , "peekViewEditor.background"                           : "#BLU_BOLD5f"
+  , "peekViewEditor.matchHighlightBackground"             : "#VIO_BOLD5f"
+  , "peekViewResult.matchHighlightBackground"             : "#VIO_BOLD5f"
+  , "peekView.border"                                     : "#CYA_BOLD5f"
   , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
-  , "peekViewResult.fileForeground"                       : "#FG__WEAK"
-  , "peekViewResult.selectionBackground"                  : "#CYA_BGND"
+  , "peekViewResult.fileForeground"                       : "#FG__NORM"
+  , "peekViewResult.selectionBackground"                  : "#CYA_BOLD5f"
   , "peekViewResult.selectionForeground"                  : "#FG__NORM"
 
   // Peek View line number background
-  //, "peekViewEditorGutter.background"                     :"#BG__WEAK"
+  //, "peekViewEditorGutter.background"                     :"#FG__NORM0f"
 
   //____________________________________________________________________
   // TERMINAL
   //____________________________________________________________________
   , "terminal.background"                                 : "#BG__NORM"
   , "terminal.foreground"                                 : "#FG__NORM"
-  , "terminalCursor.background"                           : "#FG__NORM"
-  , "terminalCursor.foreground"                           : "#GRN_BGND"
+  , "terminalCursor.background"                           : "#BG__NORM"
+  , "terminalCursor.foreground"                           : "#GRN_NORM"
   //____________________________________________________________________
   , "terminal.ansiBlack"                                  : "#BLK_NORM"
   , "terminal.ansiRed"                                    : "#RED_NORM"
@@ -79,27 +81,27 @@
   // DROPDOWN
   //____________________________________________________________________
 
-  , "dropdown.background"                                 : "#BG__WEAK"
+  , "dropdown.background"                                 : "#FG__NORM0f"
   , "dropdown.foreground"                                 : "#FG__NORM"
-  , "dropdown.border"                                     : "#BG__WEAK"
-  , "dropdown.listBackground"                             : "#BG__WEAK"
+  , "dropdown.border"                                     : "#FG__NORM0f"
+  , "dropdown.listBackground"                             : "#FG__NORM0f"
 
   //____________________________________________________________________
   // TABS
   //____________________________________________________________________
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
-  , "tab.inactiveBackground"                              : "#BG__WEAK"
+  , "tab.inactiveBackground"                              : "#FG__NORM0f"
   , "tab.inactiveForeground"                              : "#GRY_NORM"
-  , "tab.unfocusedActiveForeground"                       : "#BLU_BGND"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD7f"
   , "tab.unfocusedInactiveForeground"                     : "#GRY_NORM"
 
   //____________________________________________________________________
   // PANELS
   //____________________________________________________________________
-  , "panel.background"                                    : "#BG__WEAK"
-  , "panel.border"                                        : "#BG__WEAK"
-  , "panelTitle.activeForeground"                         : "#FG__WEAK"
+  , "panel.background"                                    : "#FG__NORM0f"
+  , "panel.border"                                        : "#FG__NORM0f"
+  , "panelTitle.activeForeground"                         : "#FG__WEAKef"
   , "panelTitle.inactiveForeground"                       : "#FG__NORM"
   , "panelTitle.border"                                   : "#BG__NORM"
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
@@ -108,17 +110,17 @@
   //____________________________________________________________________
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BLU_BGND"
+  , "statusBar.background"                                : "#BLU_BOLD7f"
   , "statusBar.foreground"                                : "#FG__NORM"
-  , "statusBarItem.remoteBackground"                      : "#BLU_BGND"
+  , "statusBarItem.remoteBackground"                      : "#BLU_BOLD7f"
   , "statusBarItem.errorBackground"                       : "#BG__INVL"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
   //____________________________________________________________________
-  , "activityBar.foreground"                              : "#FG__WEAK"
+  , "activityBar.foreground"                              : "#FG__NORMef"
   , "activityBar.background"                              : "#BG__BOLD"
-  , "activityBar.activeBackground"                        : "#CYA_BGND"
+  , "activityBar.activeBackground"                        : "#VIO_BOLD5f"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
   , "icon.foreground"                                     : "#GRY_NORM"
@@ -128,33 +130,33 @@
   //____________________________________________________________________
   , "sideBar.background"                                  : "#BG__NORM"
   , "sideBar.foreground"                                  : "#FG__NORM"
-  , "sideBar.border"                                      : "#BG__WEAK"
+  , "sideBar.border"                                      : "#FG__NORM0f"
   , "sideBarTitle.background"                             : "#BG__NORM"
   , "sideBarTitle.foreground"                             : "#FG__NORM"
-  , "sideBarSectionHeader.background"                     : "#BG__WEAK"
+  , "sideBarSectionHeader.background"                     : "#FG__NORM0f"
   , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
 
-  , "list.activeSelectionBackground"                      : "#CYA_BGND"
+  , "list.activeSelectionBackground"                      : "#VIO_BOLD5f"
   , "list.activeSelectionForeground"                      : "#FG__NORM"
-  , "list.inactiveSelectionBackground"                    : "#BG__WEAK"
-  , "list.inactiveSelectionForeground"                    : "#BLU_BGND"
+  , "list.inactiveSelectionBackground"                    : "#FG__NORM0f"
+  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD7f"
 
-  , "list.hoverBackground"                                : "#BG__WEAK"
+  , "list.hoverBackground"                                : "#FG__NORM0f"
   , "list.hoverForeground"                                : "#FG__NORM"
 
   // Drag and drop files
-  , "list.dropBackground"                                 : "#GRN_BGND"
-  , "list.dropBetweenBackground"                          : "#GRN_BGND"
+  , "list.dropBackground"                                 : "#GRN_BOLD"
+  , "list.dropBetweenBackground"                          : "#GRN_BOLD"
 
   , "list.highlightForeground"                            : "#GRN_NORM"
-  , "list.focusBackground"                                : "#BLU_BGND"
+  , "list.focusBackground"                                : "#BLU_BOLD7f"
 
   //____________________________________________________________________
   // BUTTONS
   //____________________________________________________________________
-  , "button.background"                                   : "#BG__WEAK"
+  , "button.background"                                   : "#FG__NORM0f"
   , "button.foreground"                                   : "#FG__NORM"
-  , "button.hoverBackground"                              : "#CYA_BGND"
+  , "button.hoverBackground"                              : "#VIO_BOLD5f"
 
   //____________________________________________________________________
   // DEBUG
@@ -168,11 +170,12 @@
   , "debugIcon.continueForeground"                        : "#VIO_NORM"
   , "debugIcon.pauseForeground"                           : "#VIO_NORM"
   , "debugIcon.restartForeground"                         : "#CYA_NORM"
-  , "editor.inlineValuesBackground"                       : "#BG__WEAK"
+  , "editor.inlineValuesBackground"                       : "#FG__NORM0f"
   , "editor.inlineValuesForeground"                       : "#YEL_NORM"
-  , "editor.stackFrameHighlightBackground"                : "#BG__WEAK"
-  , "statusBar.debuggingBackground"                       : "#ORN_BGND"
+  , "editor.stackFrameHighlightBackground"                : "#FG__NORM0f"
+  , "statusBar.debuggingBackground"                       : "#YEL_NORM"
   , "statusBar.debuggingForeground"                       : "#BG__NORM"
+  , "statusBar.noFolderBackground"                       : "#VIO_BOLD5f"
 
   //____________________________________________________________________
   // SOURCE CONTROL
@@ -191,13 +194,13 @@
   , "scmGraph.historyItemRefColor"                        : "#CYA_BOLD"
   , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
 
-  , "diffEditor.insertedLineBackground"                   : "#GRN_BGND1f"
-  , "diffEditor.insertedTextBackground"                   : "#GRN_BGND5f"
+  , "diffEditor.insertedLineBackground"                   : "#GRN_BOLD1f"
+  , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD5f"
 
   , "diffEditor.removedLineBackground"                    : "#FG__INVL1f"
   , "diffEditor.removedTextBackground"                    : "#BG__INVL5f"
 
-  //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BGND"
+  //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BOLD"
   //, "scmGraph.historyItemHoverDefaultLabelForeground"     : "#FG__NORM"
   //, "scmGraph.foreground2"                                : "#RED_NORM"
   //, "scmGraph.foreground3"                                : "#RED_NORM"
@@ -207,7 +210,7 @@
   //____________________________________________________________________
   // MINIMAP
   //____________________________________________________________________
-  , "minimap.background"                                  : "#BG__WEAK"
+  , "minimap.background"                                  : "#FG__NORM0f"
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
   , "minimapGutter.deletedBackground"                     : "#FG__INVL"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
@@ -278,10 +281,6 @@
   //____________________________________________________________________
   // MISC
   //____________________________________________________________________
-  //, "checkbox.background"                                 : "#CYA_BGND"
-  , "settings.checkboxBackground"                           : "#CYA_BGND"
-  , "checkbox.selectBackground"                             : "#GRN_BGND"
-  //, "banner.background"                                   : "#YEL_BOLD"
 
   }
 
@@ -313,7 +312,7 @@
     , "scope": [ ""
       , "keyword.control.ternary" // Java - : in Circle: "circle"
       , ""
-      ], "settings": { "foreground": "#FG__WEAK" }
+      ], "settings": { "foreground": "#FG__WEAKef" }
     }
 
   , { "name"  : "Color 1: Pink"
