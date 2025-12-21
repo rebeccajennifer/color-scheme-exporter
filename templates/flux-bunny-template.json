@@ -24,6 +24,23 @@
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#GRY_NORM"
 
+  , "editor.findMatchHighlightBackground"                 : "#BLU_BGND5f"
+
+  //____________________________________________________________________
+  // PEEK VIEW - Displayed with right-click and "Go to *"
+  //____________________________________________________________________
+  , "peekViewEditor.background"                           : "#BLU_BGND"
+  , "peekViewEditor.matchHighlightBackground"             : "#VIO_BGND"
+  , "peekViewResult.matchHighlightBackground"             : "#VIO_BGND"
+  , "peekView.border"                                     : "#CYA_BGND"
+  , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
+  , "peekViewResult.fileForeground"                       : "#FG__WEAK"
+  , "peekViewResult.selectionBackground"                  : "#CYA_BGND"
+  , "peekViewResult.selectionForeground"                  : "#FG__NORM"
+
+  // Peek View line number background
+  //, "peekViewEditorGutter.background"                     :"#BG__WEAK"
+
   //____________________________________________________________________
   // TERMINAL
   //____________________________________________________________________
@@ -94,6 +111,7 @@
   , "statusBar.background"                                : "#BLU_BGND"
   , "statusBar.foreground"                                : "#FG__NORM"
   , "statusBarItem.remoteBackground"                      : "#BLU_BGND"
+  , "statusBarItem.errorBackground"                       : "#BG__INVL"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
@@ -164,14 +182,19 @@
   , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
   , "gitDecoration.deletedResourceForeground"             : "#FG__INVL"
 
+  , "editorGutter.addedBackground"                        : "#GRN_NORM"
+  , "editorGutter.modifiedBackground"                     : "#YEL_NORM"
+  , "editorGutter.deletedBackground"                      : "#FG__INVL"
+
   , "scmGraph.foreground1"                                : "#YEL_NORM"
   , "scmGraph.historyItemBaseRefColor"                    : "#RED_BOLD"
   , "scmGraph.historyItemRefColor"                        : "#CYA_BOLD"
   , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
-  , "diffEditor.insertedLineBackground"                   : "#GRN_BGND5f"
-  , "diffEditor.removedLineBackground"                    : "#FG__INVL5f"
 
+  , "diffEditor.insertedLineBackground"                   : "#GRN_BGND1f"
   , "diffEditor.insertedTextBackground"                   : "#GRN_BGND5f"
+
+  , "diffEditor.removedLineBackground"                    : "#FG__INVL1f"
   , "diffEditor.removedTextBackground"                    : "#BG__INVL5f"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BGND"
@@ -185,9 +208,9 @@
   // MINIMAP
   //____________________________________________________________________
   , "minimap.background"                                  : "#BG__WEAK"
+  , "minimapGutter.addedBackground"                       : "#GRN_NORM"
   , "minimapGutter.deletedBackground"                     : "#FG__INVL"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
-  , "minimapGutter.addedBackground"                       : "#GRN_NORM"
 
   //____________________________________________________________________
   // ERRORS AND WARNINGS
