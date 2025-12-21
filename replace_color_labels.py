@@ -45,10 +45,8 @@ def get_color_label_map() -> dict:
 
   color_label_map_dark: dict =\
   { 'FG__NORM': 'c6c6c6'
-  , 'FG__WEAK': 'bcbcbc'
   , 'BG__NORM': '262626'
   , 'BG__BOLD': '1c1c1c'
-  , 'BG__WEAK': '303030'
 
   , 'GRY_NORM': '878787'
 
@@ -72,19 +70,12 @@ def get_color_label_map() -> dict:
   , 'FG__INVL': 'ff5f87'
   , 'BG__INVL': 'ff5f87'
 
-  , 'BLU_BGND': '005f87'
-  , 'CYA_BGND': '005f5f'
-  , 'VIO_BGND': '875faf'
-  , 'GRN_BGND': '00875f'
-  , 'ORN_BGND': 'ff875f'
   }
 
   color_label_map_lite: dict =\
   { 'FG__NORM': '262626'
-  , 'FG__WEAK': '303030'
   , 'BG__NORM': 'e4e4e4'
   , 'BG__BOLD': 'dadada'
-  , 'BG__WEAK': 'eeeeee'
 
   , 'GRY_NORM': '878787'
 
@@ -108,11 +99,6 @@ def get_color_label_map() -> dict:
   , 'FG__INVL': 'd75f87'
   , 'BG__INVL': 'af5f87'
 
-  , 'BLU_BGND': '00afd7'
-  , 'CYA_BGND': '87d7d7'
-  , 'VIO_BGND': 'af87d7'
-  , 'GRN_BGND': 'afd787'
-  , 'ORN_BGND': 'ff875f'
   }
 
   if is_dark:

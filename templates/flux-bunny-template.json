@@ -101,7 +101,7 @@
   //____________________________________________________________________
   , "panel.background"                                    : "#FG__NORM0f"
   , "panel.border"                                        : "#FG__NORM0f"
-  , "panelTitle.activeForeground"                         : "#FG__WEAKef"
+  , "panelTitle.activeForeground"                         : "#BG__NORM0f"
   , "panelTitle.inactiveForeground"                       : "#FG__NORM"
   , "panelTitle.border"                                   : "#BG__NORM"
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
@@ -312,7 +312,7 @@
     , "scope": [ ""
       , "keyword.control.ternary" // Java - : in Circle: "circle"
       , ""
-      ], "settings": { "foreground": "#FG__WEAKef" }
+      ], "settings": { "foreground": "#GRN_NORM" }
     }
 
   , { "name"  : "Color 1: Pink"
