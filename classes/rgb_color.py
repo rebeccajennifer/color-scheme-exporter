@@ -52,13 +52,13 @@ class RgbConst:
 
   DEFAULT_RGB_STR_LIST: str = str(
     ' 0x202020'
-    ' 0x870000'
-    ' 0x008700'
-    ' 0x878700'
-    ' 0x000087'
-    ' 0x870087'
-    ' 0x008787'
-    ' 0x878787'
+    ' 0xaf5f5f'
+    ' 0x5faf5f'
+    ' 0xafaf5f'
+    ' 0x5f5faf'
+    ' 0xaf5faf'
+    ' 0x5fafaf'
+    ' 0xafafaf'
     ' 0x000000'
     ' 0xd75f5f'
     ' 0x5fd75f'
@@ -143,7 +143,7 @@ class RgbColor:
 
 
     for i in range (len(l)):
-      out_str = f'{out_str}\nColor {i:02}: 0x{l[i]:06x}'
+      out_str = f'{out_str}\nColor {i:<2}: 0x{l[i]:06x}'
 
     return out_str
 

@@ -39,7 +39,7 @@ from utilities.color_scheme_utils import GeneralUtils
 class ParserStrings:
 
   PROGRAM_NAME: str =\
-    'Color Scheme Creator'
+    'color_scheme_exporter.py'
 
   PROGRAM_DESC: str =\
     'This program creates color scheme files in the format of several '\
@@ -49,7 +49,7 @@ class ParserStrings:
     'This is the epilog to the help menu.'
 
   SCHEME_TYPE_HELP_DESC: str =\
-    'Type of profile, e.g. Gnome, Konsole'
+    'Type of profile, e.g. GNOME'
 
   GNOME_INPUT       : str = 'gnome'
   KONSOLE_INPUT     : str = 'konsole'
@@ -59,7 +59,7 @@ class ParserStrings:
 
   SCHEME_TYPES: list =\
     [ GNOME_INPUT
-    , KONSOLE_INPUT
+    #, KONSOLE_INPUT
     , VSCODE_TERM_INPUT
     , MINTTY_INPUT
     , ALL_INPUT
@@ -68,8 +68,10 @@ class ParserStrings:
   CMD_LINE_ENTRY_GROUP_TITLE: str =\
     'Command Line Color Entry'
 
-  CMD_LINE_ENTRY_GROUP_DESC: str =\
-    'Argument group for command line entry.'
+  CMD_LINE_ENTRY_GROUP_DESC: str = str(
+    'Use these arguments if you would like to defined your color '
+    'color scheme on the command line rather than using a json file.'
+  )
 
   BACKGND_HELP_DESC: str =\
     'Background color.'
@@ -86,38 +88,15 @@ class ParserStrings:
   OUT_DIR_HELP_DESC: str =\
     'Directory path of output file.'
 
-  COLOR_JSON_HELP_DESC: str =\
-    'Path to json file containing the foreground, background, '\
-    'and palette. Overrides '\
-    f'{CMD_LINE_ENTRY_GROUP_TITLE} argument group.'\
-    '\nExample:'\
-    '\n  {   "intense-bold"              : "false"'\
-    '\n    , "background-color"          : "0x282828"'\
-    '\n    , "background-color-intense"  : "0x1c1c1c"'\
-    '\n    , "foreground-color"          : "0xDF5f87"'\
-    '\n    , "foreground-color-intense"  : "0xFF5f87"'\
-    '\n    , "palette":["0x5f0000"'\
-    '\n    , "0xFF5f00"'\
-    '\n    , "0x5fFF00"'\
-    '\n    , "0xFFFF5f"'\
-    '\n    , "0x5f00FF"'\
-    '\n    , "0xFF5fFF"'\
-    '\n    , "0x5fFFFF"'\
-    '\n    , "0xFFFFFF"'\
-    '\n    , "0x5f0000"'\
-    '\n    , "0xFF5f00"'\
-    '\n    , "0x5fFF00"'\
-    '\n    , "0xFFFF5f"'\
-    '\n    , "0x5f00FF"'\
-    '\n    , "0xFF5fFF"'\
-    '\n    , "0x5fFFFF"'\
-    '\n    , "0xFFFFFF"'\
-    '\n  ]'\
-    '\n}'\
+  COLOR_JSON_HELP_DESC: str = str(
+    'Path to json file containing the foreground, background, '
+    'and palette. Overrides '
+    f'{CMD_LINE_ENTRY_GROUP_TITLE} argument group. See the sample-'
+    'themes directory for examples.'
+    )
 
   DEFAULT_DESC: str =\
-    'Select to use default color profile:'\
-    f'{RgbColor.int_list_hex_str(RgbConst.DEFAULT_RGB_INT_LIST)}'
+    'Select to use default color profile.'
 
   COLOR_RANGE: str = '{0x000000-0xFFFFFF}'
 
@@ -144,6 +123,38 @@ class ColorSchemeParser:
       , required=False
       , default=ParserStrings.ALL_INPUT
       , choices=ParserStrings.SCHEME_TYPES
+    )
+
+    parser.add_argument('--file'
+      , '-f'
+      , help=ParserStrings.COLOR_JSON_HELP_DESC
+      , action='store'
+      , type=str
+      , required=False
+    )
+
+    parser.add_argument('--name'
+      , '-n'
+      , help=ParserStrings.OUT_FILE_HELP_DESC
+      , action='store'
+      , type=str
+      , required=False
+      , default=ParserStrings.DEFAULT_NAME
+    )
+
+    parser.add_argument('--out_dir'
+      , '-o'
+      , help=ParserStrings.OUT_DIR_HELP_DESC
+      , action='store'
+      , type=str
+      , default=getcwd()
+    )
+
+    parser.add_argument('--default'
+      , '-d'
+      , help=ParserStrings.DEFAULT_DESC
+      , action='store_true'
+      , required=False
     )
 
     # Add type, move strings to class
@@ -182,37 +193,7 @@ class ColorSchemeParser:
       , default=RgbConst.DEFAULT_RGB_STR_LIST
     )
 
-    parser.add_argument('--name'
-      , '-n'
-      , help=ParserStrings.OUT_FILE_HELP_DESC
-      , action='store'
-      , type=str
-      , required=False
-      , default=ParserStrings.DEFAULT_NAME
-    )
 
-    parser.add_argument('--out_dir'
-      , '-o'
-      , help=ParserStrings.OUT_DIR_HELP_DESC
-      , action='store'
-      , type=str
-      , default=getcwd()
-    )
-
-    parser.add_argument('--file'
-      , '-f'
-      , help=ParserStrings.COLOR_JSON_HELP_DESC
-      , action='store'
-      , type=str
-      , required=False
-    )
-
-    parser.add_argument('--default'
-      , '-d'
-      , help=ParserStrings.DEFAULT_DESC
-      , action='store_true'
-      , required=False
-    )
 
     return
 

@@ -96,5 +96,17 @@
     , "justMyCode": false
     , "console"   : "integratedTerminal"
     }
+  , { "name"    : "gnome-demo"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "--scheme_type" , "gnome"
+      , "--file"        , "sample-themes/demo/input.json"
+      , "--name"        , "flux-test"
+      , "--out_dir"     , "~/.themes/"
+      ]
+    }
   ]
 }
