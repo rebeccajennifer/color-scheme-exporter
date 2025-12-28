@@ -5,6 +5,9 @@
 
 import json
 
+from flux_bunny_utils.error_utils import ErrorUtils
+from flux_bunny_utils.string_utils import StringUtils
+
 
 #_______________________________________________________________________
 class UtilErrors:
@@ -33,30 +36,6 @@ class GeneralUtils:
   MAX_COLOR: int = 0xFFFFFF
 
   #_____________________________________________________________________
-  def str_hex_to_int(s: str) -> int:
-    """
-    Parameter
-    s - hex integer represented as a string
-
-    Returns
-    The int represented by the input string as hex.
-    """
-
-    try:
-      if (isinstance(s, str)):
-        return int(s, base=16)
-
-    except Exception as error:
-      err_msg: str =\
-        f'{UtilErrors.ERROR_TYPE}'\
-        f'{type(error).__name__}'\
-        f'{UtilErrors.DESC}'\
-        f'{UtilErrors.CONVERSION_ERROR}'\
-        f'{UtilErrors.LINE}'\
-
-      raise ValueError(err_msg)
-
-  #_____________________________________________________________________
   def str_list_to_hex_list(l: list[str]) -> list[int]:
     """
     Converts a list of strings representing hexadecimal numbers to a
@@ -76,7 +55,7 @@ class GeneralUtils:
     int_list: list[int] = [0] * list_length
 
     for i in range(list_length):
-      int_list[i] = GeneralUtils.str_hex_to_int(l[i])
+      int_list[i] = StringUtils.str_hex_to_int(l[i])
 
     return int_list
 

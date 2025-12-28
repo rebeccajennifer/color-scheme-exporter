@@ -124,11 +124,11 @@ class MinttyScheme(ColorScheme):
   def construct_from_json(self, input_dict):
     """
     Constructs color scheme from JSON input. Extends base class with
-    additional variables for .mintty file.
+    additional variables for .minttyrc file.
     """
     super().construct_from_json(input_dict)
 
     if (self.CURSOR_COLOR in input_dict):
       self.cursor_color_ =\
-        Utils.str_hex_to_int(input_dict[self.CURSOR_COLOR])
+        StringUtils.str_hex_to_int(input_dict[self.CURSOR_COLOR])
     return
