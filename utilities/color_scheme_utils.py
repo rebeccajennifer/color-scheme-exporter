@@ -10,27 +10,6 @@ from flux_bunny_utils.string_utils import StringUtils
 
 
 #_______________________________________________________________________
-class UtilErrors:
-
-  LINE: str =\
-    '\n________________________________________________________________'
-
-  ERROR: str =\
-    f'{LINE}'\
-    '\nUH OH! The program has encountered an error!'\
-    f'{LINE}'
-
-  ERROR_TYPE: str =\
-    f'{ERROR}'\
-    '\nTYPE:        '
-
-  DESC: str =\
-    '\nDESCRIPTION: '
-
-  CONVERSION_ERROR: str =\
-    f'Invalid conversion'
-
-#_______________________________________________________________________
 class GeneralUtils:
 
   MAX_COLOR: int = 0xFFFFFF
@@ -108,45 +87,6 @@ class GeneralUtils:
     with open(file_path, 'r') as file:
       file_dict: dict = json.load(file)
       return file_dict
-
-  #_____________________________________________________________________
-  def bool_to_str(flag: bool, capitalize: bool = False) -> str:
-    """
-    Prints Boolean string.
-
-    Parameters
-    flag        - Boolean to print
-    capitalize  - Capitalize first letter
-    """
-
-    out_str: str = ''
-
-    if (flag):
-      out_str = 'true'
-    else:
-      out_str = 'false'
-
-    if (capitalize):
-      out_str = f'{out_str[0].upper()}{out_str[1:len(out_str)]}'
-
-    return out_str
-
-  #_____________________________________________________________________
-  def str_to_bool(s: str) -> bool:
-    """
-    Returns boolean corresponding with input string. Will return true
-    if string is any capitalization of the word 'true'.
-
-    Parameters
-    s - any string, assumption s = {'true', 'True', 'false', 'False'}
-
-    Returns
-    bool
-    """
-
-    lowercase: str = s.lower()
-
-    return lowercase == 'true' or lowercase == 't'
 
   #_____________________________________________________________________
   def construct_color_print_str(text: str
