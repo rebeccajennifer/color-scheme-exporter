@@ -28,6 +28,7 @@
 
 from classes.scheme_types.base_scheme import ColorScheme
 from utilities.color_scheme_utils import GeneralUtils as Utils
+from flux_bunny_utils.string_utils import StringUtils
 from classes.color_scheme_strings import ColorSchemeStrings as Strings
 
 
@@ -114,7 +115,7 @@ class MinttyScheme(ColorScheme):
       out_str = str(
         f'{out_str}'
         f'\n{label_list[i]:<{color_field_width}}'
-        f' = #{Utils.int_to_hex6(crnt_color)}'
+        f' = #{StringUtils.int_to_hex6(crnt_color)}'
       )
 
     return out_str

@@ -209,20 +209,3 @@ class GeneralUtils:
       f'\033[38;2;{fg_red};{fg_grn};{fg_blu}m{set_bg_str}{text}\033[0m'
 
     return colored_str
-
-  #_____________________________________________________________________
-  def int_to_hex6(n: int) -> str:
-    """
-    Converts an integer to a 6-digit hex string.
-
-    Parameters
-    n - integer to convert
-
-    Returns
-    6-digit hex string representation of the input integer.
-    E.g. 255 -> '0000ff'
-    16777215 -> 'ffffff'
-    0 -> '000000'
-    16777216 -> '01000000' (not 6 digits, but 8)
-    """
-    return f'{n:06x}'
