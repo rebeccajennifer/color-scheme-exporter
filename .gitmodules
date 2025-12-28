@@ -1,0 +1,3 @@
+[submodule "flux_bunny_utils"]
+	path = flux_bunny_utils
+	url = git@github.com:rebeccajennifer/flux_bunny_utils.git

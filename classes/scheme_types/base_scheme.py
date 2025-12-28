@@ -29,11 +29,10 @@
 from os import path
 
 from classes.color_scheme_strings import ColorSchemeStrings as Strings
-from classes.color_scheme_strings import ErrorStrings
 from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
 from utilities.color_scheme_utils import GeneralUtils as Utils
-from utilities.file_utils import FileUtils
+from flux_bunny_utils.file_utils import FileUtils
 
 
 #_______________________________________________________________________
