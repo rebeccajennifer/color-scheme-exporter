@@ -150,6 +150,7 @@
 
   , "list.highlightForeground"                            : "#GRN_NORM"
   , "list.focusBackground"                                : "#BLU_BOLD7f"
+  , "list.invalidItemForeground"                          : "#FG__INVL"
 
   //____________________________________________________________________
   // BUTTONS

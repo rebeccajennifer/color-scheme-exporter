@@ -33,6 +33,7 @@ from classes.color_scheme_strings import ColorSchemeStrings
 from classes.rgb_color import RgbColor, RgbConst
 
 from utilities.color_scheme_utils import GeneralUtils
+from flux_bunny_utils.string_utils import StringUtils
 
 
 #_______________________________________________________________________
@@ -166,7 +167,7 @@ class ColorSchemeParser:
       , '-bg'
       , help=ParserStrings.BACKGND_HELP_DESC
       , action='store'
-      , type=GeneralUtils.str_hex_to_int
+      , type=StringUtils.str_hex_to_int
       , required=False
       , default=RgbConst.DEFAULT_BACKGROUND
       , choices=range(0, GeneralUtils.MAX_COLOR + 1)
@@ -177,7 +178,7 @@ class ColorSchemeParser:
       , '-fg'
       , help=ParserStrings.FOREGND_HELP_DESC
       , action='store'
-      , type=GeneralUtils.str_hex_to_int
+      , type=StringUtils.str_hex_to_int
       , required=False
       , default=RgbConst.DEFAULT_FOREGROUND
       , choices=range(0, GeneralUtils.MAX_COLOR + 1)

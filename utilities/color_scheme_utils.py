@@ -5,56 +5,13 @@
 
 import json
 
+from flux_bunny_utils.string_utils import StringUtils
 
-#_______________________________________________________________________
-class UtilErrors:
-
-  LINE: str =\
-    '\n________________________________________________________________'
-
-  ERROR: str =\
-    f'{LINE}'\
-    '\nUH OH! The program has encountered an error!'\
-    f'{LINE}'
-
-  ERROR_TYPE: str =\
-    f'{ERROR}'\
-    '\nTYPE:        '
-
-  DESC: str =\
-    '\nDESCRIPTION: '
-
-  CONVERSION_ERROR: str =\
-    f'Invalid conversion'
 
 #_______________________________________________________________________
 class GeneralUtils:
 
   MAX_COLOR: int = 0xFFFFFF
-
-  #_____________________________________________________________________
-  def str_hex_to_int(s: str) -> int:
-    """
-    Parameter
-    s - hex integer represented as a string
-
-    Returns
-    The int represented by the input string as hex.
-    """
-
-    try:
-      if (isinstance(s, str)):
-        return int(s, base=16)
-
-    except Exception as error:
-      err_msg: str =\
-        f'{UtilErrors.ERROR_TYPE}'\
-        f'{type(error).__name__}'\
-        f'{UtilErrors.DESC}'\
-        f'{UtilErrors.CONVERSION_ERROR}'\
-        f'{UtilErrors.LINE}'\
-
-      raise ValueError(err_msg)
 
   #_____________________________________________________________________
   def str_list_to_hex_list(l: list[str]) -> list[int]:
@@ -76,7 +33,7 @@ class GeneralUtils:
     int_list: list[int] = [0] * list_length
 
     for i in range(list_length):
-      int_list[i] = GeneralUtils.str_hex_to_int(l[i])
+      int_list[i] = StringUtils.str_hex_to_int(l[i])
 
     return int_list
 
@@ -131,45 +88,6 @@ class GeneralUtils:
       return file_dict
 
   #_____________________________________________________________________
-  def bool_to_str(flag: bool, capitalize: bool = False) -> str:
-    """
-    Prints Boolean string.
-
-    Parameters
-    flag        - Boolean to print
-    capitalize  - Capitalize first letter
-    """
-
-    out_str: str = ''
-
-    if (flag):
-      out_str = 'true'
-    else:
-      out_str = 'false'
-
-    if (capitalize):
-      out_str = f'{out_str[0].upper()}{out_str[1:len(out_str)]}'
-
-    return out_str
-
-  #_____________________________________________________________________
-  def str_to_bool(s: str) -> bool:
-    """
-    Returns boolean corresponding with input string. Will return true
-    if string is any capitalization of the word 'true'.
-
-    Parameters
-    s - any string, assumption s = {'true', 'True', 'false', 'False'}
-
-    Returns
-    bool
-    """
-
-    lowercase: str = s.lower()
-
-    return lowercase == 'true' or lowercase == 't'
-
-  #_____________________________________________________________________
   def construct_color_print_str(text: str
     , fg_red: int
     , fg_grn: int
@@ -209,20 +127,3 @@ class GeneralUtils:
       f'\033[38;2;{fg_red};{fg_grn};{fg_blu}m{set_bg_str}{text}\033[0m'
 
     return colored_str
-
-  #_____________________________________________________________________
-  def int_to_hex6(n: int) -> str:
-    """
-    Converts an integer to a 6-digit hex string.
-
-    Parameters
-    n - integer to convert
-
-    Returns
-    6-digit hex string representation of the input integer.
-    E.g. 255 -> '0000ff'
-    16777215 -> 'ffffff'
-    0 -> '000000'
-    16777216 -> '01000000' (not 6 digits, but 8)
-    """
-    return f'{n:06x}'

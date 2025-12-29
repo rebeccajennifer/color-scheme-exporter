@@ -29,11 +29,11 @@
 from os import path
 
 from classes.color_scheme_strings import ColorSchemeStrings as Strings
-from classes.color_scheme_strings import ErrorStrings
 from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
 from utilities.color_scheme_utils import GeneralUtils as Utils
-from utilities.file_utils import FileUtils
+from flux_bunny_utils.file_utils import FileUtils
+from flux_bunny_utils.string_utils import StringUtils
 
 
 #_______________________________________________________________________
@@ -137,12 +137,12 @@ class ColorScheme():
     #___________________________________________________________________
     if (self.BACKGROUND_COLOR in input_dict):
       self.background_color_ =\
-        Utils.str_hex_to_int(input_dict[self.BACKGROUND_COLOR])
+        StringUtils.str_hex_to_int(input_dict[self.BACKGROUND_COLOR])
 
     #___________________________________________________________________
     if (self.FOREGROUND_COLOR in input_dict):
       self.foreground_color_ =\
-        Utils.str_hex_to_int(input_dict[self.FOREGROUND_COLOR])
+        StringUtils.str_hex_to_int(input_dict[self.FOREGROUND_COLOR])
 
     #___________________________________________________________________
     if (self.PALETTE in input_dict):

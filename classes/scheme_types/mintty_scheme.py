@@ -28,6 +28,7 @@
 
 from classes.scheme_types.base_scheme import ColorScheme
 from utilities.color_scheme_utils import GeneralUtils as Utils
+from flux_bunny_utils.string_utils import StringUtils
 from classes.color_scheme_strings import ColorSchemeStrings as Strings
 
 
@@ -114,7 +115,7 @@ class MinttyScheme(ColorScheme):
       out_str = str(
         f'{out_str}'
         f'\n{label_list[i]:<{color_field_width}}'
-        f' = #{Utils.int_to_hex6(crnt_color)}'
+        f' = #{StringUtils.int_to_hex6(crnt_color)}'
       )
 
     return out_str
@@ -123,11 +124,11 @@ class MinttyScheme(ColorScheme):
   def construct_from_json(self, input_dict):
     """
     Constructs color scheme from JSON input. Extends base class with
-    additional variables for .mintty file.
+    additional variables for .minttyrc file.
     """
     super().construct_from_json(input_dict)
 
     if (self.CURSOR_COLOR in input_dict):
       self.cursor_color_ =\
-        Utils.str_hex_to_int(input_dict[self.CURSOR_COLOR])
+        StringUtils.str_hex_to_int(input_dict[self.CURSOR_COLOR])
     return
