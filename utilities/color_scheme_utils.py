@@ -5,7 +5,6 @@
 
 import json
 
-from flux_bunny_utils.error_utils import ErrorUtils
 from flux_bunny_utils.string_utils import StringUtils
 
 
