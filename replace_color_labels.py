@@ -57,17 +57,13 @@ def get_color_label_map() -> dict:
   , 'CYA_NORM': '87d7af'
   , 'WHT_NORM': 'd7d7d7'
   , 'BLK_BOLD': '878787'
-  , 'RED_BOLD': 'd75f87'
+  , 'RED_BOLD': 'ff5f87'
   , 'GRN_BOLD': '87af5f'
   , 'YEL_BOLD': 'ffd787'
   , 'BLU_BOLD': '00afd7'
   , 'VIO_BOLD': 'af5faf'
   , 'CYA_BOLD': '5fafaf'
   , 'WHT_BOLD': 'eeeeee'
-
-  , 'FG__INVL': 'ff5f87'
-  , 'BG__INVL': 'ff5f87'
-
   }
 
   color_label_map_lite: dict =\
@@ -84,17 +80,13 @@ def get_color_label_map() -> dict:
   , 'CYA_NORM': '008787'
   , 'WHT_NORM': '878787'
   , 'BLK_BOLD': '262626'
-  , 'RED_BOLD': 'd7005f'
+  , 'RED_BOLD': 'd75f87'
   , 'GRN_BOLD': '0087af'
   , 'YEL_BOLD': 'd78700'
   , 'BLU_BOLD': '005faf'
   , 'VIO_BOLD': '875f87'
   , 'CYA_BOLD': '005f5f'
   , 'WHT_BOLD': 'afafaf'
-
-  , 'FG__INVL': 'd75f87'
-  , 'BG__INVL': 'af5f87'
-
   }
 
   if is_dark:

@@ -4,7 +4,7 @@
 , "colors":
   { "foreground"                                          : "#FG__NORM"
   , "selection.background"                                : "#VIO_BOLD5f"
-  , "errorForeground"                                     : "#FG__INVL"
+  , "errorForeground"                                     : "#RED_BOLD"
   , "focusBorder"                                         : "#CYA_BOLD"
 
   , "editor.background"                                   : "#BG__NORM"
@@ -74,8 +74,8 @@
   //____________________________________________________________________
   , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
   , "editorBracketHighlight.foreground3"                  : "#CYA_BOLD"
-  , "editorBracketHighlight.foreground2"                  : "#RED_BOLD"
-  , "editorBracketHighlight.unexpectedBracket.foreground" : "#FG__INVL"
+  , "editorBracketHighlight.foreground2"                  : "#RED_NORM"
+  , "editorBracketHighlight.unexpectedBracket.foreground" : "#RED_BOLD"
 
   //____________________________________________________________________
   // DROPDOWN
@@ -113,7 +113,8 @@
   , "statusBar.background"                                : "#BLU_BOLD7f"
   , "statusBar.foreground"                                : "#FG__NORM"
   , "statusBarItem.remoteBackground"                      : "#BLU_BOLD7f"
-  , "statusBarItem.errorBackground"                       : "#BG__INVL"
+  , "statusBarItem.errorBackground"                       : "#RED_BOLD"
+  , "statusBar.noFolderBackground"                        : "#VIO_BOLD5f"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
@@ -142,7 +143,6 @@
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD7f"
 
   , "list.hoverBackground"                                : "#FG__NORM0f"
-  , "list.hoverForeground"                                : "#FG__NORM"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#GRN_BOLD"
@@ -150,7 +150,7 @@
 
   , "list.highlightForeground"                            : "#GRN_NORM"
   , "list.focusBackground"                                : "#BLU_BOLD7f"
-  , "list.invalidItemForeground"                          : "#FG__INVL"
+  , "list.invalidItemForeground"                          : "#RED_BOLD"
 
   //____________________________________________________________________
   // BUTTONS
@@ -162,7 +162,7 @@
   //____________________________________________________________________
   // DEBUG
   //____________________________________________________________________
-  , "debugIcon.breakpointForeground"                      : "#FG__INVL"
+  , "debugIcon.breakpointForeground"                      : "#RED_BOLD"
   , "debugIcon.startForeground"                           : "#GRN_NORM"
   , "debugIcon.stopForeground"                            : "#RED_NORM"
   , "debugIcon.stepIntoForeground"                        : "#BLU_NORM"
@@ -176,7 +176,10 @@
   , "editor.stackFrameHighlightBackground"                : "#FG__NORM0f"
   , "statusBar.debuggingBackground"                       : "#YEL_NORM"
   , "statusBar.debuggingForeground"                       : "#BG__NORM"
-  , "statusBar.noFolderBackground"                       : "#VIO_BOLD5f"
+
+  //, "debugIcon.breakpointStackframeForeground"            : "#00FF00" // test
+  , "debugExceptionWidget.border"                         : "#RED_BOLD"
+  , "debugExceptionWidget.background"                     : "#RED_BOLD5f"
 
   //____________________________________________________________________
   // SOURCE CONTROL
@@ -184,25 +187,25 @@
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
   , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
   , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
-  , "gitDecoration.deletedResourceForeground"             : "#FG__INVL"
+  , "gitDecoration.deletedResourceForeground"             : "#RED_BOLD"
 
   , "editorGutter.addedBackground"                        : "#GRN_NORM"
   , "editorGutter.modifiedBackground"                     : "#YEL_NORM"
-  , "editorGutter.deletedBackground"                      : "#FG__INVL"
+  , "editorGutter.deletedBackground"                      : "#RED_BOLD"
 
   , "scmGraph.foreground1"                                : "#YEL_NORM"
-  , "scmGraph.historyItemBaseRefColor"                    : "#RED_BOLD"
+  , "scmGraph.historyItemBaseRefColor"                    : "#RED_NORM"
   , "scmGraph.historyItemRefColor"                        : "#CYA_BOLD"
-  , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
+  , "scmGraph.historyItemRemoteRefColor"                  : "#RED_NORM"
+  , "scmGraph.historyItemHoverLabelForeground"            : "#BG__NORM"
 
   , "diffEditor.insertedLineBackground"                   : "#GRN_BOLD1f"
   , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD5f"
 
-  , "diffEditor.removedLineBackground"                    : "#FG__INVL1f"
-  , "diffEditor.removedTextBackground"                    : "#BG__INVL5f"
+  , "diffEditor.removedLineBackground"                    : "#RED_BOLD1f"
+  , "diffEditor.removedTextBackground"                    : "#RED_BOLD5f"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BOLD"
-  //, "scmGraph.historyItemHoverDefaultLabelForeground"     : "#FG__NORM"
   //, "scmGraph.foreground2"                                : "#RED_NORM"
   //, "scmGraph.foreground3"                                : "#RED_NORM"
   //, "scmGraph.foreground4"                                : "#RED_NORM"
@@ -213,32 +216,37 @@
   //____________________________________________________________________
   , "minimap.background"                                  : "#FG__NORM0f"
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
-  , "minimapGutter.deletedBackground"                     : "#FG__INVL"
+  , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
 
   //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
   , "editorWarning.foreground"                            : "#YEL_BOLD"
-  , "editorError.foreground"                              : "#FG__INVL"
+  , "editorError.foreground"                              : "#RED_BOLD"
 
   , "list.warningForeground"                              : "#YEL_NORM"
-  , "list.errorForeground"                                : "#FG__INVL"
+  , "list.errorForeground"                                : "#RED_BOLD"
 
-  , "minimap.errorHighlight"                              : "#FG__INVL"
+  , "minimap.errorHighlight"                              : "#RED_BOLD"
   , "minimap.warningHighlight"                            : "#YEL_NORM"
   , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
 
-  , "inputValidation.warningBackground"                   : "#FG__INVL"
+  , "inputValidation.warningBackground"                   : "#RED_BOLD"
   , "inputValidation.warningForeground"                   : "#FG__NORM"
   , "inputValidation.warningBorder"                       : "#FG__NORM"
   , "inputValidation.errorBackground"                     : "#BG__NORM"
-  , "inputValidation.errorForeground"                     : "#FG__INVL"
-  , "inputValidation.errorBorder"                         : "#FG__INVL"
+  , "inputValidation.errorForeground"                     : "#RED_BOLD"
+  , "inputValidation.errorBorder"                         : "#RED_BOLD"
 
-  , "problemsErrorIcon.foreground"                        : "#FG__INVL"
+  , "problemsErrorIcon.foreground"                        : "#RED_BOLD"
   , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
+  , "debugConsole.errorForeground"                        : "#RED_BOLD"
+
+  , "disabledForeground"                                 : "#BLK_BOLD7f"
+  , "list.deemphasizedForeground"                        : "#BLK_BOLD7f"
+
 
   //____________________________________________________________________
   // ICONS
@@ -334,7 +342,7 @@
     , "scope" : [ ""
       , "invalid"
       , ""
-      ], "settings": { "foreground": "#FG__INVL" }
+      ], "settings": { "foreground": "#RED_BOLD" }
     }
 
   , { "name"  : "Color 2: Green"
