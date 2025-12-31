@@ -90,14 +90,14 @@ class KonsoleScheme(ColorScheme):
           Utils.str_hex_to_int(d[self.BACKGROUND_COLOR_INTENSE])
       except:
         self.background_color_intense_ =\
-          d[self.BACKGROUND_COLOR]
+          d[self.BG_NORM_KEY]
 
       try:
         self.foreground_color_intense_ =\
           Utils.str_hex_to_int(d[self.FOREGROUND_COLOR_INTENSE])
       except:
         self.foreground_color_intense_ =\
-          d[self.FOREGROUND_COLOR]
+          d[self.FG_NORM_KEY]
     #___________________________________________________________________
 
     self.normal_colors_: list[int] = self.palette_[0:8]

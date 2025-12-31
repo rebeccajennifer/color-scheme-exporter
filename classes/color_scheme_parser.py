@@ -55,6 +55,7 @@ class ParserStrings:
   GNOME_INPUT       : str = 'gnome'
   KONSOLE_INPUT     : str = 'konsole'
   VSCODE_TERM_INPUT : str = 'vscode-term'
+  VSCODE_INPUT      : str = 'vscode-scheme'
   MINTTY_INPUT      : str = 'mintty'
   ALL_INPUT         : str = 'all'
 
@@ -62,6 +63,7 @@ class ParserStrings:
     [ GNOME_INPUT
     #, KONSOLE_INPUT
     , VSCODE_TERM_INPUT
+    , VSCODE_INPUT
     , MINTTY_INPUT
     , ALL_INPUT
     ]

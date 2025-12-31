@@ -43,8 +43,10 @@ class ColorScheme():
   cannot be used on its own - it must be inherited by a derived class.
   """
 
-  BACKGROUND_COLOR: str = 'background-color'
-  FOREGROUND_COLOR: str = 'foreground-color'
+  BG_NORM_KEY     : str = 'background-color'
+  BG_BOLD_KEY     : str = 'background-color-intense'
+  FG_NORM_KEY     : str = 'foreground-color'
+  FG_BOLD_KEY     : str = 'foreground-color-intense'
   CURSOR_COLOR    : str = 'cursor-color'
   PALETTE         : str = 'palette'
 
@@ -135,14 +137,14 @@ class ColorScheme():
       self.name_ = input_dict['name'].replace(' ', '-')
 
     #___________________________________________________________________
-    if (self.BACKGROUND_COLOR in input_dict):
+    if (self.BG_NORM_KEY in input_dict):
       self.background_color_ =\
-        StringUtils.str_hex_to_int(input_dict[self.BACKGROUND_COLOR])
+        StringUtils.str_hex_to_int(input_dict[self.BG_NORM_KEY])
 
     #___________________________________________________________________
-    if (self.FOREGROUND_COLOR in input_dict):
+    if (self.FG_NORM_KEY in input_dict):
       self.foreground_color_ =\
-        StringUtils.str_hex_to_int(input_dict[self.FOREGROUND_COLOR])
+        StringUtils.str_hex_to_int(input_dict[self.FG_NORM_KEY])
 
     #___________________________________________________________________
     if (self.PALETTE in input_dict):
