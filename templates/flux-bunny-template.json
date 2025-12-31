@@ -2,10 +2,38 @@
   "$schema"     : "vscode://schemas/color-theme"
 
 , "colors":
-  { "foreground"                                          : "#FG__NORM"
+  {
+  //____________________________________________________________________
+  // TERMINAL
+  //____________________________________________________________________
+    "terminal.background"                                 : "#BG__NORM"
+  , "terminal.foreground"                                 : "#FG__NORM"
+  , "terminalCursor.background"                           : "#BG__NORM"
+  , "terminalCursor.foreground"                           : "#GRN_NORM"
+  //____________________________________________________________________
+  , "terminal.ansiBlack"                                  : "#BLK_NORM"
+  , "terminal.ansiRed"                                    : "#RED_NORM"
+  , "terminal.ansiGreen"                                  : "#GRN_NORM"
+  , "terminal.ansiYellow"                                 : "#YEL_NORM"
+  , "terminal.ansiBlue"                                   : "#BLU_NORM"
+  , "terminal.ansiMagenta"                                : "#VIO_NORM"
+  , "terminal.ansiCyan"                                   : "#CYA_NORM"
+  , "terminal.ansiWhite"                                  : "#WHT_NORM"
+  //____________________________________________________________________
+  , "terminal.ansiBrightBlack"                            : "#BLK_BOLD"
+  , "terminal.ansiBrightRed"                              : "#RED_BOLD"
+  , "terminal.ansiBrightGreen"                            : "#GRN_BOLD"
+  , "terminal.ansiBrightYellow"                           : "#YEL_BOLD"
+  , "terminal.ansiBrightBlue"                             : "#BLU_BOLD"
+  , "terminal.ansiBrightMagenta"                          : "#VIO_BOLD"
+  , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
+  , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
+
+  //____________________________________________________________________
+  , "foreground"                                          : "#FG__NORM"
   , "selection.background"                                : "#VIO_BOLD5f"
   , "errorForeground"                                     : "#RED_BOLD"
-  , "focusBorder"                                         : "#CYA_BOLD"
+  , "focusBorder"                                         : "#VIO_BOLD5f"
 
   , "editor.background"                                   : "#BG__NORM"
   , "editor.foreground"                                   : "#FG__NORM"
@@ -15,7 +43,8 @@
   , "editor.selectionForeground"                          : "#BG__NORM"
   , "editorRuler.foreground"                              : "#FG__NORM0f"
 
-  , "menu.background"                                    : "#BG__BOLD"
+  , "menu.background"                                     : "#BG__BOLD"
+  , "textLink.foreground"                                 : "#BLU_BOLD"
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
@@ -44,32 +73,6 @@
   //, "peekViewEditorGutter.background"                     :"#FG__NORM0f"
 
   //____________________________________________________________________
-  // TERMINAL
-  //____________________________________________________________________
-  , "terminal.background"                                 : "#BG__NORM"
-  , "terminal.foreground"                                 : "#FG__NORM"
-  , "terminalCursor.background"                           : "#BG__NORM"
-  , "terminalCursor.foreground"                           : "#GRN_NORM"
-  //____________________________________________________________________
-  , "terminal.ansiBlack"                                  : "#BLK_NORM"
-  , "terminal.ansiRed"                                    : "#RED_NORM"
-  , "terminal.ansiGreen"                                  : "#GRN_NORM"
-  , "terminal.ansiYellow"                                 : "#YEL_NORM"
-  , "terminal.ansiBlue"                                   : "#BLU_NORM"
-  , "terminal.ansiMagenta"                                : "#VIO_NORM"
-  , "terminal.ansiCyan"                                   : "#CYA_NORM"
-  , "terminal.ansiWhite"                                  : "#WHT_NORM"
-  //____________________________________________________________________
-  , "terminal.ansiBrightBlack"                            : "#BLK_BOLD"
-  , "terminal.ansiBrightRed"                              : "#RED_BOLD"
-  , "terminal.ansiBrightGreen"                            : "#GRN_BOLD"
-  , "terminal.ansiBrightYellow"                           : "#YEL_BOLD"
-  , "terminal.ansiBrightBlue"                             : "#BLU_BOLD"
-  , "terminal.ansiBrightMagenta"                          : "#VIO_BOLD"
-  , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
-  , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
-
-  //____________________________________________________________________
   // BRACKETS
   //____________________________________________________________________
   , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
@@ -80,11 +83,10 @@
   //____________________________________________________________________
   // DROPDOWN
   //____________________________________________________________________
-
   , "dropdown.background"                                 : "#FG__NORM0f"
   , "dropdown.foreground"                                 : "#FG__NORM"
   , "dropdown.border"                                     : "#FG__NORM0f"
-  , "dropdown.listBackground"                             : "#FG__NORM0f"
+  , "dropdown.listBackground"                             : "#BG__NORM"
 
   //____________________________________________________________________
   // TABS
@@ -155,14 +157,19 @@
   //____________________________________________________________________
   // BUTTONS
   //____________________________________________________________________
-  , "button.background"                                   : "#FG__NORM0f"
+  , "button.background"                                   : "#CYA_BOLD5f"
   , "button.foreground"                                   : "#FG__NORM"
   , "button.hoverBackground"                              : "#VIO_BOLD5f"
 
   //____________________________________________________________________
   // DEBUG
   //____________________________________________________________________
+
+  // Breakpoint dot
   , "debugIcon.breakpointForeground"                      : "#RED_BOLD"
+  // Breakpoint arrow when stopped
+  , "debugIcon.breakpointCurrentStackframeForeground"     : "#YEL_BOLD"
+
   , "debugIcon.startForeground"                           : "#GRN_NORM"
   , "debugIcon.stopForeground"                            : "#RED_NORM"
   , "debugIcon.stepIntoForeground"                        : "#BLU_NORM"
@@ -177,7 +184,7 @@
   , "statusBar.debuggingBackground"                       : "#YEL_NORM"
   , "statusBar.debuggingForeground"                       : "#BG__NORM"
 
-  //, "debugIcon.breakpointStackframeForeground"            : "#00FF00" // test
+  // Debug exception
   , "debugExceptionWidget.border"                         : "#RED_BOLD"
   , "debugExceptionWidget.background"                     : "#RED_BOLD5f"
 
@@ -244,8 +251,8 @@
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
   , "debugConsole.errorForeground"                        : "#RED_BOLD"
 
-  , "disabledForeground"                                 : "#BLK_BOLD7f"
-  , "list.deemphasizedForeground"                        : "#BLK_BOLD7f"
+  , "disabledForeground"                                  : "#BLK_BOLD7f"
+  , "list.deemphasizedForeground"                         : "#BLK_BOLD7f"
 
 
   //____________________________________________________________________
@@ -534,7 +541,5 @@
   //, "macro"         : "#WHT_BOLD" // PI in #define PI
   //, "type"          : "#BLU_NORM "// Don't set this
   }
-
-
 }
 
