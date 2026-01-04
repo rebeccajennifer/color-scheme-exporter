@@ -45,6 +45,7 @@
 
   , "menu.background"                                     : "#BG__BOLD"
   , "textLink.foreground"                                 : "#BLU_BOLD"
+  , "textLink.activeForeground"                           : "#CYA_BOLD"
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
@@ -94,7 +95,7 @@
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#FG__NORM0f"
-  , "tab.inactiveForeground"                              : "#BLK_BOLD"
+  , "tab.inactiveForeground"                              : "#FG__NORM87"
   , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD7f"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
 
@@ -103,9 +104,9 @@
   //____________________________________________________________________
   , "panel.background"                                    : "#FG__NORM0f"
   , "panel.border"                                        : "#FG__NORM0f"
-  , "panelTitle.activeForeground"                         : "#BG__NORM0f"
+  , "panelTitle.activeForeground"                         : "#FG__NORM"
   , "panelTitle.inactiveForeground"                       : "#FG__NORM"
-  , "panelTitle.border"                                   : "#BG__NORM"
+  //, "panelTitle.border"                                   : "#BG__NORM"
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
   //, "panelTitleBadge.foreground"                          : "#BG__NORM"
 
@@ -113,10 +114,16 @@
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
   , "statusBar.background"                                : "#BLU_BOLD7f"
+  , "statusBar.background"                                : "#BLU_BOLD"
   , "statusBar.foreground"                                : "#FG__NORM"
+  , "statusBar.foreground"                                : "#BG__NORM"
   , "statusBarItem.remoteBackground"                      : "#BLU_BOLD7f"
+  , "statusBar.noFolderBackground"                        : "#VIO_BOLD"
+
+  , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
+  , "statusBarItem.warningForeground"                     : "#BG__NORM"
   , "statusBarItem.errorBackground"                       : "#RED_BOLD"
-  , "statusBar.noFolderBackground"                        : "#VIO_BOLD5f"
+  , "statusBarItem.errorForeground"                       : "#BG__NORM"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
@@ -157,9 +164,9 @@
   //____________________________________________________________________
   // BUTTONS
   //____________________________________________________________________
-  , "button.background"                                   : "#CYA_BOLD5f"
-  , "button.foreground"                                   : "#FG__NORM"
-  , "button.hoverBackground"                              : "#VIO_BOLD5f"
+  , "button.background"                                   : "#GRN_NORM"
+  , "button.foreground"                                   : "#BG__NORM"
+  , "button.hoverBackground"                              : "#VIO_BOLD"
 
   //____________________________________________________________________
   // DEBUG
