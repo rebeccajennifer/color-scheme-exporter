@@ -7,20 +7,34 @@
   //____________________________________________________________________
   // TESTING
   //____________________________________________________________________
-  //  "list.filterMatchBackground"                            : "#YEL_BOLD5f"
+  //  "list.filterMatchBackground"                          : "#YEL_BOLD5f"
   //, "panelSection.dropBackground"                         : "#GRN_BOLD5f"
-  //, "list.filterMatchBackground": "#FF0000"
-  //, "list.inactiveFocusOutline": "#FF0000"
-  //, "editor.compositionBorder": "#0000FF"
-  ////, "settings.textInputBackground": "#FFFF00"
-  //, "editorActionList.background": "#00FFFF"
-  //, "sideBar.dropBackground": "#ff0000"
-  //, "checkbox.background"                                : "#CYA_BOLD"
-  //, "checkbox.foreground"                                : "#FG__NORM"
-  //, "checkbox.selectBackground"                          : "#ff0000"
-  //, "checkbox.border"                                    : "#00ff00"
+  //, "list.filterMatchBackground"                          : "#FF0000"
+  //, "list.inactiveFocusOutline"                           : "#FF0000"
+  //, "editor.compositionBorder"                            : "#0000FF"
+  //, "settings.textInputBackground"                        : "#FFFF00"
+  //, "editorActionList.background"                         : "#00FFFF"
+  //, "sideBar.dropBackground"                              : "#ff0000"
+  //, "checkbox.border"                                     : "#00ff00"
+  //, "debugConsole.sourceForeground"                       : "#ff0000"
+  //, "debugView.exceptionLabelBackground"                    : "#ffff0"
+  //, "debugView.exceptionLabelForeground"                    : "#ff0000"
 
+  // E.g. Checkboxes in settings
+  , "checkbox.background"                                 : "#BG__BOLD"
+  , "checkbox.foreground"                                 : "#FG__NORM"
+  //, "checkbox.selectBorder"                               : "#GRN_NORM"
+  //, "checkbox.selectBackground"                           : "#ff0000"
+  //, "checkbox.disabled.background"                        : "#ff0000"
+
+  // Text color of header in settings
   , "settings.headerForeground"                           : "#CYA_BOLD"
+
+  // Overridden by other properties
+  //, "quickInput.background"                               : "#BG__BOLD"
+  //, "quickInputList.focusIconForeground"                  : "#FG__BOLD"
+  //, "quickInput.foreground"                                 : "#FG__NORM"
+
 
   //____________________________________________________________________
   // TERMINAL
@@ -56,6 +70,14 @@
   , "terminal.ansiBrightMagenta"                          : "#VIO_BOLD"
   , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
   , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
+
+  // E.g. Background of hyperlink on hover in terminal
+  , "terminal.hoverHighlightBackground"                   : "#VIO_BOLD5f"
+
+  // Dot left of command prompt
+  , "terminalCommandDecoration.defaultBackground"         :"#CYA_NORM"
+  , "terminalCommandDecoration.successBackground"         :"#GRN_NORM"
+  , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
 
   //____________________________________________________________________
   , "selection.background"                                : "#VIO_BOLD5f"
@@ -199,7 +221,7 @@
   , "list.activeSelectionForeground"                      : "#FG__NORM"
   , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
-
+  , "list.activeSelectionIconForeground"                  :"#GRN_NORM"
   , "list.hoverBackground"                                : "#BG__BOLD"
 
   // Drag and drop files
@@ -210,6 +232,9 @@
   , "list.focusBackground"                                : "#BLU_BOLD87"
   , "list.invalidItemForeground"                          : "#RED_BOLD"
 
+  // Keyboard shortcut indicator in drop down command palette
+  , "keybindingLabel.background"                          : "#BG__BOLD"
+  , "keybindingLabel.foreground"                          : "#FG__NORM"
   //____________________________________________________________________
   // BUTTONS
   //____________________________________________________________________
@@ -228,6 +253,7 @@
   // Breakpoint arrow when stopped
   , "debugIcon.breakpointCurrentStackframeForeground"     : "#GRN_NORM"
 
+  , "debugToolBar.background"                             : "#BG__BOLD"
   , "debugIcon.startForeground"                           : "#GRN_NORM"
   , "debugIcon.stopForeground"                            : "#RED_NORM"
   , "debugIcon.stepIntoForeground"                        : "#BLU_NORM"
@@ -264,6 +290,7 @@
   , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
   , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
   , "gitDecoration.deletedResourceForeground"             : "#RED_BOLD"
+  , "gitDecoration.submoduleResourceForeground"           : "#BLU_NORM"
 
   , "editorGutter.addedBackground"                        : "#GRN_NORM"
   , "editorGutter.modifiedBackground"                     : "#YEL_NORM"
@@ -323,7 +350,6 @@
 
   , "disabledForeground"                                  : "#BLK_BOLD7f"
   , "list.deemphasizedForeground"                         : "#BLK_BOLD7f"
-
 
   //____________________________________________________________________
   // ICONS
