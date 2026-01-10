@@ -103,10 +103,10 @@
   , "editor.findMatchBackground"                          : "#BLU_BOLD87"
 
   // Sticky Scroll - keep current code context at top of file
-  , "editorStickyScroll.background"                       :"#BG__BOLD"
+  , "editorStickyScroll.background"                       : "#BG__BOLD"
   , "editorStickyScrollHover.background"                  : "#BLU_BOLD5f"
   , "editorStickyScroll.shadow"                           : "#BLU_BOLD5f"
-  , "panelStickyScroll.background"                        :"#BG__BOLD"
+  , "panelStickyScroll.background"                        : "#BG__BOLD"
   , "panelStickyScroll.shadow"                            : "#BLU_BOLD5f"
 
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
@@ -122,12 +122,12 @@
   , "input.placeholderForeground"                         : "#BLU_NORM"
 
   // E.g. Commit message entry, command palette
-  , "editor.placeholder.foreground"                       :"#BLU_NORM"
+  , "editor.placeholder.foreground"                       : "#BLU_NORM"
 
   // E.g. Match case button in search
-  , "inputOption.activeBackground"                        :"#CYA_NORM"
-  , "inputOption.activeForeground"                        :"#BG__NORM"
-  , "inputOption.activeBorder"                            :"#FG__NORM0f"
+  , "inputOption.activeBackground"                        : "#CYA_NORM"
+  , "inputOption.activeForeground"                        : "#BG__NORM"
+  , "inputOption.activeBorder"                            : "#FG__NORM0f"
 
   // Dropdown for command field
   , "editorWidget.background"                             : "#BG__NORM"
