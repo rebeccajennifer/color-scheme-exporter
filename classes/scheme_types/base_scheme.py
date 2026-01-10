@@ -70,8 +70,11 @@ class ColorScheme():
     , out_dir: str = '.', *arg):
 
     self.cursor_color_      = RgbConst.DEFAULT_CURSOR_COL
-    self.background_color_  = RgbConst.DEFAULT_BACKGROUND
-    self.foreground_color_  = RgbConst.DEFAULT_FOREGROUND
+    self.bg_norm_color_  = RgbConst.DEF_BG_NORM
+    self.fg_norm_color_  = RgbConst.DEF_FG_NORM
+
+    self.bg_bold_color_     = RgbConst.DEF_BG_BOLD
+    self.fg_bold_color_     = RgbConst.DEF_FG_BOLD
     self.palette_           = RgbConst.DEFAULT_RGB_INT_LIST
     self.name_              = name
 
@@ -87,12 +90,12 @@ class ColorScheme():
 
     #___________________________________________________________________
     if (isinstance(arg[0], int)):
-        self.background_color_ = arg[0]
+        self.bg_norm_color_ = arg[0]
 
     #___________________________________________________________________
     if (len(arg) > 1):
       try:
-        self.foreground_color_ = arg[1]
+        self.fg_norm_color_ = arg[1]
       except TypeError:
         pass
 
@@ -138,12 +141,12 @@ class ColorScheme():
 
     #___________________________________________________________________
     if (self.BG_NORM_KEY in input_dict):
-      self.background_color_ =\
+      self.bg_norm_color_ =\
         StringUtils.str_hex_to_int(input_dict[self.BG_NORM_KEY])
 
     #___________________________________________________________________
     if (self.FG_NORM_KEY in input_dict):
-      self.foreground_color_ =\
+      self.fg_norm_color_ =\
         StringUtils.str_hex_to_int(input_dict[self.FG_NORM_KEY])
 
     #___________________________________________________________________
@@ -188,10 +191,10 @@ class ColorScheme():
     Prints color scheme to console as colored text.
     """
 
-    bg: int = self.background_color_
+    bg: int = self.bg_norm_color_
 
     # Flag to determine if background color is light or dark
-    is_lite_bg: bool = self.background_color_ >= 0x808080
+    is_lite_bg: bool = self.bg_norm_color_ >= 0x808080
 
     if (is_lite_bg):
       greyscale_list: list = RgbConst.ANSI_256_LITE_GREYS
@@ -212,12 +215,12 @@ class ColorScheme():
     )
 
     header += RgbColor.construct_color_print_str\
-      ( text=f' 0x{self.background_color_:06x} '
-      , fg=self.foreground_color_
+      ( text=f' 0x{self.bg_norm_color_:06x} '
+      , fg=self.fg_norm_color_
       , bg=bg
       )
 
-    bg_color_list: list = [self.background_color_]
+    bg_color_list: list = [self.bg_norm_color_]
 
     # Make an abbreviated list
     for i in range(0, len(greyscale_list)):
@@ -228,7 +231,7 @@ class ColorScheme():
     for color in bg_color_list[1:len(bg_color_list)]:
       header += '|' + RgbColor.construct_color_print_str\
         ( text=f' 0x{color:06x} '
-        , fg=self.foreground_color_
+        , fg=self.fg_norm_color_
         , bg=color
         )
 

@@ -65,8 +65,8 @@ class KonsoleScheme(ColorScheme):
     # Set class specific defaults
     #___________________________________________________________________
     self.intense_bold_ = True
-    self.background_color_intense_: int = RgbConst.DEFAULT_BACKGROUND
-    self.foreground_color_intense_: int = RgbConst.DEFAULT_FOREGROUND
+    self.background_color_intense_: int = RgbConst.DEF_BG_NORM
+    self.foreground_color_intense_: int = RgbConst.DEF_FG_NORM
 
     if (len(arg) and isinstance(arg[0], bool)):
       self.intense_bold_ = arg[0]
@@ -170,7 +170,7 @@ class KonsoleScheme(ColorScheme):
     label_index: int = 0
 
     background_normal_str: str = self.create_simple_entry(
-      rgb_color=self.background_color_
+      rgb_color=self.bg_norm_color_
       , label=self.label_list_[label_index])
 
     label_index = label_index + 1
@@ -205,7 +205,7 @@ class KonsoleScheme(ColorScheme):
     #___________________________________________________________________
 
     foreground_normal_str: str = self.create_simple_entry(
-      rgb_color=self.foreground_color_
+      rgb_color=self.fg_norm_color_
       , label=self.label_list_[label_index])
 
     label_index = label_index + 1

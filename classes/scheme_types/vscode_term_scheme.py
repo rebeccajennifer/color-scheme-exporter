@@ -104,14 +104,14 @@ class VsCodeTermScheme(ColorScheme):
 
     out_str = f'{out_str}'\
       f' "terminal.{background}"{": ":>{space_length}}'\
-      f'"#{self.background_color_:06x}"'
+      f'"#{self.bg_norm_color_:06x}"'
 
     space_length: int =\
       VsCodeTermScheme.COLOR_FIELD_WIDTH - len(foreground)
 
     out_str = f'{out_str}'\
       f'\n  , "terminal.{foreground}"{": ":>{space_length}}'\
-      f'"#{self.foreground_color_:06x}"'
+      f'"#{self.fg_norm_color_:06x}"'
 
     #___________________________________________________________________
     # Iterate through palette and append to out_str

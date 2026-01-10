@@ -171,7 +171,7 @@ class ColorSchemeParser:
       , action='store'
       , type=StringUtils.str_hex_to_int
       , required=False
-      , default=RgbConst.DEFAULT_BACKGROUND
+      , default=RgbConst.DEF_BG_NORM
       , choices=range(0, GeneralUtils.MAX_COLOR + 1)
       , metavar=ParserStrings.COLOR_RANGE
     )
@@ -182,7 +182,7 @@ class ColorSchemeParser:
       , action='store'
       , type=StringUtils.str_hex_to_int
       , required=False
-      , default=RgbConst.DEFAULT_FOREGROUND
+      , default=RgbConst.DEF_FG_NORM
       , choices=range(0, GeneralUtils.MAX_COLOR + 1)
       , metavar=ParserStrings.COLOR_RANGE
     )

@@ -65,8 +65,8 @@ class GnomeScheme(ColorScheme):
     FOREGND: str = ColorScheme.FG_NORM_KEY
     PALETTE: str = ColorScheme.PALETTE
 
-    backgnd: dict = RgbColor.get_rgb_from_hex(self.background_color_)
-    foregnd: dict = RgbColor.get_rgb_from_hex(self.foreground_color_)
+    backgnd: dict = RgbColor.get_rgb_from_hex(self.bg_norm_color_)
+    foregnd: dict = RgbColor.get_rgb_from_hex(self.fg_norm_color_)
 
     out_str: str = \
       '[/]'\

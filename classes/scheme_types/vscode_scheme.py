@@ -36,7 +36,7 @@ from flux_bunny_utils.string_utils import StringUtils
 #_______________________________________________________________________
 class VsCodeScheme(ColorScheme):
 
-  OUT_EXT: str = 'vscode.json'
+  OUT_EXT: str = '.json'
 
   COMPLETION_TEXT: str =str (
     '\nFollow instructions here for instructions on how to implement'
@@ -58,10 +58,10 @@ class VsCodeScheme(ColorScheme):
     """
 
     self.color_replacement_map: dict=\
-    { 'BG__NORM' : StringUtils.int_to_hex6(self.background_color_)
-    , 'BG__BOLD' : StringUtils.int_to_hex6(self.background_color_) #intense_ # TODO: Add BG__INTENSE)
-    , 'FG__NORM' : StringUtils.int_to_hex6(self.foreground_color_)
-    , 'FG__BOLD' : StringUtils.int_to_hex6(self.foreground_color_) #intense_ # TODO: Add FG__INTENSE)
+    { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
+    , 'BG__BOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
+    , 'FG__NORM' : StringUtils.int_to_hex6(self.fg_norm_color_)
+    , 'FG__BOLD' : StringUtils.int_to_hex6(self.fg_bold_color_)
     , 'BLK_NORM' : StringUtils.int_to_hex6(self.palette_[0])
     , 'RED_NORM' : StringUtils.int_to_hex6(self.palette_[1])
     , 'GRN_NORM' : StringUtils.int_to_hex6(self.palette_[2])
