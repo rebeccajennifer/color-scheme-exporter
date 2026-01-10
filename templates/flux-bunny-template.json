@@ -12,29 +12,24 @@
   //, "list.filterMatchBackground"                          : "#FF0000"
   //, "list.inactiveFocusOutline"                           : "#FF0000"
   //, "editor.compositionBorder"                            : "#0000FF"
-  //, "settings.textInputBackground"                        : "#FFFF00"
   //, "editorActionList.background"                         : "#00FFFF"
   //, "sideBar.dropBackground"                              : "#ff0000"
-  //, "checkbox.border"                                     : "#00ff00"
   //, "debugConsole.sourceForeground"                       : "#ff0000"
-  //, "debugView.exceptionLabelBackground"                    : "#ffff0"
-  //, "debugView.exceptionLabelForeground"                    : "#ff0000"
-
-  // E.g. Checkboxes in settings
-  , "checkbox.background"                                 : "#BG__BOLD"
-  , "checkbox.foreground"                                 : "#FG__NORM"
+  //, "debugView.exceptionLabelBackground"                  : "#ffff00"
+  //, "debugView.exceptionLabelForeground"                  : "#ff0000"
+  //, "checkbox.border"                                     : "#00ff00"
   //, "checkbox.selectBorder"                               : "#GRN_NORM"
   //, "checkbox.selectBackground"                           : "#ff0000"
   //, "checkbox.disabled.background"                        : "#ff0000"
 
-  // Text color of header in settings
-  , "settings.headerForeground"                           : "#CYA_BOLD"
 
+  //____________________________________________________________________
   // Overridden by other properties
+  //____________________________________________________________________
   //, "quickInput.background"                               : "#BG__BOLD"
   //, "quickInputList.focusIconForeground"                  : "#FG__BOLD"
-  //, "quickInput.foreground"                                 : "#FG__NORM"
-
+  //, "quickInput.foreground"                               : "#FG__NORM"
+  //, "settings.textInputBackground"                        : "#FFFF00"
 
   //____________________________________________________________________
   // TERMINAL
@@ -90,8 +85,9 @@
   , "editorCursor.foreground"                             : "#GRN_NORM"
   , "editor.selectionBackground"                          : "#BLU_BOLD5f"
   , "editor.selectionForeground"                          : "#BG__NORM"
-  , "editorRuler.foreground"                              : "#BG__BOLD"
 
+  // Text color of header in settings
+  , "settings.headerForeground"                           : "#CYA_BOLD"
   , "menu.background"                                     : "#BG__BOLD"
   , "textLink.foreground"                                 : "#BLU_BOLD"
   , "textLink.activeForeground"                           : "#BLU_NORM"
@@ -102,11 +98,17 @@
   , "editor.wordHighlightTextBackground"                  : "#VIO_BOLD5f"
   , "editor.wordHighlightBackground"                      : "#BG__BOLD"
   , "editor.lineHighlightBackground"                      : "#BG__BOLD"
+  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD87"
+  , "editor.findMatchBackground"                          : "#BLU_BOLD87"
+
+  // Sticky Scroll - keep current code context at top of file
+  , "editorStickyScroll.background"                       :"#BG__BOLD"
+  , "editorStickyScrollHover.background"                  : "#BLU_BOLD5f"
+  , "panelStickyScroll.background"                        :"#BG__BOLD"
 
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
-
-  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD87"
+  , "editorRuler.foreground"                              : "#BG__BOLD"
 
   //____________________________________________________________________
   // TEXT INPUT FIELDS
@@ -114,10 +116,10 @@
   // Text field entry
   , "input.background"                                    : "#BG__BOLD"
   , "input.foreground"                                    : "#FG__BOLD"
-  , "input.placeholderForeground"                         : "#VIO_BOLD"
+  , "input.placeholderForeground"                         : "#BLU_NORM"
 
-  // E.g. Commit message entry
-  , "editor.placeholder.foreground"                       :"#VIO_BOLD"
+  // E.g. Commit message entry, command palette
+  , "editor.placeholder.foreground"                       :"#BLU_NORM"
 
   // E.g. Match case button in search
   , "inputOption.activeBackground"                        :"#CYA_NORM"
@@ -236,11 +238,15 @@
   , "keybindingLabel.background"                          : "#BG__BOLD"
   , "keybindingLabel.foreground"                          : "#FG__NORM"
   //____________________________________________________________________
-  // BUTTONS
+  // BUTTONS & CHECKBOXES
   //____________________________________________________________________
   , "button.background"                                   : "#VIO_BOLD87"
   , "button.foreground"                                   : "#FG__NORM"
   , "button.hoverBackground"                              : "#CYA_BOLD5f"
+
+  // E.g. Checkboxes in settings
+  , "checkbox.background"                                 : "#BG__BOLD"
+  , "checkbox.foreground"                                 : "#FG__NORM"
 
   //____________________________________________________________________
   // DEBUG
