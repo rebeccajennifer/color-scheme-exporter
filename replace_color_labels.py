@@ -58,7 +58,7 @@ def get_color_label_map() -> dict:
   , 'WHT_NORM': 'd7d7d7'
   , 'BLK_BOLD': '878787'
   , 'RED_BOLD': 'ff5f87'
-  , 'GRN_BOLD': '87af5f'
+  , 'GRN_BOLD': '5faf87'
   , 'YEL_BOLD': 'ffd787'
   , 'BLU_BOLD': '00afd7'
   , 'VIO_BOLD': 'af5faf'

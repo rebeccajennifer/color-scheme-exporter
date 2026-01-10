@@ -45,7 +45,8 @@
 
   , "menu.background"                                     : "#BG__BOLD"
   , "textLink.foreground"                                 : "#BLU_BOLD"
-  , "textLink.activeForeground"                           : "#CYA_BOLD"
+  , "textLink.activeForeground"                           : "#BLU_NORM"
+
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
@@ -56,7 +57,7 @@
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
 
-  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD7f"
+  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD87"
 
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
@@ -95,8 +96,8 @@
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#FG__NORM0f"
-  , "tab.inactiveForeground"                              : "#FG__NORM87"
-  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD7f"
+  , "tab.inactiveForeground"                              : "#FG__NORM7f"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
 
   //____________________________________________________________________
@@ -113,12 +114,10 @@
   //____________________________________________________________________
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BLU_BOLD7f"
-  , "statusBar.background"                                : "#BLU_BOLD"
+  , "statusBar.background"                                : "#BLU_BOLD87"
   , "statusBar.foreground"                                : "#FG__NORM"
-  , "statusBar.foreground"                                : "#BG__NORM"
-  , "statusBarItem.remoteBackground"                      : "#BLU_BOLD7f"
-  , "statusBar.noFolderBackground"                        : "#VIO_BOLD"
+  , "statusBarItem.remoteBackground"                      : "#GRN_BOLD87"
+  , "statusBar.noFolderBackground"                        : "#VIO_BOLD87"
 
   , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
   , "statusBarItem.warningForeground"                     : "#BG__NORM"
@@ -136,7 +135,7 @@
   , "icon.foreground"                                     : "#BLK_BOLD"
 
   //____________________________________________________________________
-  // SIDEBAR (PROJECT EXLPORER, ETC)
+  // SIDEBAR (PROJECT EXPLORER, ETC)
   //____________________________________________________________________
   , "sideBar.background"                                  : "#BG__NORM"
   , "sideBar.foreground"                                  : "#FG__NORM"
@@ -149,7 +148,7 @@
   , "list.activeSelectionBackground"                      : "#VIO_BOLD5f"
   , "list.activeSelectionForeground"                      : "#FG__NORM"
   , "list.inactiveSelectionBackground"                    : "#FG__NORM0f"
-  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD7f"
+  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
 
   , "list.hoverBackground"                                : "#FG__NORM0f"
 
@@ -158,15 +157,15 @@
   , "list.dropBetweenBackground"                          : "#GRN_BOLD"
 
   , "list.highlightForeground"                            : "#GRN_NORM"
-  , "list.focusBackground"                                : "#BLU_BOLD7f"
+  , "list.focusBackground"                                : "#BLU_BOLD87"
   , "list.invalidItemForeground"                          : "#RED_BOLD"
 
   //____________________________________________________________________
   // BUTTONS
   //____________________________________________________________________
-  , "button.background"                                   : "#GRN_NORM"
-  , "button.foreground"                                   : "#BG__NORM"
-  , "button.hoverBackground"                              : "#VIO_BOLD"
+  , "button.background"                                   : "#VIO_BOLD87"
+  , "button.foreground"                                   : "#FG__NORM"
+  , "button.hoverBackground"                              : "#CYA_BOLD5f"
 
   //____________________________________________________________________
   // DEBUG
@@ -175,7 +174,7 @@
   // Breakpoint dot
   , "debugIcon.breakpointForeground"                      : "#RED_BOLD"
   // Breakpoint arrow when stopped
-  , "debugIcon.breakpointCurrentStackframeForeground"     : "#YEL_BOLD"
+  , "debugIcon.breakpointCurrentStackframeForeground"     : "#GRN_NORM"
 
   , "debugIcon.startForeground"                           : "#GRN_NORM"
   , "debugIcon.stopForeground"                            : "#RED_NORM"
@@ -185,6 +184,7 @@
   , "debugIcon.continueForeground"                        : "#VIO_NORM"
   , "debugIcon.pauseForeground"                           : "#VIO_NORM"
   , "debugIcon.restartForeground"                         : "#CYA_NORM"
+
   , "editor.inlineValuesBackground"                       : "#FG__NORM0f"
   , "editor.inlineValuesForeground"                       : "#YEL_NORM"
   , "editor.stackFrameHighlightBackground"                : "#FG__NORM0f"
@@ -194,6 +194,16 @@
   // Debug exception
   , "debugExceptionWidget.border"                         : "#RED_BOLD"
   , "debugExceptionWidget.background"                     : "#RED_BOLD5f"
+
+  // Debug variables in sidebar
+  , "debugConsole.infoForeground"                         : "#BLU_NORM"
+  , "debugTokenExpression.boolean"                        : "#YEL_NORM"
+  , "debugTokenExpression.number"                         : "#VIO_BOLD"
+  , "debugTokenExpression.string"                         : "#CYA_BOLD"
+  , "debugTokenExpression.value"                          : "#FG__NORM"
+  , "debugTokenExpression.error"                          : "#RED_BOLD"
+  , "debugTokenExpression.name"                           : "#GRN_NORM"
+  , "debugTokenExpression.type"                           : "#BLU_NORM"
 
   //____________________________________________________________________
   // SOURCE CONTROL
@@ -257,6 +267,7 @@
   , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
   , "debugConsole.errorForeground"                        : "#RED_BOLD"
+  , "debugConsole.warningForeground"                      : "#YEL_NORM"
 
   , "disabledForeground"                                  : "#BLK_BOLD7f"
   , "list.deemphasizedForeground"                         : "#BLK_BOLD7f"
