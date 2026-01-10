@@ -29,7 +29,7 @@
 
 from os import path
 
-is_dark: bool = True
+is_dark: bool = False
 
 profile_name: str =\
   'flux-bunny-dark.json' if is_dark else 'flux-bunny-lite.json'
@@ -45,6 +45,7 @@ def get_color_label_map() -> dict:
 
   color_label_map_dark: dict =\
   { 'FG__NORM': 'c6c6c6'
+  , 'FG__NORM': 'cccccc'
   , 'BG__NORM': '262626'
   , 'BG__BOLD': '1c1c1c'
 
@@ -68,6 +69,7 @@ def get_color_label_map() -> dict:
 
   color_label_map_lite: dict =\
   { 'FG__NORM': '262626'
+  , 'FG__BOLD': '303030'
   , 'BG__NORM': 'e4e4e4'
   , 'BG__BOLD': 'dadada'
 
@@ -79,7 +81,7 @@ def get_color_label_map() -> dict:
   , 'VIO_NORM': '870087'
   , 'CYA_NORM': '008787'
   , 'WHT_NORM': '878787'
-  , 'BLK_BOLD': '262626'
+  , 'BLK_BOLD': '878787'
   , 'RED_BOLD': 'd75f87'
   , 'GRN_BOLD': '0087af'
   , 'YEL_BOLD': 'd78700'
