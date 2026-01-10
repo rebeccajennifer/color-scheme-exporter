@@ -47,8 +47,10 @@ class RgbConst:
   BLU_RIGHT_SHIFT: int = 0
 
   DEFAULT_CURSOR_COL: int = 0x808080
-  DEFAULT_BACKGROUND: int = 0x1c1c1c
-  DEFAULT_FOREGROUND: int = 0xeeeeee
+  DEF_BG_NORM: int = 0x262626
+  DEF_FG_NORM: int = 0xc6c6c6
+  DEF_BG_BOLD: int = 0x1c1c1c
+  DEF_FG_BOLD: int = 0xbcbcbc
 
   DEFAULT_RGB_STR_LIST: str = str(
     ' 0x202020'

@@ -105,8 +105,8 @@ class MinttyScheme(ColorScheme):
 
     color_list: list[int] =\
       [ self.cursor_color_
-      , self.background_color_
-      , self.foreground_color_
+      , self.bg_norm_color_
+      , self.fg_norm_color_
       ] + self.palette_
 
     for i in range(0, len(label_list)):

@@ -108,5 +108,17 @@
       , "--out_dir"     , "~/.themes/"
       ]
     }
+  , { "name"    : "vscode-theme"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "-s" , "vscode-scheme"
+      , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "-n" , "flux-bunny-dark"
+      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark"
+      ]
+    }
   ]
 }

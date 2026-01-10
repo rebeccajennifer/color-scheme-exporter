@@ -35,6 +35,7 @@ from classes.scheme_types.gnome_scheme import GnomeScheme
 from classes.scheme_types.mintty_scheme import MinttyScheme
 from classes.scheme_types.konsole_scheme import KonsoleScheme
 from classes.scheme_types.vscode_term_scheme import VsCodeTermScheme
+from classes.scheme_types.vscode_scheme import VsCodeScheme
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
@@ -61,6 +62,7 @@ if __name__ == '__main__':
   [ GnomeScheme
   #, KonsoleScheme
   , VsCodeTermScheme
+  , VsCodeScheme
   , MinttyScheme
   ]
 
@@ -72,6 +74,9 @@ if __name__ == '__main__':
 
   elif (args.scheme_type == ParserStrings.VSCODE_TERM_INPUT):
     SchemeType = VsCodeTermScheme
+
+  elif (args.scheme_type == ParserStrings.VSCODE_INPUT):
+    SchemeType = VsCodeScheme
 
   elif (args.scheme_type == ParserStrings.MINTTY_INPUT):
     SchemeType = MinttyScheme

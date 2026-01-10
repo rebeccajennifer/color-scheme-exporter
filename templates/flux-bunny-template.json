@@ -2,46 +2,34 @@
   "$schema"     : "vscode://schemas/color-theme"
 
 , "colors":
-  { "foreground"                                          : "#FG__NORM"
-  , "selection.background"                                : "#VIO_BOLD5f"
-  , "errorForeground"                                     : "#FG__INVL"
-  , "focusBorder"                                         : "#CYA_BOLD"
-
-  , "editor.background"                                   : "#BG__NORM"
-  , "editor.foreground"                                   : "#FG__NORM"
-  , "editorCursor.background"                             : "#BG__NORM"
-  , "editorCursor.foreground"                             : "#GRN_NORM"
-  , "editor.selectionBackground"                          : "#BLU_BOLD5f"
-  , "editor.selectionForeground"                          : "#BG__NORM"
-  , "editorRuler.foreground"                              : "#FG__NORM0f"
-
-  , "menu.background"                                    : "#BG__BOLD"
+  {
+    "foreground"                                          : "#FG__NORM"
   //____________________________________________________________________
-  // HIGHLIGHTING AND SELECTION
+  // TESTING
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#VIO_BOLD5f"
-  , "editor.wordHighlightBackground"                      : "#FG__NORM0f"
-  , "editor.lineHighlightBackground"                      : "#BG__BOLD"
+  //  "list.filterMatchBackground"                          : "#YEL_BOLD5f"
+  //, "panelSection.dropBackground"                         : "#GRN_BOLD5f"
+  //, "list.filterMatchBackground"                          : "#FF0000"
+  //, "list.inactiveFocusOutline"                           : "#FF0000"
+  //, "editor.compositionBorder"                            : "#0000FF"
+  //, "editorActionList.background"                         : "#00FFFF"
+  //, "sideBar.dropBackground"                              : "#ff0000"
+  //, "debugConsole.sourceForeground"                       : "#ff0000"
+  //, "debugView.exceptionLabelBackground"                  : "#ffff00"
+  //, "debugView.exceptionLabelForeground"                  : "#ff0000"
+  //, "checkbox.border"                                     : "#00ff00"
+  //, "checkbox.selectBorder"                               : "#GRN_NORM"
+  //, "checkbox.selectBackground"                           : "#ff0000"
+  //, "checkbox.disabled.background"                        : "#ff0000"
 
-  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
-  , "editorLineNumber.foreground"                         : "#BLK_BOLD"
-
-  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD7f"
 
   //____________________________________________________________________
-  // PEEK VIEW - Displayed with right-click and "Go to *"
+  // Overridden by other properties
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#BLU_BOLD5f"
-  , "peekViewEditor.matchHighlightBackground"             : "#VIO_BOLD5f"
-  , "peekViewResult.matchHighlightBackground"             : "#VIO_BOLD5f"
-  , "peekView.border"                                     : "#CYA_BOLD5f"
-  , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
-  , "peekViewResult.fileForeground"                       : "#FG__NORM"
-  , "peekViewResult.selectionBackground"                  : "#CYA_BOLD5f"
-  , "peekViewResult.selectionForeground"                  : "#FG__NORM"
-
-  // Peek View line number background
-  //, "peekViewEditorGutter.background"                     :"#FG__NORM0f"
+  //, "quickInput.background"                               : "#BG__BOLD"
+  //, "quickInputList.focusIconForeground"                  : "#FG__BOLD"
+  //, "quickInput.foreground"                               : "#FG__NORM"
+  //, "settings.textInputBackground"                        : "#FFFF00"
 
   //____________________________________________________________________
   // TERMINAL
@@ -69,51 +57,151 @@
   , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
   , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
 
+  , "terminal.ansiBrightBlack"                            : "#BLK_BOLD"
+  , "terminal.ansiBrightRed"                              : "#RED_BOLD"
+  , "terminal.ansiBrightGreen"                            : "#GRN_BOLD"
+  , "terminal.ansiBrightYellow"                           : "#YEL_BOLD"
+  , "terminal.ansiBrightBlue"                             : "#BLU_BOLD"
+  , "terminal.ansiBrightMagenta"                          : "#VIO_BOLD"
+  , "terminal.ansiBrightCyan"                             : "#CYA_BOLD"
+  , "terminal.ansiBrightWhite"                            : "#WHT_BOLD"
+
+  // E.g. Background of hyperlink on hover in terminal
+  , "terminal.hoverHighlightBackground"                   : "#VIO_BOLD5f"
+
+  // Dot left of command prompt
+  , "terminalCommandDecoration.defaultBackground"         :"#CYA_NORM"
+  , "terminalCommandDecoration.successBackground"         :"#GRN_NORM"
+  , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
+
+  //____________________________________________________________________
+  , "selection.background"                                : "#VIO_BOLD5f"
+  , "errorForeground"                                     : "#RED_BOLD"
+  , "focusBorder"                                         : "#VIO_BOLD5f"
+  , "titleBar.activeBackground"                           : "#FG__NORM20"
+
+  , "editor.background"                                   : "#BG__NORM"
+  , "editor.foreground"                                   : "#FG__NORM"
+  , "editorCursor.background"                             : "#BG__NORM"
+  , "editorCursor.foreground"                             : "#GRN_NORM"
+  , "editor.selectionBackground"                          : "#BLU_BOLD5f"
+  , "editor.selectionForeground"                          : "#BG__NORM"
+
+  // Text color of header in settings
+  , "settings.headerForeground"                           : "#CYA_BOLD"
+  , "menu.background"                                     : "#BG__BOLD"
+  , "textLink.foreground"                                 : "#BLU_BOLD"
+  , "textLink.activeForeground"                           : "#BLU_NORM"
+
+  //____________________________________________________________________
+  // HIGHLIGHTING AND SELECTION
+  //____________________________________________________________________
+  , "editor.wordHighlightTextBackground"                  : "#VIO_BOLD5f"
+  , "editor.wordHighlightBackground"                      : "#BG__BOLD"
+  , "editor.lineHighlightBackground"                      : "#BG__BOLD"
+  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD87"
+  , "editor.findMatchBackground"                          : "#BLU_BOLD87"
+
+  // Sticky Scroll - keep current code context at top of file
+  , "editorStickyScroll.background"                       :"#BG__BOLD"
+  , "editorStickyScrollHover.background"                  : "#BLU_BOLD5f"
+  , "editorStickyScroll.shadow"                           : "#BLU_BOLD5f"
+  , "panelStickyScroll.background"                        :"#BG__BOLD"
+  , "panelStickyScroll.shadow"                            : "#BLU_BOLD5f"
+
+  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
+  , "editorLineNumber.foreground"                         : "#BLK_BOLD"
+  , "editorRuler.foreground"                              : "#BG__BOLD"
+
+  //____________________________________________________________________
+  // TEXT INPUT FIELDS
+  //____________________________________________________________________
+  // Text field entry
+  , "input.background"                                    : "#BG__BOLD"
+  , "input.foreground"                                    : "#FG__BOLD"
+  , "input.placeholderForeground"                         : "#BLU_NORM"
+
+  // E.g. Commit message entry, command palette
+  , "editor.placeholder.foreground"                       :"#BLU_NORM"
+
+  // E.g. Match case button in search
+  , "inputOption.activeBackground"                        :"#CYA_NORM"
+  , "inputOption.activeForeground"                        :"#BG__NORM"
+  , "inputOption.activeBorder"                            :"#FG__NORM0f"
+
+  // Dropdown for command field
+  , "editorWidget.background"                             : "#BG__NORM"
+  , "editorWidget.border"                                 : "#BG__BOLD"
+  , "editorSuggestWidget.background"                      : "#BG__BOLD"
+  , "editorSuggestWidget.foreground"                      : "#FG__NORM"
+  , "editorSuggestWidget.border"                          : "#BG__BOLD"
+
+  //____________________________________________________________________
+  // PEEK VIEW - Displayed with right-click and "Go to *"
+  //____________________________________________________________________
+  , "peekViewEditor.background"                           : "#BLU_BOLD5f"
+  , "peekViewEditor.matchHighlightBackground"             : "#VIO_BOLD5f"
+  , "peekViewResult.matchHighlightBackground"             : "#VIO_BOLD5f"
+  , "peekView.border"                                     : "#CYA_BOLD5f"
+  , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
+  , "peekViewResult.fileForeground"                       : "#FG__NORM"
+  , "peekViewResult.selectionBackground"                  : "#CYA_BOLD5f"
+  , "peekViewResult.selectionForeground"                  : "#FG__NORM"
+
+  // Peek View line number background
+  //, "peekViewEditorGutter.background"                     :"#BG__BOLD"
+
   //____________________________________________________________________
   // BRACKETS
   //____________________________________________________________________
   , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
   , "editorBracketHighlight.foreground3"                  : "#CYA_BOLD"
-  , "editorBracketHighlight.foreground2"                  : "#RED_BOLD"
-  , "editorBracketHighlight.unexpectedBracket.foreground" : "#FG__INVL"
+  , "editorBracketHighlight.foreground2"                  : "#RED_NORM"
+  , "editorBracketHighlight.unexpectedBracket.foreground" : "#RED_BOLD"
 
   //____________________________________________________________________
   // DROPDOWN
   //____________________________________________________________________
-
-  , "dropdown.background"                                 : "#FG__NORM0f"
+  , "dropdown.background"                                 : "#BG__BOLD"
   , "dropdown.foreground"                                 : "#FG__NORM"
-  , "dropdown.border"                                     : "#FG__NORM0f"
-  , "dropdown.listBackground"                             : "#FG__NORM0f"
+  , "dropdown.border"                                     : "#BG__BOLD"
+  , "dropdown.listBackground"                             : "#BG__NORM"
 
   //____________________________________________________________________
   // TABS
   //____________________________________________________________________
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
-  , "tab.inactiveBackground"                              : "#FG__NORM0f"
-  , "tab.inactiveForeground"                              : "#BLK_BOLD"
-  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD7f"
+  , "tab.inactiveBackground"                              : "#BG__BOLD"
+  , "tab.inactiveForeground"                              : "#FG__NORM7f"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
+  , "tab.border"                                          : "#00000000"
+  , "editorGroupHeader.tabsBackground"                    : "#BG__NORM"
 
   //____________________________________________________________________
   // PANELS
   //____________________________________________________________________
-  , "panel.background"                                    : "#FG__NORM0f"
-  , "panel.border"                                        : "#FG__NORM0f"
-  , "panelTitle.activeForeground"                         : "#BG__NORM0f"
+  , "panel.background"                                    : "#BG__BOLD"
+  , "panel.border"                                        : "#BG__BOLD"
+  , "panelTitle.activeForeground"                         : "#FG__NORM"
   , "panelTitle.inactiveForeground"                       : "#FG__NORM"
-  , "panelTitle.border"                                   : "#BG__NORM"
+  //, "panelTitle.border"                                   : "#BG__NORM"
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
   //, "panelTitleBadge.foreground"                          : "#BG__NORM"
 
   //____________________________________________________________________
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BLU_BOLD7f"
+  , "statusBar.background"                                : "#BLU_BOLD87"
   , "statusBar.foreground"                                : "#FG__NORM"
-  , "statusBarItem.remoteBackground"                      : "#BLU_BOLD7f"
-  , "statusBarItem.errorBackground"                       : "#BG__INVL"
+  , "statusBarItem.remoteBackground"                      : "#GRN_BOLD87"
+  , "statusBar.noFolderBackground"                        : "#VIO_BOLD87"
+
+  , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
+  , "statusBarItem.warningForeground"                     : "#BG__NORM"
+  , "statusBarItem.errorBackground"                       : "#RED_BOLD"
+  , "statusBarItem.errorForeground"                       : "#BG__NORM"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
@@ -126,43 +214,57 @@
   , "icon.foreground"                                     : "#BLK_BOLD"
 
   //____________________________________________________________________
-  // SIDEBAR (PROJECT EXLPORER, ETC)
+  // SIDEBAR (PROJECT EXPLORER, ETC)
   //____________________________________________________________________
   , "sideBar.background"                                  : "#BG__NORM"
   , "sideBar.foreground"                                  : "#FG__NORM"
-  , "sideBar.border"                                      : "#FG__NORM0f"
+  , "sideBar.border"                                      : "#BG__BOLD"
   , "sideBarTitle.background"                             : "#BG__NORM"
   , "sideBarTitle.foreground"                             : "#FG__NORM"
-  , "sideBarSectionHeader.background"                     : "#FG__NORM0f"
+  , "sideBarSectionHeader.background"                     : "#FG__NORM20"
   , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
 
   , "list.activeSelectionBackground"                      : "#VIO_BOLD5f"
   , "list.activeSelectionForeground"                      : "#FG__NORM"
-  , "list.inactiveSelectionBackground"                    : "#FG__NORM0f"
-  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD7f"
-
-  , "list.hoverBackground"                                : "#FG__NORM0f"
-  , "list.hoverForeground"                                : "#FG__NORM"
+  , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
+  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
+  , "list.activeSelectionIconForeground"                  :"#GRN_NORM"
+  , "list.hoverBackground"                                : "#BG__BOLD"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#GRN_BOLD"
   , "list.dropBetweenBackground"                          : "#GRN_BOLD"
 
   , "list.highlightForeground"                            : "#GRN_NORM"
-  , "list.focusBackground"                                : "#BLU_BOLD7f"
-  , "list.invalidItemForeground"                          : "#FG__INVL"
+  , "list.focusBackground"                                : "#BLU_BOLD87"
+  , "list.invalidItemForeground"                          : "#RED_BOLD"
 
+  // Keyboard shortcut indicator in drop down command palette
+  , "keybindingLabel.background"                          : "#BG__BOLD"
+  , "keybindingLabel.foreground"                          : "#FG__NORM"
   //____________________________________________________________________
-  // BUTTONS
+  // BUTTONS & CHECKBOXES
   //____________________________________________________________________
-  , "button.background"                                   : "#FG__NORM0f"
+  , "button.background"                                   : "#VIO_BOLD87"
   , "button.foreground"                                   : "#FG__NORM"
-  , "button.hoverBackground"                              : "#VIO_BOLD5f"
+  , "button.hoverBackground"                              : "#CYA_BOLD5f"
+
+  // E.g. Checkboxes in settings
+  , "checkbox.background"                                 : "#BG__BOLD"
+  , "checkbox.foreground"                                 : "#FG__NORM"
 
   //____________________________________________________________________
   // DEBUG
   //____________________________________________________________________
-  , "debugIcon.breakpointForeground"                      : "#FG__INVL"
+
+  // Breakpoint dot
+  , "debugIcon.breakpointForeground"                      : "#RED_BOLD"
+  , "debugIcon.breakpointDisabledForeground"              : "#RED_BOLD5f"
+
+  // Breakpoint arrow when stopped
+  , "debugIcon.breakpointCurrentStackframeForeground"     : "#GRN_NORM"
+
+  , "debugToolBar.background"                             : "#BG__BOLD"
   , "debugIcon.startForeground"                           : "#GRN_NORM"
   , "debugIcon.stopForeground"                            : "#RED_NORM"
   , "debugIcon.stepIntoForeground"                        : "#BLU_NORM"
@@ -171,12 +273,26 @@
   , "debugIcon.continueForeground"                        : "#VIO_NORM"
   , "debugIcon.pauseForeground"                           : "#VIO_NORM"
   , "debugIcon.restartForeground"                         : "#CYA_NORM"
-  , "editor.inlineValuesBackground"                       : "#FG__NORM0f"
+
+  , "editor.inlineValuesBackground"                       : "#BG__BOLD"
   , "editor.inlineValuesForeground"                       : "#YEL_NORM"
-  , "editor.stackFrameHighlightBackground"                : "#FG__NORM0f"
+  , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
   , "statusBar.debuggingBackground"                       : "#YEL_NORM"
   , "statusBar.debuggingForeground"                       : "#BG__NORM"
-  , "statusBar.noFolderBackground"                       : "#VIO_BOLD5f"
+
+  // Debug exception
+  , "debugExceptionWidget.border"                         : "#RED_BOLD"
+  , "debugExceptionWidget.background"                     : "#RED_BOLD5f"
+
+  // Debug variables in sidebar
+  , "debugConsole.infoForeground"                         : "#BLU_NORM"
+  , "debugTokenExpression.boolean"                        : "#YEL_NORM"
+  , "debugTokenExpression.number"                         : "#VIO_BOLD"
+  , "debugTokenExpression.string"                         : "#CYA_BOLD"
+  , "debugTokenExpression.value"                          : "#FG__NORM"
+  , "debugTokenExpression.error"                          : "#RED_BOLD"
+  , "debugTokenExpression.name"                           : "#GRN_NORM"
+  , "debugTokenExpression.type"                           : "#BLU_NORM"
 
   //____________________________________________________________________
   // SOURCE CONTROL
@@ -184,25 +300,26 @@
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
   , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
   , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
-  , "gitDecoration.deletedResourceForeground"             : "#FG__INVL"
+  , "gitDecoration.deletedResourceForeground"             : "#RED_BOLD"
+  , "gitDecoration.submoduleResourceForeground"           : "#BLU_NORM"
 
   , "editorGutter.addedBackground"                        : "#GRN_NORM"
   , "editorGutter.modifiedBackground"                     : "#YEL_NORM"
-  , "editorGutter.deletedBackground"                      : "#FG__INVL"
+  , "editorGutter.deletedBackground"                      : "#RED_BOLD"
 
   , "scmGraph.foreground1"                                : "#YEL_NORM"
-  , "scmGraph.historyItemBaseRefColor"                    : "#RED_BOLD"
+  , "scmGraph.historyItemBaseRefColor"                    : "#RED_NORM"
   , "scmGraph.historyItemRefColor"                        : "#CYA_BOLD"
-  , "scmGraph.historyItemRemoteRefColor"                  : "#RED_BOLD"
+  , "scmGraph.historyItemRemoteRefColor"                  : "#RED_NORM"
+  , "scmGraph.historyItemHoverLabelForeground"            : "#BG__NORM"
 
   , "diffEditor.insertedLineBackground"                   : "#GRN_BOLD1f"
   , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD5f"
 
-  , "diffEditor.removedLineBackground"                    : "#FG__INVL1f"
-  , "diffEditor.removedTextBackground"                    : "#BG__INVL5f"
+  , "diffEditor.removedLineBackground"                    : "#RED_BOLD1f"
+  , "diffEditor.removedTextBackground"                    : "#RED_BOLD5f"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BOLD"
-  //, "scmGraph.historyItemHoverDefaultLabelForeground"     : "#FG__NORM"
   //, "scmGraph.foreground2"                                : "#RED_NORM"
   //, "scmGraph.foreground3"                                : "#RED_NORM"
   //, "scmGraph.foreground4"                                : "#RED_NORM"
@@ -211,34 +328,39 @@
   //____________________________________________________________________
   // MINIMAP
   //____________________________________________________________________
-  , "minimap.background"                                  : "#FG__NORM0f"
+  , "minimap.background"                                  : "#BG__BOLD"
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
-  , "minimapGutter.deletedBackground"                     : "#FG__INVL"
+  , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
 
   //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
   , "editorWarning.foreground"                            : "#YEL_BOLD"
-  , "editorError.foreground"                              : "#FG__INVL"
+  , "editorError.foreground"                              : "#RED_BOLD"
 
   , "list.warningForeground"                              : "#YEL_NORM"
-  , "list.errorForeground"                                : "#FG__INVL"
+  , "list.errorForeground"                                : "#RED_BOLD"
 
-  , "minimap.errorHighlight"                              : "#FG__INVL"
+  , "minimap.errorHighlight"                              : "#RED_BOLD"
   , "minimap.warningHighlight"                            : "#YEL_NORM"
   , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
 
-  , "inputValidation.warningBackground"                   : "#FG__INVL"
+  , "inputValidation.warningBackground"                   : "#RED_BOLD"
   , "inputValidation.warningForeground"                   : "#FG__NORM"
   , "inputValidation.warningBorder"                       : "#FG__NORM"
   , "inputValidation.errorBackground"                     : "#BG__NORM"
-  , "inputValidation.errorForeground"                     : "#FG__INVL"
-  , "inputValidation.errorBorder"                         : "#FG__INVL"
+  , "inputValidation.errorForeground"                     : "#RED_BOLD"
+  , "inputValidation.errorBorder"                         : "#RED_BOLD"
 
-  , "problemsErrorIcon.foreground"                        : "#FG__INVL"
+  , "problemsErrorIcon.foreground"                        : "#RED_BOLD"
   , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
+  , "debugConsole.errorForeground"                        : "#RED_BOLD"
+  , "debugConsole.warningForeground"                      : "#YEL_NORM"
+
+  , "disabledForeground"                                  : "#BLK_BOLD7f"
+  , "list.deemphasizedForeground"                         : "#BLK_BOLD7f"
 
   //____________________________________________________________________
   // ICONS
@@ -334,7 +456,7 @@
     , "scope" : [ ""
       , "invalid"
       , ""
-      ], "settings": { "foreground": "#FG__INVL" }
+      ], "settings": { "foreground": "#RED_BOLD" }
     }
 
   , { "name"  : "Color 2: Green"
@@ -526,7 +648,5 @@
   //, "macro"         : "#WHT_BOLD" // PI in #define PI
   //, "type"          : "#BLU_NORM "// Don't set this
   }
-
-
 }
 
