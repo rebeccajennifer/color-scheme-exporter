@@ -82,12 +82,6 @@
       , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
-  , { "name"    : "replace-color-labels-test"
-    , "type"    : "debugpy"
-    , "request" : "launch"
-    , "program" : "${workspaceFolder}/replace_color_labels.py"
-    , "console" : "integratedTerminal"
-    }
   , { "name"      : "test-rgb-color"
     , "type"      : "debugpy"
     , "request"   : "launch"
@@ -108,7 +102,7 @@
       , "--out_dir"     , "~/.themes/"
       ]
     }
-  , { "name"    : "vscode-theme"
+  , { "name"    : "vscode-theme-dark"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
@@ -118,6 +112,18 @@
       , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
       , "-n" , "flux-bunny-dark"
       , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark"
+      ]
+    }
+  , { "name"    : "vscode-theme-lite"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "-s" , "vscode-scheme"
+      , "-f" , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
+      , "-n" , "flux-bunny-lite"
+      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-lite"
       ]
     }
   ]

@@ -69,14 +69,15 @@ class ColorScheme():
     , name: str = Strings.DEFAULT_NAME
     , out_dir: str = '.', *arg):
 
-    self.cursor_color_      = RgbConst.DEFAULT_CURSOR_COL
-    self.bg_norm_color_  = RgbConst.DEF_BG_NORM
-    self.fg_norm_color_  = RgbConst.DEF_FG_NORM
+    self.cursor_color_  = RgbConst.DEFAULT_CURSOR_COL
 
-    self.bg_bold_color_     = RgbConst.DEF_BG_BOLD
-    self.fg_bold_color_     = RgbConst.DEF_FG_BOLD
-    self.palette_           = RgbConst.DEFAULT_RGB_INT_LIST
-    self.name_              = name
+    self.bg_norm_color_ = RgbConst.DEF_BG_NORM
+    self.fg_norm_color_ = RgbConst.DEF_FG_NORM
+    self.bg_bold_color_ = RgbConst.DEF_BG_BOLD
+    self.fg_bold_color_ = RgbConst.DEF_FG_BOLD
+
+    self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
+    self.name_          = name
 
     #___________________________________________________________________
     # Default with no arguments
@@ -140,14 +141,26 @@ class ColorScheme():
       self.name_ = input_dict['name'].replace(' ', '-')
 
     #___________________________________________________________________
+    # Set background
+    #___________________________________________________________________
     if (self.BG_NORM_KEY in input_dict):
       self.bg_norm_color_ =\
         StringUtils.str_hex_to_int(input_dict[self.BG_NORM_KEY])
 
+    if (self.BG_BOLD_KEY in input_dict):
+      self.bg_bold_color_ =\
+        StringUtils.str_hex_to_int(input_dict[self.BG_BOLD_KEY])
+
+    #___________________________________________________________________
+    # Set foreground
     #___________________________________________________________________
     if (self.FG_NORM_KEY in input_dict):
       self.fg_norm_color_ =\
         StringUtils.str_hex_to_int(input_dict[self.FG_NORM_KEY])
+
+    if (self.FG_BOLD_KEY in input_dict):
+      self.fg_bold_color_ =\
+        StringUtils.str_hex_to_int(input_dict[self.FG_BOLD_KEY])
 
     #___________________________________________________________________
     if (self.PALETTE in input_dict):

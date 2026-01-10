@@ -36,7 +36,7 @@ from flux_bunny_utils.string_utils import StringUtils
 #_______________________________________________________________________
 class VsCodeScheme(ColorScheme):
 
-  OUT_EXT: str = '.json'
+  OUT_EXT: str = 'json'
 
   COMPLETION_TEXT: str =str (
     '\nFollow instructions here for instructions on how to implement'
