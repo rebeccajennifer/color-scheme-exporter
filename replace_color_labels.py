@@ -45,7 +45,7 @@ def get_color_label_map() -> dict:
 
   color_label_map_dark: dict =\
   { 'FG__NORM': 'c6c6c6'
-  , 'FG__NORM': 'cccccc'
+  , 'FG__BOLD': 'bcbcbc'
   , 'BG__NORM': '262626'
   , 'BG__BOLD': '1c1c1c'
 

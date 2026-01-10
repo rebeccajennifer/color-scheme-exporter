@@ -78,6 +78,7 @@
   , "selection.background"                                : "#VIO_BOLD5f"
   , "errorForeground"                                     : "#RED_BOLD"
   , "focusBorder"                                         : "#VIO_BOLD5f"
+  , "titleBar.activeBackground"                           : "#FG__NORM20"
 
   , "editor.background"                                   : "#BG__NORM"
   , "editor.foreground"                                   : "#FG__NORM"
@@ -104,7 +105,9 @@
   // Sticky Scroll - keep current code context at top of file
   , "editorStickyScroll.background"                       :"#BG__BOLD"
   , "editorStickyScrollHover.background"                  : "#BLU_BOLD5f"
+  , "editorStickyScroll.shadow"                           : "#BLU_BOLD5f"
   , "panelStickyScroll.background"                        :"#BG__BOLD"
+  , "panelStickyScroll.shadow"                            : "#BLU_BOLD5f"
 
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
@@ -173,6 +176,8 @@
   , "tab.inactiveForeground"                              : "#FG__NORM7f"
   , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
+  , "tab.border"                                          : "#00000000"
+  , "editorGroupHeader.tabsBackground"                    : "#BG__NORM"
 
   //____________________________________________________________________
   // PANELS
@@ -188,7 +193,7 @@
   //____________________________________________________________________
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BLU_BOLD10"
+  , "statusBar.background"                                : "#BLU_BOLD87"
   , "statusBar.foreground"                                : "#FG__NORM"
   , "statusBarItem.remoteBackground"                      : "#GRN_BOLD87"
   , "statusBar.noFolderBackground"                        : "#VIO_BOLD87"
@@ -216,7 +221,7 @@
   , "sideBar.border"                                      : "#BG__BOLD"
   , "sideBarTitle.background"                             : "#BG__NORM"
   , "sideBarTitle.foreground"                             : "#FG__NORM"
-  , "sideBarSectionHeader.background"                     : "#BG__BOLD"
+  , "sideBarSectionHeader.background"                     : "#FG__NORM20"
   , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
 
   , "list.activeSelectionBackground"                      : "#VIO_BOLD5f"
