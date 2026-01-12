@@ -195,8 +195,9 @@
   //____________________________________________________________________
   , "statusBar.background"                                : "#005faf87"
   , "statusBar.foreground"                                : "#262626"
-  , "statusBarItem.remoteBackground"                      : "#0087af87"
   , "statusBar.noFolderBackground"                        : "#875f8787"
+  , "statusBarItem.remoteBackground"                      : "#0087af87"
+  , "statusBarItem.remoteForeground"                      : "#262626"
 
   , "statusBarItem.warningBackground"                     : "#d78700"
   , "statusBarItem.warningForeground"                     : "#e4e4e4"
