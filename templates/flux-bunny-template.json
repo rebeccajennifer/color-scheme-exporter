@@ -66,9 +66,9 @@
   , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
 
   //____________________________________________________________________
-  , "selection.background"                                : "#VIO_BOLD5f"
+  , "selection.background"                                : "#ACCENT_0"
   , "errorForeground"                                     : "#RED_BOLD"
-  , "focusBorder"                                         : "#VIO_BOLD5f"
+  , "focusBorder"                                         : "#ACCENT_0"
   , "titleBar.activeBackground"                           : "#FG__NORM20"
 
   , "editor.background"                                   : "#BG__NORM"
@@ -87,18 +87,18 @@
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#VIO_BOLD5f"
+  , "editor.wordHighlightTextBackground"                  : "#FG__NORM0f"
   , "editor.wordHighlightBackground"                      : "#BG__BOLD"
   , "editor.lineHighlightBackground"                      : "#BG__BOLD"
-  , "editor.findMatchHighlightBackground"                 : "#BLU_BOLD87"
-  , "editor.findMatchBackground"                          : "#BLU_BOLD87"
+  , "editor.findMatchHighlightBackground"                 : "#ACCENT_287"
+  , "editor.findMatchBackground"                          : "#ACCENT_287"
 
   // Sticky Scroll - keep current code context at top of file
   , "editorStickyScroll.background"                       : "#BG__BOLD"
-  , "editorStickyScrollHover.background"                  : "#BLU_BOLD5f"
-  , "editorStickyScroll.shadow"                           : "#BLU_BOLD5f"
+  , "editorStickyScrollHover.background"                  : "#BG__BOLD"
+  , "editorStickyScroll.shadow"                           : "#ACCENT_15f"
   , "panelStickyScroll.background"                        : "#BG__BOLD"
-  , "panelStickyScroll.shadow"                            : "#BLU_BOLD5f"
+  , "panelStickyScroll.shadow"                            : "#ACCENT_15f"
 
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
@@ -116,8 +116,8 @@
   , "editor.placeholder.foreground"                       : "#BLU_NORM"
 
   // E.g. Match case button in search
-  , "inputOption.activeBackground"                        : "#CYA_NORM"
-  , "inputOption.activeForeground"                        : "#BG__NORM"
+  , "inputOption.activeBackground"                        : "#ACCENT_0"
+  , "inputOption.activeForeground"                        : "#FG__NORM"
   , "inputOption.activeBorder"                            : "#FG__NORM0f"
 
   // Dropdown for command field
@@ -130,13 +130,13 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#BLU_BOLD5f"
-  , "peekViewEditor.matchHighlightBackground"             : "#VIO_BOLD5f"
-  , "peekViewResult.matchHighlightBackground"             : "#VIO_BOLD5f"
+  , "peekViewEditor.background"                           : "#BLU_BOLD20"
+  , "peekViewEditor.matchHighlightBackground"             : "#ACCENT_287"
+  , "peekViewResult.matchHighlightBackground"             : "#ACCENT_287"
   , "peekView.border"                                     : "#CYA_BOLD5f"
   , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
   , "peekViewResult.fileForeground"                       : "#FG__NORM"
-  , "peekViewResult.selectionBackground"                  : "#CYA_BOLD5f"
+  , "peekViewResult.selectionBackground"                  : "#ACCENT_0"
   , "peekViewResult.selectionForeground"                  : "#FG__NORM"
 
   // Peek View line number background
@@ -200,7 +200,7 @@
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#FG__NORMef"
   , "activityBar.background"                              : "#BG__BOLD"
-  , "activityBar.activeBackground"                        : "#VIO_BOLD5f"
+  , "activityBar.activeBackground"                        : "#ACCENT_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
   , "icon.foreground"                                     : "#BLK_BOLD"
@@ -216,7 +216,7 @@
   , "sideBarSectionHeader.background"                     : "#FG__NORM20"
   , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
 
-  , "list.activeSelectionBackground"                      : "#VIO_BOLD5f"
+  , "list.activeSelectionBackground"                      : "#ACCENT_0"
   , "list.activeSelectionForeground"                      : "#FG__NORM"
   , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
@@ -237,9 +237,9 @@
   //____________________________________________________________________
   // BUTTONS & CHECKBOXES
   //____________________________________________________________________
-  , "button.background"                                   : "#VIO_BOLD87"
+  , "button.background"                                   : "#ACCENT_0"
   , "button.foreground"                                   : "#FG__NORM"
-  , "button.hoverBackground"                              : "#CYA_BOLD5f"
+  , "button.hoverBackground"                              : "#ACCENT_1"
 
   // E.g. Checkboxes in settings
   , "checkbox.background"                                 : "#BG__BOLD"
