@@ -57,15 +57,6 @@
   , "terminal.ansiBrightCyan"                             : "#5fafaf"
   , "terminal.ansiBrightWhite"                            : "#eeeeee"
 
-  , "terminal.ansiBrightBlack"                            : "#878787"
-  , "terminal.ansiBrightRed"                              : "#ff5f87"
-  , "terminal.ansiBrightGreen"                            : "#5faf87"
-  , "terminal.ansiBrightYellow"                           : "#ffd787"
-  , "terminal.ansiBrightBlue"                             : "#00afd7"
-  , "terminal.ansiBrightMagenta"                          : "#af5faf"
-  , "terminal.ansiBrightCyan"                             : "#5fafaf"
-  , "terminal.ansiBrightWhite"                            : "#eeeeee"
-
   // E.g. Background of hyperlink on hover in terminal
   , "terminal.hoverHighlightBackground"                   : "#af5faf5f"
 
@@ -75,9 +66,9 @@
   , "terminalCommandDecoration.errorBackground"           :"#ff5f87"
 
   //____________________________________________________________________
-  , "selection.background"                                : "#af5faf5f"
+  , "selection.background"                                : "#005f5f"
   , "errorForeground"                                     : "#ff5f87"
-  , "focusBorder"                                         : "#af5faf5f"
+  , "focusBorder"                                         : "#005f5f"
   , "titleBar.activeBackground"                           : "#c6c6c620"
 
   , "editor.background"                                   : "#262626"
@@ -96,18 +87,18 @@
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#af5faf5f"
+  , "editor.wordHighlightTextBackground"                  : "#c6c6c60f"
   , "editor.wordHighlightBackground"                      : "#303030"
   , "editor.lineHighlightBackground"                      : "#303030"
-  , "editor.findMatchHighlightBackground"                 : "#00afd787"
-  , "editor.findMatchBackground"                          : "#00afd787"
+  , "editor.findMatchHighlightBackground"                 : "#0087af87"
+  , "editor.findMatchBackground"                          : "#0087af87"
 
   // Sticky Scroll - keep current code context at top of file
   , "editorStickyScroll.background"                       : "#303030"
-  , "editorStickyScrollHover.background"                  : "#00afd75f"
-  , "editorStickyScroll.shadow"                           : "#00afd75f"
+  , "editorStickyScrollHover.background"                  : "#303030"
+  , "editorStickyScroll.shadow"                           : "#5f4b875f"
   , "panelStickyScroll.background"                        : "#303030"
-  , "panelStickyScroll.shadow"                            : "#00afd75f"
+  , "panelStickyScroll.shadow"                            : "#5f4b875f"
 
   , "editorLineNumber.activeForeground"                   : "#afd787"
   , "editorLineNumber.foreground"                         : "#878787"
@@ -125,8 +116,8 @@
   , "editor.placeholder.foreground"                       : "#87afd7"
 
   // E.g. Match case button in search
-  , "inputOption.activeBackground"                        : "#87d7af"
-  , "inputOption.activeForeground"                        : "#262626"
+  , "inputOption.activeBackground"                        : "#005f5f"
+  , "inputOption.activeForeground"                        : "#c6c6c6"
   , "inputOption.activeBorder"                            : "#c6c6c60f"
 
   // Dropdown for command field
@@ -139,13 +130,13 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#00afd75f"
-  , "peekViewEditor.matchHighlightBackground"             : "#af5faf5f"
-  , "peekViewResult.matchHighlightBackground"             : "#af5faf5f"
+  , "peekViewEditor.background"                           : "#00afd720"
+  , "peekViewEditor.matchHighlightBackground"             : "#0087af87"
+  , "peekViewResult.matchHighlightBackground"             : "#0087af87"
   , "peekView.border"                                     : "#5fafaf5f"
   , "peekViewTitleLabel.foreground"                       : "#c6c6c6"
   , "peekViewResult.fileForeground"                       : "#c6c6c6"
-  , "peekViewResult.selectionBackground"                  : "#5fafaf5f"
+  , "peekViewResult.selectionBackground"                  : "#005f5f"
   , "peekViewResult.selectionForeground"                  : "#c6c6c6"
 
   // Peek View line number background
@@ -209,7 +200,7 @@
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#c6c6c6ef"
   , "activityBar.background"                              : "#303030"
-  , "activityBar.activeBackground"                        : "#af5faf5f"
+  , "activityBar.activeBackground"                        : "#005f5f"
   , "activityBarBadge.background"                         : "#afd787"
   , "activityBarBadge.foreground"                         : "#303030"
   , "icon.foreground"                                     : "#878787"
@@ -225,7 +216,7 @@
   , "sideBarSectionHeader.background"                     : "#c6c6c620"
   , "sideBarSectionHeader.foreground"                     : "#c6c6c6"
 
-  , "list.activeSelectionBackground"                      : "#af5faf5f"
+  , "list.activeSelectionBackground"                      : "#005f5f"
   , "list.activeSelectionForeground"                      : "#c6c6c6"
   , "list.inactiveSelectionBackground"                    : "#303030"
   , "list.inactiveSelectionForeground"                    : "#00afd787"
@@ -246,9 +237,9 @@
   //____________________________________________________________________
   // BUTTONS & CHECKBOXES
   //____________________________________________________________________
-  , "button.background"                                   : "#af5faf87"
+  , "button.background"                                   : "#005f5f"
   , "button.foreground"                                   : "#c6c6c6"
-  , "button.hoverBackground"                              : "#5fafaf5f"
+  , "button.hoverBackground"                              : "#5f4b87"
 
   // E.g. Checkboxes in settings
   , "checkbox.background"                                 : "#303030"
