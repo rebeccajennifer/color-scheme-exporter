@@ -8,8 +8,8 @@
 
 
 CursorColour       = #808080
-BackgroundColour   = #1c1c1c
-ForegroundColour   = #eeeeee
+BackgroundColour   = #262626
+ForegroundColour   = #c6c6c6
 Black              = #202020
 Red                = #af5f5f
 Green              = #5faf5f
@@ -18,7 +18,7 @@ Blue               = #5f5faf
 Magenta            = #af5faf
 Cyan               = #5fafaf
 White              = #afafaf
-BoldBlack          = #000000
+BoldBlack          = #878787
 BoldRed            = #d75f5f
 BoldGreen          = #5fd75f
 BoldYellow         = #d7d75f
