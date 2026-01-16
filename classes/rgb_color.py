@@ -30,6 +30,8 @@ from math import floor
 
 from classes.ansi256_colors import Ansi256Colors
 from utilities.color_scheme_utils import GeneralUtils as Utils
+from flux_bunny_utils.error_utils import ErrorUtils
+from flux_bunny_utils.string_utils import StringUtils
 
 #_______________________________________________________________________
 class RgbConst:
@@ -267,3 +269,24 @@ class RgbColor:
     return Ansi256Colors.rgb_list[ansi_256_index]
 
   #_____________________________________________________________________
+  def make_background_color\
+    ( color
+    , is_dark: bool = True
+    , cutoff: int = RgbConst.BG_CUTOFF
+    ) -> dict:
+
+    if (isinstance(color, str)):
+      color: dict = StringUtils.str_hex_to_int(color)
+
+    if (isinstance(color, int)):
+      color: dict = RgbColor.get_rgb_from_hex(color)
+
+    elif (not isinstance(color, dict)):
+
+      desc: str = str(
+        f'{ErrorUtils.WRONG_TYPE}'
+        f'type(color) = {str(type(color))}'
+        )
+      ErrorUtils.raise_exception_with_desc(desc=desc)
+
+    return

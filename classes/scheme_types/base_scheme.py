@@ -47,11 +47,12 @@ class ColorScheme():
   BG_BOLD_KEY     : str = 'background-color-intense'
   FG_NORM_KEY     : str = 'foreground-color'
   FG_BOLD_KEY     : str = 'foreground-color-intense'
-  ACCENT0_KEY     : str = "accent-color-0"
-  ACCENT1_KEY     : str = "accent-color-1"
-  ACCENT2_KEY     : str = "accent-color-2"
+  ACCENT0_KEY     : str = 'accent-color-0'
+  ACCENT1_KEY     : str = 'accent-color-1'
+  ACCENT2_KEY     : str = 'accent-color-2'
   CURSOR_COLOR    : str = 'cursor-color'
   PALETTE         : str = 'palette'
+  NAME            : str = 'name'
 
   PREVIEW: str = str(
     f'\n{Strings.LINE}'
@@ -109,9 +110,9 @@ class ColorScheme():
     """
 
     #___________________________________________________________________
-    if ('name' in input_dict):
+    if (self.NAME in input_dict):
       # Ensure file names have no spaces
-      self.name_ = input_dict['name'].replace(' ', '-').lower()
+      self.name_ = input_dict[self.NAME].replace(' ', '-').lower()
 
     #___________________________________________________________________
     # Set background

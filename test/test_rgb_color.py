@@ -26,6 +26,8 @@
 #   Tests for RGB color related functions.
 #_______________________________________________________________________
 
+import pytest
+
 from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
 from classes.ansi256_colors import Ansi256Colors
@@ -67,3 +69,9 @@ def test_rgb_from_ansi_256():
     rgb_val = RgbColor.rgb_from_ansi_256(ansi_256_val)
     expected_rgb_val = Ansi256Colors.rgb_list[i]
     assert rgb_val == expected_rgb_val
+
+#_______________________________________________________________________
+def test_make_background_color():
+
+  with pytest.raises(ValueError):
+    RgbColor.make_background_color(color='hello')
