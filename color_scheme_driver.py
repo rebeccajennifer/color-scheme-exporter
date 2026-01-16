@@ -55,9 +55,6 @@ if __name__ == '__main__':
 
   args: argparse.Namespace = parser.parse_args()
 
-  scheme_name : str = args.name
-  out_dir     : str = args.out_dir
-
   scheme_types: list =\
   [ GnomeScheme
   #, KonsoleScheme
@@ -91,13 +88,11 @@ if __name__ == '__main__':
     # Data in file overrides all other arguments
     if(args.file):
       color_scheme = SchemeType(
-        args.name, args.out_dir, Utils.read_hex_color_json(args.file))
+        args.out_dir, Utils.read_hex_color_json(args.file))
 
     else:
       color_scheme =\
-        SchemeType(args.name, args.out_dir, args.background_color
-          , args.foreground_color
-          , args.rgb_list)
+        SchemeType(out_dir=args.out_dir)
 
     color_scheme.write_file()
     color_scheme.on_completion()

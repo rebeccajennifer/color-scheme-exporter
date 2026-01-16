@@ -69,8 +69,8 @@ class ColorScheme():
 
   #_____________________________________________________________________
   def __init__(self
-    , name: str = Strings.DEFAULT_NAME
-    , out_dir: str = '.', *arg):
+    , out_dir: str = '.'
+    , cfg = None):
 
     self.cursor_color_  = RgbConst.DEFAULT_CURSOR_COL
 
@@ -83,46 +83,12 @@ class ColorScheme():
     self.accent_color2_ = RgbConst.DEF_ACCENT2
 
     self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
-    self.name_          = name
+    self.name_          = 'theme-name'
     self.is_dark_       = True
 
     #___________________________________________________________________
-    # Default with no arguments
-    #___________________________________________________________________
-    if (not len(arg)):
-      return
-
-    #___________________________________________________________________
-    if (isinstance(arg[0], dict)):
-      self.construct_from_json(arg[0])
-
-    #___________________________________________________________________
-    if (isinstance(arg[0], int)):
-        self.bg_norm_color_ = arg[0]
-
-    #___________________________________________________________________
-    if (len(arg) > 1):
-      try:
-        self.fg_norm_color_ = arg[1]
-      except TypeError:
-        pass
-
-    #___________________________________________________________________
-    # Third argument is assumed to be a string containing white space
-    # separated hex int strings, used when command line input. E.g.
-    # TODO add example
-    #___________________________________________________________________
-    if (len(arg) > 2):
-      try:
-        rgb_colors: str = arg[2]
-
-        rgb_color_str_list: list[str] = rgb_colors.split()
-
-        self.palette_ =\
-          Utils.str_list_to_hex_list(rgb_color_str_list)
-
-      except TypeError:
-        pass
+    if (isinstance(cfg, dict)):
+      self.construct_from_json(cfg)
 
     self.out_file_name_: str =\
       f'{self.name_}.{self.OUT_EXT}'
@@ -145,7 +111,7 @@ class ColorScheme():
     #___________________________________________________________________
     if ('name' in input_dict):
       # Ensure file names have no spaces
-      self.name_ = input_dict['name'].replace(' ', '-')
+      self.name_ = input_dict['name'].replace(' ', '-').lower()
 
     #___________________________________________________________________
     # Set background

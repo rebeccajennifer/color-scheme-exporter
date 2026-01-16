@@ -67,7 +67,7 @@ class RgbConst:
     ' 0xaf5faf'
     ' 0x5fafaf'
     ' 0xafafaf'
-    ' 0x000000'
+    ' 0x878787'
     ' 0xd75f5f'
     ' 0x5fd75f'
     ' 0xd7d75f'

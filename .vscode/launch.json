@@ -31,7 +31,6 @@
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "all"
-      , "--name"        , "default"
       , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
@@ -43,7 +42,6 @@
     , "args":
       [ "-s" , "all"
       , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
-      , "-n" , "flux-bunny-dark"
       , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark"
       ]
     }
@@ -55,7 +53,6 @@
     , "args":
       [ "--scheme_type" , "all"
       , "--file"        , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
-      , "--name"        , "flux-bunny-lite"
       , "--out_dir"     , "${workspaceFolder}/sample-themes/flux-bunny-lite"
       ]
     }
@@ -76,10 +73,7 @@
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args"    :
-      [ "--default"
-      , "--scheme_type" , "all"
-      , "--name"        , "default"
-      , "--out_dir"     , "${workspaceFolder}/sample-themes/default"
+      [ "--out_dir"     , "${workspaceFolder}/sample-themes/default"
       ]
     }
   , { "name"      : "test-rgb-color"
@@ -98,7 +92,6 @@
     , "args":
       [ "--scheme_type" , "gnome"
       , "--file"        , "sample-themes/demo/input.json"
-      , "--name"        , "flux-test"
       , "--out_dir"     , "~/.themes/"
       ]
     }
@@ -110,8 +103,7 @@
     , "args":
       [ "-s" , "vscode-scheme"
       , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
-      , "-n" , "flux-bunny-dark"
-      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-dark"
+      , "-o" , "~/.vscode/extensions/flux-bunny-themes"
       ]
     }
   , { "name"    : "vscode-theme-lite"
@@ -122,7 +114,6 @@
     , "args":
       [ "-s" , "vscode-scheme"
       , "-f" , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
-      , "-n" , "flux-bunny-lite"
       , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-lite"
       ]
     }

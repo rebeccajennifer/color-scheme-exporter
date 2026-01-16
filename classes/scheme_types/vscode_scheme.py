@@ -26,10 +26,8 @@
 #   Visual Studio Code color scheme
 #_______________________________________________________________________
 
-from platform import system
 from classes.scheme_types.base_scheme import ColorScheme
 
-from classes.color_scheme_strings import ColorSchemeStrings as Strings
 from flux_bunny_utils.string_utils import StringUtils
 
 

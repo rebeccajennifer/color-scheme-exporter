@@ -136,15 +136,6 @@ class ColorSchemeParser:
       , required=False
     )
 
-    parser.add_argument('--name'
-      , '-n'
-      , help=ParserStrings.OUT_FILE_HELP_DESC
-      , action='store'
-      , type=str
-      , required=False
-      , default=ParserStrings.DEFAULT_NAME
-    )
-
     parser.add_argument('--out_dir'
       , '-o'
       , help=ParserStrings.OUT_DIR_HELP_DESC
@@ -159,44 +150,6 @@ class ColorSchemeParser:
       , action='store_true'
       , required=False
     )
-
-    # Add type, move strings to class
-    cmd_line_group = parser.add_argument_group(\
-      ParserStrings.CMD_LINE_ENTRY_GROUP_TITLE
-       , ParserStrings.CMD_LINE_ENTRY_GROUP_DESC)
-
-    cmd_line_group.add_argument('--background_color'
-      , '-bg'
-      , help=ParserStrings.BACKGND_HELP_DESC
-      , action='store'
-      , type=StringUtils.str_hex_to_int
-      , required=False
-      , default=RgbConst.DEF_BG_NORM
-      , choices=range(0, GeneralUtils.MAX_COLOR + 1)
-      , metavar=ParserStrings.COLOR_RANGE
-    )
-
-    cmd_line_group.add_argument('--foreground_color'
-      , '-fg'
-      , help=ParserStrings.FOREGND_HELP_DESC
-      , action='store'
-      , type=StringUtils.str_hex_to_int
-      , required=False
-      , default=RgbConst.DEF_FG_NORM
-      , choices=range(0, GeneralUtils.MAX_COLOR + 1)
-      , metavar=ParserStrings.COLOR_RANGE
-    )
-
-    cmd_line_group.add_argument('--rgb_list'
-      , '-rgb'
-      , help=ParserStrings.RGB_LIST_HELP_DESC
-      , action='store'
-      , type=str
-      , required=False
-      , default=RgbConst.DEFAULT_RGB_STR_LIST
-    )
-
-
 
     return
 
