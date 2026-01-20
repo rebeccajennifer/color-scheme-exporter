@@ -95,3 +95,9 @@ def test_make_background_color_err():
 
   with pytest.raises(Exception):
     c = RgbColor.make_background_color_dark(color=-1)
+
+  with pytest.raises(ValueError):
+    RgbColor.make_background_color_lite(color='hello')
+
+  with pytest.raises(Exception):
+    c = RgbColor.make_background_color_lite(color=-1)

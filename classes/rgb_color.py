@@ -172,7 +172,7 @@ class RgbColor:
   #_____________________________________________________________________
   def construct_color_print_str(text: str
     , fg: int = 0
-    , bg: int = -1
+    , bg: int = 0xffffff
   ) -> None:
     """
     Calls utility function to print colored text.
@@ -193,14 +193,6 @@ class RgbColor:
     bg_red: int = bg[RgbConst.RED_STR]
     bg_grn: int = bg[RgbConst.GRN_STR]
     bg_blu: int = bg[RgbConst.BLU_STR]
-
-
-    # Used in print color utility function
-    # -1 indicates to print no background color
-    if (bg == -1):
-      bg_red: int = -1
-      bg_grn: int = -1
-      bg_blu: int = -1
 
     return Utils.construct_color_print_str(text=text
     , fg_red=fg_red
