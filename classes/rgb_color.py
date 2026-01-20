@@ -30,6 +30,8 @@ from math import floor
 
 from classes.ansi256_colors import Ansi256Colors
 from utilities.color_scheme_utils import GeneralUtils as Utils
+
+from flux_bunny_utils.dict_utils import DictUtils
 from flux_bunny_utils.error_utils import ErrorUtils
 from flux_bunny_utils.string_utils import StringUtils
 
@@ -58,7 +60,7 @@ class RgbConst:
   DEF_ACCENT2: int = 0xaf5f87
   DEF_ACCENT2: int = 0xaf5f87
 
-  BG_CUTOFF: int = 0x80
+  BG_CUTOFF: int = 0x5f
 
   DEFAULT_RGB_STR_LIST: str = str(
     ' 0x202020'
@@ -131,6 +133,16 @@ class RgbColor:
     output: {'red': 255, 'grn': 255, blu: 0}
     """
 
+    if (not isinstance(rgb_color, int)):
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(rgb_color))}'
+      ErrorUtils.raise_exception_with_desc(err=TypeError(), desc=desc)
+
+    if (rgb_color < 0 or rgb_color > 0xFFFFFF):
+      desc: str =\
+        f'{ErrorUtils.INVALID_VALUE} {rgb_color}'
+      ErrorUtils.raise_exception_with_desc(err=ValueError(), desc=desc)
+
     rgb_map: dict = {}
 
     red: int = (rgb_color & RgbConst.RED_MASK) >> RgbConst.RED_RIGHT_SHIFT
@@ -166,9 +178,9 @@ class RgbColor:
     Calls utility function to print colored text.
 
     Parameters
-    text - text to print
-    fg   - foreground color range[0x000000-0xFFFFFF]
-    bg   - background color range[0x000000-0xFFFFFF]
+      text : text to print
+      fg   : foreground color range[0x000000-0xFFFFFF]
+      bg   : background color range[0x000000-0xFFFFFF]
     """
 
     # Convert rgb ints to dicts
@@ -205,10 +217,10 @@ class RgbColor:
     Converts 24 bit RGB color to nearest ANSI 256 color.
 
     Parameters
-    rgb_color - 24 bit RGB color as integer
+      rgb_color - 24 bit RGB color as integer
 
     Returns
-    Nearest ANSI 256 color index as integer
+      Nearest ANSI 256 color index as integer
     """
 
     valid_rgb_values: list[int] =\
@@ -260,20 +272,30 @@ class RgbColor:
     Converts ANSI 256 color index to 24 bit RGB color.
 
     Parameters
-    ansi_256_index - ANSI 256 color index as integer
+      ansi_256_index - ANSI 256 color index as integer
 
     Returns
-    24 bit RGB color as integer
+      24 bit RGB color as integer
     """
 
     return Ansi256Colors.rgb_list[ansi_256_index]
 
   #_____________________________________________________________________
-  def make_background_color\
+  def make_background_color_dark\
     ( color
-    , is_dark: bool = True
     , cutoff: int = RgbConst.BG_CUTOFF
     ) -> dict:
+    """
+    Creates a darkened background color from the input color to ensure
+    that light foreground text remains readable against it.
+
+    Parameters
+      color : RGB input color as int or dictionary
+      cutoff: Maximum allowed channel value used to clamp brightness
+
+    Returns
+      A dictionary representing the darkened RGB background color
+    """
 
     if (isinstance(color, str)):
       color: dict = StringUtils.str_hex_to_int(color)
@@ -281,12 +303,72 @@ class RgbColor:
     if (isinstance(color, int)):
       color: dict = RgbColor.get_rgb_from_hex(color)
 
+    #___________________________________________________________________
+    # Exception handling
+    #___________________________________________________________________
     elif (not isinstance(color, dict)):
 
-      desc: str = str(
-        f'{ErrorUtils.WRONG_TYPE}'
-        f'type(color) = {str(type(color))}'
-        )
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
+      ErrorUtils.raise_exception_with_desc(err=TypeError(), desc=desc)
+
+    max_pair: tuple = DictUtils.get_max_tuple(color)
+
+    mav_val: int = max_pair[1]
+
+    if (mav_val <= cutoff):
+      return color
+
+    multiplier: float = cutoff / mav_val
+
+    for key in color.keys():
+      color[key] = int(color[key] * multiplier)
+
+    return color
+
+
+  #_____________________________________________________________________
+  def make_background_color_lite\
+    ( color
+    , cutoff: int = RgbConst.BG_CUTOFF
+    ) -> dict:
+    """
+    Creates a lightened background color from the input color to ensure
+    that dark foreground text remains readable against it.
+
+    Parameters
+      color : RGB input color as int or dictionary
+      cutoff: Minimum allowed channel value used to clamp brightness
+
+    Returns
+      A dictionary representing the lightened RGB background color
+    """
+
+    if (isinstance(color, str)):
+      color: dict = StringUtils.str_hex_to_int(color)
+
+    if (isinstance(color, int)):
+      color: dict = RgbColor.get_rgb_from_hex(color)
+
+    #___________________________________________________________________
+    # Exception handling
+    #___________________________________________________________________
+    elif (not isinstance(color, dict)):
+
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
       ErrorUtils.raise_exception_with_desc(desc=desc)
 
-    return
+    max_pair: tuple = DictUtils.get_max_tuple(color)
+
+    mav_val: int = max_pair[1]
+
+    if (mav_val <= cutoff):
+      return color
+
+    multiplier: float = cutoff / mav_val
+
+    for key in color.keys():
+      color[key] = int(color[key] * multiplier)
+
+    return color
