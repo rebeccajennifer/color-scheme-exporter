@@ -79,10 +79,19 @@
   , { "name"      : "test-rgb-color"
     , "type"      : "debugpy"
     , "request"   : "launch"
+    , "console"   : "integratedTerminal"
     , "module"    : "pytest"
     , "args"      : [ "test"]
     , "justMyCode": false
+    }
+  , { "name"      : "test-flux-utils"
+    , "type"      : "debugpy"
+    , "request"   : "launch"
     , "console"   : "integratedTerminal"
+    , "module"    : "pytest"
+    , "args"      : [ "flux_bunny_utils/test_flux_bunny_utils"]
+    , "justMyCode": false
+    , "cwd"       : "${workspaceFolder}"
     }
   , { "name"    : "gnome-demo"
     , "type"    : "debugpy"
