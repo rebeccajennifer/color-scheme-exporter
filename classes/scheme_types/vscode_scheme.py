@@ -27,6 +27,7 @@
 #_______________________________________________________________________
 
 from classes.scheme_types.base_scheme import ColorScheme
+from classes.rgb_color import RgbColor
 
 from flux_bunny_utils.string_utils import StringUtils
 
@@ -54,6 +55,10 @@ class VsCodeScheme(ColorScheme):
     Populate map of color labels in template with values from
     color scheme.
     """
+
+    self.accent_color0_ = RgbColor.make_background_color(self.accent_color0_, is_dark=self.is_dark_)
+    self.accent_color1_ = RgbColor.make_background_color(self.accent_color1_, is_dark=self.is_dark_)
+    self.accent_color2_ = RgbColor.make_background_color(self.accent_color2_, is_dark=self.is_dark_)
 
     self.color_replacement_map: dict=\
     { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)

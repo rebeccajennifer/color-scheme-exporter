@@ -157,6 +157,56 @@ class RgbColor:
     return rgb_map
 
   #_____________________________________________________________________
+  def get_int_from_rgb_dict(rgb_dict: dict) -> str:
+    """
+    Creates integer from rgb dictionary.
+
+    Parameters
+      rgb_dict : Dictionary with 'red', 'grn', and 'blu' keys
+                 E.g. {'red': 255, 'grn': 255, blu: 0}
+
+    Returns
+      Integer representing RGB color.
+
+    E.g.
+    input:  {'red': 255, 'grn': 255, blu: 0}
+    output: 0xFFFF00
+    """
+
+    red: int = rgb_dict[RgbConst.RED_STR]
+    grn: int = rgb_dict[RgbConst.GRN_STR]
+    blu: int = rgb_dict[RgbConst.BLU_STR]
+
+    hex_val: int =\
+      (red << RgbConst.RED_RIGHT_SHIFT) |\
+      (grn << RgbConst.GRN_RIGHT_SHIFT) |\
+      (blu << RgbConst.BLU_RIGHT_SHIFT)
+
+    return hex_val
+
+  #_____________________________________________________________________
+  def get_hex_str_from_rgb_dict(rgb_dict: dict) -> str:
+    """
+    Creates hex string from rgb dictionary.
+
+    Parameters
+      rgb_dict : Dictionary with 'red', 'grn', and 'blu' keys
+                 E.g. {'red': 255, 'grn': 255, blu: 0}
+
+    Returns
+      Hex string representing RGB color.
+
+    E.g.
+    input:  {'red': 255, 'grn': 255, blu: 0}
+    output: 0xFFFF00
+    """
+
+    int_val: int = RgbColor.get_int_from_rgb_dict(rgb_dict)
+    hex_str: str = StringUtils.int_to_hex6(int_val)
+
+    return hex_str
+
+  #_____________________________________________________________________
   def int_list_hex_str(l: list[int]) -> str:
     """
     Prints list of integers as 6 digit hex string.
@@ -290,6 +340,8 @@ class RgbColor:
       A dictionary representing the darkened RGB background color
     """
 
+    input_type: type = type(color)
+
     if (isinstance(color, str)):
       color: dict = StringUtils.str_hex_to_int(color)
 
@@ -317,6 +369,9 @@ class RgbColor:
     for key in color.keys():
       color[key] = int(color[key] * multiplier)
 
+    if (input_type == int):
+      return RgbColor.get_int_from_rgb_dict(color)
+
     return color
 
 
@@ -336,6 +391,8 @@ class RgbColor:
     Returns
       A dictionary representing the lightened RGB background color
     """
+
+    input_type: type = type(color)
 
     if (isinstance(color, str)):
       color: dict = StringUtils.str_hex_to_int(color)
@@ -366,4 +423,33 @@ class RgbColor:
       if (color[key] > 0xff):
         color[key] = 0xff
 
+    if (input_type == int):
+      return RgbColor.get_int_from_rgb_dict(color)
+
     return color
+
+  #_____________________________________________________________________
+  def make_background_color(color, cutoff: int = None, is_dark: bool = True) -> dict:
+    """
+    Creates a background color from the input color to ensure that
+    foreground text remains readable against it.
+
+    Parameters
+      color   : RGB input color as int or dictionary
+      cutoff  : Channel value used to clamp brightness
+      is_dark : If true, makes background dark. If false, makes lite.
+
+    Returns
+      A dictionary representing the lightened or darkened RGB
+      background color
+    """
+
+    if (is_dark):
+      if (cutoff is None):
+        cutoff = RgbConst.BG_MAX_CUTOFF_DARK
+      return RgbColor.make_background_color_dark(color, cutoff)
+
+    else:
+      if (cutoff is None):
+        cutoff = RgbConst.BG_MIN_CUTOFF_LITE
+      return RgbColor.make_background_color_lite(color, cutoff)

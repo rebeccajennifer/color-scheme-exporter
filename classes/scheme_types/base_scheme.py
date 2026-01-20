@@ -53,6 +53,7 @@ class ColorScheme():
   CURSOR_COLOR    : str = 'cursor-color'
   PALETTE         : str = 'palette'
   NAME            : str = 'name'
+  MODE            : str = 'mode'
 
   PREVIEW: str = str(
     f'\n{Strings.LINE}'
@@ -108,6 +109,8 @@ class ColorScheme():
     """
     Constructs color scheme from dictionary created from json.
     """
+    if (self.MODE in input_dict):
+      self.is_dark_ = input_dict['mode']
 
     #___________________________________________________________________
     if (self.NAME in input_dict):
