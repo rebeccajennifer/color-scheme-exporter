@@ -60,7 +60,8 @@ class RgbConst:
   DEF_ACCENT2: int = 0xaf5f87
   DEF_ACCENT2: int = 0xaf5f87
 
-  BG_CUTOFF: int = 0x5f
+  BG_MAX_CUTOFF_DARK: int = 0x5f
+  BG_MIN_CUTOFF_LITE: int = 0x87
 
   DEFAULT_RGB_STR_LIST: str = str(
     ' 0x202020'
@@ -275,7 +276,7 @@ class RgbColor:
   #_____________________________________________________________________
   def make_background_color_dark\
     ( color
-    , cutoff: int = RgbConst.BG_CUTOFF
+    , cutoff: int = RgbConst.BG_MAX_CUTOFF_DARK
     ) -> dict:
     """
     Creates a darkened background color from the input color to ensure
@@ -306,12 +307,12 @@ class RgbColor:
 
     max_pair: tuple = DictUtils.get_max_tuple(color)
 
-    mav_val: int = max_pair[1]
+    max_val: int = max_pair[1]
 
-    if (mav_val <= cutoff):
+    if (max_val <= cutoff):
       return color
 
-    multiplier: float = cutoff / mav_val
+    multiplier: float = cutoff / max_val
 
     for key in color.keys():
       color[key] = int(color[key] * multiplier)
@@ -322,7 +323,7 @@ class RgbColor:
   #_____________________________________________________________________
   def make_background_color_lite\
     ( color
-    , cutoff: int = RgbConst.BG_CUTOFF
+    , cutoff: int = RgbConst.BG_MIN_CUTOFF_LITE
     ) -> dict:
     """
     Creates a lightened background color from the input color to ensure
@@ -351,16 +352,18 @@ class RgbColor:
         f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
       ErrorUtils.raise_exception_with_desc(desc=desc)
 
-    max_pair: tuple = DictUtils.get_max_tuple(color)
+    max_pair: tuple = DictUtils.get_min_tuple(color)
 
-    mav_val: int = max_pair[1]
+    min_val: int = max_pair[1]
 
-    if (mav_val <= cutoff):
+    if (min_val >= cutoff):
       return color
 
-    multiplier: float = cutoff / mav_val
+    multiplier: float = cutoff / min_val
 
     for key in color.keys():
       color[key] = int(color[key] * multiplier)
+      if (color[key] > 0xff):
+        color[key] = 0xff
 
     return color
