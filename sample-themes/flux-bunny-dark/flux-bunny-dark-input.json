@@ -6,8 +6,8 @@
 , "foreground-color"          : "0xc6c6c6"
 , "foreground-color-intense"  : "0xafafaf"
 , "cursor-color"              : "0xff875f"
-, "accent-color-0"            : "0x00ffff"
-, "accent-color-1"            : "0xff87ff"
+, "accent-color-0"            : "0x00afaf"
+, "accent-color-1"            : "0xaf5faf"
 , "accent-color-2"            : "0x00afd7"
 , "palette"                   :
   [ "0x1c1c1c"

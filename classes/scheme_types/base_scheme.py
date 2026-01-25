@@ -47,9 +47,9 @@ class ColorScheme():
   BG_BOLD_KEY     : str = 'background-color-intense'
   FG_NORM_KEY     : str = 'foreground-color'
   FG_BOLD_KEY     : str = 'foreground-color-intense'
-  ACCENT0_KEY     : str = 'accent-color-0'
-  ACCENT1_KEY     : str = 'accent-color-1'
-  ACCENT2_KEY     : str = 'accent-color-2'
+  KEY_BG0_KEY     : str = 'accent-color-0'
+  KEY_BG1_KEY     : str = 'accent-color-1'
+  KEY_BG2_KEY     : str = 'accent-color-2'
   CURSOR_COLOR    : str = 'cursor-color'
   PALETTE         : str = 'palette'
   NAME            : str = 'name'
@@ -80,9 +80,9 @@ class ColorScheme():
     self.fg_norm_color_ = RgbConst.DEF_FG_NORM
     self.bg_bold_color_ = RgbConst.DEF_BG_BOLD
     self.fg_bold_color_ = RgbConst.DEF_FG_BOLD
-    self.accent_color0_ = RgbConst.DEF_ACCENT0
-    self.accent_color1_ = RgbConst.DEF_ACCENT1
-    self.accent_color2_ = RgbConst.DEF_ACCENT2
+    self.accent_color0_ = RgbConst.DEF_KEY_BG0
+    self.accent_color1_ = RgbConst.DEF_KEY_BG1
+    self.accent_color2_ = RgbConst.DEF_KEY_BG2
 
     self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
     self.name_          = 'theme-name'
@@ -142,17 +142,17 @@ class ColorScheme():
     #___________________________________________________________________
     # Set accent colors
     #___________________________________________________________________
-    if (self.ACCENT0_KEY in input_dict):
+    if (self.KEY_BG0_KEY in input_dict):
       self.accent_color0_ =\
-        StringUtils.str_hex_to_int(input_dict[self.ACCENT0_KEY])
+        StringUtils.str_hex_to_int(input_dict[self.KEY_BG0_KEY])
 
-    if (self.ACCENT1_KEY in input_dict):
+    if (self.KEY_BG1_KEY in input_dict):
       self.accent_color1_ =\
-        StringUtils.str_hex_to_int(input_dict[self.ACCENT1_KEY])
+        StringUtils.str_hex_to_int(input_dict[self.KEY_BG1_KEY])
 
-    if (self.ACCENT2_KEY in input_dict):
+    if (self.KEY_BG2_KEY in input_dict):
       self.accent_color2_ =\
-        StringUtils.str_hex_to_int(input_dict[self.ACCENT2_KEY])
+        StringUtils.str_hex_to_int(input_dict[self.KEY_BG2_KEY])
 
     #___________________________________________________________________
     if (self.PALETTE in input_dict):
