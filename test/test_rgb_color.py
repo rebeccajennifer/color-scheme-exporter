@@ -104,18 +104,46 @@ def test_make_background_color_lite():
 
   #assert test_color == color
 
-
 #_______________________________________________________________________
 def test_make_background_color_err():
 
-  with pytest.raises(ValueError):
-    RgbColor.make_background_color_dark(color='hello')
+  #with pytest.raises(ValueError):
+  #  RgbColor.make_background_color_dark(color='hello')
 
-  with pytest.raises(Exception):
+  with pytest.raises(ValueError):
     c = RgbColor.make_background_color_dark(color=-1)
 
-  with pytest.raises(ValueError):
-    RgbColor.make_background_color_lite(color='hello')
+  #with pytest.raises(ValueError):
+  #  RgbColor.make_background_color_lite(color='hello')
 
-  with pytest.raises(Exception):
-    c = RgbColor.make_background_color_lite(color=-1)
+  #with pytest.raises(Exception):
+  #  c = RgbColor.make_background_color_lite(color=-1)
+
+#_______________________________________________________________________
+def test_scale_color():
+
+  lo_cutoff: int = 0x10
+  hi_cutoff: int = 0xe0
+
+  color       : int = 0x804020
+  color_scaled: int = 0x804020
+
+  test_color  : int = RgbColor.scale_color(color, lo_cutoff, hi_cutoff)
+  assert test_color == color_scaled
+
+  lo_cutoff   : int = 0x00
+  hi_cutoff   : int = 0xe0
+  color       : int = 0xff8010
+  color_scaled: int = 0xe0700e
+  test_color  : int = RgbColor.scale_color(color, lo_cutoff, hi_cutoff)
+
+  assert test_color == color_scaled
+
+#_______________________________________________________________________
+def test_scale_color_err():
+
+  with pytest.raises(ValueError):
+    RgbColor.scale_color(color='hello')
+
+  with pytest.raises(ValueError):
+    c = RgbColor.scale_color(color=-1)

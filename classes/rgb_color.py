@@ -176,9 +176,9 @@ class RgbColor:
     output: 0xFFFF00
     """
 
-    red: int = rgb_dict[RgbConst.RED_STR]
-    grn: int = rgb_dict[RgbConst.GRN_STR]
-    blu: int = rgb_dict[RgbConst.BLU_STR]
+    red: int = int(rgb_dict[RgbConst.RED_STR])
+    grn: int = int(rgb_dict[RgbConst.GRN_STR])
+    blu: int = int(rgb_dict[RgbConst.BLU_STR])
 
     hex_val: int =\
       (red << RgbConst.RED_RIGHT_SHIFT) |\
@@ -372,6 +372,74 @@ class RgbColor:
     for key in color.keys():
       color[key] = int(color[key] * multiplier)
 
+    if (input_type == int):
+      return RgbColor.get_int_from_rgb_dict(color)
+
+    return color
+
+  #_____________________________________________________________________
+  def scale_color\
+    ( color
+    , lo_cutoff: int = RgbConst.BG_MIN_CUTOFF_LITE
+    , hi_cutoff: int = RgbConst.BG_MAX_CUTOFF_DARK
+    ) -> dict:
+    """
+    Scales a color to be within the specified brightness range.
+    Parameters
+      color     : RGB input color as int or dictionary
+      lo_cutoff : Minimum allowed channel value used to clamp brightness
+      hi_cutoff : Maximum allowed channel value used to clamp brightness
+    Returns
+      A dictionary or int representing the scaled RGB color
+    """
+
+    input_type: type = type(color)
+
+    if (isinstance(color, str)):
+      color: dict = StringUtils.str_hex_to_int(color)
+
+    if (isinstance(color, int)):
+      color: dict = RgbColor.get_rgb_from_hex(color)
+
+    #___________________________________________________________________
+    # Exception handling
+    #___________________________________________________________________
+    elif (not isinstance(color, dict)):
+
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
+      ErrorUtils.raise_exception_with_desc(desc=desc)
+
+    #___________________________________________________________________
+    # Determine highest and lowest channel values
+    #___________________________________________________________________
+    min_pair: tuple = DictUtils.get_min_tuple(color)
+    max_pair: tuple = DictUtils.get_max_tuple(color)
+
+    min_val: int = min_pair[1]
+    max_val: int = max_pair[1]
+
+    # If color is in range return without modification
+    if (min_val >= lo_cutoff and max_val <= hi_cutoff):
+      if (input_type == int):
+        return RgbColor.get_int_from_rgb_dict(color)
+      return color
+
+    # Range of allowed values
+    cutoff_range      : int = hi_cutoff - lo_cutoff
+
+    input_color_range : int = max_val - min_val
+
+
+    # Normalize color channels
+    for key in color.keys():
+      color[key] = (color[key] - lo_cutoff) / max_val
+
+    # Scale color channels
+    for key in color.keys():
+      color[key] = color[key] * cutoff_range + lo_cutoff
+
+    # Return int type if input was int
     if (input_type == int):
       return RgbColor.get_int_from_rgb_dict(color)
 
