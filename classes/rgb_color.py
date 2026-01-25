@@ -55,12 +55,10 @@ class RgbConst:
   DEF_FG_NORM: int = 0xc6c6c6
   DEF_BG_BOLD: int = 0x1c1c1c
   DEF_FG_BOLD: int = 0xbcbcbc
-  DEF_KEY_BG0: int = 0x005f5f
-  DEF_KEY_BG1: int = 0x00afd7
-  DEF_KEY_BG2: int = 0xaf5f87
-  DEF_KEY_FG0: int = 0x005f5f
-  DEF_KEY_FG1: int = 0x00afd7
-  DEF_KEY_FG2: int = 0xaf5f87
+
+  DEF_ACCENT0: int = 0x00afaf
+  DEF_ACCENT1: int = 0xaf5faf
+  DEF_ACCENT2: int = 0x00afd7
 
   BG_MAX_CUTOFF_DARK: int = 0x5f
   FG_MIN_CUTOFF_DARK: int = 0x5f

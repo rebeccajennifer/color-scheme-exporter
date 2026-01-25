@@ -80,9 +80,10 @@ class ColorScheme():
     self.fg_norm_color_ = RgbConst.DEF_FG_NORM
     self.bg_bold_color_ = RgbConst.DEF_BG_BOLD
     self.fg_bold_color_ = RgbConst.DEF_FG_BOLD
-    self.accent_color0_ = RgbConst.DEF_KEY_BG0
-    self.accent_color1_ = RgbConst.DEF_KEY_BG1
-    self.accent_color2_ = RgbConst.DEF_KEY_BG2
+
+    self.accent_color0_ = RgbConst.DEF_ACCENT0
+    self.accent_color1_ = RgbConst.DEF_ACCENT1
+    self.accent_color2_ = RgbConst.DEF_ACCENT2
 
     self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
     self.name_          = 'theme-name'
