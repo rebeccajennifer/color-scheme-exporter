@@ -74,7 +74,7 @@ class ColorScheme():
     , out_dir: str = '.'
     , cfg = None):
 
-    self.cursor_color_  = RgbConst.DEFAULT_CURSOR_COL
+    self.cursor_color_  = RgbConst.DEF_CRSR_BG
 
     self.bg_norm_color_ = RgbConst.DEF_BG_NORM
     self.fg_norm_color_ = RgbConst.DEF_FG_NORM

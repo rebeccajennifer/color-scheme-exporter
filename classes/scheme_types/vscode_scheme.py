@@ -56,18 +56,25 @@ class VsCodeScheme(ColorScheme):
     color scheme.
     """
 
-    self.accent_color0_ = RgbColor.make_background_color(self.accent_color0_, is_dark=self.is_dark_)
-    self.accent_color1_ = RgbColor.make_background_color(self.accent_color1_, is_dark=self.is_dark_)
-    self.accent_color2_ = RgbColor.make_background_color(self.accent_color2_, is_dark=self.is_dark_)
+    key_bg_0 = RgbColor.make_background_color(self.accent_color0_, is_dark=self.is_dark_)
+    key_bg_1 = RgbColor.make_background_color(self.accent_color1_, is_dark=self.is_dark_)
+    key_bg_2 = RgbColor.make_background_color(self.accent_color2_, is_dark=self.is_dark_)
+
+    key_fg_0 = RgbColor.make_foreground_color(self.accent_color0_, is_dark=self.is_dark_)
+    key_fg_1 = RgbColor.make_foreground_color(self.accent_color1_, is_dark=self.is_dark_)
+    key_fg_2 = RgbColor.make_foreground_color(self.accent_color2_, is_dark=self.is_dark_)
 
     self.color_replacement_map: dict=\
     { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
     , 'BG__BOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
     , 'FG__NORM' : StringUtils.int_to_hex6(self.fg_norm_color_)
     , 'FG__BOLD' : StringUtils.int_to_hex6(self.fg_bold_color_)
-    , 'KEY_BG_0' : StringUtils.int_to_hex6(self.accent_color0_)
-    , 'KEY_BG_1' : StringUtils.int_to_hex6(self.accent_color1_)
-    , 'KEY_BG_2' : StringUtils.int_to_hex6(self.accent_color2_)
+    , 'KEY_BG_0' : StringUtils.int_to_hex6(key_bg_0)
+    , 'KEY_BG_1' : StringUtils.int_to_hex6(key_bg_1)
+    , 'KEY_BG_2' : StringUtils.int_to_hex6(key_bg_2)
+    , 'KEY_FG_0' : StringUtils.int_to_hex6(key_fg_0)
+    , 'KEY_FG_1' : StringUtils.int_to_hex6(key_fg_1)
+    , 'KEY_FG_2' : StringUtils.int_to_hex6(key_fg_2)
     , 'BLK_NORM' : StringUtils.int_to_hex6(self.palette_[0])
     , 'RED_NORM' : StringUtils.int_to_hex6(self.palette_[1])
     , 'GRN_NORM' : StringUtils.int_to_hex6(self.palette_[2])

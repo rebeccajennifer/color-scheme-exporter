@@ -79,7 +79,7 @@
   , "editor.selectionForeground"                          : "#BG__NORM"
 
   // Text color of header in settings
-  , "settings.headerForeground"                           : "#CYA_BOLD"
+  , "settings.headerForeground"                           : "#KEY_FG_0"
   , "menu.background"                                     : "#BG__BOLD"
   , "textLink.foreground"                                 : "#BLU_BOLD"
   , "textLink.activeForeground"                           : "#BLU_NORM"

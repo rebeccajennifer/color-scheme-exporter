@@ -50,7 +50,7 @@ class RgbConst:
   GRN_RIGHT_SHIFT: int = 8
   BLU_RIGHT_SHIFT: int = 0
 
-  DEFAULT_CURSOR_COL: int = 0x808080
+  DEF_CRSR_BG: int = 0x808080
   DEF_BG_NORM: int = 0x262626
   DEF_FG_NORM: int = 0xc6c6c6
   DEF_BG_BOLD: int = 0x1c1c1c
@@ -58,10 +58,15 @@ class RgbConst:
   DEF_KEY_BG0: int = 0x005f5f
   DEF_KEY_BG1: int = 0x00afd7
   DEF_KEY_BG2: int = 0xaf5f87
-  DEF_KEY_BG2: int = 0xaf5f87
+  DEF_KEY_FG0: int = 0x005f5f
+  DEF_KEY_FG1: int = 0x00afd7
+  DEF_KEY_FG2: int = 0xaf5f87
 
   BG_MAX_CUTOFF_DARK: int = 0x5f
+  FG_MIN_CUTOFF_DARK: int = 0x5f
+
   BG_MIN_CUTOFF_LITE: int = 0x87
+  FG_MAX_CUTOFF_LITE: int = 0x87
 
   DEFAULT_RGB_STR_LIST: str = str(
     ' 0x202020'
@@ -409,12 +414,15 @@ class RgbColor:
         f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
       ErrorUtils.raise_exception_with_desc(desc=desc)
 
-    max_pair: tuple = DictUtils.get_min_tuple(color)
+    min_pair: tuple = DictUtils.get_min_tuple(color)
 
-    min_val: int = max_pair[1]
+    min_val: int = min_pair[1]
 
     if (min_val >= cutoff):
       return color
+
+    if min_val == 0:
+      min_val = 1  # prevent division by zero
 
     multiplier: float = cutoff / min_val
 
@@ -445,6 +453,34 @@ class RgbColor:
     """
 
     if (is_dark):
+      if (cutoff is None):
+        cutoff = RgbConst.BG_MAX_CUTOFF_DARK
+      return RgbColor.make_background_color_dark(color, cutoff)
+
+    else:
+      if (cutoff is None):
+        cutoff = RgbConst.BG_MIN_CUTOFF_LITE
+      return RgbColor.make_background_color_lite(color, cutoff)
+
+  #_____________________________________________________________________
+  def make_foreground_color(color, cutoff: int = None, is_dark: bool = True) -> dict:
+    """
+    Creates a foreground color from the input color to ensure that
+    foreground text remains readable against it.
+
+    Uses the same logic as make_background_color but inverts is_dark.
+
+    Parameters
+      color   : RGB input color as int or dictionary
+      cutoff  : Channel value used to clamp brightness
+      is_dark : If true, makes background dark. If false, makes lite.
+
+    Returns
+      A dictionary representing the lightened or darkened RGB
+      background color
+    """
+
+    if (not is_dark):
       if (cutoff is None):
         cutoff = RgbConst.BG_MAX_CUTOFF_DARK
       return RgbColor.make_background_color_dark(color, cutoff)
