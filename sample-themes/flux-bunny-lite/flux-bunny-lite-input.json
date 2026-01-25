@@ -1,12 +1,10 @@
 { "name"                      : "Flux Bunny Lite"
+, "mode"                      : "light"
 , "intense-bold"              : "false"
 , "background-color"          : "0xe4e4e4"
 , "background-color-intense"  : "0xdadada"
 , "foreground-color"          : "0x262626"
 , "foreground-color-intense"  : "0x303030"
-, "accent-color-0"            : "0x005f5f"
-, "accent-color-1"            : "0x875f87"
-, "accent-color-2"            : "0x00005f"
 , "palette"                   :
   [ "0x121212"
   , "0xaf005f"

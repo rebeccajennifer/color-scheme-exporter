@@ -220,7 +220,7 @@
   , "list.activeSelectionForeground"                      : "#FG__NORM"
   , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
-  , "list.activeSelectionIconForeground"                  :"#GRN_NORM"
+  , "list.activeSelectionIconForeground"                  : "#FG__NORM"
   , "list.hoverBackground"                                : "#BG__BOLD"
 
   // Drag and drop files
