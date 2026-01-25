@@ -87,7 +87,13 @@
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#FG__NORM0f"
+
+  // Needed for visual selection in vim
+  , "editor.selectionHighlightBackground"                 : "#FG__NORM0f"
+
+  // Occurances of word under cursor
+  , "editor.wordHighlightTextBackground"                  : "#FG__NORM1f"
+
   , "editor.wordHighlightBackground"                      : "#BG__BOLD"
   , "editor.lineHighlightBackground"                      : "#BG__BOLD"
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
@@ -570,7 +576,7 @@
       , "constant.other.rgb-value"
       , "string"
       , ""
-      ], "settings": { "foreground": "#VIO_BOLD"}
+      ], "settings": { "foreground": "#VIO_BOLD" }
     }
 
   , { "name"  : "Color 6: Cyan"
