@@ -115,7 +115,7 @@
   //____________________________________________________________________
   // Text field entry
   , "input.background"                                    : "#BG__BOLD"
-  , "input.foreground"                                    : "#FG__BOLD"
+  , "input.foreground"                                    : "#FG__NORM"
   , "input.placeholderForeground"                         : "#BLU_NORM"
 
   // E.g. Commit message entry, command palette
@@ -136,7 +136,7 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#BLU_BOLD20"
+  , "peekViewEditor.background"                           : "#KEY_BG_2"
   , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_287"
   , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_287"
   , "peekView.border"                                     : "#CYA_BOLD5f"
@@ -191,15 +191,15 @@
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
   , "statusBar.background"                                : "#BLU_BOLD87"
-  , "statusBar.foreground"                                : "#FG__NORM"
+  , "statusBar.foreground"                                : "#FG__BOLD"
   , "statusBar.noFolderBackground"                        : "#VIO_BOLD87"
   , "statusBarItem.remoteBackground"                      : "#GRN_BOLD87"
-  , "statusBarItem.remoteForeground"                      : "#FG__NORM"
+  , "statusBarItem.remoteForeground"                      : "#FG__BOLD"
 
   , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
   , "statusBarItem.warningForeground"                     : "#BG__NORM"
   , "statusBarItem.errorBackground"                       : "#RED_BOLD"
-  , "statusBarItem.errorForeground"                       : "#BG__NORM"
+  , "statusBarItem.errorForeground"                       : "#FG__BOLD"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
@@ -275,8 +275,8 @@
   , "editor.inlineValuesBackground"                       : "#BG__BOLD"
   , "editor.inlineValuesForeground"                       : "#YEL_NORM"
   , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
-  , "statusBar.debuggingBackground"                       : "#YEL_NORM"
-  , "statusBar.debuggingForeground"                       : "#BG__NORM"
+  , "statusBar.debuggingBackground"                       : "#YEL_BOLD"
+  , "statusBar.debuggingForeground"                       : "#FG__BOLD"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#RED_BOLD"
