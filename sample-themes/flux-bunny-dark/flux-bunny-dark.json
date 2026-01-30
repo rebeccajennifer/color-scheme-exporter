@@ -27,7 +27,7 @@
   // Overridden by other properties
   //____________________________________________________________________
   //, "quickInput.background"                               : "#303030"
-  //, "quickInputList.focusIconForeground"                  : "#afafaf"
+  //, "quickInputList.focusIconForeground"                  : "#eeeeee"
   //, "quickInput.foreground"                               : "#c6c6c6"
   //, "settings.textInputBackground"                        : "#FFFF00"
 
@@ -115,7 +115,7 @@
   //____________________________________________________________________
   // Text field entry
   , "input.background"                                    : "#303030"
-  , "input.foreground"                                    : "#afafaf"
+  , "input.foreground"                                    : "#c6c6c6"
   , "input.placeholderForeground"                         : "#87afd7"
 
   // E.g. Commit message entry, command palette
@@ -136,7 +136,7 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#00afd720"
+  , "peekViewEditor.background"                           : "#004d5f"
   , "peekViewEditor.matchHighlightBackground"             : "#004d5f87"
   , "peekViewResult.matchHighlightBackground"             : "#004d5f87"
   , "peekView.border"                                     : "#5fafaf5f"
@@ -191,15 +191,15 @@
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
   , "statusBar.background"                                : "#00afd787"
-  , "statusBar.foreground"                                : "#c6c6c6"
+  , "statusBar.foreground"                                : "#eeeeee"
   , "statusBar.noFolderBackground"                        : "#af5faf87"
   , "statusBarItem.remoteBackground"                      : "#5faf8787"
-  , "statusBarItem.remoteForeground"                      : "#c6c6c6"
+  , "statusBarItem.remoteForeground"                      : "#eeeeee"
 
   , "statusBarItem.warningBackground"                     : "#ff875f"
   , "statusBarItem.warningForeground"                     : "#262626"
   , "statusBarItem.errorBackground"                       : "#ff5f87"
-  , "statusBarItem.errorForeground"                       : "#262626"
+  , "statusBarItem.errorForeground"                       : "#eeeeee"
 
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
@@ -275,8 +275,8 @@
   , "editor.inlineValuesBackground"                       : "#303030"
   , "editor.inlineValuesForeground"                       : "#ffd787"
   , "editor.stackFrameHighlightBackground"                : "#303030"
-  , "statusBar.debuggingBackground"                       : "#ffd787"
-  , "statusBar.debuggingForeground"                       : "#262626"
+  , "statusBar.debuggingBackground"                       : "#ff875f"
+  , "statusBar.debuggingForeground"                       : "#eeeeee"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#ff5f87"
