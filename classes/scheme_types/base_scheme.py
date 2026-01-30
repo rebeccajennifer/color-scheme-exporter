@@ -106,7 +106,7 @@ class ColorScheme():
     return
 
   #_____________________________________________________________________
-  def construct_from_json(self, input_dict: dict):
+  def construct_from_json(self, input_dict: dict) -> None:
     """
     Constructs color scheme from dictionary created from json.
     """

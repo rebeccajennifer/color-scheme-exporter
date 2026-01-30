@@ -71,55 +71,6 @@ def test_rgb_from_ansi_256():
     assert rgb_val == expected_rgb_val
 
 #_______________________________________________________________________
-def test_make_background_color_dark():
-
-  # Cutoff is 0x5f (95 decimal) making test so that highest value is 2x
-  # Multiplier should be 1/2 so each element should be 1/2
-  color     : int   = RgbColor.get_rgb_from_hex(0xbe1020)
-  color_bg  : dict  = RgbColor.get_rgb_from_hex(0x5f0810)
-  test_color: dict  = RgbColor.make_background_color_dark(color)
-
-  assert test_color == color_bg
-
-  # Setting cutoff greater than largest element, should return same
-  test_color: dict  =\
-    RgbColor.make_background_color_dark(color, cutoff=0xff)
-
-  assert test_color == color
-
-#_______________________________________________________________________
-def test_make_background_color_lite():
-
-  # Cutoff is 0x5f (95 decimal) making test so that highest value is 2x
-  # Multiplier should be 1/2 so each element should be 1/2
-  color     : int   = RgbColor.get_rgb_from_hex(0x401020)
-  color_bg  : dict  = RgbColor.get_rgb_from_hex(0xff80ff)
-  test_color: dict  = RgbColor.make_background_color_lite(color, 0x80)
-
-  assert test_color == color_bg
-
-  # Setting cutoff greater than largest element, should return same
-  test_color: dict  =\
-    RgbColor.make_background_color_dark(color, cutoff=0x10)
-
-  #assert test_color == color
-
-#_______________________________________________________________________
-def test_make_background_color_err():
-
-  #with pytest.raises(ValueError):
-  #  RgbColor.make_background_color_dark(color='hello')
-
-  with pytest.raises(ValueError):
-    c = RgbColor.make_background_color_dark(color=-1)
-
-  #with pytest.raises(ValueError):
-  #  RgbColor.make_background_color_lite(color='hello')
-
-  #with pytest.raises(Exception):
-  #  c = RgbColor.make_background_color_lite(color=-1)
-
-#_______________________________________________________________________
 def test_scale_color():
 
   lo_cutoff: int = 0x10
@@ -138,6 +89,16 @@ def test_scale_color():
   test_color  : int = RgbColor.scale_color(color, lo_cutoff, hi_cutoff)
 
   assert test_color == color_scaled
+
+#_______________________________________________________________________
+def test_make_background_color():
+
+  color             : int = 0x80FF10
+  expected_bg_color : int = 0x305F06
+
+  test_color: int = RgbColor.make_background_color(color, is_dark=True)
+
+  assert test_color == expected_bg_color
 
 #_______________________________________________________________________
 def test_scale_color_err():
