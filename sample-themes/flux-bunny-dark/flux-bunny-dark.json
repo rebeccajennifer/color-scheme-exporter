@@ -79,7 +79,7 @@
   , "editor.selectionForeground"                          : "#262626"
 
   // Text color of header in settings
-  , "settings.headerForeground"                           : "#499999"
+  , "settings.headerForeground"                           : "#5f9696"
   , "menu.background"                                     : "#303030"
   , "textLink.foreground"                                 : "#00afd7"
   , "textLink.activeForeground"                           : "#87afd7"
@@ -94,7 +94,7 @@
   // Occurances of word under cursor
   , "editor.wordHighlightTextBackground"                  : "#c6c6c61f"
 
-  , "editor.wordHighlightBackground"                      : "#303030"
+  , "editor.wordHighlightBackground"                      : "#c6c6c61f"
   , "editor.lineHighlightBackground"                      : "#303030"
   , "editor.findMatchHighlightBackground"                 : "#004d5f87"
   , "editor.findMatchBackground"                          : "#004d5f87"

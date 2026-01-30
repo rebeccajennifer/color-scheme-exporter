@@ -79,7 +79,7 @@
   , "editor.selectionForeground"                          : "#e4e4e4"
 
   // Text color of header in settings
-  , "settings.headerForeground"                           : "#005f5f"
+  , "settings.headerForeground"                           : "#5f9696"
   , "menu.background"                                     : "#dadada"
   , "textLink.foreground"                                 : "#005faf"
   , "textLink.activeForeground"                           : "#005f87"
@@ -87,18 +87,24 @@
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#2626260f"
-  , "editor.wordHighlightBackground"                      : "#dadada"
+
+  // Needed for visual selection in vim
+  , "editor.selectionHighlightBackground"                 : "#2626260f"
+
+  // Occurances of word under cursor
+  , "editor.wordHighlightTextBackground"                  : "#2626261f"
+
+  , "editor.wordHighlightBackground"                      : "#2626261f"
   , "editor.lineHighlightBackground"                      : "#dadada"
-  , "editor.findMatchHighlightBackground"                 : "#00005f87"
-  , "editor.findMatchBackground"                          : "#00005f87"
+  , "editor.findMatchHighlightBackground"                 : "#004d5f87"
+  , "editor.findMatchBackground"                          : "#004d5f87"
 
   // Sticky Scroll - keep current code context at top of file
   , "editorStickyScroll.background"                       : "#dadada"
   , "editorStickyScrollHover.background"                  : "#dadada"
-  , "editorStickyScroll.shadow"                           : "#875f875f"
+  , "editorStickyScroll.shadow"                           : "#5f345f5f"
   , "panelStickyScroll.background"                        : "#dadada"
-  , "panelStickyScroll.shadow"                            : "#875f875f"
+  , "panelStickyScroll.shadow"                            : "#5f345f5f"
 
   , "editorLineNumber.activeForeground"                   : "#008700"
   , "editorLineNumber.foreground"                         : "#878787"
@@ -131,8 +137,8 @@
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#005faf20"
-  , "peekViewEditor.matchHighlightBackground"             : "#00005f87"
-  , "peekViewResult.matchHighlightBackground"             : "#00005f87"
+  , "peekViewEditor.matchHighlightBackground"             : "#004d5f87"
+  , "peekViewResult.matchHighlightBackground"             : "#004d5f87"
   , "peekView.border"                                     : "#005f5f5f"
   , "peekViewTitleLabel.foreground"                       : "#262626"
   , "peekViewResult.fileForeground"                       : "#262626"
@@ -220,7 +226,7 @@
   , "list.activeSelectionForeground"                      : "#262626"
   , "list.inactiveSelectionBackground"                    : "#dadada"
   , "list.inactiveSelectionForeground"                    : "#005faf87"
-  , "list.activeSelectionIconForeground"                  :"#008700"
+  , "list.activeSelectionIconForeground"                  : "#262626"
   , "list.hoverBackground"                                : "#dadada"
 
   // Drag and drop files
@@ -239,7 +245,7 @@
   //____________________________________________________________________
   , "button.background"                                   : "#005f5f"
   , "button.foreground"                                   : "#262626"
-  , "button.hoverBackground"                              : "#875f87"
+  , "button.hoverBackground"                              : "#5f345f"
 
   // E.g. Checkboxes in settings
   , "checkbox.background"                                 : "#dadada"
@@ -570,7 +576,7 @@
       , "constant.other.rgb-value"
       , "string"
       , ""
-      ], "settings": { "foreground": "#875f87"}
+      ], "settings": { "foreground": "#875f87" }
     }
 
   , { "name"  : "Color 6: Cyan"
