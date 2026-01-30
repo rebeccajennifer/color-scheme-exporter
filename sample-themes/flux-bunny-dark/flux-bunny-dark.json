@@ -7,7 +7,7 @@
   //____________________________________________________________________
   // TESTING
   //____________________________________________________________________
-  //  "list.filterMatchBackground"                          : "#ffd7875f"
+  //  "list.filterMatchBackground"                          : "#ff875f5f"
   //, "panelSection.dropBackground"                         : "#5faf875f"
   //, "list.filterMatchBackground"                          : "#FF0000"
   //, "list.inactiveFocusOutline"                           : "#FF0000"
@@ -42,16 +42,16 @@
   , "terminal.ansiBlack"                                  : "#1c1c1c"
   , "terminal.ansiRed"                                    : "#d787af"
   , "terminal.ansiGreen"                                  : "#afd787"
-  , "terminal.ansiYellow"                                 : "#ffaf87"
+  , "terminal.ansiYellow"                                 : "#ffd787"
   , "terminal.ansiBlue"                                   : "#87afd7"
   , "terminal.ansiMagenta"                                : "#af87d7"
   , "terminal.ansiCyan"                                   : "#87d7af"
   , "terminal.ansiWhite"                                  : "#d7d7d7"
   //____________________________________________________________________
-  , "terminal.ansiBrightBlack"                            : "#878787"
+  , "terminal.ansiBrightBlack"                            : "#5f5f5f"
   , "terminal.ansiBrightRed"                              : "#ff5f87"
   , "terminal.ansiBrightGreen"                            : "#5faf87"
-  , "terminal.ansiBrightYellow"                           : "#ffd787"
+  , "terminal.ansiBrightYellow"                           : "#ff875f"
   , "terminal.ansiBrightBlue"                             : "#00afd7"
   , "terminal.ansiBrightMagenta"                          : "#af5faf"
   , "terminal.ansiBrightCyan"                             : "#5fafaf"
@@ -79,7 +79,7 @@
   , "editor.selectionForeground"                          : "#262626"
 
   // Text color of header in settings
-  , "settings.headerForeground"                           : "#5fafaf"
+  , "settings.headerForeground"                           : "#499999"
   , "menu.background"                                     : "#303030"
   , "textLink.foreground"                                 : "#00afd7"
   , "textLink.activeForeground"                           : "#87afd7"
@@ -87,21 +87,27 @@
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
-  , "editor.wordHighlightTextBackground"                  : "#c6c6c60f"
+
+  // Needed for visual selection in vim
+  , "editor.selectionHighlightBackground"                 : "#c6c6c60f"
+
+  // Occurances of word under cursor
+  , "editor.wordHighlightTextBackground"                  : "#c6c6c61f"
+
   , "editor.wordHighlightBackground"                      : "#303030"
   , "editor.lineHighlightBackground"                      : "#303030"
-  , "editor.findMatchHighlightBackground"                 : "#0087af87"
-  , "editor.findMatchBackground"                          : "#0087af87"
+  , "editor.findMatchHighlightBackground"                 : "#004d5f87"
+  , "editor.findMatchBackground"                          : "#004d5f87"
 
   // Sticky Scroll - keep current code context at top of file
   , "editorStickyScroll.background"                       : "#303030"
   , "editorStickyScrollHover.background"                  : "#303030"
-  , "editorStickyScroll.shadow"                           : "#5f4b875f"
+  , "editorStickyScroll.shadow"                           : "#5f345f5f"
   , "panelStickyScroll.background"                        : "#303030"
-  , "panelStickyScroll.shadow"                            : "#5f4b875f"
+  , "panelStickyScroll.shadow"                            : "#5f345f5f"
 
   , "editorLineNumber.activeForeground"                   : "#afd787"
-  , "editorLineNumber.foreground"                         : "#878787"
+  , "editorLineNumber.foreground"                         : "#5f5f5f"
   , "editorRuler.foreground"                              : "#303030"
 
   //____________________________________________________________________
@@ -131,8 +137,8 @@
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#00afd720"
-  , "peekViewEditor.matchHighlightBackground"             : "#0087af87"
-  , "peekViewResult.matchHighlightBackground"             : "#0087af87"
+  , "peekViewEditor.matchHighlightBackground"             : "#004d5f87"
+  , "peekViewResult.matchHighlightBackground"             : "#004d5f87"
   , "peekView.border"                                     : "#5fafaf5f"
   , "peekViewTitleLabel.foreground"                       : "#c6c6c6"
   , "peekViewResult.fileForeground"                       : "#c6c6c6"
@@ -166,7 +172,7 @@
   , "tab.inactiveBackground"                              : "#303030"
   , "tab.inactiveForeground"                              : "#c6c6c67f"
   , "tab.unfocusedActiveForeground"                       : "#00afd787"
-  , "tab.unfocusedInactiveForeground"                     : "#878787"
+  , "tab.unfocusedInactiveForeground"                     : "#5f5f5f"
   , "tab.border"                                          : "#00000000"
   , "editorGroupHeader.tabsBackground"                    : "#262626"
 
@@ -190,7 +196,7 @@
   , "statusBarItem.remoteBackground"                      : "#5faf8787"
   , "statusBarItem.remoteForeground"                      : "#c6c6c6"
 
-  , "statusBarItem.warningBackground"                     : "#ffd787"
+  , "statusBarItem.warningBackground"                     : "#ff875f"
   , "statusBarItem.warningForeground"                     : "#262626"
   , "statusBarItem.errorBackground"                       : "#ff5f87"
   , "statusBarItem.errorForeground"                       : "#262626"
@@ -203,7 +209,7 @@
   , "activityBar.activeBackground"                        : "#005f5f"
   , "activityBarBadge.background"                         : "#afd787"
   , "activityBarBadge.foreground"                         : "#303030"
-  , "icon.foreground"                                     : "#878787"
+  , "icon.foreground"                                     : "#5f5f5f"
 
   //____________________________________________________________________
   // SIDEBAR (PROJECT EXPLORER, ETC)
@@ -220,7 +226,7 @@
   , "list.activeSelectionForeground"                      : "#c6c6c6"
   , "list.inactiveSelectionBackground"                    : "#303030"
   , "list.inactiveSelectionForeground"                    : "#00afd787"
-  , "list.activeSelectionIconForeground"                  :"#afd787"
+  , "list.activeSelectionIconForeground"                  : "#c6c6c6"
   , "list.hoverBackground"                                : "#303030"
 
   // Drag and drop files
@@ -239,7 +245,7 @@
   //____________________________________________________________________
   , "button.background"                                   : "#005f5f"
   , "button.foreground"                                   : "#c6c6c6"
-  , "button.hoverBackground"                              : "#5f4b87"
+  , "button.hoverBackground"                              : "#5f345f"
 
   // E.g. Checkboxes in settings
   , "checkbox.background"                                 : "#303030"
@@ -267,9 +273,9 @@
   , "debugIcon.restartForeground"                         : "#87d7af"
 
   , "editor.inlineValuesBackground"                       : "#303030"
-  , "editor.inlineValuesForeground"                       : "#ffaf87"
+  , "editor.inlineValuesForeground"                       : "#ffd787"
   , "editor.stackFrameHighlightBackground"                : "#303030"
-  , "statusBar.debuggingBackground"                       : "#ffaf87"
+  , "statusBar.debuggingBackground"                       : "#ffd787"
   , "statusBar.debuggingForeground"                       : "#262626"
 
   // Debug exception
@@ -278,7 +284,7 @@
 
   // Debug variables in sidebar
   , "debugConsole.infoForeground"                         : "#87afd7"
-  , "debugTokenExpression.boolean"                        : "#ffaf87"
+  , "debugTokenExpression.boolean"                        : "#ffd787"
   , "debugTokenExpression.number"                         : "#af5faf"
   , "debugTokenExpression.string"                         : "#5fafaf"
   , "debugTokenExpression.value"                          : "#c6c6c6"
@@ -290,16 +296,16 @@
   // SOURCE CONTROL
   //____________________________________________________________________
   , "gitDecoration.addedResourceForeground"               : "#5faf87"
-  , "gitDecoration.modifiedResourceForeground"            : "#ffaf87"
+  , "gitDecoration.modifiedResourceForeground"            : "#ffd787"
   , "gitDecoration.untrackedResourceForeground"           : "#af87d7"
   , "gitDecoration.deletedResourceForeground"             : "#ff5f87"
   , "gitDecoration.submoduleResourceForeground"           : "#87afd7"
 
   , "editorGutter.addedBackground"                        : "#afd787"
-  , "editorGutter.modifiedBackground"                     : "#ffaf87"
+  , "editorGutter.modifiedBackground"                     : "#ffd787"
   , "editorGutter.deletedBackground"                      : "#ff5f87"
 
-  , "scmGraph.foreground1"                                : "#ffaf87"
+  , "scmGraph.foreground1"                                : "#ffd787"
   , "scmGraph.historyItemBaseRefColor"                    : "#d787af"
   , "scmGraph.historyItemRefColor"                        : "#5fafaf"
   , "scmGraph.historyItemRemoteRefColor"                  : "#d787af"
@@ -323,19 +329,19 @@
   , "minimap.background"                                  : "#303030"
   , "minimapGutter.addedBackground"                       : "#afd787"
   , "minimapGutter.deletedBackground"                     : "#ff5f87"
-  , "minimapGutter.modifiedBackground"                    : "#ffaf87"
+  , "minimapGutter.modifiedBackground"                    : "#ffd787"
 
   //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
-  , "editorWarning.foreground"                            : "#ffd787"
+  , "editorWarning.foreground"                            : "#ff875f"
   , "editorError.foreground"                              : "#ff5f87"
 
-  , "list.warningForeground"                              : "#ffaf87"
+  , "list.warningForeground"                              : "#ffd787"
   , "list.errorForeground"                                : "#ff5f87"
 
   , "minimap.errorHighlight"                              : "#ff5f87"
-  , "minimap.warningHighlight"                            : "#ffaf87"
+  , "minimap.warningHighlight"                            : "#ffd787"
   , "minimap.selectionHighlight"                          : "#87d7afaf"
 
   , "inputValidation.warningBackground"                   : "#ff5f87"
@@ -346,27 +352,27 @@
   , "inputValidation.errorBorder"                         : "#ff5f87"
 
   , "problemsErrorIcon.foreground"                        : "#ff5f87"
-  , "problemsWarningIcon.foreground"                      : "#ffaf87"
-  , "problemsInfoIcon.foreground"                         : "#ffaf87"
+  , "problemsWarningIcon.foreground"                      : "#ffd787"
+  , "problemsInfoIcon.foreground"                         : "#ffd787"
   , "debugConsole.errorForeground"                        : "#ff5f87"
-  , "debugConsole.warningForeground"                      : "#ffaf87"
+  , "debugConsole.warningForeground"                      : "#ffd787"
 
-  , "disabledForeground"                                  : "#8787877f"
-  , "list.deemphasizedForeground"                         : "#8787877f"
+  , "disabledForeground"                                  : "#5f5f5f7f"
+  , "list.deemphasizedForeground"                         : "#5f5f5f7f"
 
   //____________________________________________________________________
   // ICONS
   //____________________________________________________________________
-  , "editorLightBulb.foreground"                          : "#ffaf87"
+  , "editorLightBulb.foreground"                          : "#ffd787"
 
   , "symbolIcon.arrayForeground"                          : "#5faf87"
   , "symbolIcon.booleanForeground"                        : "#c6c6c6"
   , "symbolIcon.classForeground"                          : "#87d7af"
   //, "symbolIcon.colorForeground"                          : "#"
-  , "symbolIcon.constantForeground"                       : "#ffaf87"
+  , "symbolIcon.constantForeground"                       : "#ffd787"
   , "symbolIcon.constructorForeground"                    : "#af87d7"
   , "symbolIcon.enumeratorForeground"                     : "#af87d7"
-  , "symbolIcon.enumeratorMemberForeground"               : "#ffaf87"
+  , "symbolIcon.enumeratorMemberForeground"               : "#ffd787"
   //, "symbolIcon.eventForeground"                          : "#"
   , "symbolIcon.fieldForeground"                          : "#87afd7"
   //, "symbolIcon.fileForeground"                           : "#"
@@ -376,7 +382,7 @@
   //, "symbolIcon.keyForeground"                            : "#"
   //, "symbolIcon.keywordForeground"                        : "#"
   , "symbolIcon.methodForeground"                         : "#5fafaf"
-  , "symbolIcon.moduleForeground"                         : "#ffaf87"
+  , "symbolIcon.moduleForeground"                         : "#ffd787"
   , "symbolIcon.namespaceForeground"                      : "#af87d7"
   //, "symbolIcon.nullForeground"                           : "#"
   //, "symbolIcon.numberForeground"                         : "#"
@@ -387,7 +393,7 @@
   //, "symbolIcon.referenceForeground"                      : "#"
   //, "symbolIcon.snippetForeground"                        : "#"
   , "symbolIcon.stringForeground"                         : "#af5faf"
-  , "symbolIcon.structForeground"                         : "#ffaf87"
+  , "symbolIcon.structForeground"                         : "#ffd787"
   , "symbolIcon.textForeground"                           : "#af5faf"
   //, "symbolIcon.typeParameterForeground"                  : "#"
   , "symbolIcon.unitForeground"                           : "#d787af"
@@ -493,7 +499,7 @@
       , "storage.modifier"                            // const, static
       , "support.constant.font-name"
       , ""
-      ], "settings": { "foreground": "#ffaf87"}
+      ], "settings": { "foreground": "#ffd787"}
     }
 
   , { "name": "Color 11: Yellow Bold"
@@ -505,7 +511,7 @@
       , "entity.name.operator.custom-literal"
       , "keyword.other.unit"
       , "punctuation.separator.continuation.line"
-      ], "settings": { "foreground": "#ffd787" }
+      ], "settings": { "foreground": "#ff875f" }
     }
 
  , { "name"  : "Color 4: Blue"
@@ -570,7 +576,7 @@
       , "constant.other.rgb-value"
       , "string"
       , ""
-      ], "settings": { "foreground": "#af5faf"}
+      ], "settings": { "foreground": "#af5faf" }
     }
 
   , { "name"  : "Color 6: Cyan"
@@ -595,7 +601,7 @@
       , "comment"
       , "punctuation.definition.comment" // Comment specifier e.g. //
       , ""
-      ], "settings": { "foreground": "#878787" }
+      ], "settings": { "foreground": "#5f5f5f" }
     }
 
   , { "name"  : "CSS property value"
@@ -632,7 +638,7 @@
   // These properties override tokenColors
 , "semanticTokenColors":
   {
-    "enumMember"    : "#ffaf87" // Enum member variables
+    "enumMember"    : "#ffd787" // Enum member variables
   //, "variable"      : "#87afd7" // Local variables
   //, "property"      : "#87afd7" // Class member variables
   //, "parameter"     : "#87afd7" // Function parameters
