@@ -60,9 +60,11 @@ class RgbConst:
   DEF_ACCENT1: int = 0xaf5faf
   DEF_ACCENT2: int = 0x00afd7
 
+  MIN_COLOR_VALUE: int = 0x00
+  MAX_COLOR_VALUE: int = 0xff
   MAX_CUTOFF_DARK: int = 0x5f
   MIN_CUTOFF_DARK: int = 0x00
-  MIN_CUTOFF_LITE: int = 0x87
+  MIN_CUTOFF_LITE: int = 0x5f
   MAX_CUTOFF_LITE: int = 0xd7
 
   DEFAULT_RGB_STR_LIST: str = str(
@@ -379,8 +381,8 @@ class RgbColor:
   #_____________________________________________________________________
   def scale_color\
     ( color
-    , lo_cutoff: int = RgbConst.MIN_CUTOFF_LITE
-    , hi_cutoff: int = RgbConst.MAX_CUTOFF_DARK
+    , lo_cutoff: int = RgbConst.MIN_COLOR_VALUE
+    , hi_cutoff: int = RgbConst.MAX_COLOR_VALUE
     ) -> dict:
     """
     Scales a color to be within the specified brightness range.
@@ -431,7 +433,8 @@ class RgbColor:
 
     # Normalize color channels
     for key in color.keys():
-      color[key] = (color[key] - lo_cutoff) / max_val
+      clamped = max(0, color[key] - lo_cutoff)
+      color[key] = (clamped) / max_val
 
     # Scale color channels
     for key in color.keys():
@@ -500,7 +503,7 @@ class RgbColor:
       return RgbColor.make_color_lite(color)
 
   #_____________________________________________________________________
-  def make_foreground_color(color, is_dark: bool = True) -> dict:
+  def make_foreground_color(color, is_dark: bool = True):
     """
     Creates a foreground color from the input color to ensure that
     foreground text remains readable against it.
