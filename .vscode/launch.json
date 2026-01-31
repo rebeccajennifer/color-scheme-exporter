@@ -123,7 +123,7 @@
     , "args":
       [ "-s" , "vscode-scheme"
       , "-f" , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
-      , "-o" , "${workspaceFolder}/sample-themes/flux-bunny-lite"
+      , "-o" , "~/.vscode/extensions/flux-bunny-themes"
       ]
     }
   ]
