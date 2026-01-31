@@ -94,8 +94,8 @@
   // Occurances of word under cursor
   , "editor.wordHighlightTextBackground"                  : "#FG__NORM1f"
 
-  , "editor.wordHighlightBackground"                      : "#FG__NORM1f"
-  , "editor.lineHighlightBackground"                      : "#FG__NORM1f"
+  , "editor.wordHighlightBackground"                      : "#FG__NORM0f"
+  , "editor.lineHighlightBackground"                      : "#FG__NORM0f"
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
   , "editor.findMatchBackground"                          : "#KEY_BG_287"
 
