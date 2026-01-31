@@ -95,7 +95,7 @@
   , "editor.wordHighlightTextBackground"                  : "#FG__NORM1f"
 
   , "editor.wordHighlightBackground"                      : "#FG__NORM1f"
-  , "editor.lineHighlightBackground"                      : "#BG__BOLD"
+  , "editor.lineHighlightBackground"                      : "#FG__NORM1f"
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
   , "editor.findMatchBackground"                          : "#KEY_BG_287"
 
@@ -136,13 +136,16 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#KEY_BG_2"
+  , "peekViewEditor.background"                           : "#KEY_BG_287"
   , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_287"
+  //, "peekViewEditorGutter.background"                     : "#KEY_BG_2"
   , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_287"
+  , "peekViewEditorStickyScroll.background"               : "#KEY_BG_2"
+  , "peekViewEditorStickyScrollGutter.background"         : "#KEY_BG_2"
   , "peekView.border"                                     : "#CYA_BOLD5f"
   , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
   , "peekViewResult.fileForeground"                       : "#FG__NORM"
-  , "peekViewResult.selectionBackground"                  : "#KEY_BG_0"
+  , "peekViewResult.selectionBackground"                  : "#KEY_BG_1"
   , "peekViewResult.selectionForeground"                  : "#FG__NORM"
 
   // Peek View line number background
@@ -296,13 +299,17 @@
   // SOURCE CONTROL
   //____________________________________________________________________
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
-  , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
+  , "gitDecoration.modifiedResourceForeground"            : "#YEL_BOLD"
   , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
   , "gitDecoration.deletedResourceForeground"             : "#RED_BOLD"
-  , "gitDecoration.submoduleResourceForeground"           : "#BLU_NORM"
+  , "gitDecoration.renamedResourceForeground"             : "#YEL_BOLD"
+  , "gitDecoration.conflictingResourceForeground"         : "#RED_BOLD"
+
+  , "gitDecoration.submoduleResourceForeground"           : "#CYA_NORM"
+  , "gitDecoration.ignoredResourceForeground"             : "#VIO_NORM"
 
   , "editorGutter.addedBackground"                        : "#GRN_NORM"
-  , "editorGutter.modifiedBackground"                     : "#YEL_NORM"
+  , "editorGutter.modifiedBackground"                     : "#YEL_BOLD"
   , "editorGutter.deletedBackground"                      : "#RED_BOLD"
 
   , "scmGraph.foreground1"                                : "#YEL_NORM"
@@ -312,10 +319,10 @@
   , "scmGraph.historyItemHoverLabelForeground"            : "#BG__NORM"
 
   , "diffEditor.insertedLineBackground"                   : "#GRN_BOLD1f"
-  , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD5f"
+  , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD2f"
 
   , "diffEditor.removedLineBackground"                    : "#RED_BOLD1f"
-  , "diffEditor.removedTextBackground"                    : "#RED_BOLD5f"
+  , "diffEditor.removedTextBackground"                    : "#RED_BOLD2f"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#GRN_BOLD"
   //, "scmGraph.foreground2"                                : "#RED_NORM"
@@ -334,10 +341,10 @@
   //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
-  , "editorWarning.foreground"                            : "#YEL_BOLD"
+  , "editorWarning.foreground"                            : "#YEL_NORM"
   , "editorError.foreground"                              : "#RED_BOLD"
 
-  , "list.warningForeground"                              : "#YEL_NORM"
+  , "list.warningForeground"                              : "#YEL_BOLD"
   , "list.errorForeground"                                : "#RED_BOLD"
 
   , "minimap.errorHighlight"                              : "#RED_BOLD"
@@ -352,7 +359,7 @@
   , "inputValidation.errorBorder"                         : "#RED_BOLD"
 
   , "problemsErrorIcon.foreground"                        : "#RED_BOLD"
-  , "problemsWarningIcon.foreground"                      : "#YEL_NORM"
+  , "problemsWarningIcon.foreground"                      : "#YEL_BOLD"
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
   , "debugConsole.errorForeground"                        : "#RED_BOLD"
   , "debugConsole.warningForeground"                      : "#YEL_NORM"
