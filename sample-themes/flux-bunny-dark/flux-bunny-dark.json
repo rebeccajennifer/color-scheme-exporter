@@ -79,7 +79,7 @@
   , "editor.selectionForeground"                          : "#262626"
 
   // Text color of header in settings
-  , "settings.headerForeground"                           : "#5f9696"
+  , "settings.headerForeground"                           : "#879999"
   , "menu.background"                                     : "#303030"
   , "textLink.foreground"                                 : "#00afd7"
   , "textLink.activeForeground"                           : "#87afd7"
@@ -94,8 +94,8 @@
   // Occurances of word under cursor
   , "editor.wordHighlightTextBackground"                  : "#c6c6c61f"
 
-  , "editor.wordHighlightBackground"                      : "#c6c6c61f"
-  , "editor.lineHighlightBackground"                      : "#303030"
+  , "editor.wordHighlightBackground"                      : "#c6c6c60f"
+  , "editor.lineHighlightBackground"                      : "#c6c6c60f"
   , "editor.findMatchHighlightBackground"                 : "#004d5f87"
   , "editor.findMatchBackground"                          : "#004d5f87"
 
@@ -136,13 +136,16 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#004d5f"
+  , "peekViewEditor.background"                           : "#004d5f87"
   , "peekViewEditor.matchHighlightBackground"             : "#004d5f87"
+  //, "peekViewEditorGutter.background"                     : "#004d5f"
   , "peekViewResult.matchHighlightBackground"             : "#004d5f87"
+  , "peekViewEditorStickyScroll.background"               : "#004d5f"
+  , "peekViewEditorStickyScrollGutter.background"         : "#004d5f"
   , "peekView.border"                                     : "#5fafaf5f"
   , "peekViewTitleLabel.foreground"                       : "#c6c6c6"
   , "peekViewResult.fileForeground"                       : "#c6c6c6"
-  , "peekViewResult.selectionBackground"                  : "#005f5f"
+  , "peekViewResult.selectionBackground"                  : "#5f345f"
   , "peekViewResult.selectionForeground"                  : "#c6c6c6"
 
   // Peek View line number background
@@ -296,13 +299,17 @@
   // SOURCE CONTROL
   //____________________________________________________________________
   , "gitDecoration.addedResourceForeground"               : "#5faf87"
-  , "gitDecoration.modifiedResourceForeground"            : "#ffd787"
+  , "gitDecoration.modifiedResourceForeground"            : "#ff875f"
   , "gitDecoration.untrackedResourceForeground"           : "#af87d7"
   , "gitDecoration.deletedResourceForeground"             : "#ff5f87"
-  , "gitDecoration.submoduleResourceForeground"           : "#87afd7"
+  , "gitDecoration.renamedResourceForeground"             : "#ff875f"
+  , "gitDecoration.conflictingResourceForeground"         : "#ff5f87"
+
+  , "gitDecoration.submoduleResourceForeground"           : "#87d7af"
+  , "gitDecoration.ignoredResourceForeground"             : "#af87d7"
 
   , "editorGutter.addedBackground"                        : "#afd787"
-  , "editorGutter.modifiedBackground"                     : "#ffd787"
+  , "editorGutter.modifiedBackground"                     : "#ff875f"
   , "editorGutter.deletedBackground"                      : "#ff5f87"
 
   , "scmGraph.foreground1"                                : "#ffd787"
@@ -312,10 +319,10 @@
   , "scmGraph.historyItemHoverLabelForeground"            : "#262626"
 
   , "diffEditor.insertedLineBackground"                   : "#5faf871f"
-  , "diffEditor.insertedTextBackground"                   : "#5faf875f"
+  , "diffEditor.insertedTextBackground"                   : "#5faf872f"
 
   , "diffEditor.removedLineBackground"                    : "#ff5f871f"
-  , "diffEditor.removedTextBackground"                    : "#ff5f875f"
+  , "diffEditor.removedTextBackground"                    : "#ff5f872f"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#5faf87"
   //, "scmGraph.foreground2"                                : "#d787af"
@@ -334,10 +341,10 @@
   //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
-  , "editorWarning.foreground"                            : "#ff875f"
+  , "editorWarning.foreground"                            : "#ffd787"
   , "editorError.foreground"                              : "#ff5f87"
 
-  , "list.warningForeground"                              : "#ffd787"
+  , "list.warningForeground"                              : "#ff875f"
   , "list.errorForeground"                                : "#ff5f87"
 
   , "minimap.errorHighlight"                              : "#ff5f87"
@@ -352,7 +359,7 @@
   , "inputValidation.errorBorder"                         : "#ff5f87"
 
   , "problemsErrorIcon.foreground"                        : "#ff5f87"
-  , "problemsWarningIcon.foreground"                      : "#ffd787"
+  , "problemsWarningIcon.foreground"                      : "#ff875f"
   , "problemsInfoIcon.foreground"                         : "#ffd787"
   , "debugConsole.errorForeground"                        : "#ff5f87"
   , "debugConsole.warningForeground"                      : "#ffd787"

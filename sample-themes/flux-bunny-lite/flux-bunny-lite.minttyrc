@@ -7,7 +7,7 @@
 #________________________________________________________________
 
 
-CursorColour       = #808080
+CursorColour       = #ff875f
 BackgroundColour   = #e4e4e4
 ForegroundColour   = #262626
 Black              = #121212
@@ -15,14 +15,14 @@ Red                = #af005f
 Green              = #008700
 Yellow             = #d75f00
 Blue               = #005f87
-Magenta            = #870087
-Cyan               = #008787
+Magenta            = #872f87
+Cyan               = #5f8787
 White              = #878787
 BoldBlack          = #878787
 BoldRed            = #d75f87
-BoldGreen          = #0087af
+BoldGreen          = #008700
 BoldYellow         = #d78700
-BoldBlue           = #005faf
+BoldBlue           = #0087af
 BoldMagenta        = #875f87
 BoldCyan           = #005f5f
 BoldWhite          = #afafaf
