@@ -111,7 +111,7 @@ class ColorScheme():
     Constructs color scheme from dictionary created from json.
     """
     if (self.MODE in input_dict):
-      self.is_dark_ = input_dict['mode']
+      self.is_dark_ = True if input_dict['mode'] == 'dark' else False
 
     #___________________________________________________________________
     if (self.NAME in input_dict):
