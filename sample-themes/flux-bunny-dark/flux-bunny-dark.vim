@@ -65,7 +65,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = 'NAME'
+let g:colors_name = 'flux-bunny-dark'
 
 " File containing the highlight group configurations
 source ~/.vim/colors/flux-bunny-base.vim

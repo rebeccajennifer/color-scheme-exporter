@@ -66,6 +66,7 @@ class VimScheme(ColorScheme):
     mappy: dict = self.str_replace_map
 
     # Additional CLI colors
+    mappy['NAME'] = self.name_
     mappy['BG__NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BG__NORM']))
     mappy['FG__NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['FG__NORM']))
     mappy['BG__BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BG__BOLD']))
