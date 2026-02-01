@@ -54,6 +54,7 @@ class ColorScheme():
   PALETTE         : str = 'palette'
   NAME            : str = 'name'
   MODE            : str = 'mode'
+  TEMPLATE_PATH   : str = None
 
   PREVIEW: str = str(
     f'\n{Strings.LINE}'
@@ -293,8 +294,63 @@ class ColorScheme():
     print(completion_text)
 
   #_____________________________________________________________________
-  def create_color_scheme_str(self):
+  def populate_replacement_map(self) -> str:
     """
-    Must be implemented by derived classes.
+    Populate map of color labels in template with values from
+    color scheme. Used by classes that have template files.
     """
-    return
+
+    Rgb = RgbColor
+
+    self.color_replacement_map: dict=\
+    { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
+    , 'FG__NORM' : StringUtils.int_to_hex6(self.fg_norm_color_)
+    , 'BG__BOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
+    , 'FG__BOLD' : StringUtils.int_to_hex6(self.fg_bold_color_)
+    , 'BLK_NORM' : StringUtils.int_to_hex6(self.palette_[0])
+    , 'RED_NORM' : StringUtils.int_to_hex6(self.palette_[1])
+    , 'GRN_NORM' : StringUtils.int_to_hex6(self.palette_[2])
+    , 'YEL_NORM' : StringUtils.int_to_hex6(self.palette_[3])
+    , 'BLU_NORM' : StringUtils.int_to_hex6(self.palette_[4])
+    , 'VIO_NORM' : StringUtils.int_to_hex6(self.palette_[5])
+    , 'CYA_NORM' : StringUtils.int_to_hex6(self.palette_[6])
+    , 'WHT_NORM' : StringUtils.int_to_hex6(self.palette_[7])
+    , 'BLK_BOLD' : StringUtils.int_to_hex6(self.palette_[8])
+    , 'RED_BOLD' : StringUtils.int_to_hex6(self.palette_[9])
+    , 'GRN_BOLD' : StringUtils.int_to_hex6(self.palette_[10])
+    , 'YEL_BOLD' : StringUtils.int_to_hex6(self.palette_[11])
+    , 'BLU_BOLD' : StringUtils.int_to_hex6(self.palette_[12])
+    , 'VIO_BOLD' : StringUtils.int_to_hex6(self.palette_[13])
+    , 'CYA_BOLD' : StringUtils.int_to_hex6(self.palette_[14])
+    , 'WHT_BOLD' : StringUtils.int_to_hex6(self.palette_[15])
+    }
+
+  #_____________________________________________________________________
+  def create_color_scheme_str(self) -> str:
+    """
+    Creates color scheme string to be printed to a file.
+    Used by classes that have template files.
+    """
+
+    self.populate_replacement_map()
+
+    #_______________________________________________________________
+    # Load template file.
+    #_______________________________________________________________
+    with open(self.TEMPLATE_PATH, 'r') as file:
+      text: str = file.read()
+
+    #_______________________________________________________________
+    # Replace color labels.
+    #_______________________________________________________________
+
+    for key in self.color_replacement_map:
+      value: str = self.color_replacement_map[key]
+
+      label_str: str = f'#{key}'
+      text = text.replace(label_str, f'#{value}')
+
+    out_str: str = text
+
+
+    return out_str
