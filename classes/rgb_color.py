@@ -259,7 +259,7 @@ class RgbColor:
     )
 
   #_____________________________________________________________________
-  def ansi_256_from_rgb(rgb_color: int) -> int:
+  def rgb_to_ansi256(rgb_color: int) -> int:
     """
     Converts 24 bit RGB color to nearest ANSI 256 color.
 
