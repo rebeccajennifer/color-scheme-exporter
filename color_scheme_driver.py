@@ -36,8 +36,18 @@ from classes.scheme_types.mintty_scheme import MinttyScheme
 from classes.scheme_types.konsole_scheme import KonsoleScheme
 from classes.scheme_types.vscode_term_scheme import VsCodeTermScheme
 from classes.scheme_types.vscode_scheme import VsCodeScheme
+from classes.scheme_types.vim_scheme import VimScheme
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
+
+SCHEME_MAP: dict =\
+{ ParserStrings.GNOME_INPUT       : GnomeScheme
+, ParserStrings.KONSOLE_INPUT     : KonsoleScheme
+, ParserStrings.VSCODE_TERM_INPUT : VsCodeTermScheme
+, ParserStrings.VSCODE_INPUT      : VsCodeScheme
+, ParserStrings.MINTTY_INPUT      : MinttyScheme
+, ParserStrings.VIM_INPUT         : VimScheme
+}
 
 
 #_______________________________________________________________________
@@ -63,20 +73,8 @@ if __name__ == '__main__':
   , MinttyScheme
   ]
 
-  if (args.scheme_type == ParserStrings.GNOME_INPUT):
-    SchemeType = GnomeScheme
-
-  elif (args.scheme_type == ParserStrings.KONSOLE_INPUT):
-    SchemeType = KonsoleScheme
-
-  elif (args.scheme_type == ParserStrings.VSCODE_TERM_INPUT):
-    SchemeType = VsCodeTermScheme
-
-  elif (args.scheme_type == ParserStrings.VSCODE_INPUT):
-    SchemeType = VsCodeScheme
-
-  elif (args.scheme_type == ParserStrings.MINTTY_INPUT):
-    SchemeType = MinttyScheme
+  if (args.scheme_type != ParserStrings.ALL_INPUT):
+    SchemeType = SCHEME_MAP[args.scheme_type]
 
   if (args.default):
     args.scheme_type = ParserStrings.ALL_INPUT

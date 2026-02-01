@@ -30,10 +30,6 @@ import argparse
 from os import getcwd
 
 from classes.color_scheme_strings import ColorSchemeStrings
-from classes.rgb_color import RgbColor, RgbConst
-
-from utilities.color_scheme_utils import GeneralUtils
-from flux_bunny_utils.string_utils import StringUtils
 
 
 #_______________________________________________________________________
@@ -57,6 +53,7 @@ class ParserStrings:
   VSCODE_TERM_INPUT : str = 'vscode-term'
   VSCODE_INPUT      : str = 'vscode-scheme'
   MINTTY_INPUT      : str = 'mintty'
+  VIM_INPUT         : str = 'vim'
   ALL_INPUT         : str = 'all'
 
   SCHEME_TYPES: list =\
@@ -65,6 +62,7 @@ class ParserStrings:
     , VSCODE_TERM_INPUT
     , VSCODE_INPUT
     , MINTTY_INPUT
+    , VIM_INPUT
     , ALL_INPUT
     ]
 
