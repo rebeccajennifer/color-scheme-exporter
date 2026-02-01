@@ -270,6 +270,9 @@ class RgbColor:
       Nearest ANSI 256 color index as integer
     """
 
+    if (isinstance(rgb_color, str)):
+      rgb_color = StringUtils.str_hex_to_int(rgb_color)
+
     valid_rgb_values: list[int] =\
     [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
 

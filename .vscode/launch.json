@@ -104,6 +104,17 @@
       , "--out_dir"     , "~/.themes/"
       ]
     }
+  , { "name"    : "vim-theme-dark"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "-s" , "vim"
+      , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "-o" , "sample-themes/flux-bunny-dark/"
+      ]
+    }
   , { "name"    : "vscode-theme-dark"
     , "type"    : "debugpy"
     , "request" : "launch"

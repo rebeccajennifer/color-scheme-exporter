@@ -60,7 +60,7 @@ exe ':hi Cursor           ctermfg ='.cli_blk_norm 'guifg ='.gui_blk_norm
 "_______________________________________________________________________
 
 " Option none disables the line
-exe ':hi CursorLine       cterm   =  none           gui  =  none'
+exe ':hi CursorLine       cterm   =  none          gui   =  none'
 exe ':hi CursorLine       ctermbg ='.cli_bg__bold 'guibg ='.gui_blk_norm
 
 " CursorLineNr: Sets color of current line

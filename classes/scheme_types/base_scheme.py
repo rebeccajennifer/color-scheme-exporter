@@ -26,6 +26,8 @@
 #   Base class for color schemes
 #_______________________________________________________________________
 
+import re
+
 from os import path
 
 from classes.color_scheme_strings import ColorSchemeStrings as Strings
@@ -89,6 +91,8 @@ class ColorScheme():
     self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
     self.name_          = 'theme-name'
     self.is_dark_       = True
+
+    self.color_replacement_map: dict = {}
 
     #___________________________________________________________________
     if (isinstance(cfg, dict)):
@@ -300,7 +304,9 @@ class ColorScheme():
     color scheme. Used by classes that have template files.
     """
 
-    Rgb = RgbColor
+    self.color_replacement_map: dict=\
+    { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
+    }
 
     self.color_replacement_map: dict=\
     { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
@@ -325,6 +331,8 @@ class ColorScheme():
     , 'WHT_BOLD' : StringUtils.int_to_hex6(self.palette_[15])
     }
 
+    return
+
   #_____________________________________________________________________
   def create_color_scheme_str(self) -> str:
     """
@@ -343,12 +351,10 @@ class ColorScheme():
     #_______________________________________________________________
     # Replace color labels.
     #_______________________________________________________________
-
     for key in self.color_replacement_map:
-      value: str = self.color_replacement_map[key]
-
-      label_str: str = f'#{key}'
-      text = text.replace(label_str, f'#{value}')
+      value = self.color_replacement_map[key]
+      pattern = fr'\b{re.escape(key)}\b'
+      text = re.sub(pattern, value, text)
 
     out_str: str = text
 

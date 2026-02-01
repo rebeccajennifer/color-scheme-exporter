@@ -42,11 +42,11 @@ from utilities.color_scheme_utils import GeneralUtils as Utils
 
 SCHEME_MAP: dict =\
 { ParserStrings.GNOME_INPUT       : GnomeScheme
-, ParserStrings.KONSOLE_INPUT     : KonsoleScheme
 , ParserStrings.VSCODE_TERM_INPUT : VsCodeTermScheme
 , ParserStrings.VSCODE_INPUT      : VsCodeScheme
 , ParserStrings.MINTTY_INPUT      : MinttyScheme
 , ParserStrings.VIM_INPUT         : VimScheme
+#, ParserStrings.KONSOLE_INPUT     : KonsoleScheme
 }
 
 
@@ -65,13 +65,7 @@ if __name__ == '__main__':
 
   args: argparse.Namespace = parser.parse_args()
 
-  scheme_types: list =\
-  [ GnomeScheme
-  #, KonsoleScheme
-  , VsCodeTermScheme
-  , VsCodeScheme
-  , MinttyScheme
-  ]
+  scheme_types: list = list(SCHEME_MAP.values())
 
   if (args.scheme_type != ParserStrings.ALL_INPUT):
     SchemeType = SCHEME_MAP[args.scheme_type]

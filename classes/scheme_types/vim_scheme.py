@@ -35,7 +35,7 @@ from flux_bunny_utils.string_utils import StringUtils
 #_______________________________________________________________________
 class VimScheme(ColorScheme):
 
-  OUT_EXT: str = 'json'
+  OUT_EXT: str = 'vim'
 
   COMPLETION_TEXT: str =str (
     '\nFollow instructions here for instructions on how to implement'
@@ -60,30 +60,31 @@ class VimScheme(ColorScheme):
     """
 
     Rgb = RgbColor
-    color_map: dict = self.color_replacement_map
 
     super().populate_replacement_map()
 
+    color_map: dict = self.color_replacement_map
+
     # Additional CLI colors
-    color_map['BG__NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['BG__NORM'])
-    color_map['FG__NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['FG__NORM'])
-    color_map['BG__BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['BG__BOLD'])
-    color_map['FG__BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['FG__BOLD'])
-    color_map['BLK_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['BLK_NORM'])
-    color_map['RED_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['RED_NORM'])
-    color_map['GRN_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['GRN_NORM'])
-    color_map['YEL_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['YEL_NORM'])
-    color_map['BLU_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['BLU_NORM'])
-    color_map['VIO_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['VIO_NORM'])
-    color_map['CYA_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['CYA_NORM'])
-    color_map['WHT_NORM_CLI'] = Rgb.ansi_256_from_rgb(color_map['WHT_NORM'])
-    color_map['BLK_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['BLK_BOLD'])
-    color_map['RED_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['RED_BOLD'])
-    color_map['GRN_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['GRN_BOLD'])
-    color_map['YEL_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['YEL_BOLD'])
-    color_map['BLU_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['BLU_BOLD'])
-    color_map['VIO_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['VIO_BOLD'])
-    color_map['CYA_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['CYA_BOLD'])
-    color_map['WHT_BOLD_CLI'] = Rgb.ansi_256_from_rgb(color_map['WHT_BOLD'])
+    color_map['BG__NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BG__NORM']))
+    color_map['FG__NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['FG__NORM']))
+    color_map['BG__BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BG__BOLD']))
+    color_map['FG__BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['FG__BOLD']))
+    color_map['BLK_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BLK_NORM']))
+    color_map['RED_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['RED_NORM']))
+    color_map['GRN_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['GRN_NORM']))
+    color_map['YEL_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['YEL_NORM']))
+    color_map['BLU_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BLU_NORM']))
+    color_map['VIO_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['VIO_NORM']))
+    color_map['CYA_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['CYA_NORM']))
+    color_map['WHT_NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['WHT_NORM']))
+    color_map['BLK_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BLK_BOLD']))
+    color_map['RED_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['RED_BOLD']))
+    color_map['GRN_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['GRN_BOLD']))
+    color_map['YEL_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['YEL_BOLD']))
+    color_map['BLU_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BLU_BOLD']))
+    color_map['VIO_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['VIO_BOLD']))
+    color_map['CYA_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['CYA_BOLD']))
+    color_map['WHT_BOLD_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['WHT_BOLD']))
 
     return
