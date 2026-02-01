@@ -92,7 +92,7 @@ class ColorScheme():
     self.name_          = 'theme-name'
     self.is_dark_       = True
 
-    self.color_replacement_map: dict = {}
+    self.str_replace_map: dict = {}
 
     #___________________________________________________________________
     if (isinstance(cfg, dict)):
@@ -304,11 +304,11 @@ class ColorScheme():
     color scheme. Used by classes that have template files.
     """
 
-    self.color_replacement_map: dict=\
+    self.str_replace_map: dict=\
     { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
     }
 
-    self.color_replacement_map: dict=\
+    self.str_replace_map: dict=\
     { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
     , 'FG__NORM' : StringUtils.int_to_hex6(self.fg_norm_color_)
     , 'BG__BOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
@@ -351,8 +351,8 @@ class ColorScheme():
     #_______________________________________________________________
     # Replace color labels.
     #_______________________________________________________________
-    for key in self.color_replacement_map:
-      value = self.color_replacement_map[key]
+    for key in self.str_replace_map:
+      value = self.str_replace_map[key]
       pattern = fr'\b{re.escape(key)}\b'
       text = re.sub(pattern, value, text)
 

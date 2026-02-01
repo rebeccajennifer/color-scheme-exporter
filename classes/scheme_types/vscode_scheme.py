@@ -66,7 +66,7 @@ class VsCodeScheme(ColorScheme):
     key_fg_1 = RgbColor.make_foreground_color(self.accent_color1_, is_dark=self.is_dark_)
     key_fg_2 = RgbColor.make_foreground_color(self.accent_color2_, is_dark=self.is_dark_)
 
-    color_map: dict = self.color_replacement_map
+    color_map: dict = self.str_replace_map
 
     color_map['KEY_BG_0'] =  StringUtils.int_to_hex6(key_bg_0)
     color_map['KEY_BG_1'] =  StringUtils.int_to_hex6(key_bg_1)

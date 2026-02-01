@@ -56,14 +56,14 @@ class VimScheme(ColorScheme):
     color scheme. Added additional CLI colors.
 
     Side Effects:
-      Modifies self.color_replacement_map to include CLI color mappings.
+      Modifies self.str_replace_map to include CLI color mappings.
     """
 
     Rgb = RgbColor
 
     super().populate_replacement_map()
 
-    color_map: dict = self.color_replacement_map
+    color_map: dict = self.str_replace_map
 
     # Additional CLI colors
     color_map['BG__NORM_CLI'] = str(Rgb.ansi_256_from_rgb(color_map['BG__NORM']))
