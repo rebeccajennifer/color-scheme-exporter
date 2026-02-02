@@ -4,6 +4,17 @@
 "_______________________________________________________________________
 
 "_______________________________________________________________________
+" COLOR SCHEME DEFINITION
+"_______________________________________________________________________
+set background=LITE_OR_DARK
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = 'NAME'
+
+"_______________________________________________________________________
 " COLOR DEFINITONS
 "_______________________________________________________________________
 
@@ -23,7 +34,10 @@ let gui_mag_norm = '#VIO_NORM'
 let gui_cya_norm = '#CYA_NORM'
 let gui_wht_norm = '#WHT_NORM'
 
-let gui_blk_bold = '#BLK_BOLD
+let gui_bg__bold = '#BG__BOLD'
+let gui_fg__bold = '#FG__BOLD'
+
+let gui_blk_bold = '#BLK_BOLD'
 let gui_red_bold = '#RED_BOLD'
 let gui_grn_bold = '#GRN_BOLD'
 let gui_yel_bold = '#YEL_BOLD'
@@ -35,37 +49,29 @@ let gui_wht_bold = '#WHT_BOLD'
 "-----------------------------------------------------------------------
 " CLI Colors
 "-----------------------------------------------------------------------
-let cli_bg__norm = 'BG__BOLD_CLI'
-let cli_fg__norm = 'FG__BOLD_CLI'
+let cli_bg__norm = 'BG__CLI_NORM'
+let cli_fg__norm = 'FG__CLI_NORM'
 
-let cli_blk_norm = 'BLK_NORM_CLI'
-let cli_red_norm = 'RED_NORM_CLI'
-let cli_grn_norm = 'GRN_NORM_CLI'
-let cli_yel_norm = 'YEL_NORM_CLI'
-let cli_blu_norm = 'BLU_NORM_CLI'
-let cli_mag_norm = 'VIO_NORM_CLI'
-let cli_cya_norm = 'CYA_NORM_CLI'
-let cli_wht_norm = 'WHT_NORM_CLI'
+let cli_blk_norm = 'BLK_CLI_NORM'
+let cli_red_norm = 'RED_CLI_NORM'
+let cli_grn_norm = 'GRN_CLI_NORM'
+let cli_yel_norm = 'YEL_CLI_NORM'
+let cli_blu_norm = 'BLU_CLI_NORM'
+let cli_mag_norm = 'VIO_CLI_NORM'
+let cli_cya_norm = 'CYA_CLI_NORM'
+let cli_wht_norm = 'WHT_CLI_NORM'
 
-let cli_blk_bold = 'BLK_BOLD_CLI'
-let cli_red_bold = 'RED_BOLD_CLI'
-let cli_grn_bold = 'GRN_BOLD_CLI'
-let cli_yel_bold = 'YEL_BOLD_CLI'
-let cli_blu_bold = 'BLU_BOLD_CLI'
-let cli_mag_bold = 'VIO_BOLD_CLI'
-let cli_cya_bold = 'CYA_BOLD_CLI'
-let cli_wht_bold = 'WHT_BOLD_CLI'
+let cli_bg__bold = 'BG__CLI_BOLD'
+let cli_fg__bold = 'FG__CLI_BOLD'
 
-"_______________________________________________________________________
-" COLOR SCHEME DEFINITION
-"_______________________________________________________________________
-set background=IS_DARK
-hi clear
-if exists("syntax_on")
-  syntax reset
-endif
-
-let g:colors_name = 'NAME'
+let cli_blk_bold = 'BLK_CLI_BOLD'
+let cli_red_bold = 'RED_CLI_BOLD'
+let cli_grn_bold = 'GRN_CLI_BOLD'
+let cli_yel_bold = 'YEL_CLI_BOLD'
+let cli_blu_bold = 'BLU_CLI_BOLD'
+let cli_mag_bold = 'VIO_CLI_BOLD'
+let cli_cya_bold = 'CYA_CLI_BOLD'
+let cli_wht_bold = 'WHT_CLI_BOLD'
 
 " File containing the highlight group configurations
 source ~/.vim/colors/flux-bunny-base.vim

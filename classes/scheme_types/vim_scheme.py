@@ -63,29 +63,34 @@ class VimScheme(ColorScheme):
 
     super().populate_replacement_map()
 
+    is_dark_str: str = 'dark' if self.is_dark_ else 'light'
+
     mappy: dict = self.str_replace_map
 
     # Additional CLI colors
-    mappy['NAME'] = self.name_
-    mappy['BG__NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BG__NORM']))
-    mappy['FG__NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['FG__NORM']))
-    mappy['BG__BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BG__BOLD']))
-    mappy['FG__BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['FG__BOLD']))
-    mappy['BLK_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BLK_NORM']))
-    mappy['RED_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['RED_NORM']))
-    mappy['GRN_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['GRN_NORM']))
-    mappy['YEL_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['YEL_NORM']))
-    mappy['BLU_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BLU_NORM']))
-    mappy['VIO_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['VIO_NORM']))
-    mappy['CYA_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['CYA_NORM']))
-    mappy['WHT_NORM_CLI'] = str(Rgb.rgb_to_ansi256(mappy['WHT_NORM']))
-    mappy['BLK_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BLK_BOLD']))
-    mappy['RED_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['RED_BOLD']))
-    mappy['GRN_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['GRN_BOLD']))
-    mappy['YEL_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['YEL_BOLD']))
-    mappy['BLU_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['BLU_BOLD']))
-    mappy['VIO_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['VIO_BOLD']))
-    mappy['CYA_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['CYA_BOLD']))
-    mappy['WHT_BOLD_CLI'] = str(Rgb.rgb_to_ansi256(mappy['WHT_BOLD']))
+    mappy['NAME']         = self.name_
+    mappy['LITE_OR_DARK'] = is_dark_str
+
+    mappy['BG__CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['BG__NORM']))
+    mappy['FG__CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['FG__NORM']))
+    mappy['BG__CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['BG__BOLD']))
+    mappy['FG__CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['FG__BOLD']))
+
+    mappy['BLK_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['BLK_NORM']))
+    mappy['RED_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['RED_NORM']))
+    mappy['GRN_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['GRN_NORM']))
+    mappy['YEL_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['YEL_NORM']))
+    mappy['BLU_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['BLU_NORM']))
+    mappy['VIO_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['VIO_NORM']))
+    mappy['CYA_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['CYA_NORM']))
+    mappy['WHT_CLI_NORM'] = str(Rgb.rgb_to_ansi256(mappy['WHT_NORM']))
+    mappy['BLK_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['BLK_BOLD']))
+    mappy['RED_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['RED_BOLD']))
+    mappy['GRN_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['GRN_BOLD']))
+    mappy['YEL_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['YEL_BOLD']))
+    mappy['BLU_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['BLU_BOLD']))
+    mappy['VIO_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['VIO_BOLD']))
+    mappy['CYA_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['CYA_BOLD']))
+    mappy['WHT_CLI_BOLD'] = str(Rgb.rgb_to_ansi256(mappy['WHT_BOLD']))
 
     return

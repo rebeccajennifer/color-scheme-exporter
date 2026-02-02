@@ -23,6 +23,9 @@ let gui_mag_norm = '#af87d7'
 let gui_cya_norm = '#87d7af'
 let gui_wht_norm = '#d7d7d7'
 
+let gui_bg__bold = '#303030'
+let gui_fg__bold = '#eeeeee'
+
 let gui_blk_bold = '#5f5f5f
 let gui_red_bold = '#ff5f87'
 let gui_grn_bold = '#5faf87'
@@ -35,8 +38,8 @@ let gui_wht_bold = '#eeeeee'
 "-----------------------------------------------------------------------
 " CLI Colors
 "-----------------------------------------------------------------------
-let cli_bg__norm = '236'
-let cli_fg__norm = '255'
+let cli_bg__norm = '235'
+let cli_fg__norm = '251'
 
 let cli_blk_norm = '234'
 let cli_red_norm = '175'
@@ -46,6 +49,9 @@ let cli_blu_norm = '110'
 let cli_mag_norm = '140'
 let cli_cya_norm = '115'
 let cli_wht_norm = '188'
+
+let cli_bg__norm = '236'
+let cli_fg__norm = '255'
 
 let cli_blk_bold = '59'
 let cli_red_bold = '204'

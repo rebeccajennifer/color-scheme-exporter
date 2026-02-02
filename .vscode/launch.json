@@ -112,7 +112,18 @@
     , "args":
       [ "-s" , "vim"
       , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
-      , "-o" , "sample-themes/flux-bunny-dark/"
+      , "-o" , "~/.vim/colors/"
+      ]
+    }
+  , { "name"    : "vim-theme-lite"
+    , "type"    : "debugpy"
+    , "request" : "launch"
+    , "program" : "${workspaceFolder}/color_scheme_driver.py"
+    , "console" : "integratedTerminal"
+    , "args":
+      [ "-s" , "vim"
+      , "-f" , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
+      , "-o" , "~/.vim/colors/"
       ]
     }
   , { "name"    : "vscode-theme-dark"

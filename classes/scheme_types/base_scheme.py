@@ -353,8 +353,11 @@ class ColorScheme():
     #_______________________________________________________________
     for key in self.str_replace_map:
       value = self.str_replace_map[key]
-      pattern = fr'\b{re.escape(key)}\b'
-      text = re.sub(pattern, value, text)
+      text = text.replace(key, value)
+      # Replace whole word only
+      # Does not currently handle properties in vscode theme
+      #pattern = fr'\b{re.escape(key)}\b'
+      #text = re.sub(pattern, value, text)
 
     out_str: str = text
 
