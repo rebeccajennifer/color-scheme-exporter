@@ -4,6 +4,17 @@
 "_______________________________________________________________________
 
 "_______________________________________________________________________
+" COLOR SCHEME DEFINITION
+"_______________________________________________________________________
+set background=dark
+hi clear
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = 'flux-bunny-dark'
+
+"_______________________________________________________________________
 " COLOR DEFINITONS
 "_______________________________________________________________________
 
@@ -26,7 +37,7 @@ let gui_wht_norm = '#d7d7d7'
 let gui_bg__bold = '#303030'
 let gui_fg__bold = '#eeeeee'
 
-let gui_blk_bold = '#5f5f5f
+let gui_blk_bold = '#5f5f5f'
 let gui_red_bold = '#ff5f87'
 let gui_grn_bold = '#5faf87'
 let gui_yel_bold = '#ff875f'
@@ -50,8 +61,8 @@ let cli_mag_norm = '140'
 let cli_cya_norm = '115'
 let cli_wht_norm = '188'
 
-let cli_bg__norm = '236'
-let cli_fg__norm = '255'
+let cli_bg__bold = '236'
+let cli_fg__bold = '255'
 
 let cli_blk_bold = '59'
 let cli_red_bold = '204'
@@ -61,17 +72,6 @@ let cli_blu_bold = '38'
 let cli_mag_bold = '133'
 let cli_cya_bold = '73'
 let cli_wht_bold = '255'
-
-"_______________________________________________________________________
-" COLOR SCHEME DEFINITION
-"_______________________________________________________________________
-set background=IS_DARK
-hi clear
-if exists("syntax_on")
-  syntax reset
-endif
-
-let g:colors_name = 'flux-bunny-dark'
 
 " File containing the highlight group configurations
 source ~/.vim/colors/flux-bunny-base.vim
