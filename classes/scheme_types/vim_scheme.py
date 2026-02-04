@@ -23,13 +23,13 @@
 #_______________________________________________________________________
 #_______________________________________________________________________
 #   DESCRIPTION
-#   Visual Studio Code color scheme
+#   Vim color scheme
 #_______________________________________________________________________
 
+from shutil import copy
 from classes.scheme_types.base_scheme import ColorScheme
 from classes.rgb_color import RgbColor
-
-from flux_bunny_utils.string_utils import StringUtils
+from flux_bunny_utils.file_utils import FileUtils
 
 
 #_______________________________________________________________________
@@ -47,7 +47,18 @@ class VimScheme(ColorScheme):
   #_____________________________________________________________________
   # Mapping of input key names to color label names in template
   #_____________________________________________________________________
-  TEMPLATE_PATH: str = 'templates/vim/flux-bunny-template.vim'
+  TEMPLATE_PATH : str = 'templates/vim/flux-bunny-template.vim'
+  BASE_PATH     : str = 'templates/vim/flux-bunny-base.vim'
+
+  #_____________________________________________________________________
+  def __init__(self, out_dir: str = '.', cfg = None):
+    super().__init__(out_dir, cfg)
+
+    # TODO add to flux_bunny_utils
+
+    copy(self.BASE_PATH, self.out_dir_)
+
+    return
 
   #_____________________________________________________________________
   def populate_replacement_map(self) -> str:

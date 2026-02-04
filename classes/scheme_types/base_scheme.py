@@ -73,9 +73,7 @@ class ColorScheme():
   COMPLETION_TEXT: str = Strings.OUTPUT_STR
 
   #_____________________________________________________________________
-  def __init__(self
-    , out_dir: str = '.'
-    , cfg = None):
+  def __init__(self, out_dir: str = '.', cfg = None):
 
     self.cursor_color_  = RgbConst.DEF_CRSR_BG
 
@@ -91,6 +89,7 @@ class ColorScheme():
     self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
     self.name_          = 'theme-name'
     self.is_dark_       = True
+    self.out_dir_       = out_dir
 
     self.str_replace_map: dict = {}
 
