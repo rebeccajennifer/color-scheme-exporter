@@ -113,13 +113,12 @@
   //____________________________________________________________________
   // TEXT INPUT FIELDS
   //____________________________________________________________________
-  // Text field entry
   , "input.background"                                    : "#303030"
   , "input.foreground"                                    : "#c6c6c6"
-  , "input.placeholderForeground"                         : "#87afd7"
+  , "input.placeholderForeground"                         : "#5f5f5f"
 
   // E.g. Commit message entry, command palette
-  , "editor.placeholder.foreground"                       : "#87afd7"
+  , "editor.placeholder.foreground"                       : "#5f5f5f"
 
   // E.g. Match case button in search
   , "inputOption.activeBackground"                        : "#005f5f"
@@ -193,9 +192,9 @@
   //____________________________________________________________________
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
-  , "statusBar.background"                                : "#00afd787"
+  , "statusBar.background"                                : "#004d5f"
   , "statusBar.foreground"                                : "#eeeeee"
-  , "statusBar.noFolderBackground"                        : "#af5faf87"
+  , "statusBar.noFolderBackground"                        : "#5f345f"
   , "statusBarItem.remoteBackground"                      : "#5faf8787"
   , "statusBarItem.remoteForeground"                      : "#eeeeee"
 
@@ -207,7 +206,7 @@
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
   //____________________________________________________________________
-  , "activityBar.foreground"                              : "#c6c6c6ef"
+  , "activityBar.foreground"                              : "#eeeeee"
   , "activityBar.background"                              : "#303030"
   , "activityBar.activeBackground"                        : "#005f5f"
   , "activityBarBadge.background"                         : "#afd787"
@@ -221,12 +220,12 @@
   , "sideBar.foreground"                                  : "#c6c6c6"
   , "sideBar.border"                                      : "#303030"
   , "sideBarTitle.background"                             : "#262626"
-  , "sideBarTitle.foreground"                             : "#c6c6c6"
+  , "sideBarTitle.foreground"                             : "#eeeeee"
   , "sideBarSectionHeader.background"                     : "#c6c6c620"
   , "sideBarSectionHeader.foreground"                     : "#c6c6c6"
 
   , "list.activeSelectionBackground"                      : "#005f5f"
-  , "list.activeSelectionForeground"                      : "#c6c6c6"
+  , "list.activeSelectionForeground"                      : "#eeeeee"
   , "list.inactiveSelectionBackground"                    : "#303030"
   , "list.inactiveSelectionForeground"                    : "#00afd787"
   , "list.activeSelectionIconForeground"                  : "#c6c6c6"
