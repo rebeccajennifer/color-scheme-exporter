@@ -113,13 +113,12 @@
   //____________________________________________________________________
   // TEXT INPUT FIELDS
   //____________________________________________________________________
-  // Text field entry
   , "input.background"                                    : "#BG__BOLD"
   , "input.foreground"                                    : "#FG__NORM"
-  , "input.placeholderForeground"                         : "#BLU_NORM"
+  , "input.placeholderForeground"                         : "#BLK_BOLD"
 
   // E.g. Commit message entry, command palette
-  , "editor.placeholder.foreground"                       : "#BLU_NORM"
+  , "editor.placeholder.foreground"                       : "#BLK_BOLD"
 
   // E.g. Match case button in search
   , "inputOption.activeBackground"                        : "#KEY_BG_0"
@@ -193,9 +192,9 @@
   //____________________________________________________________________
   // STATUS BAR (BOTTOM OF WINDOW)
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BLU_BOLD87"
+  , "statusBar.background"                                : "#KEY_BG_2"
   , "statusBar.foreground"                                : "#FG__BOLD"
-  , "statusBar.noFolderBackground"                        : "#VIO_BOLD87"
+  , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
   , "statusBarItem.remoteBackground"                      : "#GRN_BOLD87"
   , "statusBarItem.remoteForeground"                      : "#FG__BOLD"
 
@@ -207,7 +206,7 @@
   //____________________________________________________________________
   // ACTIVITY BAR (LEFT OF WINDOW)
   //____________________________________________________________________
-  , "activityBar.foreground"                              : "#FG__NORMef"
+  , "activityBar.foreground"                              : "#FG__BOLD"
   , "activityBar.background"                              : "#BG__BOLD"
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
@@ -221,12 +220,12 @@
   , "sideBar.foreground"                                  : "#FG__NORM"
   , "sideBar.border"                                      : "#BG__BOLD"
   , "sideBarTitle.background"                             : "#BG__NORM"
-  , "sideBarTitle.foreground"                             : "#FG__NORM"
+  , "sideBarTitle.foreground"                             : "#FG__BOLD"
   , "sideBarSectionHeader.background"                     : "#FG__NORM20"
   , "sideBarSectionHeader.foreground"                     : "#FG__NORM"
 
   , "list.activeSelectionBackground"                      : "#KEY_BG_0"
-  , "list.activeSelectionForeground"                      : "#FG__NORM"
+  , "list.activeSelectionForeground"                      : "#FG__BOLD"
   , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
   , "list.activeSelectionIconForeground"                  : "#FG__NORM"
