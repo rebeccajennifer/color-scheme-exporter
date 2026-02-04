@@ -26,6 +26,8 @@
 #   Base class for color schemes
 #_______________________________________________________________________
 
+import re
+
 from os import path
 
 from classes.color_scheme_strings import ColorSchemeStrings as Strings
@@ -47,8 +49,14 @@ class ColorScheme():
   BG_BOLD_KEY     : str = 'background-color-intense'
   FG_NORM_KEY     : str = 'foreground-color'
   FG_BOLD_KEY     : str = 'foreground-color-intense'
+  KEY_BG0_KEY     : str = 'accent-color-0'
+  KEY_BG1_KEY     : str = 'accent-color-1'
+  KEY_BG2_KEY     : str = 'accent-color-2'
   CURSOR_COLOR    : str = 'cursor-color'
   PALETTE         : str = 'palette'
+  NAME            : str = 'name'
+  MODE            : str = 'mode'
+  TEMPLATE_PATH   : str = None
 
   PREVIEW: str = str(
     f'\n{Strings.LINE}'
@@ -65,57 +73,29 @@ class ColorScheme():
   COMPLETION_TEXT: str = Strings.OUTPUT_STR
 
   #_____________________________________________________________________
-  def __init__(self
-    , name: str = Strings.DEFAULT_NAME
-    , out_dir: str = '.', *arg):
+  def __init__(self, out_dir: str = '.', cfg = None):
 
-    self.cursor_color_  = RgbConst.DEFAULT_CURSOR_COL
+    self.cursor_color_  = RgbConst.DEF_CRSR_BG
 
     self.bg_norm_color_ = RgbConst.DEF_BG_NORM
     self.fg_norm_color_ = RgbConst.DEF_FG_NORM
     self.bg_bold_color_ = RgbConst.DEF_BG_BOLD
     self.fg_bold_color_ = RgbConst.DEF_FG_BOLD
 
+    self.accent_color0_ = RgbConst.DEF_ACCENT0
+    self.accent_color1_ = RgbConst.DEF_ACCENT1
+    self.accent_color2_ = RgbConst.DEF_ACCENT2
+
     self.palette_       = RgbConst.DEFAULT_RGB_INT_LIST
-    self.name_          = name
+    self.name_          = 'theme-name'
+    self.is_dark_       = True
+    self.out_dir_       = out_dir
+
+    self.str_replace_map: dict = {}
 
     #___________________________________________________________________
-    # Default with no arguments
-    #___________________________________________________________________
-    if (not len(arg)):
-      return
-
-    #___________________________________________________________________
-    if (isinstance(arg[0], dict)):
-      self.construct_from_json(arg[0])
-
-    #___________________________________________________________________
-    if (isinstance(arg[0], int)):
-        self.bg_norm_color_ = arg[0]
-
-    #___________________________________________________________________
-    if (len(arg) > 1):
-      try:
-        self.fg_norm_color_ = arg[1]
-      except TypeError:
-        pass
-
-    #___________________________________________________________________
-    # Third argument is assumed to be a string containing white space
-    # separated hex int strings, used when command line input. E.g.
-    # TODO add example
-    #___________________________________________________________________
-    if (len(arg) > 2):
-      try:
-        rgb_colors: str = arg[2]
-
-        rgb_color_str_list: list[str] = rgb_colors.split()
-
-        self.palette_ =\
-          Utils.str_list_to_hex_list(rgb_color_str_list)
-
-      except TypeError:
-        pass
+    if (isinstance(cfg, dict)):
+      self.construct_from_json(cfg)
 
     self.out_file_name_: str =\
       f'{self.name_}.{self.OUT_EXT}'
@@ -130,15 +110,17 @@ class ColorScheme():
     return
 
   #_____________________________________________________________________
-  def construct_from_json(self, input_dict: dict):
+  def construct_from_json(self, input_dict: dict) -> None:
     """
     Constructs color scheme from dictionary created from json.
     """
+    if (self.MODE in input_dict):
+      self.is_dark_ = True if input_dict['mode'] == 'dark' else False
 
     #___________________________________________________________________
-    if ('name' in input_dict):
+    if (self.NAME in input_dict):
       # Ensure file names have no spaces
-      self.name_ = input_dict['name'].replace(' ', '-')
+      self.name_ = input_dict[self.NAME].replace(' ', '-').lower()
 
     #___________________________________________________________________
     # Set background
@@ -161,6 +143,21 @@ class ColorScheme():
     if (self.FG_BOLD_KEY in input_dict):
       self.fg_bold_color_ =\
         StringUtils.str_hex_to_int(input_dict[self.FG_BOLD_KEY])
+
+    #___________________________________________________________________
+    # Set accent colors
+    #___________________________________________________________________
+    if (self.KEY_BG0_KEY in input_dict):
+      self.accent_color0_ =\
+        StringUtils.str_hex_to_int(input_dict[self.KEY_BG0_KEY])
+
+    if (self.KEY_BG1_KEY in input_dict):
+      self.accent_color1_ =\
+        StringUtils.str_hex_to_int(input_dict[self.KEY_BG1_KEY])
+
+    if (self.KEY_BG2_KEY in input_dict):
+      self.accent_color2_ =\
+        StringUtils.str_hex_to_int(input_dict[self.KEY_BG2_KEY])
 
     #___________________________________________________________________
     if (self.PALETTE in input_dict):
@@ -300,8 +297,68 @@ class ColorScheme():
     print(completion_text)
 
   #_____________________________________________________________________
-  def create_color_scheme_str(self):
+  def populate_replacement_map(self) -> str:
     """
-    Must be implemented by derived classes.
+    Populate map of color labels in template with values from
+    color scheme. Used by classes that have template files.
     """
+
+    self.str_replace_map: dict=\
+    { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
+    }
+
+    self.str_replace_map: dict=\
+    { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
+    , 'FG__NORM' : StringUtils.int_to_hex6(self.fg_norm_color_)
+    , 'BG__BOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
+    , 'FG__BOLD' : StringUtils.int_to_hex6(self.fg_bold_color_)
+    , 'BLK_NORM' : StringUtils.int_to_hex6(self.palette_[0])
+    , 'RED_NORM' : StringUtils.int_to_hex6(self.palette_[1])
+    , 'GRN_NORM' : StringUtils.int_to_hex6(self.palette_[2])
+    , 'YEL_NORM' : StringUtils.int_to_hex6(self.palette_[3])
+    , 'BLU_NORM' : StringUtils.int_to_hex6(self.palette_[4])
+    , 'VIO_NORM' : StringUtils.int_to_hex6(self.palette_[5])
+    , 'CYA_NORM' : StringUtils.int_to_hex6(self.palette_[6])
+    , 'WHT_NORM' : StringUtils.int_to_hex6(self.palette_[7])
+    , 'BLK_BOLD' : StringUtils.int_to_hex6(self.palette_[8])
+    , 'RED_BOLD' : StringUtils.int_to_hex6(self.palette_[9])
+    , 'GRN_BOLD' : StringUtils.int_to_hex6(self.palette_[10])
+    , 'YEL_BOLD' : StringUtils.int_to_hex6(self.palette_[11])
+    , 'BLU_BOLD' : StringUtils.int_to_hex6(self.palette_[12])
+    , 'VIO_BOLD' : StringUtils.int_to_hex6(self.palette_[13])
+    , 'CYA_BOLD' : StringUtils.int_to_hex6(self.palette_[14])
+    , 'WHT_BOLD' : StringUtils.int_to_hex6(self.palette_[15])
+    }
+
     return
+
+  #_____________________________________________________________________
+  def create_color_scheme_str(self) -> str:
+    """
+    Creates color scheme string to be printed to a file.
+    Used by classes that have template files.
+    """
+
+    self.populate_replacement_map()
+
+    #_______________________________________________________________
+    # Load template file.
+    #_______________________________________________________________
+    with open(self.TEMPLATE_PATH, 'r') as file:
+      text: str = file.read()
+
+    #_______________________________________________________________
+    # Replace color labels.
+    #_______________________________________________________________
+    for key in self.str_replace_map:
+      value = self.str_replace_map[key]
+      text = text.replace(key, value)
+      # Replace whole word only
+      # Does not currently handle properties in vscode theme
+      #pattern = fr'\b{re.escape(key)}\b'
+      #text = re.sub(pattern, value, text)
+
+    out_str: str = text
+
+
+    return out_str

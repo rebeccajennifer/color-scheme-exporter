@@ -31,6 +31,10 @@ from math import floor
 from classes.ansi256_colors import Ansi256Colors
 from utilities.color_scheme_utils import GeneralUtils as Utils
 
+from flux_bunny_utils.dict_utils import DictUtils
+from flux_bunny_utils.error_utils import ErrorUtils
+from flux_bunny_utils.string_utils import StringUtils
+
 #_______________________________________________________________________
 class RgbConst:
 
@@ -46,11 +50,22 @@ class RgbConst:
   GRN_RIGHT_SHIFT: int = 8
   BLU_RIGHT_SHIFT: int = 0
 
-  DEFAULT_CURSOR_COL: int = 0x808080
+  DEF_CRSR_BG: int = 0x808080
   DEF_BG_NORM: int = 0x262626
   DEF_FG_NORM: int = 0xc6c6c6
   DEF_BG_BOLD: int = 0x1c1c1c
   DEF_FG_BOLD: int = 0xbcbcbc
+
+  DEF_ACCENT0: int = 0x00afaf
+  DEF_ACCENT1: int = 0xaf5faf
+  DEF_ACCENT2: int = 0x00afd7
+
+  MIN_COLOR_VALUE: int = 0x00
+  MAX_COLOR_VALUE: int = 0xff
+  MAX_CUTOFF_DARK: int = 0x5f
+  MIN_CUTOFF_DARK: int = 0x00
+  MIN_CUTOFF_LITE: int = 0x87
+  MAX_CUTOFF_LITE: int = 0xd7
 
   DEFAULT_RGB_STR_LIST: str = str(
     ' 0x202020'
@@ -61,7 +76,7 @@ class RgbConst:
     ' 0xaf5faf'
     ' 0x5fafaf'
     ' 0xafafaf'
-    ' 0x000000'
+    ' 0x878787'
     ' 0xd75f5f'
     ' 0x5fd75f'
     ' 0xd7d75f'
@@ -123,6 +138,16 @@ class RgbColor:
     output: {'red': 255, 'grn': 255, blu: 0}
     """
 
+    if (not isinstance(rgb_color, int)):
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(rgb_color))}'
+      ErrorUtils.raise_exception_with_desc(err=TypeError(), desc=desc)
+
+    if (rgb_color < 0 or rgb_color > 0xFFFFFF):
+      desc: str =\
+        f'{ErrorUtils.INVALID_VALUE} {rgb_color}'
+      ErrorUtils.raise_exception_with_desc(err=ValueError(), desc=desc)
+
     rgb_map: dict = {}
 
     red: int = (rgb_color & RgbConst.RED_MASK) >> RgbConst.RED_RIGHT_SHIFT
@@ -134,6 +159,56 @@ class RgbColor:
     rgb_map[RgbConst.BLU_STR] = blu
 
     return rgb_map
+
+  #_____________________________________________________________________
+  def get_int_from_rgb_dict(rgb_dict: dict) -> str:
+    """
+    Creates integer from rgb dictionary.
+
+    Parameters
+      rgb_dict : Dictionary with 'red', 'grn', and 'blu' keys
+                 E.g. {'red': 255, 'grn': 255, blu: 0}
+
+    Returns
+      Integer representing RGB color.
+
+    E.g.
+    input:  {'red': 255, 'grn': 255, blu: 0}
+    output: 0xFFFF00
+    """
+
+    red: int = int(round(rgb_dict[RgbConst.RED_STR]))
+    grn: int = int(round(rgb_dict[RgbConst.GRN_STR]))
+    blu: int = int(round(rgb_dict[RgbConst.BLU_STR]))
+
+    hex_val: int =\
+      (red << RgbConst.RED_RIGHT_SHIFT) |\
+      (grn << RgbConst.GRN_RIGHT_SHIFT) |\
+      (blu << RgbConst.BLU_RIGHT_SHIFT)
+
+    return hex_val
+
+  #_____________________________________________________________________
+  def get_hex_str_from_rgb_dict(rgb_dict: dict) -> str:
+    """
+    Creates hex string from rgb dictionary.
+
+    Parameters
+      rgb_dict : Dictionary with 'red', 'grn', and 'blu' keys
+                 E.g. {'red': 255, 'grn': 255, blu: 0}
+
+    Returns
+      Hex string representing RGB color.
+
+    E.g.
+    input:  {'red': 255, 'grn': 255, blu: 0}
+    output: 0xFFFF00
+    """
+
+    int_val: int = RgbColor.get_int_from_rgb_dict(rgb_dict)
+    hex_str: str = StringUtils.int_to_hex6(int_val)
+
+    return hex_str
 
   #_____________________________________________________________________
   def int_list_hex_str(l: list[int]) -> str:
@@ -152,15 +227,15 @@ class RgbColor:
   #_____________________________________________________________________
   def construct_color_print_str(text: str
     , fg: int = 0
-    , bg: int = -1
+    , bg: int = 0xffffff
   ) -> None:
     """
     Calls utility function to print colored text.
 
     Parameters
-    text - text to print
-    fg   - foreground color range[0x000000-0xFFFFFF]
-    bg   - background color range[0x000000-0xFFFFFF]
+      text : text to print
+      fg   : foreground color range[0x000000-0xFFFFFF]
+      bg   : background color range[0x000000-0xFFFFFF]
     """
 
     # Convert rgb ints to dicts
@@ -174,14 +249,6 @@ class RgbColor:
     bg_grn: int = bg[RgbConst.GRN_STR]
     bg_blu: int = bg[RgbConst.BLU_STR]
 
-
-    # Used in print color utility function
-    # -1 indicates to print no background color
-    if (bg == -1):
-      bg_red: int = -1
-      bg_grn: int = -1
-      bg_blu: int = -1
-
     return Utils.construct_color_print_str(text=text
     , fg_red=fg_red
     , fg_grn=fg_grn
@@ -192,16 +259,19 @@ class RgbColor:
     )
 
   #_____________________________________________________________________
-  def ansi_256_from_rgb(rgb_color: int) -> int:
+  def rgb_to_ansi256(rgb_color: int) -> int:
     """
     Converts 24 bit RGB color to nearest ANSI 256 color.
 
     Parameters
-    rgb_color - 24 bit RGB color as integer
+      rgb_color - 24 bit RGB color as integer
 
     Returns
-    Nearest ANSI 256 color index as integer
+      Nearest ANSI 256 color index as integer
     """
+
+    if (isinstance(rgb_color, str)):
+      rgb_color = StringUtils.str_hex_to_int(rgb_color)
 
     valid_rgb_values: list[int] =\
     [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff]
@@ -252,10 +322,207 @@ class RgbColor:
     Converts ANSI 256 color index to 24 bit RGB color.
 
     Parameters
-    ansi_256_index - ANSI 256 color index as integer
+      ansi_256_index - ANSI 256 color index as integer
 
     Returns
-    24 bit RGB color as integer
+      24 bit RGB color as integer
     """
 
     return Ansi256Colors.rgb_list[ansi_256_index]
+
+  #_____________________________________________________________________
+  def make_background_color_dark\
+    ( color
+    , cutoff: int = RgbConst.MAX_CUTOFF_DARK
+    ) -> dict:
+    """
+    Creates a darkened background color from the input color to ensure
+    that light foreground text remains readable against it.
+
+    Parameters
+      color : RGB input color as int or dictionary
+      cutoff: Maximum allowed channel value used to clamp brightness
+
+    Returns
+      A dictionary representing the darkened RGB background color
+    """
+
+    input_type: type = type(color)
+
+    if (isinstance(color, str)):
+      color: dict = StringUtils.str_hex_to_int(color)
+
+    if (isinstance(color, int)):
+      color: dict = RgbColor.get_rgb_from_hex(color)
+
+    #___________________________________________________________________
+    # Exception handling
+    #___________________________________________________________________
+    elif (not isinstance(color, dict)):
+
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
+      ErrorUtils.raise_exception_with_desc(err=TypeError(), desc=desc)
+
+    max_pair: tuple = DictUtils.get_max_tuple(color)
+
+    max_val: int = max_pair[1]
+
+    if (max_val <= cutoff):
+      return color
+
+    multiplier: float = cutoff / max_val
+
+    for key in color.keys():
+      color[key] = int(color[key] * multiplier)
+
+    if (input_type == int):
+      return RgbColor.get_int_from_rgb_dict(color)
+
+    return color
+
+  #_____________________________________________________________________
+  def scale_color\
+    ( color
+    , lo_cutoff: int = RgbConst.MIN_COLOR_VALUE
+    , hi_cutoff: int = RgbConst.MAX_COLOR_VALUE
+    ) -> dict:
+    """
+    Scales a color to be within the specified brightness range.
+
+    Parameters
+      color     : RGB input color as int or dictionary
+      lo_cutoff : Minimum allowed channel value used to clamp brightness
+      hi_cutoff : Maximum allowed channel value used to clamp brightness
+
+    Returns
+      A dictionary or int representing the scaled RGB color
+    """
+
+    color_in = color
+
+    input_type: type = type(color)
+
+    if (isinstance(color, str)):
+      color: dict = StringUtils.str_hex_to_int(color)
+
+    if (isinstance(color, int)):
+      color: dict = RgbColor.get_rgb_from_hex(color)
+
+    #___________________________________________________________________
+    # Exception handling
+    #___________________________________________________________________
+    elif (not isinstance(color, dict)):
+
+      desc: str =\
+        f'{ErrorUtils.WRONG_TYPE} type(color) = {str(type(color))}'
+      ErrorUtils.raise_exception_with_desc(desc=desc)
+
+    #___________________________________________________________________
+    # Determine highest and lowest channel values
+    #___________________________________________________________________
+    min_pair: tuple = DictUtils.get_min_tuple(color)
+    max_pair: tuple = DictUtils.get_max_tuple(color)
+
+    min_val: int = min_pair[1]
+    max_val: int = max_pair[1]
+
+    # If color is in range return without modification
+    if (min_val >= lo_cutoff and max_val <= hi_cutoff):
+      return color_in
+
+    # Range of allowed values
+    cutoff_range      : int = hi_cutoff - lo_cutoff
+
+    # Normalize color channels
+    for key in color.keys():
+      clamped = max(0, color[key] - lo_cutoff)
+      color[key] = (clamped) / max_val
+
+    # Scale color channels
+    for key in color.keys():
+      color[key] = color[key] * cutoff_range + lo_cutoff
+
+    # Return int type if input was int
+    if (input_type == int):
+      return RgbColor.get_int_from_rgb_dict(color)
+
+    return color
+
+  #_____________________________________________________________________
+  def make_color_dark(color):
+    """
+    Creates a darkened color from the input color. Suitable for dark
+    background.
+
+    Parameters
+      color : RGB input color as int or dictionary
+
+    Returns
+      A dictionary or int representing the darkened RGB color
+    """
+
+    return RgbColor.scale_color(color
+      , lo_cutoff=RgbConst.MIN_CUTOFF_DARK
+      , hi_cutoff=RgbConst.MAX_CUTOFF_DARK)
+
+  #_____________________________________________________________________
+  def make_color_lite(color):
+    """
+    Creates a lightened color from the input color. Suitable for light
+    background.
+
+    Parameters
+      color : RGB input color as int or dictionary
+
+    Returns
+      A dictionary or int representing the lightened RGB color
+    """
+
+    return RgbColor.scale_color(color
+      , lo_cutoff=RgbConst.MIN_CUTOFF_LITE
+      , hi_cutoff=RgbConst.MAX_CUTOFF_LITE)
+
+  #_____________________________________________________________________
+  def make_background_color(color, is_dark: bool = True) -> dict:
+    """
+    Creates a background color from the input color to ensure that
+    foreground text remains readable against it.
+
+    Parameters
+      color   : RGB input color as int or dictionary
+      cutoff  : Channel value used to clamp brightness
+      is_dark : If true, makes background dark. If false, makes lite.
+
+    Returns
+      A dictionary representing the lightened or darkened RGB
+      background color
+    """
+
+    if (is_dark):
+      return RgbColor.make_color_dark(color)
+
+    else:
+      return RgbColor.make_color_lite(color)
+
+  #_____________________________________________________________________
+  def make_foreground_color(color, is_dark: bool = True):
+    """
+    Creates a foreground color from the input color to ensure that
+    foreground text remains readable against it.
+
+    Parameters
+      color   : RGB input color as int or dictionary
+      cutoff  : Channel value used to clamp brightness
+      is_dark : If true, makes foreground light. If false, makes dark.
+
+    Returns
+      A dictionary representing the lightened or darkened RGB
+      foreground color
+    """
+
+    if (is_dark):
+      return RgbColor.make_color_lite(color)
+
+    else:
+      return RgbColor.make_color_dark(color)

@@ -1,0 +1,42 @@
+#include <iostream>
+#include <regex>
+using namespace std;
+
+int main() {
+  // Match a word surrounded by spaces or start/end of line
+  regex r1(R"((^|\s)(\w+)(\s|$))");
+  //    ↑   ↑    ↑    ↑
+  //    |   |    |    └─ group punctuation
+  //    |   |    └───── character class \w
+  //    |   └────────── anchor ^
+  //    └────────────── group start
+
+  // Match an email-like pattern
+  regex r2(R"(([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+)\.([A-Za-z]{2,}))");
+  // Character classes [A-Z], [0-9], +, ., etc.
+
+  // Match either "cat" or "dog"
+  regex r3(R"((cat|dog))"); // keyword.operator.or.regexp highlights '|'
+
+  // Match a non-digit (negated class)
+  regex r4(R"([^0-9])");
+  //          ↑ keyword.operator.negation.regexp
+
+  // Lookahead and lookbehind assertions
+  regex r5(R"((?<=\bfoo)\d+(?=bar\b))");
+  //        ↑ punctuation.definition.group.assertion.regexp
+
+  // Character set including parentheses
+  regex r6(R"([(){}\[\]])");
+  //      ↑ punctuation.definition.character-class.regexp
+  //      ↑ punctuation.character.set.begin.regexp
+  //        … support.other.parenthesis.regexp
+  //             punctuation.character.set.end.regexp
+
+  // Anchors
+  regex r7(R"(^\s*(hello|world)\s*$)");
+  //  ^, $, \b, \B → keyword.control.anchor.regexp
+
+  cout << "Regex tests compiled.\n";
+  return 0;
+}

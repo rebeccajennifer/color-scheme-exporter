@@ -26,6 +26,8 @@
 #   Tests for RGB color related functions.
 #_______________________________________________________________________
 
+import pytest
+
 from classes.rgb_color import RgbColor
 from classes.rgb_color import RgbConst
 from classes.ansi256_colors import Ansi256Colors
@@ -56,7 +58,7 @@ def test_ansii_256_from_rgb():
 
   for i in range(16, len(Ansi256Colors.rgb_list)):
     rgb_val = Ansi256Colors.rgb_list[i]
-    ansi_256_val = RgbColor.ansi_256_from_rgb(rgb_val)
+    ansi_256_val = RgbColor.rgb_to_ansi256(rgb_val)
     assert ansi_256_val == i
 
 #_______________________________________________________________________
@@ -67,3 +69,42 @@ def test_rgb_from_ansi_256():
     rgb_val = RgbColor.rgb_from_ansi_256(ansi_256_val)
     expected_rgb_val = Ansi256Colors.rgb_list[i]
     assert rgb_val == expected_rgb_val
+
+#_______________________________________________________________________
+def test_scale_color():
+
+  lo_cutoff: int = 0x10
+  hi_cutoff: int = 0xe0
+
+  color       : int = 0x804020
+  color_scaled: int = 0x804020
+
+  test_color  : int = RgbColor.scale_color(color, lo_cutoff, hi_cutoff)
+  assert test_color == color_scaled
+
+  lo_cutoff   : int = 0x00
+  hi_cutoff   : int = 0xe0
+  color       : int = 0xff8010
+  color_scaled: int = 0xe0700e
+  test_color  : int = RgbColor.scale_color(color, lo_cutoff, hi_cutoff)
+
+  assert test_color == color_scaled
+
+#_______________________________________________________________________
+def test_make_background_color():
+
+  color             : int = 0x80FF10
+  expected_bg_color : int = 0x305F06
+
+  test_color: int = RgbColor.make_background_color(color, is_dark=True)
+
+  assert test_color == expected_bg_color
+
+#_______________________________________________________________________
+def test_scale_color_err():
+
+  with pytest.raises(ValueError):
+    RgbColor.scale_color(color='hello')
+
+  with pytest.raises(ValueError):
+    c = RgbColor.scale_color(color=-1)

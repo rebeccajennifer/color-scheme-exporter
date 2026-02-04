@@ -1,6 +1,6 @@
   "workbench.colorCustomizations":
-  { "terminal.background"       : "#1c1c1c"
-  , "terminal.foreground"       : "#eeeeee"
+  { "terminal.background"       : "#262626"
+  , "terminal.foreground"       : "#c6c6c6"
   , "terminal.ansiBlack"        : "#202020"
   , "terminal.ansiRed"          : "#af5f5f"
   , "terminal.ansiGreen"        : "#5faf5f"
@@ -9,7 +9,7 @@
   , "terminal.ansiMagenta"      : "#af5faf"
   , "terminal.ansiCyan"         : "#5fafaf"
   , "terminal.ansiWhite"        : "#afafaf"
-  , "terminal.ansiBrightBlack"  : "#000000"
+  , "terminal.ansiBrightBlack"  : "#878787"
   , "terminal.ansiBrightRed"    : "#d75f5f"
   , "terminal.ansiBrightGreen"  : "#5fd75f"
   , "terminal.ansiBrightYellow" : "#d7d75f"

@@ -36,8 +36,18 @@ from classes.scheme_types.mintty_scheme import MinttyScheme
 from classes.scheme_types.konsole_scheme import KonsoleScheme
 from classes.scheme_types.vscode_term_scheme import VsCodeTermScheme
 from classes.scheme_types.vscode_scheme import VsCodeScheme
+from classes.scheme_types.vim_scheme import VimScheme
 
 from utilities.color_scheme_utils import GeneralUtils as Utils
+
+SCHEME_MAP: dict =\
+{ ParserStrings.GNOME_INPUT       : GnomeScheme
+, ParserStrings.VSCODE_TERM_INPUT : VsCodeTermScheme
+, ParserStrings.VSCODE_INPUT      : VsCodeScheme
+, ParserStrings.MINTTY_INPUT      : MinttyScheme
+, ParserStrings.VIM_INPUT         : VimScheme
+#, ParserStrings.KONSOLE_INPUT     : KonsoleScheme
+}
 
 
 #_______________________________________________________________________
@@ -55,31 +65,10 @@ if __name__ == '__main__':
 
   args: argparse.Namespace = parser.parse_args()
 
-  scheme_name : str = args.name
-  out_dir     : str = args.out_dir
+  scheme_types: list = list(SCHEME_MAP.values())
 
-  scheme_types: list =\
-  [ GnomeScheme
-  #, KonsoleScheme
-  , VsCodeTermScheme
-  , VsCodeScheme
-  , MinttyScheme
-  ]
-
-  if (args.scheme_type == ParserStrings.GNOME_INPUT):
-    SchemeType = GnomeScheme
-
-  elif (args.scheme_type == ParserStrings.KONSOLE_INPUT):
-    SchemeType = KonsoleScheme
-
-  elif (args.scheme_type == ParserStrings.VSCODE_TERM_INPUT):
-    SchemeType = VsCodeTermScheme
-
-  elif (args.scheme_type == ParserStrings.VSCODE_INPUT):
-    SchemeType = VsCodeScheme
-
-  elif (args.scheme_type == ParserStrings.MINTTY_INPUT):
-    SchemeType = MinttyScheme
+  if (args.scheme_type != ParserStrings.ALL_INPUT):
+    SchemeType = SCHEME_MAP[args.scheme_type]
 
   if (args.default):
     args.scheme_type = ParserStrings.ALL_INPUT
@@ -91,13 +80,11 @@ if __name__ == '__main__':
     # Data in file overrides all other arguments
     if(args.file):
       color_scheme = SchemeType(
-        args.name, args.out_dir, Utils.read_hex_color_json(args.file))
+        args.out_dir, Utils.read_hex_color_json(args.file))
 
     else:
       color_scheme =\
-        SchemeType(args.name, args.out_dir, args.background_color
-          , args.foreground_color
-          , args.rgb_list)
+        SchemeType(out_dir=args.out_dir)
 
     color_scheme.write_file()
     color_scheme.on_completion()

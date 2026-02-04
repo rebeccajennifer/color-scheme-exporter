@@ -30,10 +30,6 @@ import argparse
 from os import getcwd
 
 from classes.color_scheme_strings import ColorSchemeStrings
-from classes.rgb_color import RgbColor, RgbConst
-
-from utilities.color_scheme_utils import GeneralUtils
-from flux_bunny_utils.string_utils import StringUtils
 
 
 #_______________________________________________________________________
@@ -57,6 +53,7 @@ class ParserStrings:
   VSCODE_TERM_INPUT : str = 'vscode-term'
   VSCODE_INPUT      : str = 'vscode-scheme'
   MINTTY_INPUT      : str = 'mintty'
+  VIM_INPUT         : str = 'vim'
   ALL_INPUT         : str = 'all'
 
   SCHEME_TYPES: list =\
@@ -65,6 +62,7 @@ class ParserStrings:
     , VSCODE_TERM_INPUT
     , VSCODE_INPUT
     , MINTTY_INPUT
+    , VIM_INPUT
     , ALL_INPUT
     ]
 
@@ -136,15 +134,6 @@ class ColorSchemeParser:
       , required=False
     )
 
-    parser.add_argument('--name'
-      , '-n'
-      , help=ParserStrings.OUT_FILE_HELP_DESC
-      , action='store'
-      , type=str
-      , required=False
-      , default=ParserStrings.DEFAULT_NAME
-    )
-
     parser.add_argument('--out_dir'
       , '-o'
       , help=ParserStrings.OUT_DIR_HELP_DESC
@@ -159,44 +148,6 @@ class ColorSchemeParser:
       , action='store_true'
       , required=False
     )
-
-    # Add type, move strings to class
-    cmd_line_group = parser.add_argument_group(\
-      ParserStrings.CMD_LINE_ENTRY_GROUP_TITLE
-       , ParserStrings.CMD_LINE_ENTRY_GROUP_DESC)
-
-    cmd_line_group.add_argument('--background_color'
-      , '-bg'
-      , help=ParserStrings.BACKGND_HELP_DESC
-      , action='store'
-      , type=StringUtils.str_hex_to_int
-      , required=False
-      , default=RgbConst.DEF_BG_NORM
-      , choices=range(0, GeneralUtils.MAX_COLOR + 1)
-      , metavar=ParserStrings.COLOR_RANGE
-    )
-
-    cmd_line_group.add_argument('--foreground_color'
-      , '-fg'
-      , help=ParserStrings.FOREGND_HELP_DESC
-      , action='store'
-      , type=StringUtils.str_hex_to_int
-      , required=False
-      , default=RgbConst.DEF_FG_NORM
-      , choices=range(0, GeneralUtils.MAX_COLOR + 1)
-      , metavar=ParserStrings.COLOR_RANGE
-    )
-
-    cmd_line_group.add_argument('--rgb_list'
-      , '-rgb'
-      , help=ParserStrings.RGB_LIST_HELP_DESC
-      , action='store'
-      , type=str
-      , required=False
-      , default=RgbConst.DEFAULT_RGB_STR_LIST
-    )
-
-
 
     return
 
