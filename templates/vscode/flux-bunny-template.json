@@ -147,10 +147,11 @@
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#KEY_BG_25f"
   , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_287"
-  //, "peekViewEditorGutter.background"                     : "#KEY_BG_2"
   , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_287"
+
   , "peekViewEditorStickyScroll.background"               : "#KEY_BG_2"
   , "peekViewEditorStickyScrollGutter.background"         : "#KEY_BG_2"
+
   , "peekView.border"                                     : "#KEY_BG_0"
   , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
   , "peekViewResult.fileForeground"                       : "#FG__NORM"
