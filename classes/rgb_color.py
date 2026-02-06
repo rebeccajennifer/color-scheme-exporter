@@ -64,7 +64,7 @@ class RgbConst:
   MAX_COLOR_VALUE: int = 0xff
   MAX_CUTOFF_DARK: int = 0x5f
   MIN_CUTOFF_DARK: int = 0x00
-  MIN_CUTOFF_LITE: int = 0x87
+  MIN_CUTOFF_LITE: int = 0x5f
   MAX_CUTOFF_LITE: int = 0xd7
 
   DEFAULT_RGB_STR_LIST: str = str(
