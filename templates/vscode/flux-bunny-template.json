@@ -2,8 +2,9 @@
   "$schema"     : "vscode://schemas/color-theme"
 
 , "colors":
-  {
-    "foreground"                                          : "#FG__NORM"
+  { "foreground"                                          : "#FG__NORM"
+  , "errorForeground"                                     : "#RED_BOLD"
+  , "focusBorder"                                         : "#KEY_BG_0"
   //____________________________________________________________________
   // TESTING
   //____________________________________________________________________
@@ -65,41 +66,104 @@
   , "terminalCommandDecoration.successBackground"         :"#GRN_NORM"
   , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
 
-  //____________________________________________________________________
-  , "selection.background"                                : "#KEY_BG_287"
-  , "errorForeground"                                     : "#RED_BOLD"
-  , "focusBorder"                                         : "#KEY_BG_0"
 
-  // Main window title bar
+  //____________________________________________________________________
+  // TITLE BAR - Main window title bar
+  //____________________________________________________________________
+  //
   , "titleBar.activeBackground"                           : "#FG__NORM0f"
   , "titleBar.activeForeground"                           : "#FG__BOLD"
 
-  , "titleBar.inactiveBackground"                         : "#BG__BOLD"
-  , "titleBar.inactiveForeground"                         : "#BLU_BOLD87"
+  , "titleBar.inactiveBackground"                         : "#FG__NORM1f"
+  , "titleBar.inactiveForeground"                         : "#FG__NORM"
 
   , "editor.background"                                   : "#BG__NORM"
   , "editor.foreground"                                   : "#FG__NORM"
   , "editorCursor.background"                             : "#BG__NORM"
   , "editorCursor.foreground"                             : "#GRN_NORM"
-  , "editor.selectionBackground"                          : "#KEY_BG_287"
-  , "editor.selectionForeground"                          : "#BG__NORM"
+
+  //____________________________________________________________________
+  // STATUS BAR - Bottom of window
+  //____________________________________________________________________
+  , "statusBar.background"                                : "#BG__NORM"
+  , "statusBar.border"                                    : "#BG__BOLD"
+  , "statusBar.foreground"                                : "#FG__BOLD"
+  , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
+  , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
+  , "statusBarItem.remoteForeground"                      : "#BG__BOLD"
+
+  , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
+  , "statusBarItem.warningForeground"                     : "#BG__NORM"
+  , "statusBarItem.errorBackground"                       : "#RED_BOLD"
+  , "statusBarItem.errorForeground"                       : "#FG__BOLD"
+
+  //____________________________________________________________________
+  // ACTIVITY BAR - Left of window
+  //____________________________________________________________________
+  , "activityBar.foreground"                              : "#FG__BOLD"
+  , "activityBar.background"                              : "#BG__NORM"
+  , "activityBar.border"                                  : "#BG__BOLD"
+  , "activityBar.activeBackground"                        : "#KEY_BG_0"
+  , "activityBarBadge.background"                         : "#GRN_NORM"
+  , "activityBarBadge.foreground"                         : "#BG__BOLD"
+  , "icon.foreground"                                     : "#BLK_BOLD"
+
+  //____________________________________________________________________
+  // SIDEBAR - Project explorer, etc
+  //____________________________________________________________________
+  , "sideBar.background"                                  : "#BG__NORM"
+  , "sideBar.foreground"                                  : "#FG__NORM"
+  , "sideBar.border"                                      : "#BG__BOLD"
+  , "sideBarStickyScroll.shadow"                          : "#BLK_NORM"
+
+  , "sideBarTitle.background"                             : "#BG__NORM"
+  , "sideBarTitle.foreground"                             : "#FG__BOLD"
+  , "sideBarSectionHeader.background"                     : "#FG__NORM0f"
+  , "sideBarSectionHeader.foreground"                     : "#FG__BOLD"
+
+  , "list.activeSelectionBackground"                      : "#KEY_BG_0"
+  , "list.activeSelectionForeground"                      : "#FG__BOLD"
+  , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
+  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
+  , "list.activeSelectionIconForeground"                  : "#FG__NORM"
+  , "list.hoverBackground"                                : "#BG__BOLD"
+
+  // Drag and drop files
+  , "list.dropBackground"                                 : "#GRN_BOLD"
+  , "list.dropBetweenBackground"                          : "#GRN_BOLD"
+
+  , "list.highlightForeground"                            : "#GRN_NORM"
+  , "list.focusBackground"                                : "#BLU_BOLD87"
+  , "list.invalidItemForeground"                          : "#RED_BOLD"
+
+  // Keyboard shortcut indicator in drop down command palette
+  , "keybindingLabel.background"                          : "#BG__BOLD"
+  , "keybindingLabel.foreground"                          : "#FG__NORM"
 
   // Text color of header in settings
   , "settings.headerForeground"                           : "#KEY_FG_0"
 
   // Right-click menu
   , "menu.background"                                     : "#BG__BOLD"
+
+
   , "textLink.foreground"                                 : "#BLU_BOLD"
   , "textLink.activeForeground"                           : "#BLU_NORM"
+
+  // E.g. 'other commands', 'recently opened ' in command palette
+  , "pickerGroup.foreground"                              : "#BLU_BOLD"
 
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
+  , "editor.selectionBackground"                          : "#FG__NORM1f"
+  , "editor.selectionForeground"                          : "#BG__NORM"
+  , "selection.background"                                : "#KEY_BG_287"
 
   // Needed for visual selection in vim
   , "editor.selectionHighlightBackground"                 : "#FG__NORM0f"
 
-  // Occurances of word under cursor
+  // Occurrences of word under cursor
   , "editor.wordHighlightTextBackground"                  : "#FG__NORM1f"
 
   , "editor.wordHighlightBackground"                      : "#FG__NORM0f"
@@ -107,7 +171,9 @@
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
   , "editor.findMatchBackground"                          : "#KEY_BG_287"
 
-  // Sticky Scroll - keep current code context at top of file
+  //____________________________________________________________________
+  // STICKY SCROLL - keep current code context at top of file
+  //____________________________________________________________________
   , "editorStickyScroll.background"                       : "#BG__BOLD"
   , "editorStickyScrollHover.background"                  : "#BG__BOLD"
   , "editorStickyScroll.shadow"                           : "#BLK_NORM"
@@ -116,6 +182,9 @@
   , "panelStickyScroll.shadow"                            : "#BLK_NORM"
   , "panelStickyScroll.border"                            : "#00000000"
 
+  //____________________________________________________________________
+  // GUTTER - line numbers, etc
+  //____________________________________________________________________
   , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
   , "editorRuler.foreground"                              : "#BG__BOLD"
@@ -210,63 +279,6 @@
   //, "panelSectionHeader.background"                       : "#GRN_NORM"
   //, "panelTitleBadge.foreground"                          : "#BG__NORM"
 
-  //____________________________________________________________________
-  // STATUS BAR (BOTTOM OF WINDOW)
-  //____________________________________________________________________
-  , "statusBar.background"                                : "#BG__NORM"
-  , "statusBar.border"                                    : "#BG__BOLD"
-  , "statusBar.foreground"                                : "#FG__BOLD"
-  , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
-  , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
-  , "statusBarItem.remoteForeground"                      : "#BG__BOLD"
-
-  , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
-  , "statusBarItem.warningForeground"                     : "#BG__NORM"
-  , "statusBarItem.errorBackground"                       : "#RED_BOLD"
-  , "statusBarItem.errorForeground"                       : "#FG__BOLD"
-
-  //____________________________________________________________________
-  // ACTIVITY BAR (LEFT OF WINDOW)
-  //____________________________________________________________________
-  , "activityBar.foreground"                              : "#FG__BOLD"
-  , "activityBar.background"                              : "#BG__NORM"
-  , "activityBar.border"                                  : "#BG__BOLD"
-  , "activityBar.activeBackground"                        : "#KEY_BG_0"
-  , "activityBarBadge.background"                         : "#GRN_NORM"
-  , "activityBarBadge.foreground"                         : "#BG__BOLD"
-  , "icon.foreground"                                     : "#BLK_BOLD"
-
-  //____________________________________________________________________
-  // SIDEBAR (PROJECT EXPLORER, ETC)
-  //____________________________________________________________________
-  , "sideBar.background"                                  : "#BG__NORM"
-  , "sideBar.foreground"                                  : "#FG__NORM"
-  , "sideBar.border"                                      : "#BG__BOLD"
-  , "sideBarStickyScroll.shadow"                          : "#BLK_NORM"
-
-  , "sideBarTitle.background"                             : "#BG__NORM"
-  , "sideBarTitle.foreground"                             : "#FG__BOLD"
-  , "sideBarSectionHeader.background"                     : "#FG__NORM0f"
-  , "sideBarSectionHeader.foreground"                     : "#FG__BOLD"
-
-  , "list.activeSelectionBackground"                      : "#KEY_BG_0"
-  , "list.activeSelectionForeground"                      : "#FG__BOLD"
-  , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
-  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
-  , "list.activeSelectionIconForeground"                  : "#FG__NORM"
-  , "list.hoverBackground"                                : "#BG__BOLD"
-
-  // Drag and drop files
-  , "list.dropBackground"                                 : "#GRN_BOLD"
-  , "list.dropBetweenBackground"                          : "#GRN_BOLD"
-
-  , "list.highlightForeground"                            : "#GRN_NORM"
-  , "list.focusBackground"                                : "#BLU_BOLD87"
-  , "list.invalidItemForeground"                          : "#RED_BOLD"
-
-  // Keyboard shortcut indicator in drop down command palette
-  , "keybindingLabel.background"                          : "#BG__BOLD"
-  , "keybindingLabel.foreground"                          : "#FG__NORM"
   //____________________________________________________________________
   // BUTTONS & CHECKBOXES
   //____________________________________________________________________
