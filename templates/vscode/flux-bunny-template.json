@@ -3,7 +3,6 @@
 
 , "colors":
   { "foreground"                                          : "#FG__NORM"
-  , "errorForeground"                                     : "#RED_BOLD"
   , "focusBorder"                                         : "#KEY_BG_0"
   //____________________________________________________________________
   // TESTING
@@ -22,7 +21,6 @@
   //, "checkbox.selectBorder"                               : "#GRN_NORM"
   //, "checkbox.selectBackground"                           : "#ff0000"
   //, "checkbox.disabled.background"                        : "#ff0000"
-
 
   //____________________________________________________________________
   // Overridden by other properties
@@ -66,11 +64,9 @@
   , "terminalCommandDecoration.successBackground"         :"#GRN_NORM"
   , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
 
-
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  //
   , "titleBar.activeBackground"                           : "#FG__NORM0f"
   , "titleBar.activeForeground"                           : "#FG__BOLD"
 
@@ -140,18 +136,34 @@
   , "keybindingLabel.background"                          : "#BG__BOLD"
   , "keybindingLabel.foreground"                          : "#FG__NORM"
 
-  // Text color of header in settings
-  , "settings.headerForeground"                           : "#KEY_FG_0"
+  //____________________________________________________________________
+  // MINIMAP - Mini version of code on right of window
+  //____________________________________________________________________
+  , "minimap.background"                                  : "#BG__BOLD"
+  , "minimapGutter.addedBackground"                       : "#GRN_NORM"
+  , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
+  , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
 
-  // Right-click menu
-  , "menu.background"                                     : "#BG__BOLD"
+  //____________________________________________________________________
+  // GUTTER - line numbers, etc
+  //____________________________________________________________________
+  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
+  , "editorLineNumber.foreground"                         : "#BLK_BOLD"
+  , "editorRuler.foreground"                              : "#BG__BOLD"
 
+  //____________________________________________________________________
+  // TABS
+  //____________________________________________________________________
+  , "tab.activeBackground"                                : "#BG__NORM"
+  , "tab.activeForeground"                                : "#FG__NORM"
+  , "tab.inactiveBackground"                              : "#BG__BOLD"
+  , "tab.inactiveForeground"                              : "#FG__NORM7f"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
+  , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
+  , "tab.border"                                          : "#BG__BOLD"
 
-  , "textLink.foreground"                                 : "#BLU_BOLD"
-  , "textLink.activeForeground"                           : "#BLU_NORM"
-
-  // E.g. 'other commands', 'recently opened ' in command palette
-  , "pickerGroup.foreground"                              : "#BLU_BOLD"
+  // Dead space to right of tabs
+  , "editorGroupHeader.tabsBackground"                    : "#BG__NORM"
 
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
@@ -171,23 +183,17 @@
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
   , "editor.findMatchBackground"                          : "#KEY_BG_287"
 
-  //____________________________________________________________________
-  // STICKY SCROLL - keep current code context at top of file
-  //____________________________________________________________________
-  , "editorStickyScroll.background"                       : "#BG__BOLD"
-  , "editorStickyScrollHover.background"                  : "#BG__BOLD"
-  , "editorStickyScroll.shadow"                           : "#BLK_NORM"
-  , "editorStickyScroll.border"                           : "#KEY_BG_1"
-  , "panelStickyScroll.background"                        : "#BG__BOLD"
-  , "panelStickyScroll.shadow"                            : "#BLK_NORM"
-  , "panelStickyScroll.border"                            : "#00000000"
+  // Right-click menu
+  , "menu.background"                                     : "#BG__BOLD"
 
   //____________________________________________________________________
-  // GUTTER - line numbers, etc
+  // LINKS
   //____________________________________________________________________
-  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
-  , "editorLineNumber.foreground"                         : "#BLK_BOLD"
-  , "editorRuler.foreground"                              : "#BG__BOLD"
+  , "textLink.foreground"                                 : "#BLU_BOLD"
+  , "textLink.activeForeground"                           : "#BLU_NORM"
+
+  // E.g. 'other commands', 'recently opened ' in command palette
+  , "pickerGroup.foreground"                              : "#BLU_BOLD"
 
   //____________________________________________________________________
   // TEXT INPUT FIELDS
@@ -212,6 +218,17 @@
   , "editorSuggestWidget.border"                          : "#BG__BOLD"
 
   //____________________________________________________________________
+  // STICKY SCROLL - keep current code context at top of file
+  //____________________________________________________________________
+  , "editorStickyScroll.background"                       : "#BG__BOLD"
+  , "editorStickyScrollHover.background"                  : "#BG__BOLD"
+  , "editorStickyScroll.shadow"                           : "#BLK_NORM"
+  , "editorStickyScroll.border"                           : "#00000000"
+  , "panelStickyScroll.background"                        : "#BG__BOLD"
+  , "panelStickyScroll.shadow"                            : "#BLK_NORM"
+  , "panelStickyScroll.border"                            : "#00000000"
+
+  //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#KEY_BG_25f"
@@ -230,13 +247,8 @@
   // Peek View line number background
   //, "peekViewEditorGutter.background"                     :"#BG__BOLD"
 
-  //____________________________________________________________________
-  // BRACKETS
-  //____________________________________________________________________
-  , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
-  , "editorBracketHighlight.foreground3"                  : "#CYA_BOLD"
-  , "editorBracketHighlight.foreground2"                  : "#RED_NORM"
-  , "editorBracketHighlight.unexpectedBracket.foreground" : "#RED_BOLD"
+   // Text color of header in settings
+  , "settings.headerForeground"                           : "#KEY_FG_0"
 
   //____________________________________________________________________
   // DROPDOWN
@@ -245,20 +257,6 @@
   , "dropdown.foreground"                                 : "#FG__NORM"
   , "dropdown.border"                                     : "#BG__BOLD"
   , "dropdown.listBackground"                             : "#BG__NORM"
-
-  //____________________________________________________________________
-  // TABS
-  //____________________________________________________________________
-  , "tab.activeBackground"                                : "#BG__NORM"
-  , "tab.activeForeground"                                : "#FG__NORM"
-  , "tab.inactiveBackground"                              : "#BG__BOLD"
-  , "tab.inactiveForeground"                              : "#FG__NORM7f"
-  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
-  , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
-  , "tab.border"                                          : "#BG__BOLD"
-
-  // Dead space to right of tabs
-  , "editorGroupHeader.tabsBackground"                    : "#BG__NORM"
 
   //____________________________________________________________________
   // PANELS
@@ -379,16 +377,9 @@
   //, "scmGraph.foreground5"                                : "#RED_NORM"
 
   //____________________________________________________________________
-  // MINIMAP
-  //____________________________________________________________________
-  , "minimap.background"                                  : "#BG__BOLD"
-  , "minimapGutter.addedBackground"                       : "#GRN_NORM"
-  , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
-  , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
-
-  //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
+  , "errorForeground"                                     : "#RED_BOLD"
   , "editorWarning.foreground"                            : "#YEL_NORM"
   , "editorError.foreground"                              : "#RED_BOLD"
 
@@ -457,6 +448,15 @@
   //____________________________________________________________________
   // MISC
   //____________________________________________________________________
+
+  //____________________________________________________________________
+  // BRACKETS
+  //____________________________________________________________________
+  , "editorBracketHighlight.foreground1"                  : "#GRN_BOLD"
+  , "editorBracketHighlight.foreground3"                  : "#CYA_BOLD"
+  , "editorBracketHighlight.foreground2"                  : "#RED_NORM"
+  , "editorBracketHighlight.unexpectedBracket.foreground" : "#RED_BOLD"
+
 
   }
 
