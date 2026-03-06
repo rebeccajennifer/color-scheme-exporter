@@ -65,6 +65,20 @@
   , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
 
   //____________________________________________________________________
+  // BORDERS
+  //____________________________________________________________________
+  , "activityBar.border"                                  : "#FG__NORM0f"
+  // Border dividing panel from editor
+  , "panel.border"                                        : "#FG__NORM0f"
+  // Border under panel title
+  , "panelTitle.border"                                   : "#KEY_BG_0"
+  , "peekView.border"                                     : "#KEY_BG_0"
+  , "sideBar.border"                                      : "#FG__NORM0f"
+  , "statusBar.border"                                    : "#FG__NORM0f"
+  , "tab.border"                                          : "#BG__NORM"
+
+
+  //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
   , "titleBar.activeBackground"                           : "#FG__NORM0f"
@@ -82,7 +96,6 @@
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
   , "statusBar.background"                                : "#BG__NORM"
-  , "statusBar.border"                                    : "#BG__BOLD"
   , "statusBar.foreground"                                : "#FG__BOLD"
   , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
   , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
@@ -98,7 +111,6 @@
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#FG__BOLD"
   , "activityBar.background"                              : "#BG__NORM"
-  , "activityBar.border"                                  : "#BG__BOLD"
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
@@ -109,7 +121,6 @@
   //____________________________________________________________________
   , "sideBar.background"                                  : "#BG__NORM"
   , "sideBar.foreground"                                  : "#FG__NORM"
-  , "sideBar.border"                                      : "#BG__BOLD"
   , "sideBarStickyScroll.shadow"                          : "#BLK_NORM"
 
   , "sideBarTitle.background"                             : "#BG__NORM"
@@ -119,7 +130,7 @@
 
   , "list.activeSelectionBackground"                      : "#KEY_BG_0"
   , "list.activeSelectionForeground"                      : "#FG__BOLD"
-  , "list.inactiveSelectionBackground"                    : "#BG__BOLD"
+  , "list.inactiveSelectionBackground"                    : "#KEY_BG_1"
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
   , "list.activeSelectionIconForeground"                  : "#FG__NORM"
   , "list.hoverBackground"                                : "#BG__BOLD"
@@ -133,7 +144,7 @@
   , "list.invalidItemForeground"                          : "#RED_BOLD"
 
   // Keyboard shortcut indicator in drop down command palette
-  , "keybindingLabel.background"                          : "#BG__BOLD"
+  , "keybindingLabel.background"                          : "#FG__NORM0f"
   , "keybindingLabel.foreground"                          : "#FG__NORM"
 
   //____________________________________________________________________
@@ -147,7 +158,7 @@
   //____________________________________________________________________
   // GUTTER - line numbers, etc
   //____________________________________________________________________
-  , "editorLineNumber.activeForeground"                   : "#GRN_NORM"
+  , "editorLineNumber.activeForeground"                   : "#RED_BOLD"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
   , "editorRuler.foreground"                              : "#BG__BOLD"
 
@@ -156,11 +167,10 @@
   //____________________________________________________________________
   , "tab.activeBackground"                                : "#BG__NORM"
   , "tab.activeForeground"                                : "#FG__NORM"
-  , "tab.inactiveBackground"                              : "#BG__BOLD"
+  , "tab.inactiveBackground"                              : "#FG__NORM0f"
   , "tab.inactiveForeground"                              : "#FG__NORM7f"
   , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
-  , "tab.border"                                          : "#BG__BOLD"
 
   // Dead space to right of tabs
   , "editorGroupHeader.tabsBackground"                    : "#BG__NORM"
@@ -179,7 +189,7 @@
   , "editor.wordHighlightTextBackground"                  : "#FG__NORM1f"
 
   , "editor.wordHighlightBackground"                      : "#FG__NORM0f"
-  , "editor.lineHighlightBackground"                      : "#FG__NORM0f"
+  , "editor.lineHighlightBackground"                      : "#BG__BOLD"
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
   , "editor.findMatchBackground"                          : "#KEY_BG_287"
 
@@ -198,7 +208,7 @@
   //____________________________________________________________________
   // TEXT INPUT FIELDS
   //____________________________________________________________________
-  , "input.background"                                    : "#BG__BOLD"
+  , "input.background"                                    : "#BG__BOLD5f"
   , "input.foreground"                                    : "#FG__NORM"
   , "input.placeholderForeground"                         : "#BLK_BOLD"
 
@@ -212,15 +222,15 @@
 
   // Dropdown for command field
   , "editorWidget.background"                             : "#BG__NORM"
-  , "editorWidget.border"                                 : "#BG__BOLD"
-  , "editorSuggestWidget.background"                      : "#BG__BOLD"
+  , "editorWidget.border"                                 : "#FG__NORM0f"
+  , "editorSuggestWidget.background"                      : "#FG__NORM0f"
   , "editorSuggestWidget.foreground"                      : "#FG__NORM"
-  , "editorSuggestWidget.border"                          : "#BG__BOLD"
+  , "editorSuggestWidget.border"                          : "#FG__NORM0f"
 
   //____________________________________________________________________
   // STICKY SCROLL - keep current code context at top of file
   //____________________________________________________________________
-  , "editorStickyScroll.background"                       : "#BG__BOLD"
+  , "editorStickyScroll.background"                       : "#BG__NORM"
   , "editorStickyScrollHover.background"                  : "#BG__BOLD"
   , "editorStickyScroll.shadow"                           : "#BLK_NORM"
   , "editorStickyScroll.border"                           : "#00000000"
@@ -238,7 +248,6 @@
   , "peekViewEditorStickyScroll.background"               : "#KEY_BG_2"
   , "peekViewEditorStickyScrollGutter.background"         : "#KEY_BG_2"
 
-  , "peekView.border"                                     : "#KEY_BG_0"
   , "peekViewTitleLabel.foreground"                       : "#FG__NORM"
   , "peekViewResult.fileForeground"                       : "#FG__NORM"
   , "peekViewResult.selectionBackground"                  : "#KEY_BG_1"
@@ -262,12 +271,6 @@
   // PANELS
   //____________________________________________________________________
   , "panel.background"                                    : "#BG__NORM"
-
-  // Border dividing panel from editor
-  , "panel.border"                                        : "#BG__BOLD"
-
-  // Border under panel title
-  , "panelTitle.border"                                   : "#BG__BOLD"
 
   , "panelTitle.activeForeground"                         : "#FG__BOLD"
   , "panelTitle.inactiveForeground"                       : "#FG__NORM"
@@ -333,13 +336,13 @@
   // SOURCE CONTROL
   //____________________________________________________________________
   , "gitDecoration.addedResourceForeground"               : "#GRN_BOLD"
-  , "gitDecoration.modifiedResourceForeground"            : "#YEL_BOLD"
+  , "gitDecoration.modifiedResourceForeground"            : "#YEL_NORM"
   , "gitDecoration.untrackedResourceForeground"           : "#VIO_NORM"
   , "gitDecoration.deletedResourceForeground"             : "#RED_BOLD"
   , "gitDecoration.renamedResourceForeground"             : "#YEL_BOLD"
   , "gitDecoration.conflictingResourceForeground"         : "#RED_BOLD"
   , "gitDecoration.stageDeletedResourceForeground"        : "#RED_BOLD"
-  , "gitDecoration.stageModifiedResourceForeground"       : "#YEL_BOLD"
+  , "gitDecoration.stageModifiedResourceForeground"       : "#YEL_NORM"
   , "gitDecoration.submoduleResourceForeground"           : "#CYA_NORM"
   , "gitDecoration.ignoredResourceForeground"             : "#VIO_NORM"
 
@@ -348,8 +351,8 @@
   // After staging - vertical bar in gutter where line was added
   , "editorGutter.addedSecondaryBackground"               : "#GRN_NORM"
 
-  , "editorGutter.modifiedBackground"                     : "#YEL_BOLD"
-  , "editorGutter.modifiedSecondaryBackground"            : "#YEL_BOLD"
+  , "editorGutter.modifiedBackground"                     : "#YEL_NORM"
+  , "editorGutter.modifiedSecondaryBackground"            : "#YEL_NORM"
 
   // Triangle pointing where line was deleted
   , "editorGutter.deletedBackground"                      : "#RED_BOLD"
@@ -380,17 +383,17 @@
   // ERRORS AND WARNINGS
   //____________________________________________________________________
   , "errorForeground"                                     : "#RED_BOLD"
-  , "editorWarning.foreground"                            : "#YEL_NORM"
+  , "editorWarning.foreground"                            : "#YEL_BOLD"
   , "editorError.foreground"                              : "#RED_BOLD"
 
   , "list.warningForeground"                              : "#YEL_BOLD"
   , "list.errorForeground"                                : "#RED_BOLD"
 
   , "minimap.errorHighlight"                              : "#RED_BOLD"
-  , "minimap.warningHighlight"                            : "#YEL_NORM"
+  , "minimap.warningHighlight"                            : "#YEL_BOLD"
   , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
 
-  , "inputValidation.warningBackground"                   : "#RED_BOLD"
+  , "inputValidation.warningBackground"                   : "#YEL_BOLD"
   , "inputValidation.warningForeground"                   : "#FG__NORM"
   , "inputValidation.warningBorder"                       : "#FG__NORM"
   , "inputValidation.errorBackground"                     : "#BG__NORM"
@@ -401,7 +404,7 @@
   , "problemsWarningIcon.foreground"                      : "#YEL_BOLD"
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
   , "debugConsole.errorForeground"                        : "#RED_BOLD"
-  , "debugConsole.warningForeground"                      : "#YEL_NORM"
+  , "debugConsole.warningForeground"                      : "#YEL_BOLD"
 
   , "disabledForeground"                                  : "#BLK_BOLD7f"
   , "list.deemphasizedForeground"                         : "#BLK_BOLD7f"
@@ -410,6 +413,7 @@
   // ICONS
   //____________________________________________________________________
   , "editorLightBulb.foreground"                          : "#YEL_NORM"
+  , "editorInfo.foreground"                               : "#GRN_NORM"
 
   , "symbolIcon.arrayForeground"                          : "#GRN_BOLD"
   , "symbolIcon.booleanForeground"                        : "#FG__NORM"
