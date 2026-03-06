@@ -71,7 +71,7 @@
   // Border dividing panel from editor
   , "panel.border"                                        : "#FG__NORM10"
   // Border under panel title
-  , "panelTitle.border"                                   : "#KEY_BG_0"
+  , "panelTitle.border"                                   : "#FG__NORM10"
   , "peekView.border"                                     : "#KEY_BG_0"
   , "sideBar.border"                                      : "#FG__NORM10"
   , "statusBar.border"                                    : "#FG__NORM10"
@@ -133,7 +133,7 @@
   , "list.inactiveSelectionBackground"                    : "#KEY_BG_1"
   , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
   , "list.activeSelectionIconForeground"                  : "#FG__NORM"
-  , "list.hoverBackground"                                : "#BG__BOLD50"
+  , "list.hoverBackground"                                : "#BG__BOLD"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#GRN_BOLD"
@@ -223,7 +223,7 @@
   // Dropdown for command field
   , "editorWidget.background"                             : "#BG__NORM"
   , "editorWidget.border"                                 : "#FG__NORM10"
-  , "editorSuggestWidget.background"                      : "#FG__NORM10"
+  , "editorSuggestWidget.background"                      : "#BG__BOLD"
   , "editorSuggestWidget.foreground"                      : "#FG__NORM"
   , "editorSuggestWidget.border"                          : "#FG__NORM10"
 
