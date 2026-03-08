@@ -81,7 +81,7 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#FG__NORM10"
+  , "titleBar.activeBackground"                           : "#BG__BOLD"
   , "titleBar.activeForeground"                           : "#FG__BOLD"
 
   , "titleBar.inactiveBackground"                         : "#FG__NORM20"
@@ -95,7 +95,7 @@
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BG__NORM"
+  , "statusBar.background"                                : "#BG__BOLD"
   , "statusBar.foreground"                                : "#FG__BOLD"
   , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
   , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
@@ -110,7 +110,7 @@
   // ACTIVITY BAR - Left of window
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#FG__BOLD"
-  , "activityBar.background"                              : "#BG__NORM"
+  , "activityBar.background"                              : "#BG__BOLD60"
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
@@ -119,7 +119,7 @@
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#BG__NORM"
+  , "sideBar.background"                                  : "#BG__BOLD20"
   , "sideBar.foreground"                                  : "#FG__NORM"
   , "sideBarStickyScroll.shadow"                          : "#BLK_NORM"
 
@@ -150,7 +150,7 @@
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
   //____________________________________________________________________
-  , "minimap.background"                                  : "#BG__BOLD"
+  , "minimap.background"                                  : "#BG__BOLD40"
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
   , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
@@ -208,7 +208,7 @@
   //____________________________________________________________________
   // TEXT INPUT FIELDS
   //____________________________________________________________________
-  , "input.background"                                    : "#BG__BOLD4f"
+  , "input.background"                                    : "#BG__BOLD40"
   , "input.foreground"                                    : "#FG__NORM"
   , "input.placeholderForeground"                         : "#BLK_BOLD"
 
