@@ -104,7 +104,7 @@
   , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
   , "statusBarItem.warningForeground"                     : "#BG__NORM"
   , "statusBarItem.errorBackground"                       : "#RED_BOLD"
-  , "statusBarItem.errorForeground"                       : "#FG__BOLD"
+  , "statusBarItem.errorForeground"                       : "#BG__BOLD"
 
   //____________________________________________________________________
   // ACTIVITY BAR - Left of window
@@ -316,7 +316,7 @@
   , "editor.inlineValuesForeground"                       : "#YEL_NORM"
   , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
   , "statusBar.debuggingBackground"                       : "#YEL_BOLD"
-  , "statusBar.debuggingForeground"                       : "#FG__BOLD"
+  , "statusBar.debuggingForeground"                       : "#BG__BOLD"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#RED_BOLD"

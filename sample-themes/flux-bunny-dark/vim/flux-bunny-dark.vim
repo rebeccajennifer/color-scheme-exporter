@@ -15,7 +15,7 @@ endif
 let g:colors_name = 'flux-bunny-dark'
 
 "_______________________________________________________________________
-" COLOR DEFINITONS
+" COLOR DEFINITIONS
 "_______________________________________________________________________
 
 "-----------------------------------------------------------------------
@@ -34,13 +34,13 @@ let gui_mag_norm = '#af87d7'
 let gui_cya_norm = '#87d7af'
 let gui_wht_norm = '#d7d7d7'
 
-let gui_bg__bold = '#303030'
+let gui_bg__bold = '#1c1c1c'
 let gui_fg__bold = '#eeeeee'
 
 let gui_blk_bold = '#5f5f5f'
 let gui_red_bold = '#ff5f87'
 let gui_grn_bold = '#5faf87'
-let gui_yel_bold = '#ff875f'
+let gui_yel_bold = '#ffaf87'
 let gui_blu_bold = '#00afd7'
 let gui_mag_bold = '#af5faf'
 let gui_cya_bold = '#5fafaf'
@@ -61,13 +61,13 @@ let cli_mag_norm = '140'
 let cli_cya_norm = '115'
 let cli_wht_norm = '188'
 
-let cli_bg__bold = '236'
+let cli_bg__bold = '234'
 let cli_fg__bold = '255'
 
 let cli_blk_bold = '59'
 let cli_red_bold = '204'
 let cli_grn_bold = '72'
-let cli_yel_bold = '209'
+let cli_yel_bold = '216'
 let cli_blu_bold = '38'
 let cli_mag_bold = '133'
 let cli_cya_bold = '73'
