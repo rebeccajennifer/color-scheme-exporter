@@ -114,7 +114,6 @@
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
-  , "icon.foreground"                                     : "#BLK_BOLD"
 
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc
@@ -131,9 +130,9 @@
   , "list.activeSelectionBackground"                      : "#KEY_BG_0"
   , "list.activeSelectionForeground"                      : "#FG__BOLD"
   , "list.inactiveSelectionBackground"                    : "#KEY_BG_1"
-  , "list.inactiveSelectionForeground"                    : "#BLU_BOLD87"
+  , "list.inactiveSelectionForeground"                    : "#FG__NORM"
   , "list.activeSelectionIconForeground"                  : "#FG__NORM"
-  , "list.hoverBackground"                                : "#BG__BOLD"
+  , "list.hoverBackground"                                : "#BG__BOLD60"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#GRN_BOLD"
@@ -154,6 +153,13 @@
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
   , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
+
+  //____________________________________________________________________
+  // OVERVIEW RULER - Vertical bar to right of minimap
+  //____________________________________________________________________
+   , "editorOverviewRuler.addedForeground"                : "#GRN_NORM"
+   , "editorOverviewRuler.modifiedForeground"             : "#YEL_NORM"
+   , "editorOverviewRuler.deletedForeground"              : "#RED_NORM"
 
   //____________________________________________________________________
   // GUTTER - line numbers, etc
@@ -365,11 +371,17 @@
   , "scmGraph.historyItemRemoteRefColor"                  : "#RED_NORM"
   , "scmGraph.historyItemHoverLabelForeground"            : "#BG__NORM"
 
-  , "diffEditor.insertedLineBackground"                   : "#GRN_BOLD20"
-  , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD2f"
+  , "diffEditor.insertedLineBackground"                   : "#GRN_BOLD10"
+  , "diffEditor.insertedTextBackground"                   : "#GRN_BOLD20"
+  , "diffEditorGutter.insertedLineBackground"             : "#GRN_NORM"
+  , "diffEditorOverview.insertedForeground"               : "#GRN_NORM"
+  , "diffEditor.insertedTextBorder"                       : "#00000000"
 
-  , "diffEditor.removedLineBackground"                    : "#RED_BOLD20"
-  , "diffEditor.removedTextBackground"                    : "#RED_BOLD2f"
+  , "diffEditor.removedLineBackground"                    : "#RED_BOLD10"
+  , "diffEditor.removedTextBackground"                    : "#RED_BOLD20"
+  , "diffEditorGutter.removedLineBackground"              : "#RED_BOLD"
+  , "diffEditorOverview.removedForeground"                : "#RED_BOLD"
+  , "diffEditor.removedTextBorder"                        : "#00000000"
   //, "inlineEdit.modifiedChangedLineBackground"            : "#RED_BOLD20"
   //, "inlineEdit.originalChangedLineBackground"            : "#YEL_BOLD20"
 
@@ -393,6 +405,9 @@
   , "minimap.warningHighlight"                            : "#YEL_BOLD"
   , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
 
+  // Right of minimap
+  , "editorOverviewRuler.errorForeground"                 : "#RED_BOLD"
+
   , "inputValidation.warningBackground"                   : "#YEL_BOLD"
   , "inputValidation.warningForeground"                   : "#FG__NORM"
   , "inputValidation.warningBorder"                       : "#FG__NORM"
@@ -412,6 +427,9 @@
   //____________________________________________________________________
   // ICONS
   //____________________________________________________________________
+
+  // E.g. Settings icon in debug sidebar, add file icon in explorer
+  , "icon.foreground"                                     : "#BLK_BOLD"
   , "editorLightBulb.foreground"                          : "#YEL_NORM"
   , "editorInfo.foreground"                               : "#GRN_NORM"
 
