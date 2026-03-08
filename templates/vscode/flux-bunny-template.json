@@ -160,6 +160,7 @@
    , "editorOverviewRuler.addedForeground"                : "#GRN_NORM"
    , "editorOverviewRuler.modifiedForeground"             : "#YEL_NORM"
    , "editorOverviewRuler.deletedForeground"              : "#RED_NORM"
+   , "editorOverviewRuler.wordHighlightForeground"        : "#FG__NORM20"
 
   //____________________________________________________________________
   // GUTTER - line numbers, etc
@@ -403,7 +404,7 @@
 
   , "minimap.errorHighlight"                              : "#RED_BOLD"
   , "minimap.warningHighlight"                            : "#YEL_BOLD"
-  , "minimap.selectionHighlight"                          : "#CYA_NORMaf"
+  , "minimap.selectionHighlight"                          : "#CYA_NORM80"
 
   // Right of minimap
   , "editorOverviewRuler.errorForeground"                 : "#RED_BOLD"
@@ -699,7 +700,7 @@
       , "keyword.operator.negation.regexp"
       , "support.other.parenthesis.regexp"
       ]
-    , "settings": { "foreground": "#d75fd7" }
+    , "settings": { "foreground": "#VIO_NORM" }
     }
 
   , { "scope": [
