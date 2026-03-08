@@ -81,7 +81,7 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#c6c6c610"
+  , "titleBar.activeBackground"                           : "#1c1c1c"
   , "titleBar.activeForeground"                           : "#eeeeee"
 
   , "titleBar.inactiveBackground"                         : "#c6c6c620"
@@ -95,7 +95,7 @@
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#262626"
+  , "statusBar.background"                                : "#1c1c1c"
   , "statusBar.foreground"                                : "#eeeeee"
   , "statusBar.noFolderBackground"                        : "#5f345f"
   , "statusBarItem.remoteBackground"                      : "#afd787"
@@ -110,16 +110,15 @@
   // ACTIVITY BAR - Left of window
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#eeeeee"
-  , "activityBar.background"                              : "#262626"
+  , "activityBar.background"                              : "#1c1c1c60"
   , "activityBar.activeBackground"                        : "#005f5f"
   , "activityBarBadge.background"                         : "#afd787"
   , "activityBarBadge.foreground"                         : "#1c1c1c"
-  , "icon.foreground"                                     : "#5f5f5f"
 
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#262626"
+  , "sideBar.background"                                  : "#1c1c1c20"
   , "sideBar.foreground"                                  : "#c6c6c6"
   , "sideBarStickyScroll.shadow"                          : "#1c1c1c"
 
@@ -131,9 +130,9 @@
   , "list.activeSelectionBackground"                      : "#005f5f"
   , "list.activeSelectionForeground"                      : "#eeeeee"
   , "list.inactiveSelectionBackground"                    : "#5f345f"
-  , "list.inactiveSelectionForeground"                    : "#00afd787"
+  , "list.inactiveSelectionForeground"                    : "#c6c6c6"
   , "list.activeSelectionIconForeground"                  : "#c6c6c6"
-  , "list.hoverBackground"                                : "#1c1c1c"
+  , "list.hoverBackground"                                : "#1c1c1c60"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#5faf87"
@@ -150,10 +149,18 @@
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
   //____________________________________________________________________
-  , "minimap.background"                                  : "#1c1c1c"
+  , "minimap.background"                                  : "#1c1c1c40"
   , "minimapGutter.addedBackground"                       : "#afd787"
   , "minimapGutter.deletedBackground"                     : "#ff5f87"
   , "minimapGutter.modifiedBackground"                    : "#ffd787"
+
+  //____________________________________________________________________
+  // OVERVIEW RULER - Vertical bar to right of minimap
+  //____________________________________________________________________
+   , "editorOverviewRuler.addedForeground"                : "#afd787"
+   , "editorOverviewRuler.modifiedForeground"             : "#ffd787"
+   , "editorOverviewRuler.deletedForeground"              : "#d787af"
+   , "editorOverviewRuler.wordHighlightForeground"        : "#c6c6c620"
 
   //____________________________________________________________________
   // GUTTER - line numbers, etc
@@ -208,7 +215,7 @@
   //____________________________________________________________________
   // TEXT INPUT FIELDS
   //____________________________________________________________________
-  , "input.background"                                    : "#1c1c1c4f"
+  , "input.background"                                    : "#1c1c1c40"
   , "input.foreground"                                    : "#c6c6c6"
   , "input.placeholderForeground"                         : "#5f5f5f"
 
@@ -365,11 +372,17 @@
   , "scmGraph.historyItemRemoteRefColor"                  : "#d787af"
   , "scmGraph.historyItemHoverLabelForeground"            : "#262626"
 
-  , "diffEditor.insertedLineBackground"                   : "#5faf8720"
-  , "diffEditor.insertedTextBackground"                   : "#5faf872f"
+  , "diffEditor.insertedLineBackground"                   : "#5faf8710"
+  , "diffEditor.insertedTextBackground"                   : "#5faf8720"
+  , "diffEditorGutter.insertedLineBackground"             : "#afd787"
+  , "diffEditorOverview.insertedForeground"               : "#afd787"
+  , "diffEditor.insertedTextBorder"                       : "#00000000"
 
-  , "diffEditor.removedLineBackground"                    : "#ff5f8720"
-  , "diffEditor.removedTextBackground"                    : "#ff5f872f"
+  , "diffEditor.removedLineBackground"                    : "#ff5f8710"
+  , "diffEditor.removedTextBackground"                    : "#ff5f8720"
+  , "diffEditorGutter.removedLineBackground"              : "#ff5f87"
+  , "diffEditorOverview.removedForeground"                : "#ff5f87"
+  , "diffEditor.removedTextBorder"                        : "#00000000"
   //, "inlineEdit.modifiedChangedLineBackground"            : "#ff5f8720"
   //, "inlineEdit.originalChangedLineBackground"            : "#ffaf8720"
 
@@ -391,7 +404,10 @@
 
   , "minimap.errorHighlight"                              : "#ff5f87"
   , "minimap.warningHighlight"                            : "#ffaf87"
-  , "minimap.selectionHighlight"                          : "#87d7afaf"
+  , "minimap.selectionHighlight"                          : "#87d7af80"
+
+  // Right of minimap
+  , "editorOverviewRuler.errorForeground"                 : "#ff5f87"
 
   , "inputValidation.warningBackground"                   : "#ffaf87"
   , "inputValidation.warningForeground"                   : "#c6c6c6"
@@ -412,6 +428,9 @@
   //____________________________________________________________________
   // ICONS
   //____________________________________________________________________
+
+  // E.g. Settings icon in debug sidebar, add file icon in explorer
+  , "icon.foreground"                                     : "#5f5f5f"
   , "editorLightBulb.foreground"                          : "#ffd787"
   , "editorInfo.foreground"                               : "#afd787"
 
@@ -681,7 +700,7 @@
       , "keyword.operator.negation.regexp"
       , "support.other.parenthesis.regexp"
       ]
-    , "settings": { "foreground": "#d75fd7" }
+    , "settings": { "foreground": "#af87d7" }
     }
 
   , { "scope": [
