@@ -93,14 +93,14 @@
     , "justMyCode": false
     , "cwd"       : "${workspaceFolder}"
     }
-  , { "name"    : "gnome-demo"
+  , { "name"    : "gnome-theme-dark"
     , "type"    : "debugpy"
     , "request" : "launch"
     , "program" : "${workspaceFolder}/color_scheme_driver.py"
     , "console" : "integratedTerminal"
     , "args":
       [ "--scheme_type" , "gnome"
-      , "--file"        , "sample-themes/demo/input.json"
+      , "--file"        , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
       , "--out_dir"     , "~/.themes/"
       ]
     }
