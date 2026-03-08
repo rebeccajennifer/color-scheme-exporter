@@ -2,26 +2,25 @@
   "$schema"     : "vscode://schemas/color-theme"
 
 , "colors":
-  {
-    "foreground"                                          : "#262626"
+  { "foreground"                                          : "#262626"
+  , "focusBorder"                                         : "#5fa2a2"
   //____________________________________________________________________
   // TESTING
   //____________________________________________________________________
-  //  "list.filterMatchBackground"                          : "#d787005f"
-  //, "panelSection.dropBackground"                         : "#0087005f"
+  //  "list.filterMatchBackground"                          : "#d7870060"
+  //, "panelSection.dropBackground"                         : "#00870060"
   //, "list.filterMatchBackground"                          : "#FF0000"
   //, "list.inactiveFocusOutline"                           : "#FF0000"
-  //, "editor.compositionBorder"                            : "#0000FF"
-  //, "editorActionList.background"                         : "#00FFFF"
+  //, "editor.compositionBorder"                            : "#00010F"
+  //, "editorActionList.background"                         : "#010FFF"
   //, "sideBar.dropBackground"                              : "#ff0000"
   //, "debugConsole.sourceForeground"                       : "#ff0000"
   //, "debugView.exceptionLabelBackground"                  : "#ffff00"
   //, "debugView.exceptionLabelForeground"                  : "#ff0000"
-  //, "checkbox.border"                                     : "#00ff00"
+  //, "checkbox.border"                                     : "#010f00"
   //, "checkbox.selectBorder"                               : "#008700"
   //, "checkbox.selectBackground"                           : "#ff0000"
   //, "checkbox.disabled.background"                        : "#ff0000"
-
 
   //____________________________________________________________________
   // Overridden by other properties
@@ -58,7 +57,7 @@
   , "terminal.ansiBrightWhite"                            : "#afafaf"
 
   // E.g. Background of hyperlink on hover in terminal
-  , "terminal.hoverHighlightBackground"                   : "#875f875f"
+  , "terminal.hoverHighlightBackground"                   : "#875f8760"
 
   // Dot left of command prompt
   , "terminalCommandDecoration.defaultBackground"         :"#5f8787"
@@ -66,155 +65,37 @@
   , "terminalCommandDecoration.errorBackground"           :"#d75f87"
 
   //____________________________________________________________________
-  , "selection.background"                                : "#5f8ca287"
-  , "errorForeground"                                     : "#d75f87"
-  , "focusBorder"                                         : "#5fa2a2"
+  // BORDERS
+  //____________________________________________________________________
+  , "activityBar.border"                                  : "#26262610"
+  // Border dividing panel from editor
+  , "panel.border"                                        : "#26262610"
+  // Border under panel title
+  , "panelTitle.border"                                   : "#26262610"
+  , "peekView.border"                                     : "#5fa2a2"
+  , "sideBar.border"                                      : "#26262610"
+  , "statusBar.border"                                    : "#26262610"
+  , "tab.border"                                          : "#e4e4e4"
 
-  // Main window title bar
-  , "titleBar.activeBackground"                           : "#2626260f"
+
+  //____________________________________________________________________
+  // TITLE BAR - Main window title bar
+  //____________________________________________________________________
+  , "titleBar.activeBackground"                           : "#dadada"
   , "titleBar.activeForeground"                           : "#303030"
 
-  , "titleBar.inactiveBackground"                         : "#dadada"
-  , "titleBar.inactiveForeground"                         : "#0087af87"
+  , "titleBar.inactiveBackground"                         : "#26262620"
+  , "titleBar.inactiveForeground"                         : "#262626"
 
   , "editor.background"                                   : "#e4e4e4"
   , "editor.foreground"                                   : "#262626"
   , "editorCursor.background"                             : "#e4e4e4"
   , "editorCursor.foreground"                             : "#008700"
-  , "editor.selectionBackground"                          : "#5f8ca287"
-  , "editor.selectionForeground"                          : "#e4e4e4"
-
-  // Text color of header in settings
-  , "settings.headerForeground"                           : "#005f5f"
-
-  // Right-click menu
-  , "menu.background"                                     : "#dadada"
-  , "textLink.foreground"                                 : "#0087af"
-  , "textLink.activeForeground"                           : "#005f87"
 
   //____________________________________________________________________
-  // HIGHLIGHTING AND SELECTION
+  // STATUS BAR - Bottom of window
   //____________________________________________________________________
-
-  // Needed for visual selection in vim
-  , "editor.selectionHighlightBackground"                 : "#2626260f"
-
-  // Occurances of word under cursor
-  , "editor.wordHighlightTextBackground"                  : "#2626261f"
-
-  , "editor.wordHighlightBackground"                      : "#2626260f"
-  , "editor.lineHighlightBackground"                      : "#2626260f"
-  , "editor.findMatchHighlightBackground"                 : "#5f8ca287"
-  , "editor.findMatchBackground"                          : "#5f8ca287"
-
-  // Sticky Scroll - keep current code context at top of file
-  , "editorStickyScroll.background"                       : "#dadada"
-  , "editorStickyScrollHover.background"                  : "#dadada"
-  , "editorStickyScroll.shadow"                           : "#121212"
-  , "editorStickyScroll.border"                           : "#af5faf"
-  , "panelStickyScroll.background"                        : "#dadada"
-  , "panelStickyScroll.shadow"                            : "#121212"
-  , "panelStickyScroll.border"                            : "#00000000"
-
-  , "editorLineNumber.activeForeground"                   : "#008700"
-  , "editorLineNumber.foreground"                         : "#878787"
-  , "editorRuler.foreground"                              : "#dadada"
-
-  //____________________________________________________________________
-  // TEXT INPUT FIELDS
-  //____________________________________________________________________
-  , "input.background"                                    : "#dadada"
-  , "input.foreground"                                    : "#262626"
-  , "input.placeholderForeground"                         : "#878787"
-
-  // E.g. Commit message entry, command palette
-  , "editor.placeholder.foreground"                       : "#878787"
-
-  // E.g. Match case button in search
-  , "inputOption.activeBackground"                        : "#5fa2a2"
-  , "inputOption.activeForeground"                        : "#262626"
-  , "inputOption.activeBorder"                            : "#2626260f"
-
-  // Dropdown for command field
-  , "editorWidget.background"                             : "#e4e4e4"
-  , "editorWidget.border"                                 : "#dadada"
-  , "editorSuggestWidget.background"                      : "#dadada"
-  , "editorSuggestWidget.foreground"                      : "#262626"
-  , "editorSuggestWidget.border"                          : "#dadada"
-
-  //____________________________________________________________________
-  // PEEK VIEW - Displayed with right-click and "Go to *"
-  //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#5f8ca25f"
-  , "peekViewEditor.matchHighlightBackground"             : "#5f8ca287"
-  , "peekViewResult.matchHighlightBackground"             : "#5f8ca287"
-
-  , "peekViewEditorStickyScroll.background"               : "#5f8ca2"
-  , "peekViewEditorStickyScrollGutter.background"         : "#5f8ca2"
-
-  , "peekView.border"                                     : "#5fa2a2"
-  , "peekViewTitleLabel.foreground"                       : "#262626"
-  , "peekViewResult.fileForeground"                       : "#262626"
-  , "peekViewResult.selectionBackground"                  : "#af5faf"
-  , "peekViewResult.selectionForeground"                  : "#262626"
-
-  // Peek View line number background
-  //, "peekViewEditorGutter.background"                     :"#dadada"
-
-  //____________________________________________________________________
-  // BRACKETS
-  //____________________________________________________________________
-  , "editorBracketHighlight.foreground1"                  : "#008700"
-  , "editorBracketHighlight.foreground3"                  : "#005f5f"
-  , "editorBracketHighlight.foreground2"                  : "#af005f"
-  , "editorBracketHighlight.unexpectedBracket.foreground" : "#d75f87"
-
-  //____________________________________________________________________
-  // DROPDOWN
-  //____________________________________________________________________
-  , "dropdown.background"                                 : "#dadada"
-  , "dropdown.foreground"                                 : "#262626"
-  , "dropdown.border"                                     : "#dadada"
-  , "dropdown.listBackground"                             : "#e4e4e4"
-
-  //____________________________________________________________________
-  // TABS
-  //____________________________________________________________________
-  , "tab.activeBackground"                                : "#e4e4e4"
-  , "tab.activeForeground"                                : "#262626"
-  , "tab.inactiveBackground"                              : "#dadada"
-  , "tab.inactiveForeground"                              : "#2626267f"
-  , "tab.unfocusedActiveForeground"                       : "#0087af87"
-  , "tab.unfocusedInactiveForeground"                     : "#878787"
-  , "tab.border"                                          : "#dadada"
-
-  // Dead space to right of tabs
-  , "editorGroupHeader.tabsBackground"                    : "#e4e4e4"
-
-  //____________________________________________________________________
-  // PANELS
-  //____________________________________________________________________
-  , "panel.background"                                    : "#e4e4e4"
-
-  // Border dividing panel from editor
-  , "panel.border"                                        : "#dadada"
-
-  // Border under panel title
-  , "panelTitle.border"                                   : "#dadada"
-
-  , "panelTitle.activeForeground"                         : "#303030"
-  , "panelTitle.inactiveForeground"                       : "#262626"
-
-  // Underline of active panel title - shows which panel is active
-  , "panelTitle.activeBorder"                             : "#5fa2a2"
-  //, "panelSectionHeader.background"                       : "#008700"
-  //, "panelTitleBadge.foreground"                          : "#e4e4e4"
-
-  //____________________________________________________________________
-  // STATUS BAR (BOTTOM OF WINDOW)
-  //____________________________________________________________________
-  , "statusBar.background"                                : "#e4e4e4"
-  , "statusBar.border"                                    : "#dadada"
+  , "statusBar.background"                                : "#dadada"
   , "statusBar.foreground"                                : "#303030"
   , "statusBar.noFolderBackground"                        : "#af5faf"
   , "statusBarItem.remoteBackground"                      : "#008700"
@@ -223,38 +104,35 @@
   , "statusBarItem.warningBackground"                     : "#d78700"
   , "statusBarItem.warningForeground"                     : "#e4e4e4"
   , "statusBarItem.errorBackground"                       : "#d75f87"
-  , "statusBarItem.errorForeground"                       : "#303030"
+  , "statusBarItem.errorForeground"                       : "#dadada"
 
   //____________________________________________________________________
-  // ACTIVITY BAR (LEFT OF WINDOW)
+  // ACTIVITY BAR - Left of window
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#303030"
-  , "activityBar.background"                              : "#e4e4e4"
-  , "activityBar.border"                                  : "#dadada"
+  , "activityBar.background"                              : "#dadada60"
   , "activityBar.activeBackground"                        : "#5fa2a2"
   , "activityBarBadge.background"                         : "#008700"
   , "activityBarBadge.foreground"                         : "#dadada"
-  , "icon.foreground"                                     : "#878787"
 
   //____________________________________________________________________
-  // SIDEBAR (PROJECT EXPLORER, ETC)
+  // SIDEBAR - Project explorer, etc
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#e4e4e4"
+  , "sideBar.background"                                  : "#dadada20"
   , "sideBar.foreground"                                  : "#262626"
-  , "sideBar.border"                                      : "#dadada"
   , "sideBarStickyScroll.shadow"                          : "#121212"
 
   , "sideBarTitle.background"                             : "#e4e4e4"
   , "sideBarTitle.foreground"                             : "#303030"
-  , "sideBarSectionHeader.background"                     : "#2626260f"
+  , "sideBarSectionHeader.background"                     : "#26262610"
   , "sideBarSectionHeader.foreground"                     : "#303030"
 
   , "list.activeSelectionBackground"                      : "#5fa2a2"
   , "list.activeSelectionForeground"                      : "#303030"
-  , "list.inactiveSelectionBackground"                    : "#dadada"
-  , "list.inactiveSelectionForeground"                    : "#0087af87"
+  , "list.inactiveSelectionBackground"                    : "#af5faf"
+  , "list.inactiveSelectionForeground"                    : "#262626"
   , "list.activeSelectionIconForeground"                  : "#262626"
-  , "list.hoverBackground"                                : "#dadada"
+  , "list.hoverBackground"                                : "#dadada60"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#008700"
@@ -265,8 +143,150 @@
   , "list.invalidItemForeground"                          : "#d75f87"
 
   // Keyboard shortcut indicator in drop down command palette
-  , "keybindingLabel.background"                          : "#dadada"
+  , "keybindingLabel.background"                          : "#26262610"
   , "keybindingLabel.foreground"                          : "#262626"
+
+  //____________________________________________________________________
+  // MINIMAP - Mini version of code on right of window
+  //____________________________________________________________________
+  , "minimap.background"                                  : "#dadada40"
+  , "minimapGutter.addedBackground"                       : "#008700"
+  , "minimapGutter.deletedBackground"                     : "#d75f87"
+  , "minimapGutter.modifiedBackground"                    : "#d75f00"
+
+  //____________________________________________________________________
+  // OVERVIEW RULER - Vertical bar to right of minimap
+  //____________________________________________________________________
+   , "editorOverviewRuler.addedForeground"                : "#008700"
+   , "editorOverviewRuler.modifiedForeground"             : "#d75f00"
+   , "editorOverviewRuler.deletedForeground"              : "#af005f"
+   , "editorOverviewRuler.wordHighlightForeground"        : "#26262620"
+
+  //____________________________________________________________________
+  // GUTTER - line numbers, etc
+  //____________________________________________________________________
+  , "editorLineNumber.activeForeground"                   : "#d75f87"
+  , "editorLineNumber.foreground"                         : "#878787"
+  , "editorRuler.foreground"                              : "#26262610"
+
+  //____________________________________________________________________
+  // TABS
+  //____________________________________________________________________
+  , "tab.activeBackground"                                : "#e4e4e4"
+  , "tab.activeForeground"                                : "#262626"
+  , "tab.inactiveBackground"                              : "#26262610"
+  , "tab.inactiveForeground"                              : "#26262680"
+  , "tab.unfocusedActiveForeground"                       : "#0087af87"
+  , "tab.unfocusedInactiveForeground"                     : "#878787"
+
+  // Dead space to right of tabs
+  , "editorGroupHeader.tabsBackground"                    : "#e4e4e4"
+
+  //____________________________________________________________________
+  // HIGHLIGHTING AND SELECTION
+  //____________________________________________________________________
+  , "editor.selectionBackground"                          : "#26262620"
+  , "editor.selectionForeground"                          : "#e4e4e4"
+  , "selection.background"                                : "#5f8ca287"
+
+  // Needed for visual selection in vim
+  , "editor.selectionHighlightBackground"                 : "#26262610"
+
+  // Occurrences of word under cursor
+  , "editor.wordHighlightTextBackground"                  : "#26262620"
+
+  , "editor.wordHighlightBackground"                      : "#26262610"
+  , "editor.lineHighlightBackground"                      : "#dadada60"
+  , "editor.findMatchHighlightBackground"                 : "#5f8ca287"
+  , "editor.findMatchBackground"                          : "#5f8ca287"
+
+  // Right-click menu
+  , "menu.background"                                     : "#dadada"
+
+  //____________________________________________________________________
+  // LINKS
+  //____________________________________________________________________
+  , "textLink.foreground"                                 : "#0087af"
+  , "textLink.activeForeground"                           : "#005f87"
+
+  // E.g. 'other commands', 'recently opened ' in command palette
+  , "pickerGroup.foreground"                              : "#0087af"
+
+  //____________________________________________________________________
+  // TEXT INPUT FIELDS
+  //____________________________________________________________________
+  , "input.background"                                    : "#dadada40"
+  , "input.foreground"                                    : "#262626"
+  , "input.placeholderForeground"                         : "#878787"
+
+  // E.g. Commit message entry, command palette
+  , "editor.placeholder.foreground"                       : "#878787"
+
+  // E.g. Match case button in search
+  , "inputOption.activeBackground"                        : "#5fa2a2"
+  , "inputOption.activeForeground"                        : "#262626"
+  , "inputOption.activeBorder"                            : "#26262610"
+
+  // Dropdown for command field
+  , "editorWidget.background"                             : "#e4e4e4"
+  , "editorWidget.border"                                 : "#26262610"
+  , "editorSuggestWidget.background"                      : "#dadada"
+  , "editorSuggestWidget.foreground"                      : "#262626"
+  , "editorSuggestWidget.border"                          : "#26262610"
+
+  //____________________________________________________________________
+  // STICKY SCROLL - keep current code context at top of file
+  //____________________________________________________________________
+  , "editorStickyScroll.background"                       : "#e4e4e4"
+  , "editorStickyScrollHover.background"                  : "#dadada"
+  , "editorStickyScroll.shadow"                           : "#121212"
+  , "editorStickyScroll.border"                           : "#00000000"
+  , "panelStickyScroll.background"                        : "#dadada"
+  , "panelStickyScroll.shadow"                            : "#121212"
+  , "panelStickyScroll.border"                            : "#00000000"
+
+  //____________________________________________________________________
+  // PEEK VIEW - Displayed with right-click and "Go to *"
+  //____________________________________________________________________
+  , "peekViewEditor.background"                           : "#5f8ca260"
+  , "peekViewEditor.matchHighlightBackground"             : "#5f8ca287"
+  , "peekViewResult.matchHighlightBackground"             : "#5f8ca287"
+
+  , "peekViewEditorStickyScroll.background"               : "#5f8ca2"
+  , "peekViewEditorStickyScrollGutter.background"         : "#5f8ca2"
+
+  , "peekViewTitleLabel.foreground"                       : "#262626"
+  , "peekViewResult.fileForeground"                       : "#262626"
+  , "peekViewResult.selectionBackground"                  : "#af5faf"
+  , "peekViewResult.selectionForeground"                  : "#262626"
+
+  // Peek View line number background
+  //, "peekViewEditorGutter.background"                     :"#dadada"
+
+   // Text color of header in settings
+  , "settings.headerForeground"                           : "#005f5f"
+
+  //____________________________________________________________________
+  // DROPDOWN
+  //____________________________________________________________________
+  , "dropdown.background"                                 : "#dadada"
+  , "dropdown.foreground"                                 : "#262626"
+  , "dropdown.border"                                     : "#dadada"
+  , "dropdown.listBackground"                             : "#e4e4e4"
+
+  //____________________________________________________________________
+  // PANELS
+  //____________________________________________________________________
+  , "panel.background"                                    : "#e4e4e4"
+
+  , "panelTitle.activeForeground"                         : "#303030"
+  , "panelTitle.inactiveForeground"                       : "#262626"
+
+  // Underline of active panel title - shows which panel is active
+  , "panelTitle.activeBorder"                             : "#5fa2a2"
+  //, "panelSectionHeader.background"                       : "#008700"
+  //, "panelTitleBadge.foreground"                          : "#e4e4e4"
+
   //____________________________________________________________________
   // BUTTONS & CHECKBOXES
   //____________________________________________________________________
@@ -284,7 +304,7 @@
 
   // Breakpoint dot
   , "debugIcon.breakpointForeground"                      : "#d75f87"
-  , "debugIcon.breakpointDisabledForeground"              : "#d75f875f"
+  , "debugIcon.breakpointDisabledForeground"              : "#d75f8760"
 
   // Breakpoint arrow when stopped
   , "debugIcon.breakpointCurrentStackframeForeground"     : "#008700"
@@ -303,11 +323,11 @@
   , "editor.inlineValuesForeground"                       : "#d75f00"
   , "editor.stackFrameHighlightBackground"                : "#dadada"
   , "statusBar.debuggingBackground"                       : "#d78700"
-  , "statusBar.debuggingForeground"                       : "#303030"
+  , "statusBar.debuggingForeground"                       : "#dadada"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#d75f87"
-  , "debugExceptionWidget.background"                     : "#d75f875f"
+  , "debugExceptionWidget.background"                     : "#d75f8760"
 
   // Debug variables in sidebar
   , "debugConsole.infoForeground"                         : "#005f87"
@@ -323,13 +343,13 @@
   // SOURCE CONTROL
   //____________________________________________________________________
   , "gitDecoration.addedResourceForeground"               : "#008700"
-  , "gitDecoration.modifiedResourceForeground"            : "#d78700"
+  , "gitDecoration.modifiedResourceForeground"            : "#d75f00"
   , "gitDecoration.untrackedResourceForeground"           : "#872f87"
   , "gitDecoration.deletedResourceForeground"             : "#d75f87"
   , "gitDecoration.renamedResourceForeground"             : "#d78700"
   , "gitDecoration.conflictingResourceForeground"         : "#d75f87"
   , "gitDecoration.stageDeletedResourceForeground"        : "#d75f87"
-  , "gitDecoration.stageModifiedResourceForeground"       : "#d78700"
+  , "gitDecoration.stageModifiedResourceForeground"       : "#d75f00"
   , "gitDecoration.submoduleResourceForeground"           : "#5f8787"
   , "gitDecoration.ignoredResourceForeground"             : "#872f87"
 
@@ -338,8 +358,8 @@
   // After staging - vertical bar in gutter where line was added
   , "editorGutter.addedSecondaryBackground"               : "#008700"
 
-  , "editorGutter.modifiedBackground"                     : "#d78700"
-  , "editorGutter.modifiedSecondaryBackground"            : "#d78700"
+  , "editorGutter.modifiedBackground"                     : "#d75f00"
+  , "editorGutter.modifiedSecondaryBackground"            : "#d75f00"
 
   // Triangle pointing where line was deleted
   , "editorGutter.deletedBackground"                      : "#d75f87"
@@ -352,13 +372,19 @@
   , "scmGraph.historyItemRemoteRefColor"                  : "#af005f"
   , "scmGraph.historyItemHoverLabelForeground"            : "#e4e4e4"
 
-  , "diffEditor.insertedLineBackground"                   : "#0087001f"
-  , "diffEditor.insertedTextBackground"                   : "#0087002f"
+  , "diffEditor.insertedLineBackground"                   : "#00870010"
+  , "diffEditor.insertedTextBackground"                   : "#00870020"
+  , "diffEditorGutter.insertedLineBackground"             : "#008700"
+  , "diffEditorOverview.insertedForeground"               : "#008700"
+  , "diffEditor.insertedTextBorder"                       : "#00000000"
 
-  , "diffEditor.removedLineBackground"                    : "#d75f871f"
-  , "diffEditor.removedTextBackground"                    : "#d75f872f"
-  //, "inlineEdit.modifiedChangedLineBackground"            : "#d75f871f"
-  //, "inlineEdit.originalChangedLineBackground"            : "#d787001f"
+  , "diffEditor.removedLineBackground"                    : "#d75f8710"
+  , "diffEditor.removedTextBackground"                    : "#d75f8720"
+  , "diffEditorGutter.removedLineBackground"              : "#d75f87"
+  , "diffEditorOverview.removedForeground"                : "#d75f87"
+  , "diffEditor.removedTextBorder"                        : "#00000000"
+  //, "inlineEdit.modifiedChangedLineBackground"            : "#d75f8720"
+  //, "inlineEdit.originalChangedLineBackground"            : "#d7870020"
 
   //, "scmGraph.historyItemHoverDefaultLabelBackground"     : "#008700"
   //, "scmGraph.foreground2"                                : "#af005f"
@@ -367,27 +393,23 @@
   //, "scmGraph.foreground5"                                : "#af005f"
 
   //____________________________________________________________________
-  // MINIMAP
-  //____________________________________________________________________
-  , "minimap.background"                                  : "#dadada"
-  , "minimapGutter.addedBackground"                       : "#008700"
-  , "minimapGutter.deletedBackground"                     : "#d75f87"
-  , "minimapGutter.modifiedBackground"                    : "#d75f00"
-
-  //____________________________________________________________________
   // ERRORS AND WARNINGS
   //____________________________________________________________________
-  , "editorWarning.foreground"                            : "#d75f00"
+  , "errorForeground"                                     : "#d75f87"
+  , "editorWarning.foreground"                            : "#d78700"
   , "editorError.foreground"                              : "#d75f87"
 
   , "list.warningForeground"                              : "#d78700"
   , "list.errorForeground"                                : "#d75f87"
 
   , "minimap.errorHighlight"                              : "#d75f87"
-  , "minimap.warningHighlight"                            : "#d75f00"
-  , "minimap.selectionHighlight"                          : "#5f8787af"
+  , "minimap.warningHighlight"                            : "#d78700"
+  , "minimap.selectionHighlight"                          : "#5f878780"
 
-  , "inputValidation.warningBackground"                   : "#d75f87"
+  // Right of minimap
+  , "editorOverviewRuler.errorForeground"                 : "#d75f87"
+
+  , "inputValidation.warningBackground"                   : "#d78700"
   , "inputValidation.warningForeground"                   : "#262626"
   , "inputValidation.warningBorder"                       : "#262626"
   , "inputValidation.errorBackground"                     : "#e4e4e4"
@@ -398,15 +420,19 @@
   , "problemsWarningIcon.foreground"                      : "#d78700"
   , "problemsInfoIcon.foreground"                         : "#d75f00"
   , "debugConsole.errorForeground"                        : "#d75f87"
-  , "debugConsole.warningForeground"                      : "#d75f00"
+  , "debugConsole.warningForeground"                      : "#d78700"
 
-  , "disabledForeground"                                  : "#8787877f"
-  , "list.deemphasizedForeground"                         : "#8787877f"
+  , "disabledForeground"                                  : "#87878780"
+  , "list.deemphasizedForeground"                         : "#87878780"
 
   //____________________________________________________________________
   // ICONS
   //____________________________________________________________________
+
+  // E.g. Settings icon in debug sidebar, add file icon in explorer
+  , "icon.foreground"                                     : "#878787"
   , "editorLightBulb.foreground"                          : "#d75f00"
+  , "editorInfo.foreground"                               : "#008700"
 
   , "symbolIcon.arrayForeground"                          : "#008700"
   , "symbolIcon.booleanForeground"                        : "#262626"
@@ -445,6 +471,15 @@
   //____________________________________________________________________
   // MISC
   //____________________________________________________________________
+
+  //____________________________________________________________________
+  // BRACKETS
+  //____________________________________________________________________
+  , "editorBracketHighlight.foreground1"                  : "#008700"
+  , "editorBracketHighlight.foreground3"                  : "#005f5f"
+  , "editorBracketHighlight.foreground2"                  : "#af005f"
+  , "editorBracketHighlight.unexpectedBracket.foreground" : "#d75f87"
+
 
   }
 
@@ -665,7 +700,7 @@
       , "keyword.operator.negation.regexp"
       , "support.other.parenthesis.regexp"
       ]
-    , "settings": { "foreground": "#d75fd7" }
+    , "settings": { "foreground": "#872f87" }
     }
 
   , { "scope": [

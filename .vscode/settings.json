@@ -1,0 +1,12 @@
+{ "sarif-viewer.connectToGithubCodeScanning": "off"
+, "cSpell.words":
+  [
+    "cout"
+  , "konsole"
+  , "Konsole"
+  , "KONSOLE"
+  , "Mintty"
+  , "MINTTY"
+  , "Stackframe"
+  ]
+}
