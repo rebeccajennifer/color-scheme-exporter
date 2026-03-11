@@ -2,33 +2,13 @@
   "$schema"     : "vscode://schemas/color-theme"
 
 , "colors":
-  { "foreground"                                          : "#FG__NORM"
-  , "focusBorder"                                         : "#KEY_BG_0"
+  {
   //____________________________________________________________________
-  // TESTING
+  // GENERAL
   //____________________________________________________________________
-  //  "list.filterMatchBackground"                          : "#YEL_BOLD60"
-  //, "panelSection.dropBackground"                         : "#GRN_BOLD60"
-  //, "list.filterMatchBackground"                          : "#FF0000"
-  //, "list.inactiveFocusOutline"                           : "#FF0000"
-  //, "editor.compositionBorder"                            : "#00010F"
-  //, "editorActionList.background"                         : "#010FFF"
-  //, "sideBar.dropBackground"                              : "#ff0000"
-  //, "debugConsole.sourceForeground"                       : "#ff0000"
-  //, "debugView.exceptionLabelBackground"                  : "#ffff00"
-  //, "debugView.exceptionLabelForeground"                  : "#ff0000"
-  //, "checkbox.border"                                     : "#010f00"
-  //, "checkbox.selectBorder"                               : "#GRN_NORM"
-  //, "checkbox.selectBackground"                           : "#ff0000"
-  //, "checkbox.disabled.background"                        : "#ff0000"
-
-  //____________________________________________________________________
-  // Overridden by other properties
-  //____________________________________________________________________
-  //, "quickInput.background"                               : "#BG__BOLD"
-  //, "quickInputList.focusIconForeground"                  : "#FG__BOLD"
-  //, "quickInput.foreground"                               : "#FG__NORM"
-  //, "settings.textInputBackground"                        : "#FFFF00"
+    "foreground"                                          : "#FG__NORM"
+  , "editor.background"                                   : "#BG__NORM"
+  , "editor.foreground"                                   : "#FG__NORM"
 
   //____________________________________________________________________
   // TERMINAL
@@ -67,16 +47,32 @@
   //____________________________________________________________________
   // BORDERS
   //____________________________________________________________________
+
+  // Border of focused element, e.g. active pane
+  , "focusBorder"                                         : "#KEY_BG_0"
+
   , "activityBar.border"                                  : "#FG__NORM10"
+
   // Border dividing panel from editor
   , "panel.border"                                        : "#FG__NORM10"
+
   // Border under panel title
   , "panelTitle.border"                                   : "#FG__NORM10"
+
+  // E.g. Debug configuration selection
+  , "dropdown.border"                                     : "#FG__NORM10"
+
   , "peekView.border"                                     : "#KEY_BG_0"
   , "sideBar.border"                                      : "#FG__NORM10"
   , "statusBar.border"                                    : "#FG__NORM10"
   , "tab.border"                                          : "#BG__NORM"
 
+  // Border of text input fields, e.g. command palette, search
+  , "input.border"                                        : "#FG__NORM10"
+
+  // Transparent
+  , "editorStickyScroll.border"                           : "#00000000"
+  , "panelStickyScroll.border"                            : "#00000000"
 
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
@@ -86,11 +82,6 @@
 
   , "titleBar.inactiveBackground"                         : "#FG__NORM20"
   , "titleBar.inactiveForeground"                         : "#FG__NORM"
-
-  , "editor.background"                                   : "#BG__NORM"
-  , "editor.foreground"                                   : "#FG__NORM"
-  , "editorCursor.background"                             : "#BG__NORM"
-  , "editorCursor.foreground"                             : "#GRN_NORM"
 
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
@@ -116,7 +107,7 @@
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
 
   //____________________________________________________________________
-  // SIDEBAR - Project explorer, etc
+  // SIDEBAR - Project explorer, etc.
   //____________________________________________________________________
   , "sideBar.background"                                  : "#BG__BOLD20"
   , "sideBar.foreground"                                  : "#FG__NORM"
@@ -129,7 +120,7 @@
 
   , "list.activeSelectionBackground"                      : "#KEY_BG_0"
   , "list.activeSelectionForeground"                      : "#FG__BOLD"
-  , "list.inactiveSelectionBackground"                    : "#KEY_BG_1"
+  , "list.inactiveSelectionBackground"                    : "#FG__NORM10"
   , "list.inactiveSelectionForeground"                    : "#FG__NORM"
   , "list.activeSelectionIconForeground"                  : "#FG__NORM"
   , "list.hoverBackground"                                : "#BG__BOLD60"
@@ -139,12 +130,19 @@
   , "list.dropBetweenBackground"                          : "#GRN_BOLD"
 
   , "list.highlightForeground"                            : "#GRN_NORM"
-  , "list.focusBackground"                                : "#BLU_BOLD87"
+  , "list.focusBackground"                                : "#BLU_BOLD80"
   , "list.invalidItemForeground"                          : "#RED_BOLD"
+
+  //____________________________________________________________________
+  // COMMAND PALETTE - Drop down when pressing Ctrl+P or Ctrl+Shift+P
+  //____________________________________________________________________
 
   // Keyboard shortcut indicator in drop down command palette
   , "keybindingLabel.background"                          : "#FG__NORM10"
   , "keybindingLabel.foreground"                          : "#FG__NORM"
+
+  // E.g. 'other commands', 'recently opened ' in command palette
+  , "pickerGroup.foreground"                              : "#BLU_BOLD"
 
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
@@ -163,10 +161,12 @@
    , "editorOverviewRuler.wordHighlightForeground"        : "#FG__NORM20"
 
   //____________________________________________________________________
-  // GUTTER - line numbers, etc
+  // GUTTER - Line numbers, etc
   //____________________________________________________________________
   , "editorLineNumber.activeForeground"                   : "#RED_BOLD"
   , "editorLineNumber.foreground"                         : "#BLK_BOLD"
+
+  // Vertical line at certain character width in editor
   , "editorRuler.foreground"                              : "#FG__NORM10"
 
   //____________________________________________________________________
@@ -176,7 +176,7 @@
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#FG__NORM10"
   , "tab.inactiveForeground"                              : "#FG__NORM80"
-  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD87"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD80"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
 
   // Dead space to right of tabs
@@ -185,9 +185,15 @@
   //____________________________________________________________________
   // HIGHLIGHTING AND SELECTION
   //____________________________________________________________________
+  , "editorCursor.background"                             : "#BG__NORM"
+  , "editorCursor.foreground"                             : "#GRN_NORM"
+
+  // Current line highlight
+  , "editor.lineHighlightBackground"                      : "#BG__BOLD60"
+
   , "editor.selectionBackground"                          : "#FG__NORM20"
   , "editor.selectionForeground"                          : "#BG__NORM"
-  , "selection.background"                                : "#KEY_BG_287"
+  , "selection.background"                                : "#KEY_BG_280"
 
   // Needed for visual selection in vim
   , "editor.selectionHighlightBackground"                 : "#FG__NORM10"
@@ -196,21 +202,15 @@
   , "editor.wordHighlightTextBackground"                  : "#FG__NORM20"
 
   , "editor.wordHighlightBackground"                      : "#FG__NORM10"
-  , "editor.lineHighlightBackground"                      : "#BG__BOLD60"
-  , "editor.findMatchHighlightBackground"                 : "#KEY_BG_287"
-  , "editor.findMatchBackground"                          : "#KEY_BG_287"
 
-  // Right-click menu
-  , "menu.background"                                     : "#BG__BOLD"
+  , "editor.findMatchHighlightBackground"                 : "#KEY_BG_280"
+  , "editor.findMatchBackground"                          : "#KEY_BG_280"
 
   //____________________________________________________________________
   // LINKS
   //____________________________________________________________________
   , "textLink.foreground"                                 : "#BLU_BOLD"
   , "textLink.activeForeground"                           : "#BLU_NORM"
-
-  // E.g. 'other commands', 'recently opened ' in command palette
-  , "pickerGroup.foreground"                              : "#BLU_BOLD"
 
   //____________________________________________________________________
   // TEXT INPUT FIELDS
@@ -240,17 +240,15 @@
   , "editorStickyScroll.background"                       : "#BG__NORM"
   , "editorStickyScrollHover.background"                  : "#BG__BOLD"
   , "editorStickyScroll.shadow"                           : "#BLK_NORM"
-  , "editorStickyScroll.border"                           : "#00000000"
   , "panelStickyScroll.background"                        : "#BG__BOLD"
   , "panelStickyScroll.shadow"                            : "#BLK_NORM"
-  , "panelStickyScroll.border"                            : "#00000000"
 
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#KEY_BG_260"
-  , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_287"
-  , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_287"
+  , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_280"
+  , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_280"
 
   , "peekViewEditorStickyScroll.background"               : "#KEY_BG_2"
   , "peekViewEditorStickyScrollGutter.background"         : "#KEY_BG_2"
@@ -271,7 +269,6 @@
   //____________________________________________________________________
   , "dropdown.background"                                 : "#BG__BOLD"
   , "dropdown.foreground"                                 : "#FG__NORM"
-  , "dropdown.border"                                     : "#BG__BOLD"
   , "dropdown.listBackground"                             : "#BG__NORM"
 
   //____________________________________________________________________
@@ -363,6 +360,7 @@
 
   // Triangle pointing where line was deleted
   , "editorGutter.deletedBackground"                      : "#RED_BOLD"
+
   // After staging - vertical bar in gutter where line was deleted
   , "editorGutter.deletedSecondaryBackground"             : "#YEL_BOLD"
 
@@ -438,7 +436,7 @@
   , "symbolIcon.booleanForeground"                        : "#FG__NORM"
   , "symbolIcon.classForeground"                          : "#CYA_NORM"
   //, "symbolIcon.colorForeground"                          : "#"
-  , "symbolIcon.constantForeground"                       : "#YEL_NORM"
+  , "symbolIcon.constantForeground"                       : "#d8d5d500"
   , "symbolIcon.constructorForeground"                    : "#VIO_NORM"
   , "symbolIcon.enumeratorForeground"                     : "#VIO_NORM"
   , "symbolIcon.enumeratorMemberForeground"               : "#YEL_NORM"
@@ -472,6 +470,9 @@
   // MISC
   //____________________________________________________________________
 
+  // Right-click menu
+  , "menu.background"                                     : "#BG__BOLD"
+
   //____________________________________________________________________
   // BRACKETS
   //____________________________________________________________________
@@ -480,7 +481,31 @@
   , "editorBracketHighlight.foreground2"                  : "#RED_NORM"
   , "editorBracketHighlight.unexpectedBracket.foreground" : "#RED_BOLD"
 
+  //____________________________________________________________________
+  // TESTING
+  //____________________________________________________________________
+  //  "list.filterMatchBackground"                          : "#YEL_BOLD60"
+  //, "panelSection.dropBackground"                         : "#GRN_BOLD60"
+  //, "list.filterMatchBackground"                          : "#FF0000"
+  //, "list.inactiveFocusOutline"                           : "#FF0000"
+  //, "editor.compositionBorder"                            : "#00010F"
+  //, "editorActionList.background"                         : "#010FFF"
+  //, "sideBar.dropBackground"                              : "#ff0000"
+  //, "debugConsole.sourceForeground"                       : "#ff0000"
+  //, "debugView.exceptionLabelBackground"                  : "#ffff00"
+  //, "debugView.exceptionLabelForeground"                  : "#ff0000"
+  //, "checkbox.border"                                     : "#010f00"
+  //, "checkbox.selectBorder"                               : "#GRN_NORM"
+  //, "checkbox.selectBackground"                           : "#ff0000"
+  //, "checkbox.disabled.background"                        : "#ff0000"
 
+  //____________________________________________________________________
+  // Overridden by other properties
+  //____________________________________________________________________
+  //, "quickInput.background"                               : "#BG__BOLD"
+  //, "quickInputList.focusIconForeground"                  : "#FG__BOLD"
+  //, "quickInput.foreground"                               : "#FG__NORM"
+  //, "settings.textInputBackground"                        : "#FFFF00"
   }
 
 , "tokenColors":
