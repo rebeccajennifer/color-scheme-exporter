@@ -347,7 +347,7 @@
   , "gitDecoration.stageDeletedResourceForeground"        : "#RED_BOLD"
   , "gitDecoration.stageModifiedResourceForeground"       : "#YEL_NORM"
   , "gitDecoration.submoduleResourceForeground"           : "#CYA_NORM"
-  , "gitDecoration.ignoredResourceForeground"             : "#VIO_NORM"
+  , "gitDecoration.ignoredResourceForeground"             : "#FG__NORM80"
 
   // Vertical bar in gutter showing where line was added
   , "editorGutter.addedBackground"                        : "#GRN_NORM"
