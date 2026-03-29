@@ -40,9 +40,9 @@
   , "terminal.hoverHighlightBackground"                   : "#VIO_BOLD60"
 
   // Dot left of command prompt
-  , "terminalCommandDecoration.defaultBackground"         :"#CYA_NORM"
-  , "terminalCommandDecoration.successBackground"         :"#GRN_NORM"
-  , "terminalCommandDecoration.errorBackground"           :"#RED_BOLD"
+  , "terminalCommandDecoration.defaultBackground"         : "#CYA_NORM"
+  , "terminalCommandDecoration.successBackground"         : "#GRN_NORM"
+  , "terminalCommandDecoration.errorBackground"           : "#RED_BOLD"
 
   //____________________________________________________________________
   // BORDERS
@@ -93,11 +93,6 @@
   , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
   , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
   , "statusBarItem.remoteForeground"                      : "#BG__BOLD"
-
-  , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
-  , "statusBarItem.warningForeground"                     : "#BG__NORM"
-  , "statusBarItem.errorBackground"                       : "#RED_BOLD"
-  , "statusBarItem.errorForeground"                       : "#BG__BOLD"
 
   //____________________________________________________________________
   // ACTIVITY BAR - Left of window
@@ -150,6 +145,7 @@
   // MINIMAP - Mini version of code on right of window
   //____________________________________________________________________
   , "minimap.background"                                  : "#BG__BOLD40"
+  , "minimap.selectionHighlight"                          : "#CYA_NORM80"
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
   , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
@@ -190,19 +186,34 @@
   // Current line highlight
   , "editor.lineHighlightBackground"                      : "#BG__BOLD60"
 
+  // Text selection in editor, e.g. click and drag, Vim visual selection
   , "editor.selectionBackground"                          : "#FG__NORM20"
+  // This property is overwritten
   , "editor.selectionForeground"                          : "#BG__NORM"
+
+  // Selected text in text input fields
   , "selection.background"                                : "#KEY_BG_280"
 
+  // Occurrences of selected text in file
   // Needed for visual selection in vim
   , "editor.selectionHighlightBackground"                 : "#FG__NORM10"
 
   // Occurrences of word under cursor
+  // Needs to be transparent so selectionHighlightBackground shows
+  // when word under cursor is selected
   , "editor.wordHighlightTextBackground"                  : "#FG__NORM20"
 
+  // Occurrences of a symbol under cursor
   , "editor.wordHighlightBackground"                      : "#FG__NORM10"
 
+  // Highlight of search results from search bar and Vim find command
   , "editor.findMatchHighlightBackground"                 : "#KEY_BG_280"
+
+  // Background of currently selected search result
+  // Looks like this is getting overwritten by
+  // "editor.findMatchHighlightBackground"
+  // Appears on the first search of a workspace session but disappears
+  // after that
   , "editor.findMatchBackground"                          : "#KEY_BG_280"
 
   //____________________________________________________________________
@@ -234,13 +245,14 @@
   , "editorSuggestWidget.border"                          : "#FG__NORM10"
 
   //____________________________________________________________________
-  // STICKY SCROLL - keep current code context at top of file
+  // STICKY SCROLL - Keep current code context at top of file
   //____________________________________________________________________
   , "editorStickyScroll.background"                       : "#BG__NORM"
   , "editorStickyScrollHover.background"                  : "#BG__BOLD"
   , "editorStickyScroll.shadow"                           : "#BLK_NORM"
   , "panelStickyScroll.background"                        : "#BG__BOLD"
   , "panelStickyScroll.shadow"                            : "#BLK_NORM"
+  , "sideBarStickyScroll.background"                      : "#BG__BOLD"
 
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
@@ -399,28 +411,34 @@
   , "editorWarning.foreground"                            : "#YEL_BOLD"
   , "editorError.foreground"                              : "#RED_BOLD"
 
-  , "list.warningForeground"                              : "#YEL_BOLD"
-  , "list.errorForeground"                                : "#RED_BOLD"
+  , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
+  , "statusBarItem.warningForeground"                     : "#BG__NORM"
+  , "statusBarItem.errorBackground"                       : "#RED_BOLD"
+  , "statusBarItem.errorForeground"                       : "#BG__BOLD"
 
   , "minimap.errorHighlight"                              : "#RED_BOLD"
   , "minimap.warningHighlight"                            : "#YEL_BOLD"
-  , "minimap.selectionHighlight"                          : "#CYA_NORM80"
 
   // Right of minimap
+  , "editorOverviewRuler.warningForeground"               : "#YEL_BOLD"
   , "editorOverviewRuler.errorForeground"                 : "#RED_BOLD"
 
-  , "inputValidation.warningBackground"                   : "#YEL_BOLD"
-  , "inputValidation.warningForeground"                   : "#FG__NORM"
-  , "inputValidation.warningBorder"                       : "#FG__NORM"
+  , "list.warningForeground"                              : "#YEL_BOLD"
+  , "list.errorForeground"                                : "#RED_BOLD"
+
+  , "inputValidation.warningBackground"                   : "#BG__NORM"
+  , "inputValidation.warningForeground"                   : "#YEL_BOLD"
+  , "inputValidation.warningBorder"                       : "#YEL_BOLD"
   , "inputValidation.errorBackground"                     : "#BG__NORM"
   , "inputValidation.errorForeground"                     : "#RED_BOLD"
   , "inputValidation.errorBorder"                         : "#RED_BOLD"
 
-  , "problemsErrorIcon.foreground"                        : "#RED_BOLD"
   , "problemsWarningIcon.foreground"                      : "#YEL_BOLD"
+  , "problemsErrorIcon.foreground"                        : "#RED_BOLD"
   , "problemsInfoIcon.foreground"                         : "#YEL_NORM"
-  , "debugConsole.errorForeground"                        : "#RED_BOLD"
+
   , "debugConsole.warningForeground"                      : "#YEL_BOLD"
+  , "debugConsole.errorForeground"                        : "#RED_BOLD"
 
   , "disabledForeground"                                  : "#BLK_BOLD80"
   , "list.deemphasizedForeground"                         : "#BLK_BOLD80"
@@ -488,18 +506,18 @@
   //____________________________________________________________________
   //  "list.filterMatchBackground"                          : "#YEL_BOLD60"
   //, "panelSection.dropBackground"                         : "#GRN_BOLD60"
-  //, "list.filterMatchBackground"                          : "#FF0000"
-  //, "list.inactiveFocusOutline"                           : "#FF0000"
+  //, "list.filterMatchBackground"                          : "#KEY_BG_2"
+  //, "list.inactiveFocusOutline"                           : "#KEY_BG_2"
   //, "editor.compositionBorder"                            : "#00010F"
   //, "editorActionList.background"                         : "#010FFF"
-  //, "sideBar.dropBackground"                              : "#ff0000"
-  //, "debugConsole.sourceForeground"                       : "#ff0000"
+  //, "sideBar.dropBackground"                              : "#KEY_BG_2"
+  //, "debugConsole.sourceForeground"                       : "#KEY_BG_2"
   //, "debugView.exceptionLabelBackground"                  : "#ffff00"
-  //, "debugView.exceptionLabelForeground"                  : "#ff0000"
+  //, "debugView.exceptionLabelForeground"                  : "#KEY_BG_2"
   //, "checkbox.border"                                     : "#010f00"
   //, "checkbox.selectBorder"                               : "#GRN_NORM"
-  //, "checkbox.selectBackground"                           : "#ff0000"
-  //, "checkbox.disabled.background"                        : "#ff0000"
+  //, "checkbox.selectBackground"                           : "#KEY_BG_2"
+  //, "checkbox.disabled.background"                        : "#KEY_BG_2"
 
   //____________________________________________________________________
   // Overridden by other properties
@@ -570,7 +588,7 @@
       , "keyword.operator"
       , "keyword.operator.assignment"
       , "keyword.operator.comparison"
-      , "punctuation.definition.constant"         // # in #ff0000
+      , "punctuation.definition.constant"         // # in #KEY_BG_2
       , "punctuation.definition.link.description"
       , "punctuation.separator.annotation.result" // -> in def f() -> int:
       ]
