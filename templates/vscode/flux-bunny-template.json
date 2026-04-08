@@ -192,7 +192,7 @@
   , "editor.selectionForeground"                          : "#BG__NORM"
 
   // Selected text in text input fields
-  , "selection.background"                                : "#KEY_BG_280"
+  , "selection.background"                                : "#KEY_BG_2E0"
 
   // Occurrences of selected text in file
   // Needed for visual selection in vim
@@ -207,14 +207,14 @@
   , "editor.wordHighlightBackground"                      : "#FG__NORM10"
 
   // Highlight of search results from search bar and Vim find command
-  , "editor.findMatchHighlightBackground"                 : "#KEY_BG_280"
+  , "editor.findMatchHighlightBackground"                 : "#KEY_BG_2E0"
 
   // Background of currently selected search result
   // Looks like this is getting overwritten by
   // "editor.findMatchHighlightBackground"
   // Appears on the first search of a workspace session but disappears
   // after that
-  , "editor.findMatchBackground"                          : "#KEY_BG_280"
+  , "editor.findMatchBackground"                          : "#KEY_BG_2E0"
 
   //____________________________________________________________________
   // LINKS
@@ -258,8 +258,8 @@
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#KEY_BG_260"
-  , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_280"
-  , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_280"
+  , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_2C0"
+  , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_2C0"
 
   , "peekViewEditorStickyScroll.background"               : "#KEY_BG_2"
   , "peekViewEditorStickyScrollGutter.background"         : "#KEY_BG_2"
