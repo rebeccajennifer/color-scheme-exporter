@@ -1,0 +1,16 @@
+{ "version": "2.0.0"
+, "tasks":
+  [ { "label"   : "vs-code-dark"
+    , "type"    : "shell"
+    , "command" : "python3"
+    , "args"    :
+      [ "${workspaceFolder}/color_scheme_driver.py"
+      , "-s" , "vscode-scheme"
+      , "-f" , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "-o" , "~/.vscode/extensions/flux-bunny-themes"
+      ]
+    }
+
+  ]
+
+}
