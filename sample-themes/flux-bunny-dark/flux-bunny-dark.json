@@ -192,7 +192,7 @@
   , "editor.selectionForeground"                          : "#262626"
 
   // Selected text in text input fields
-  , "selection.background"                                : "#004d5f80"
+  , "selection.background"                                : "#004d5fE0"
 
   // Occurrences of selected text in file
   // Needed for visual selection in vim
@@ -207,14 +207,14 @@
   , "editor.wordHighlightBackground"                      : "#c6c6c610"
 
   // Highlight of search results from search bar and Vim find command
-  , "editor.findMatchHighlightBackground"                 : "#004d5f80"
+  , "editor.findMatchHighlightBackground"                 : "#004d5fE0"
 
   // Background of currently selected search result
   // Looks like this is getting overwritten by
   // "editor.findMatchHighlightBackground"
   // Appears on the first search of a workspace session but disappears
   // after that
-  , "editor.findMatchBackground"                          : "#004d5f80"
+  , "editor.findMatchBackground"                          : "#004d5fE0"
 
   //____________________________________________________________________
   // LINKS
@@ -258,8 +258,8 @@
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
   , "peekViewEditor.background"                           : "#004d5f60"
-  , "peekViewEditor.matchHighlightBackground"             : "#004d5f80"
-  , "peekViewResult.matchHighlightBackground"             : "#004d5f80"
+  , "peekViewEditor.matchHighlightBackground"             : "#004d5fC0"
+  , "peekViewResult.matchHighlightBackground"             : "#004d5fC0"
 
   , "peekViewEditorStickyScroll.background"               : "#004d5f"
   , "peekViewEditorStickyScrollGutter.background"         : "#004d5f"
@@ -439,6 +439,10 @@
 
   , "debugConsole.warningForeground"                      : "#ffaf87"
   , "debugConsole.errorForeground"                        : "#ff5f87"
+
+  // Exception  label in sidebar call stack
+  , "debugView.exceptionLabelBackground"                  : "#ff5f87"
+  , "debugView.exceptionLabelForeground"                  : "#1c1c1c"
 
   , "disabledForeground"                                  : "#5f5f5f80"
   , "list.deemphasizedForeground"                         : "#5f5f5f80"

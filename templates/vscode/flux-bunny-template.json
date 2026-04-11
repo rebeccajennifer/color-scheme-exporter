@@ -440,6 +440,10 @@
   , "debugConsole.warningForeground"                      : "#YEL_BOLD"
   , "debugConsole.errorForeground"                        : "#RED_BOLD"
 
+  // Exception  label in sidebar call stack
+  , "debugView.exceptionLabelBackground"                  : "#RED_BOLD"
+  , "debugView.exceptionLabelForeground"                  : "#BG__BOLD"
+
   , "disabledForeground"                                  : "#BLK_BOLD80"
   , "list.deemphasizedForeground"                         : "#BLK_BOLD80"
 
