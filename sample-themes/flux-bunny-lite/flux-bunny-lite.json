@@ -151,6 +151,10 @@
   , "minimapGutter.addedBackground"                       : "#008700"
   , "minimapGutter.deletedBackground"                     : "#d75f87"
   , "minimapGutter.modifiedBackground"                    : "#d75f00"
+  , "minimapSlider.background"                            : "#26262660"
+  , "minimapSlider.hoverBackground"                       : "#26262680"
+  , "minimapSlider.activeBackground"                      : "#262626c0"
+
 
   //____________________________________________________________________
   // OVERVIEW RULER - Vertical bar to right of minimap
@@ -159,6 +163,7 @@
    , "editorOverviewRuler.modifiedForeground"             : "#d75f00"
    , "editorOverviewRuler.deletedForeground"              : "#af005f"
    , "editorOverviewRuler.wordHighlightForeground"        : "#26262620"
+   , "editorOverviewRuler.wordHighlightTextForeground"    : "#004d5f"
 
   //____________________________________________________________________
   // GUTTER - Line numbers, etc
