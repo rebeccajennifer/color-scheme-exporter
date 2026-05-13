@@ -1,7 +1,7 @@
 {
   "$schema"     : "vscode://schemas/color-theme"
 
-  , "colors":
+, "colors":
   {
   //____________________________________________________________________
   // GENERAL
@@ -79,7 +79,7 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#121212"
+  , "titleBar.activeBackground"                           : "#1c1c1c" // make darker
   , "titleBar.activeForeground"                           : "#eeeeee"
 
   , "titleBar.inactiveBackground"                         : "#262626"
@@ -88,7 +88,7 @@
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#121212"
+  , "statusBar.background"                                : "#1c1c1c" // make darker
   , "statusBar.foreground"                                : "#eeeeee"
   , "statusBar.noFolderBackground"                        : "#5f345f"
   , "statusBarItem.remoteBackground"                      : "#afd787"
@@ -106,13 +106,13 @@
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc.
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#303030"
+  , "sideBar.background"                                  : "#1c1c1c" // lighter?
   , "sideBar.foreground"                                  : "#c6c6c6"
   , "sideBarStickyScroll.shadow"                          : "#1c1c1c"
 
   , "sideBarTitle.background"                             : "#262626"
   , "sideBarTitle.foreground"                             : "#eeeeee"
-  , "sideBarSectionHeader.background"                     : "#1c1c1cc0"
+  , "sideBarSectionHeader.background"                     : "#c6c6c610"
   , "sideBarSectionHeader.foreground"                     : "#eeeeee"
 
   , "list.activeSelectionBackground"                      : "#005f5f"
@@ -127,7 +127,8 @@
   , "list.dropBetweenBackground"                          : "#5f345f"
 
   , "list.highlightForeground"                            : "#afd787"
-  , "list.focusBackground"                                : "#00afd7c0"
+  , "list.focusBackground"                                : "#004d5f"
+  , "list.focusForeground"                                : "#eeeeee"
   , "list.invalidItemForeground"                          : "#ff5f87"
 
   //____________________________________________________________________
@@ -146,7 +147,7 @@
   //____________________________________________________________________
   , "minimap.background"                                  : "#1c1c1c"
   , "minimap.selectionHighlight"                          : "#87d7af80"
-  , "minimap.findMatchHighlight"                          : "#00afd7c0"
+  , "minimap.findMatchHighlight"                          : "#5f8ca2c0"
   , "minimapGutter.addedBackground"                       : "#afd787"
   , "minimapGutter.deletedBackground"                     : "#ff5f87"
   , "minimapGutter.modifiedBackground"                    : "#ffd787"
@@ -185,7 +186,7 @@
   , "editorCursor.foreground"                             : "#afd787"
 
   // Current line highlight
-  , "editor.lineHighlightBackground"                      : "#1c1c1c60"
+  , "editor.lineHighlightBackground"                      : "#1c1c1cE0"
 
   // Text selection in editor, e.g. click and drag, Vim visual selection
   , "editor.selectionBackground"                          : "#c6c6c620"
@@ -193,7 +194,7 @@
   , "editor.selectionForeground"                          : "#262626"
 
   // Selected text in text input fields
-  , "selection.background"                                : "#004d5f"
+  , "selection.background"                                : "#004d5fe0"
 
   // Occurrences of selected text in file
   // Needed for visual selection in vim
@@ -208,14 +209,14 @@
   , "editor.wordHighlightBackground"                      : "#c6c6c610"
 
   // Highlight of search results from search bar and Vim find command
-  , "editor.findMatchHighlightBackground"                 : "#004d5f80"
+  , "editor.findMatchHighlightBackground"                 : "#004d5fe0"
 
   // Background of currently selected search result
   // Looks like this is getting overwritten by
   // "editor.findMatchHighlightBackground"
   // Appears on the first search of a workspace session but disappears
   // after that
-  , "editor.findMatchBackground"                          : "#5f345f80"
+  , "editor.findMatchBackground"                          : "#004d5fe0"
 
   //____________________________________________________________________
   // LINKS
@@ -258,8 +259,9 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#004d5f60"
-  , "peekViewEditor.matchHighlightBackground"             : "#004d5fc0"
+  , "peekViewEditor.background"                           : "#1c1c1c"
+  , "peekViewEditor.matchHighlightBackground"             : "#5f345fe0"
+  , "peekViewResult.matchHighlightBackground"             : "#004d5fe0"
 
   , "peekViewEditorStickyScroll.background"               : "#004d5f"
   , "peekViewEditorStickyScrollGutter.background"         : "#004d5f"

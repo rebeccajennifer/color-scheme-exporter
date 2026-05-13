@@ -79,16 +79,16 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#dadada"
+  , "titleBar.activeBackground"                           : "#dadada" // make darker
   , "titleBar.activeForeground"                           : "#303030"
 
-  , "titleBar.inactiveBackground"                         : "#26262620"
+  , "titleBar.inactiveBackground"                         : "#e4e4e4"
   , "titleBar.inactiveForeground"                         : "#262626"
 
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#dadada"
+  , "statusBar.background"                                : "#dadada" // make darker
   , "statusBar.foreground"                                : "#303030"
   , "statusBar.noFolderBackground"                        : "#af5faf"
   , "statusBarItem.remoteBackground"                      : "#008700"
@@ -98,7 +98,7 @@
   // ACTIVITY BAR - Left of window
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#303030"
-  , "activityBar.background"                              : "#dadada60"
+  , "activityBar.background"                              : "#dadada"
   , "activityBar.activeBackground"                        : "#5fa2a2"
   , "activityBarBadge.background"                         : "#008700"
   , "activityBarBadge.foreground"                         : "#dadada"
@@ -106,7 +106,7 @@
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc.
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#dadada20"
+  , "sideBar.background"                                  : "#dadada" // lighter?
   , "sideBar.foreground"                                  : "#262626"
   , "sideBarStickyScroll.shadow"                          : "#121212"
 
@@ -127,7 +127,8 @@
   , "list.dropBetweenBackground"                          : "#af5faf"
 
   , "list.highlightForeground"                            : "#008700"
-  , "list.focusBackground"                                : "#0087af80"
+  , "list.focusBackground"                                : "#5f8ca2"
+  , "list.focusForeground"                                : "#303030"
   , "list.invalidItemForeground"                          : "#d75f87"
 
   //____________________________________________________________________
@@ -144,8 +145,9 @@
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
   //____________________________________________________________________
-  , "minimap.background"                                  : "#dadada40"
+  , "minimap.background"                                  : "#dadada"
   , "minimap.selectionHighlight"                          : "#5f878780"
+  , "minimap.findMatchHighlight"                          : "#004d5fc0"
   , "minimapGutter.addedBackground"                       : "#008700"
   , "minimapGutter.deletedBackground"                     : "#d75f87"
   , "minimapGutter.modifiedBackground"                    : "#d75f00"
@@ -171,7 +173,7 @@
   , "tab.activeForeground"                                : "#262626"
   , "tab.inactiveBackground"                              : "#26262610"
   , "tab.inactiveForeground"                              : "#26262680"
-  , "tab.unfocusedActiveForeground"                       : "#0087af80"
+  , "tab.unfocusedActiveForeground"                       : "#005f87"
   , "tab.unfocusedInactiveForeground"                     : "#878787"
 
   // Dead space to right of tabs
@@ -184,7 +186,7 @@
   , "editorCursor.foreground"                             : "#008700"
 
   // Current line highlight
-  , "editor.lineHighlightBackground"                      : "#dadada60"
+  , "editor.lineHighlightBackground"                      : "#dadadaE0"
 
   // Text selection in editor, e.g. click and drag, Vim visual selection
   , "editor.selectionBackground"                          : "#26262620"
@@ -192,7 +194,7 @@
   , "editor.selectionForeground"                          : "#e4e4e4"
 
   // Selected text in text input fields
-  , "selection.background"                                : "#5f8ca2E0"
+  , "selection.background"                                : "#5f8ca2e0"
 
   // Occurrences of selected text in file
   // Needed for visual selection in vim
@@ -207,14 +209,14 @@
   , "editor.wordHighlightBackground"                      : "#26262610"
 
   // Highlight of search results from search bar and Vim find command
-  , "editor.findMatchHighlightBackground"                 : "#5f8ca2E0"
+  , "editor.findMatchHighlightBackground"                 : "#5f8ca2e0"
 
   // Background of currently selected search result
   // Looks like this is getting overwritten by
   // "editor.findMatchHighlightBackground"
   // Appears on the first search of a workspace session but disappears
   // after that
-  , "editor.findMatchBackground"                          : "#5f8ca2E0"
+  , "editor.findMatchBackground"                          : "#5f8ca2e0"
 
   //____________________________________________________________________
   // LINKS
@@ -257,9 +259,9 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#5f8ca260"
-  , "peekViewEditor.matchHighlightBackground"             : "#5f8ca2C0"
-  , "peekViewResult.matchHighlightBackground"             : "#5f8ca2C0"
+  , "peekViewEditor.background"                           : "#dadada"
+  , "peekViewEditor.matchHighlightBackground"             : "#af5fafe0"
+  , "peekViewResult.matchHighlightBackground"             : "#5f8ca2e0"
 
   , "peekViewEditorStickyScroll.background"               : "#5f8ca2"
   , "peekViewEditorStickyScrollGutter.background"         : "#5f8ca2"
@@ -288,7 +290,7 @@
   , "panel.background"                                    : "#e4e4e4"
 
   , "panelTitle.activeForeground"                         : "#303030"
-  , "panelTitle.inactiveForeground"                       : "#262626"
+  , "panelTitle.inactiveForeground"                       : "#26262680"
 
   // Underline of active panel title - shows which panel is active
   , "panelTitle.activeBorder"                             : "#5fa2a2"
