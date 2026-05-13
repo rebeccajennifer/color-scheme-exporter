@@ -79,16 +79,16 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#BG__BOLD"
+  , "titleBar.activeBackground"                           : "#BG__BOLD" // make darker
   , "titleBar.activeForeground"                           : "#FG__BOLD"
 
-  , "titleBar.inactiveBackground"                         : "#FG__NORM20"
+  , "titleBar.inactiveBackground"                         : "#BG__NORM"
   , "titleBar.inactiveForeground"                         : "#FG__NORM"
 
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BG__BOLD"
+  , "statusBar.background"                                : "#BG__BOLD" // make darker
   , "statusBar.foreground"                                : "#FG__BOLD"
   , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
   , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
@@ -98,7 +98,7 @@
   // ACTIVITY BAR - Left of window
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#FG__BOLD"
-  , "activityBar.background"                              : "#BG__BOLD60"
+  , "activityBar.background"                              : "#BG__BOLD"
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
@@ -106,7 +106,7 @@
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc.
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#BG__BOLD20"
+  , "sideBar.background"                                  : "#BG__BOLD" // lighter?
   , "sideBar.foreground"                                  : "#FG__NORM"
   , "sideBarStickyScroll.shadow"                          : "#BLK_NORM"
 
@@ -127,7 +127,8 @@
   , "list.dropBetweenBackground"                          : "#KEY_BG_1"
 
   , "list.highlightForeground"                            : "#GRN_NORM"
-  , "list.focusBackground"                                : "#BLU_BOLD80"
+  , "list.focusBackground"                                : "#KEY_BG_2"
+  , "list.focusForeground"                                : "#FG__BOLD"
   , "list.invalidItemForeground"                          : "#RED_BOLD"
 
   //____________________________________________________________________
@@ -144,8 +145,9 @@
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
   //____________________________________________________________________
-  , "minimap.background"                                  : "#BG__BOLD40"
+  , "minimap.background"                                  : "#BG__BOLD"
   , "minimap.selectionHighlight"                          : "#CYA_NORM80"
+  , "minimap.findMatchHighlight"                          : "#KEY_FG_2c0"
   , "minimapGutter.addedBackground"                       : "#GRN_NORM"
   , "minimapGutter.deletedBackground"                     : "#RED_BOLD"
   , "minimapGutter.modifiedBackground"                    : "#YEL_NORM"
@@ -171,7 +173,7 @@
   , "tab.activeForeground"                                : "#FG__NORM"
   , "tab.inactiveBackground"                              : "#FG__NORM10"
   , "tab.inactiveForeground"                              : "#FG__NORM80"
-  , "tab.unfocusedActiveForeground"                       : "#BLU_BOLD80"
+  , "tab.unfocusedActiveForeground"                       : "#BLU_NORM"
   , "tab.unfocusedInactiveForeground"                     : "#BLK_BOLD"
 
   // Dead space to right of tabs
@@ -184,7 +186,7 @@
   , "editorCursor.foreground"                             : "#GRN_NORM"
 
   // Current line highlight
-  , "editor.lineHighlightBackground"                      : "#BG__BOLD60"
+  , "editor.lineHighlightBackground"                      : "#BG__BOLDE0"
 
   // Text selection in editor, e.g. click and drag, Vim visual selection
   , "editor.selectionBackground"                          : "#FG__NORM20"
@@ -192,7 +194,7 @@
   , "editor.selectionForeground"                          : "#BG__NORM"
 
   // Selected text in text input fields
-  , "selection.background"                                : "#KEY_BG_2E0"
+  , "selection.background"                                : "#KEY_BG_2e0"
 
   // Occurrences of selected text in file
   // Needed for visual selection in vim
@@ -207,14 +209,14 @@
   , "editor.wordHighlightBackground"                      : "#FG__NORM10"
 
   // Highlight of search results from search bar and Vim find command
-  , "editor.findMatchHighlightBackground"                 : "#KEY_BG_2E0"
+  , "editor.findMatchHighlightBackground"                 : "#KEY_BG_2e0"
 
   // Background of currently selected search result
   // Looks like this is getting overwritten by
   // "editor.findMatchHighlightBackground"
   // Appears on the first search of a workspace session but disappears
   // after that
-  , "editor.findMatchBackground"                          : "#KEY_BG_2E0"
+  , "editor.findMatchBackground"                          : "#KEY_BG_2e0"
 
   //____________________________________________________________________
   // LINKS
@@ -257,9 +259,9 @@
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#KEY_BG_260"
-  , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_2C0"
-  , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_2C0"
+  , "peekViewEditor.background"                           : "#BG__BOLD"
+  , "peekViewEditor.matchHighlightBackground"             : "#KEY_BG_1e0"
+  , "peekViewResult.matchHighlightBackground"             : "#KEY_BG_2e0"
 
   , "peekViewEditorStickyScroll.background"               : "#KEY_BG_2"
   , "peekViewEditorStickyScrollGutter.background"         : "#KEY_BG_2"
@@ -288,7 +290,7 @@
   , "panel.background"                                    : "#BG__NORM"
 
   , "panelTitle.activeForeground"                         : "#FG__BOLD"
-  , "panelTitle.inactiveForeground"                       : "#FG__NORM"
+  , "panelTitle.inactiveForeground"                       : "#FG__NORM80"
 
   // Underline of active panel title - shows which panel is active
   , "panelTitle.activeBorder"                             : "#KEY_BG_0"
