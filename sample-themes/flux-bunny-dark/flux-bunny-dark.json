@@ -79,7 +79,7 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#1c1c1c" // make darker
+  , "titleBar.activeBackground"                           : "#121212"
   , "titleBar.activeForeground"                           : "#eeeeee"
 
   , "titleBar.inactiveBackground"                         : "#262626"
@@ -88,7 +88,7 @@
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#1c1c1c" // make darker
+  , "statusBar.background"                                : "#121212"
   , "statusBar.foreground"                                : "#eeeeee"
   , "statusBar.noFolderBackground"                        : "#5f345f"
   , "statusBarItem.remoteBackground"                      : "#afd787"
