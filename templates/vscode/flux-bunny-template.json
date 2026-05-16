@@ -137,7 +137,7 @@
   , "list.inactiveSelectionBackground"                    : "#FG__NORM10"
   , "list.inactiveSelectionForeground"                    : "#FG__NORM"
   , "list.activeSelectionIconForeground"                  : "#FG__NORM"
-  , "list.hoverBackground"                                : "#BG__BOLD60"
+  , "list.hoverBackground"                                : "#KEY_BG_2"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#KEY_BG_1"
@@ -557,6 +557,8 @@
 
   // E.g. Right-click menu
   , "menu.background"                                     : "#BG__BOLD"
+  , "menu.separatorBackground"                            : "#FG__NORM40"
+  , "menu.selectionBackground" :"#ffff00"
 
   // E.g. Info bubble on hover over activity bar, in line code
   , "editorHoverWidget.background"                        : "#BG__BOLD"
