@@ -66,6 +66,9 @@ class VsCodeScheme(ColorScheme):
     key_fg_1 = RgbColor.make_foreground_color(self.accent_color1_, is_dark=self.is_dark_)
     key_fg_2 = RgbColor.make_foreground_color(self.accent_color2_, is_dark=self.is_dark_)
 
+    intense_bg_0 = RgbColor.intensify_color(self.bg_bold_color_, is_dark=self.is_dark_, delta=0x0a)
+    intense_bg_0 = RgbColor.get_int_from_rgb_dict(intense_bg_0)
+
     color_map: dict = self.str_replace_map
 
     color_map['KEY_BG_0'] =  StringUtils.int_to_hex6(key_bg_0)
@@ -74,5 +77,6 @@ class VsCodeScheme(ColorScheme):
     color_map['KEY_FG_0'] =  StringUtils.int_to_hex6(key_fg_0)
     color_map['KEY_FG_1'] =  StringUtils.int_to_hex6(key_fg_1)
     color_map['KEY_FG_2'] =  StringUtils.int_to_hex6(key_fg_2)
+    color_map['BG_BBOLD'] =  StringUtils.int_to_hex6(intense_bg_0)
 
     return

@@ -450,7 +450,11 @@ class RgbColor:
     return color
 
   #_____________________________________________________________________
-  def make_color_dark(color):
+  def make_color_dark\
+    ( color
+    , lo_cutoff: int = RgbConst.MIN_CUTOFF_DARK
+    , hi_cutoff: int = RgbConst.MAX_CUTOFF_DARK
+    ):
     """
     Creates a darkened color from the input color. Suitable for dark
     background.
@@ -463,11 +467,15 @@ class RgbColor:
     """
 
     return RgbColor.scale_color(color
-      , lo_cutoff=RgbConst.MIN_CUTOFF_DARK
-      , hi_cutoff=RgbConst.MAX_CUTOFF_DARK)
+      , lo_cutoff=lo_cutoff
+      , hi_cutoff=hi_cutoff)
 
   #_____________________________________________________________________
-  def make_color_lite(color):
+  def make_color_lite\
+    ( color
+    , lo_cutoff: int = RgbConst.MIN_CUTOFF_LITE
+    , hi_cutoff: int = RgbConst.MAX_CUTOFF_LITE
+    ):
     """
     Creates a lightened color from the input color. Suitable for light
     background.
@@ -480,8 +488,8 @@ class RgbColor:
     """
 
     return RgbColor.scale_color(color
-      , lo_cutoff=RgbConst.MIN_CUTOFF_LITE
-      , hi_cutoff=RgbConst.MAX_CUTOFF_LITE)
+      , lo_cutoff=lo_cutoff
+      , hi_cutoff=hi_cutoff)
 
   #_____________________________________________________________________
   def make_background_color(color, is_dark: bool = True) -> dict:
@@ -526,3 +534,33 @@ class RgbColor:
 
     else:
       return RgbColor.make_color_dark(color)
+
+  #_____________________________________________________________________
+  def intensify_color(color, is_dark: bool = True, delta: int = 0):
+    """
+    Intensifies the input color by making it darker or lighter.
+
+    Parameters
+      color   : RGB input color as int or dictionary
+      is_dark : If true, makes color darker. If false, makes lighter.
+
+    Returns
+      A dictionary representing the lightened or darkened RGB color
+    """
+
+    if (isinstance(color,int)):
+      color: dict = RgbColor.get_rgb_from_hex(color)
+
+    max_channel = DictUtils.get_max_tuple(color)
+    min_channel = DictUtils.get_min_tuple(color)
+
+    max_channel_value: int = max_channel[1]
+    min_channel_value: int = min_channel[1]
+
+    if (is_dark):
+      return RgbColor.make_color_dark\
+        (color, hi_cutoff=max_channel_value - delta)
+
+    else:
+      return RgbColor.make_color_lite\
+        (color, lo_cutoff=min_channel_value + delta)

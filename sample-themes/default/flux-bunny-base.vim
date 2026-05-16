@@ -115,7 +115,7 @@ exe ':hi Type             ctermfg ='.cli_mag_norm 'guifg ='.gui_mag_norm
 
 " Constant examples
 "   .cpp: 3 in 3 + i
-"   .vim: 3 in ctermrg=3
+"   .vim: 3 in ctermfg=3
 exe ':hi Constant         ctermfg ='.cli_grn_norm 'guifg ='.gui_grn_norm
 
 " MatchParen: Crnt & matching paren when one paren is under cursor

@@ -311,6 +311,7 @@ class ColorScheme():
     { 'BG__NORM' : StringUtils.int_to_hex6(self.bg_norm_color_)
     , 'FG__NORM' : StringUtils.int_to_hex6(self.fg_norm_color_)
     , 'BG__BOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
+    , 'BG_BBOLD' : StringUtils.int_to_hex6(self.bg_bold_color_)
     , 'FG__BOLD' : StringUtils.int_to_hex6(self.fg_bold_color_)
     , 'BLK_NORM' : StringUtils.int_to_hex6(self.palette_[0])
     , 'RED_NORM' : StringUtils.int_to_hex6(self.palette_[1])
