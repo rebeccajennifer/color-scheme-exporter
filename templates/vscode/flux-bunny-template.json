@@ -336,12 +336,12 @@
   //____________________________________________________________________
   , "button.background"                                   : "#KEY_BG_0"
   , "button.foreground"                                   : "#FG__NORM"
-  , "button.hoverBackground"                              : "#KEY_BG_1"
+  , "button.hoverBackground"                              : "#KEY_BG_2"
   , "button.border"                                       : "#00000000"
 
-  , "button.secondaryBackground"                          : "#KEY_BG_2"
+  , "button.secondaryBackground"                          : "#KEY_BG_1"
   , "button.secondaryForeground"                          : "#FG__NORM"
-  , "button.secondaryHoverBackground"                     : "#KEY_BG_1"
+  , "button.secondaryHoverBackground"                     : "#KEY_BG_2"
   , "button.secondaryBorder"                              : "#00000000"
 
   // E.g. Checkboxes in settings
@@ -559,10 +559,10 @@
   , "menu.background"                                     : "#BG__BOLD"
 
   // E.g. Info bubble on hover over activity bar, in line code
-  , "editorHoverWidget.background"                        : "#KEY_FG_2"
-  , "editorHoverWidget.foreground"                        : "#BG__BOLD"
+  , "editorHoverWidget.background"                        : "#BG__BOLD"
+  , "editorHoverWidget.foreground"                        : "#FG__NORM"
   , "editorHoverWidget.statusBarBackground"               : "#BG_BBOLD"
-  , "editorHoverWidget.border"                            : "#00000000"
+  , "editorHoverWidget.border"                            : "#KEY_BG_0"
   // Not sure what this does
   , "editorHoverWidget.highlightForeground"               : "#FG__NORM"
 
