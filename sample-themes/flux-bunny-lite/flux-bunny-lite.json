@@ -137,7 +137,7 @@
   , "list.inactiveSelectionBackground"                    : "#26262610"
   , "list.inactiveSelectionForeground"                    : "#262626"
   , "list.activeSelectionIconForeground"                  : "#262626"
-  , "list.hoverBackground"                                : "#eeeeee60"
+  , "list.hoverBackground"                                : "#5f8ca2"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#af5faf"
@@ -513,7 +513,8 @@
   //____________________________________________________________________
 
   // E.g. Settings icon in debug sidebar, add file icon in explorer
-  , "icon.foreground"                                     : "#878787"
+  , "icon.foreground"                                     : "#262626c0"
+
   , "editorLightBulb.foreground"                          : "#d75f00"
   , "editorInfo.foreground"                               : "#008700"
 
@@ -557,6 +558,9 @@
 
   // E.g. Right-click menu
   , "menu.background"                                     : "#eeeeee"
+  , "menu.separatorBackground"                            : "#26262640"
+
+  , "toolbar.hoverBackground"                             : "#26262640"
 
   // E.g. Info bubble on hover over activity bar, in line code
   , "editorHoverWidget.background"                        : "#eeeeee"
