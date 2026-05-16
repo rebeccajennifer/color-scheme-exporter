@@ -513,7 +513,8 @@
   //____________________________________________________________________
 
   // E.g. Settings icon in debug sidebar, add file icon in explorer
-  , "icon.foreground"                                     : "#BLK_BOLD"
+  , "icon.foreground"                                     : "#FG__NORMc0"
+
   , "editorLightBulb.foreground"                          : "#YEL_NORM"
   , "editorInfo.foreground"                               : "#GRN_NORM"
 
@@ -558,7 +559,8 @@
   // E.g. Right-click menu
   , "menu.background"                                     : "#BG__BOLD"
   , "menu.separatorBackground"                            : "#FG__NORM40"
-  , "menu.selectionBackground" :"#ffff00"
+
+  , "toolbar.hoverBackground"                             : "#FG__NORM40"
 
   // E.g. Info bubble on hover over activity bar, in line code
   , "editorHoverWidget.background"                        : "#BG__BOLD"
