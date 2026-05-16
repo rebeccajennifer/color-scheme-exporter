@@ -79,7 +79,7 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#BG__BOLD" // make darker
+  , "titleBar.activeBackground"                           : "#BG_BBOLD"
   , "titleBar.activeForeground"                           : "#FG__BOLD"
 
   , "titleBar.inactiveBackground"                         : "#BG__NORM"
@@ -88,7 +88,7 @@
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#BG__BOLD" // make darker
+  , "statusBar.background"                                : "#BG_BBOLD"
   , "statusBar.foreground"                                : "#FG__BOLD"
   , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
   , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
