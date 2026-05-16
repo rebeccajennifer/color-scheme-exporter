@@ -1,95 +1,104 @@
 { "version": "2.0.0"
 , "tasks":
-  [
-    {
-      "label": "vs-code-dark",
-      "type": "shell",
-      "command": "python3",
-      "args": [
-        "${workspaceFolder}/color_scheme_driver.py",
-        "-s",
-        "vscode-scheme",
-        "-f",
-        "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json",
-        "-o",
-        "~/.vscode/extensions/rebecca-jennifer.flux-bunny-themes"
+  [ { "label": "vs-code-dark"
+    , "type": "shell"
+    , "command": "python3"
+    , "args":
+      [ "${workspaceFolder}/color_scheme_driver.py"
+      , "-s"
+      , "vscode-scheme"
+      , "-f"
+      , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "-o"
+      , "~/.vscode/extensions/rebecca-jennifer.flux-bunny-themes"
+      ]
+    , "presentation": { "close": true }
+    , "problemMatcher": []
+    }
+  , { "label": "vs-code-lite"
+    , "type": "shell"
+    , "command": "python3"
+    , "args":
+      [ "${workspaceFolder}/color_scheme_driver.py"
+      , "-s"
+      , "vscode-scheme"
+      , "-f"
+      , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
+      , "-o"
+      , "~/.vscode/extensions/rebecca-jennifer.flux-bunny-themes"
+      ]
+    , "presentation": { "close": true }
+    , "problemMatcher": []
+    }
+
+  , { "label": "all-flux-bunny-lite"
+    , "type": "shell"
+    , "command": "python3"
+    , "args":
+      [ "${workspaceFolder}/color_scheme_driver.py"
+      , "--scheme_type"
+      , "all"
+      , "--file"
+      , "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json"
+      , "--out_dir"
+      , "${workspaceFolder}/sample-themes/flux-bunny-lite"
+      ]
+    , "presentation": { "close": true }
+    , "problemMatcher": []
+    }
+
+  , { "label": "all-flux-bunny-dark"
+    , "type": "shell"
+    , "command": "python3"
+    , "args":
+      [ "${workspaceFolder}/color_scheme_driver.py"
+      , "--scheme_type"
+      , "all"
+      , "--file"
+      , "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json"
+      , "--out_dir"
+      , "${workspaceFolder}/sample-themes/flux-bunny-dark"
+      ]
+    , "presentation": { "close": true }
+    , "problemMatcher": []
+    },
+
+    { "label": "all-default"
+    , "type": "shell"
+    , "command": "python3"
+    , "args":
+      [ "${workspaceFolder}/color_scheme_driver.py"
+      , "--scheme_type"
+      , "all"
+      , "--out_dir"
+      , "${workspaceFolder}/sample-themes/default"
       ]
       , "presentation": { "close": true }
       , "problemMatcher": []
-    },
-    {
-      "label": "vs-code-lite",
-      "type": "shell",
-      "command": "python3",
-      "args": [
-        "${workspaceFolder}/color_scheme_driver.py",
-        "-s",
-        "vscode-scheme",
-        "-f",
-        "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json",
-        "-o",
-        "~/.vscode/extensions/rebecca-jennifer.flux-bunny-themes"
-      ]
-      , "presentation": { "close": true }
-      , "problemMatcher": []
-    },
-    {
-      "label": "all-flux-bunny-lite",
-      "type": "shell",
-      "command": "python3",
-      "args": [
-        "${workspaceFolder}/color_scheme_driver.py",
-        "--scheme_type",
-        "all",
-        "--file",
-        "sample-themes/flux-bunny-lite/flux-bunny-lite-input.json",
-        "--out_dir",
-        "${workspaceFolder}/sample-themes/flux-bunny-lite"
-      ]
-      , "presentation": { "close": true }
-      , "problemMatcher": []
-    },
-    {
-      "label": "all-flux-bunny-dark",
-      "type": "shell",
-      "command": "python3",
-      "args": [
-        "${workspaceFolder}/color_scheme_driver.py",
-        "--scheme_type",
-        "all",
-        "--file",
-        "sample-themes/flux-bunny-dark/flux-bunny-dark-input.json",
-        "--out_dir",
-        "${workspaceFolder}/sample-themes/flux-bunny-dark"
-      ]
-      , "presentation": { "close": true }
-      , "problemMatcher": []
-    },
-    {
-      "label": "all-default",
-      "type": "shell",
-      "command": "python3",
-      "args": [
-        "${workspaceFolder}/color_scheme_driver.py",
-        "--scheme_type",
-        "all",
-        "--out_dir",
-        "${workspaceFolder}/sample-themes/default"
-      ]
-      , "presentation": { "close": true }
-      , "problemMatcher": []
-    },
-    {
-      "label": "run-all",
-      "dependsOn": [
-        "all-flux-bunny-dark",
-        "all-flux-bunny-lite",
-        "all-default",
-        "vs-code-dark",
-        "vs-code-lite"
+    }
+
+  , { "label": "run-all"
+    ,  "dependsOn":
+        [ "all-flux-bunny-dark"
+        , "all-flux-bunny-lite"
+        , "all-default"
+        , "vs-code-dark"
+        , "vs-code-lite"
+        , "sync-vscode-files"
       ]
       , "problemMatcher": []
     }
-  ]
 
+  , { "label": "sync-vscode-files"
+    , "type": "shell"
+    , "command": "bash"
+    , "args":
+      [ "-i"
+      , "-c"
+      , "sync_vscode_files"
+      ]
+      , "presentation": { "close": true }
+      , "problemMatcher": []
+    }
+  ]
 }
