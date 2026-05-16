@@ -108,3 +108,13 @@ def test_scale_color_err():
 
   with pytest.raises(ValueError):
     c = RgbColor.scale_color(color=-1)
+
+#_______________________________________________________________________
+def test_intensify_color():
+
+  color             : int = RgbColor.get_rgb_from_hex(0x1c1c1c)
+  expected_color    : int = RgbColor.get_rgb_from_hex(0x080808)
+
+  test_color: int = RgbColor.intensify_color(color, is_dark=True, delta=0x14)
+
+  assert test_color == expected_color
