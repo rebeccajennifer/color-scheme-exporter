@@ -102,6 +102,10 @@
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
+  , "activityErrorBadge.background"                       : "#RED_BOLD"
+  , "activityErrorBadge.foreground"                       : "#BG__BOLD"
+  , "activityWarningBadge.background"                     : "#YEL_BOLD"
+  , "activityWarningBadge.foreground"                     : "#BG__BOLD"
 
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc.
@@ -155,6 +159,17 @@
   , "minimapSlider.hoverBackground"                       : "#FG__NORM80"
   , "minimapSlider.activeBackground"                      : "#FG__NORMc0"
 
+  //____________________________________________________________________
+  // SCROLL BAR
+  //____________________________________________________________________
+  , "scrollbar.background"                                : "#BG__BOLD"
+  , "scrollbarSlider.background"                          : "#FG__NORM60"
+  , "scrollbarSlider.hoverBackground"                     : "#FG__NORM80"
+  , "scrollbarSlider.activeBackground"                    : "#FG__NORMa0"
+
+  , "notebookScrollbarSlider.background"                  : "#FG__NORM60"
+  , "notebookScrollbarSlider.activeBackground"            : "#FG__NORM80"
+  , "notebookScrollbarSlider.hoverBackground"             : "#FG__NORMa0"
 
   //____________________________________________________________________
   // OVERVIEW RULER - Vertical bar to right of minimap
@@ -164,6 +179,7 @@
    , "editorOverviewRuler.deletedForeground"              : "#RED_NORM"
    , "editorOverviewRuler.wordHighlightForeground"        : "#FG__NORM20"
    , "editorOverviewRuler.wordHighlightTextForeground"    : "#KEY_FG_2"
+   , "editorOverviewRuler.findMatchForeground"            : "#KEY_FG_2"
 
   //____________________________________________________________________
   // GUTTER - Line numbers, etc
@@ -342,7 +358,7 @@
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#RED_BOLD"
-  , "debugExceptionWidget.background"                     : "#RED_BOLD60"
+  , "debugExceptionWidget.background"                     : "#BG__BOLD"
 
   // Debug variables in sidebar
   , "debugConsole.infoForeground"                         : "#BLU_NORM"
@@ -419,7 +435,7 @@
   , "editorError.foreground"                              : "#RED_BOLD"
 
   , "statusBarItem.warningBackground"                     : "#YEL_BOLD"
-  , "statusBarItem.warningForeground"                     : "#BG__NORM"
+  , "statusBarItem.warningForeground"                     : "#BG__BOLD"
   , "statusBarItem.errorBackground"                       : "#RED_BOLD"
   , "statusBarItem.errorForeground"                       : "#BG__BOLD"
 
@@ -501,8 +517,16 @@
   // MISC
   //____________________________________________________________________
 
-  // Right-click menu
+  // E.g. Right-click menu
   , "menu.background"                                     : "#BG__BOLD"
+
+  // E.g. Info bubble on hover over activity bar, in line code
+  , "editorHoverWidget.background"                        : "#KEY_FG_2"
+  , "editorHoverWidget.foreground"                        : "#BG__BOLD"
+  , "editorHoverWidget.statusBarBackground"               : "#BG_BBOLD"
+  , "editorHoverWidget.border"                            : "#00000000"
+  // Not sure what this does
+  , "editorHoverWidget.highlightForeground"               : "#FG__NORM"
 
   //____________________________________________________________________
   // BRACKETS
