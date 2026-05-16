@@ -50,6 +50,7 @@
   , "titleBar.border"                                     : "#FG__NORM20"
   , "statusBar.border"                                    : "#FG__NORM20"
   , "activityBar.border"                                  : "#FG__NORM20"
+
   , "sideBar.border"                                      : "#FG__NORM20"
   , "tab.border"                                          : "#BG__NORM"
   , "peekView.border"                                     : "#KEY_BG_0"
@@ -90,9 +91,20 @@
   //____________________________________________________________________
   , "statusBar.background"                                : "#BG_BBOLD"
   , "statusBar.foreground"                                : "#FG__BOLD"
+
   , "statusBar.noFolderBackground"                        : "#KEY_BG_1"
+  , "statusBar.noFolderForeground"                        : "default"
+  , "statusBar.noFolderBorder"                            : "default"
+
   , "statusBarItem.remoteBackground"                      : "#GRN_NORM"
   , "statusBarItem.remoteForeground"                      : "#BG__BOLD"
+
+  , "statusBarItem.activeBackground"                      : "default"
+  , "statusBarItem.errorHoverBackground"                  : "default"
+  , "statusBarItem.errorHoverForeground"                  : "default"
+  , "statusBarItem.hoverBackground"                       : "default"
+  , "statusBarItem.hoverForeground"                       : "default"
+  , "statusBar.focusBorder"                               : "default"
 
   //____________________________________________________________________
   // ACTIVITY BAR - Left of window
@@ -100,6 +112,7 @@
   , "activityBar.foreground"                              : "#FG__BOLD"
   , "activityBar.background"                              : "#BG__BOLD"
   , "activityBar.activeBackground"                        : "#KEY_BG_0"
+  , "activityBar.activeBorder"                            : "#FG__BOLD"
   , "activityBarBadge.background"                         : "#GRN_NORM"
   , "activityBarBadge.foreground"                         : "#BG__BOLD"
   , "activityErrorBadge.background"                       : "#RED_BOLD"
@@ -324,10 +337,34 @@
   , "button.background"                                   : "#KEY_BG_0"
   , "button.foreground"                                   : "#FG__NORM"
   , "button.hoverBackground"                              : "#KEY_BG_1"
+  , "button.border"                                       : "#00000000"
+
+  , "button.secondaryBackground"                          : "#KEY_BG_2"
+  , "button.secondaryForeground"                          : "#FG__NORM"
+  , "button.secondaryHoverBackground"                     : "#KEY_BG_1"
+  , "button.secondaryBorder"                              : "#00000000"
 
   // E.g. Checkboxes in settings
   , "checkbox.background"                                 : "#BG__BOLD"
   , "checkbox.foreground"                                 : "#FG__NORM"
+
+  // Unsure
+  , "button.separator"                                    : "default"
+  , "extensionButton.background"                          : "default"
+  , "extensionButton.foreground"                          : "default"
+  , "extensionButton.hoverBackground"                     : "default"
+  , "extensionButton.border"                              : "#00000000"
+  , "extensionButton.separator"                           : "default"
+  , "extensionButton.prominentBackground"                 : "default"
+  , "extensionButton.prominentForeground"                 : "default"
+  , "extensionButton.prominentHoverBackground"            : "default"
+  , "agentsNewSessionButton.background"                   : "default"
+  , "agentsNewSessionButton.foreground"                   : "default"
+  , "agentsNewSessionButton.hoverBackground"              : "default"
+  , "agentsNewSessionButton.border"                       : "#00000000"
+  , "agentsUpdateButton.downloadedBackground"             : "default"
+  , "agentsUpdateButton.downloadingBackground"            : "default"
+
 
   //____________________________________________________________________
   // DEBUG
@@ -355,6 +392,7 @@
   , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
   , "statusBar.debuggingBackground"                       : "#YEL_BOLD"
   , "statusBar.debuggingForeground"                       : "#BG__BOLD"
+  , "statusBar.debuggingBorder"                           : "#00000000"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#RED_BOLD"
