@@ -50,6 +50,7 @@
   , "titleBar.border"                                     : "#c6c6c620"
   , "statusBar.border"                                    : "#c6c6c620"
   , "activityBar.border"                                  : "#c6c6c620"
+
   , "sideBar.border"                                      : "#c6c6c620"
   , "tab.border"                                          : "#262626"
   , "peekView.border"                                     : "#005f5f"
@@ -90,9 +91,20 @@
   //____________________________________________________________________
   , "statusBar.background"                                : "#121212"
   , "statusBar.foreground"                                : "#eeeeee"
+
   , "statusBar.noFolderBackground"                        : "#5f345f"
+  , "statusBar.noFolderForeground"                        : "default"
+  , "statusBar.noFolderBorder"                            : "default"
+
   , "statusBarItem.remoteBackground"                      : "#afd787"
   , "statusBarItem.remoteForeground"                      : "#1c1c1c"
+
+  , "statusBarItem.activeBackground"                      : "default"
+  , "statusBarItem.errorHoverBackground"                  : "default"
+  , "statusBarItem.errorHoverForeground"                  : "default"
+  , "statusBarItem.hoverBackground"                       : "default"
+  , "statusBarItem.hoverForeground"                       : "default"
+  , "statusBar.focusBorder"                               : "default"
 
   //____________________________________________________________________
   // ACTIVITY BAR - Left of window
@@ -100,8 +112,13 @@
   , "activityBar.foreground"                              : "#eeeeee"
   , "activityBar.background"                              : "#1c1c1c"
   , "activityBar.activeBackground"                        : "#005f5f"
+  , "activityBar.activeBorder"                            : "#eeeeee"
   , "activityBarBadge.background"                         : "#afd787"
   , "activityBarBadge.foreground"                         : "#1c1c1c"
+  , "activityErrorBadge.background"                       : "#ff5f87"
+  , "activityErrorBadge.foreground"                       : "#1c1c1c"
+  , "activityWarningBadge.background"                     : "#ffaf87"
+  , "activityWarningBadge.foreground"                     : "#1c1c1c"
 
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc.
@@ -155,6 +172,17 @@
   , "minimapSlider.hoverBackground"                       : "#c6c6c680"
   , "minimapSlider.activeBackground"                      : "#c6c6c6c0"
 
+  //____________________________________________________________________
+  // SCROLL BAR
+  //____________________________________________________________________
+  , "scrollbar.background"                                : "#1c1c1c"
+  , "scrollbarSlider.background"                          : "#c6c6c660"
+  , "scrollbarSlider.hoverBackground"                     : "#c6c6c680"
+  , "scrollbarSlider.activeBackground"                    : "#c6c6c6a0"
+
+  , "notebookScrollbarSlider.background"                  : "#c6c6c660"
+  , "notebookScrollbarSlider.activeBackground"            : "#c6c6c680"
+  , "notebookScrollbarSlider.hoverBackground"             : "#c6c6c6a0"
 
   //____________________________________________________________________
   // OVERVIEW RULER - Vertical bar to right of minimap
@@ -164,6 +192,7 @@
    , "editorOverviewRuler.deletedForeground"              : "#d787af"
    , "editorOverviewRuler.wordHighlightForeground"        : "#c6c6c620"
    , "editorOverviewRuler.wordHighlightTextForeground"    : "#5f8ca2"
+   , "editorOverviewRuler.findMatchForeground"            : "#5f8ca2"
 
   //____________________________________________________________________
   // GUTTER - Line numbers, etc
@@ -308,10 +337,34 @@
   , "button.background"                                   : "#005f5f"
   , "button.foreground"                                   : "#c6c6c6"
   , "button.hoverBackground"                              : "#5f345f"
+  , "button.border"                                       : "#00000000"
+
+  , "button.secondaryBackground"                          : "#004d5f"
+  , "button.secondaryForeground"                          : "#c6c6c6"
+  , "button.secondaryHoverBackground"                     : "#5f345f"
+  , "button.secondaryBorder"                              : "#00000000"
 
   // E.g. Checkboxes in settings
   , "checkbox.background"                                 : "#1c1c1c"
   , "checkbox.foreground"                                 : "#c6c6c6"
+
+  // Unsure
+  , "button.separator"                                    : "default"
+  , "extensionButton.background"                          : "default"
+  , "extensionButton.foreground"                          : "default"
+  , "extensionButton.hoverBackground"                     : "default"
+  , "extensionButton.border"                              : "#00000000"
+  , "extensionButton.separator"                           : "default"
+  , "extensionButton.prominentBackground"                 : "default"
+  , "extensionButton.prominentForeground"                 : "default"
+  , "extensionButton.prominentHoverBackground"            : "default"
+  , "agentsNewSessionButton.background"                   : "default"
+  , "agentsNewSessionButton.foreground"                   : "default"
+  , "agentsNewSessionButton.hoverBackground"              : "default"
+  , "agentsNewSessionButton.border"                       : "#00000000"
+  , "agentsUpdateButton.downloadedBackground"             : "default"
+  , "agentsUpdateButton.downloadingBackground"            : "default"
+
 
   //____________________________________________________________________
   // DEBUG
@@ -339,10 +392,11 @@
   , "editor.stackFrameHighlightBackground"                : "#1c1c1c"
   , "statusBar.debuggingBackground"                       : "#ffaf87"
   , "statusBar.debuggingForeground"                       : "#1c1c1c"
+  , "statusBar.debuggingBorder"                           : "#00000000"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#ff5f87"
-  , "debugExceptionWidget.background"                     : "#ff5f8760"
+  , "debugExceptionWidget.background"                     : "#1c1c1c"
 
   // Debug variables in sidebar
   , "debugConsole.infoForeground"                         : "#87afd7"
@@ -419,7 +473,7 @@
   , "editorError.foreground"                              : "#ff5f87"
 
   , "statusBarItem.warningBackground"                     : "#ffaf87"
-  , "statusBarItem.warningForeground"                     : "#262626"
+  , "statusBarItem.warningForeground"                     : "#1c1c1c"
   , "statusBarItem.errorBackground"                       : "#ff5f87"
   , "statusBarItem.errorForeground"                       : "#1c1c1c"
 
@@ -501,8 +555,16 @@
   // MISC
   //____________________________________________________________________
 
-  // Right-click menu
+  // E.g. Right-click menu
   , "menu.background"                                     : "#1c1c1c"
+
+  // E.g. Info bubble on hover over activity bar, in line code
+  , "editorHoverWidget.background"                        : "#5f8ca2"
+  , "editorHoverWidget.foreground"                        : "#1c1c1c"
+  , "editorHoverWidget.statusBarBackground"               : "#121212"
+  , "editorHoverWidget.border"                            : "#00000000"
+  // Not sure what this does
+  , "editorHoverWidget.highlightForeground"               : "#c6c6c6"
 
   //____________________________________________________________________
   // BRACKETS

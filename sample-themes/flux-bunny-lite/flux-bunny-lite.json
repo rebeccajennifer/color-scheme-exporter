@@ -50,6 +50,7 @@
   , "titleBar.border"                                     : "#26262620"
   , "statusBar.border"                                    : "#26262620"
   , "activityBar.border"                                  : "#26262620"
+
   , "sideBar.border"                                      : "#26262620"
   , "tab.border"                                          : "#e4e4e4"
   , "peekView.border"                                     : "#5fa2a2"
@@ -79,7 +80,7 @@
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
   //____________________________________________________________________
-  , "titleBar.activeBackground"                           : "#dadada" // make darker
+  , "titleBar.activeBackground"                           : "#f8f8f8"
   , "titleBar.activeForeground"                           : "#303030"
 
   , "titleBar.inactiveBackground"                         : "#e4e4e4"
@@ -88,25 +89,41 @@
   //____________________________________________________________________
   // STATUS BAR - Bottom of window
   //____________________________________________________________________
-  , "statusBar.background"                                : "#dadada" // make darker
+  , "statusBar.background"                                : "#f8f8f8"
   , "statusBar.foreground"                                : "#303030"
+
   , "statusBar.noFolderBackground"                        : "#af5faf"
+  , "statusBar.noFolderForeground"                        : "default"
+  , "statusBar.noFolderBorder"                            : "default"
+
   , "statusBarItem.remoteBackground"                      : "#008700"
-  , "statusBarItem.remoteForeground"                      : "#dadada"
+  , "statusBarItem.remoteForeground"                      : "#eeeeee"
+
+  , "statusBarItem.activeBackground"                      : "default"
+  , "statusBarItem.errorHoverBackground"                  : "default"
+  , "statusBarItem.errorHoverForeground"                  : "default"
+  , "statusBarItem.hoverBackground"                       : "default"
+  , "statusBarItem.hoverForeground"                       : "default"
+  , "statusBar.focusBorder"                               : "default"
 
   //____________________________________________________________________
   // ACTIVITY BAR - Left of window
   //____________________________________________________________________
   , "activityBar.foreground"                              : "#303030"
-  , "activityBar.background"                              : "#dadada"
+  , "activityBar.background"                              : "#eeeeee"
   , "activityBar.activeBackground"                        : "#5fa2a2"
+  , "activityBar.activeBorder"                            : "#303030"
   , "activityBarBadge.background"                         : "#008700"
-  , "activityBarBadge.foreground"                         : "#dadada"
+  , "activityBarBadge.foreground"                         : "#eeeeee"
+  , "activityErrorBadge.background"                       : "#d75f87"
+  , "activityErrorBadge.foreground"                       : "#eeeeee"
+  , "activityWarningBadge.background"                     : "#d78700"
+  , "activityWarningBadge.foreground"                     : "#eeeeee"
 
   //____________________________________________________________________
   // SIDEBAR - Project explorer, etc.
   //____________________________________________________________________
-  , "sideBar.background"                                  : "#dadada" // lighter?
+  , "sideBar.background"                                  : "#eeeeee" // lighter?
   , "sideBar.foreground"                                  : "#262626"
   , "sideBarStickyScroll.shadow"                          : "#121212"
 
@@ -120,7 +137,7 @@
   , "list.inactiveSelectionBackground"                    : "#26262610"
   , "list.inactiveSelectionForeground"                    : "#262626"
   , "list.activeSelectionIconForeground"                  : "#262626"
-  , "list.hoverBackground"                                : "#dadada60"
+  , "list.hoverBackground"                                : "#eeeeee60"
 
   // Drag and drop files
   , "list.dropBackground"                                 : "#af5faf"
@@ -145,7 +162,7 @@
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
   //____________________________________________________________________
-  , "minimap.background"                                  : "#dadada"
+  , "minimap.background"                                  : "#eeeeee"
   , "minimap.selectionHighlight"                          : "#5f878780"
   , "minimap.findMatchHighlight"                          : "#004d5fc0"
   , "minimapGutter.addedBackground"                       : "#008700"
@@ -155,6 +172,17 @@
   , "minimapSlider.hoverBackground"                       : "#26262680"
   , "minimapSlider.activeBackground"                      : "#262626c0"
 
+  //____________________________________________________________________
+  // SCROLL BAR
+  //____________________________________________________________________
+  , "scrollbar.background"                                : "#eeeeee"
+  , "scrollbarSlider.background"                          : "#26262660"
+  , "scrollbarSlider.hoverBackground"                     : "#26262680"
+  , "scrollbarSlider.activeBackground"                    : "#262626a0"
+
+  , "notebookScrollbarSlider.background"                  : "#26262660"
+  , "notebookScrollbarSlider.activeBackground"            : "#26262680"
+  , "notebookScrollbarSlider.hoverBackground"             : "#262626a0"
 
   //____________________________________________________________________
   // OVERVIEW RULER - Vertical bar to right of minimap
@@ -164,6 +192,7 @@
    , "editorOverviewRuler.deletedForeground"              : "#af005f"
    , "editorOverviewRuler.wordHighlightForeground"        : "#26262620"
    , "editorOverviewRuler.wordHighlightTextForeground"    : "#004d5f"
+   , "editorOverviewRuler.findMatchForeground"            : "#004d5f"
 
   //____________________________________________________________________
   // GUTTER - Line numbers, etc
@@ -191,7 +220,7 @@
   , "editorCursor.foreground"                             : "#008700"
 
   // Current line highlight
-  , "editor.lineHighlightBackground"                      : "#dadadaE0"
+  , "editor.lineHighlightBackground"                      : "#eeeeeeE0"
 
   // Text selection in editor, e.g. click and drag, Vim visual selection
   , "editor.selectionBackground"                          : "#26262620"
@@ -232,7 +261,7 @@
   //____________________________________________________________________
   // TEXT INPUT FIELDS
   //____________________________________________________________________
-  , "input.background"                                    : "#dadada40"
+  , "input.background"                                    : "#eeeeee40"
   , "input.foreground"                                    : "#262626"
   , "input.placeholderForeground"                         : "#878787"
 
@@ -247,7 +276,7 @@
   // Dropdown for command field
   , "editorWidget.background"                             : "#e4e4e4"
   , "editorWidget.border"                                 : "#26262610"
-  , "editorSuggestWidget.background"                      : "#dadada"
+  , "editorSuggestWidget.background"                      : "#eeeeee"
   , "editorSuggestWidget.foreground"                      : "#262626"
   , "editorSuggestWidget.border"                          : "#26262610"
 
@@ -255,16 +284,16 @@
   // STICKY SCROLL - Keep current code context at top of file
   //____________________________________________________________________
   , "editorStickyScroll.background"                       : "#e4e4e4"
-  , "editorStickyScrollHover.background"                  : "#dadada"
+  , "editorStickyScrollHover.background"                  : "#eeeeee"
   , "editorStickyScroll.shadow"                           : "#121212"
-  , "panelStickyScroll.background"                        : "#dadada"
+  , "panelStickyScroll.background"                        : "#eeeeee"
   , "panelStickyScroll.shadow"                            : "#121212"
-  , "sideBarStickyScroll.background"                      : "#dadada"
+  , "sideBarStickyScroll.background"                      : "#eeeeee"
 
   //____________________________________________________________________
   // PEEK VIEW - Displayed with right-click and "Go to *"
   //____________________________________________________________________
-  , "peekViewEditor.background"                           : "#dadada"
+  , "peekViewEditor.background"                           : "#eeeeee"
   , "peekViewEditor.matchHighlightBackground"             : "#af5fafe0"
   , "peekViewResult.matchHighlightBackground"             : "#5f8ca2e0"
 
@@ -277,7 +306,7 @@
   , "peekViewResult.selectionForeground"                  : "#262626"
 
   // Peek View line number background
-  //, "peekViewEditorGutter.background"                     :"#dadada"
+  //, "peekViewEditorGutter.background"                     :"#eeeeee"
 
    // Text color of header in settings
   , "settings.headerForeground"                           : "#005f5f"
@@ -285,7 +314,7 @@
   //____________________________________________________________________
   // DROPDOWN
   //____________________________________________________________________
-  , "dropdown.background"                                 : "#dadada"
+  , "dropdown.background"                                 : "#eeeeee"
   , "dropdown.foreground"                                 : "#262626"
   , "dropdown.listBackground"                             : "#e4e4e4"
 
@@ -308,10 +337,34 @@
   , "button.background"                                   : "#5fa2a2"
   , "button.foreground"                                   : "#262626"
   , "button.hoverBackground"                              : "#af5faf"
+  , "button.border"                                       : "#00000000"
+
+  , "button.secondaryBackground"                          : "#5f8ca2"
+  , "button.secondaryForeground"                          : "#262626"
+  , "button.secondaryHoverBackground"                     : "#af5faf"
+  , "button.secondaryBorder"                              : "#00000000"
 
   // E.g. Checkboxes in settings
-  , "checkbox.background"                                 : "#dadada"
+  , "checkbox.background"                                 : "#eeeeee"
   , "checkbox.foreground"                                 : "#262626"
+
+  // Unsure
+  , "button.separator"                                    : "default"
+  , "extensionButton.background"                          : "default"
+  , "extensionButton.foreground"                          : "default"
+  , "extensionButton.hoverBackground"                     : "default"
+  , "extensionButton.border"                              : "#00000000"
+  , "extensionButton.separator"                           : "default"
+  , "extensionButton.prominentBackground"                 : "default"
+  , "extensionButton.prominentForeground"                 : "default"
+  , "extensionButton.prominentHoverBackground"            : "default"
+  , "agentsNewSessionButton.background"                   : "default"
+  , "agentsNewSessionButton.foreground"                   : "default"
+  , "agentsNewSessionButton.hoverBackground"              : "default"
+  , "agentsNewSessionButton.border"                       : "#00000000"
+  , "agentsUpdateButton.downloadedBackground"             : "default"
+  , "agentsUpdateButton.downloadingBackground"            : "default"
+
 
   //____________________________________________________________________
   // DEBUG
@@ -324,7 +377,7 @@
   // Breakpoint arrow when stopped
   , "debugIcon.breakpointCurrentStackframeForeground"     : "#008700"
 
-  , "debugToolBar.background"                             : "#dadada"
+  , "debugToolBar.background"                             : "#eeeeee"
   , "debugIcon.startForeground"                           : "#008700"
   , "debugIcon.stopForeground"                            : "#af005f"
   , "debugIcon.stepIntoForeground"                        : "#005f87"
@@ -334,15 +387,16 @@
   , "debugIcon.pauseForeground"                           : "#872f87"
   , "debugIcon.restartForeground"                         : "#5f8787"
 
-  , "editor.inlineValuesBackground"                       : "#dadada"
+  , "editor.inlineValuesBackground"                       : "#eeeeee"
   , "editor.inlineValuesForeground"                       : "#d75f00"
-  , "editor.stackFrameHighlightBackground"                : "#dadada"
+  , "editor.stackFrameHighlightBackground"                : "#eeeeee"
   , "statusBar.debuggingBackground"                       : "#d78700"
-  , "statusBar.debuggingForeground"                       : "#dadada"
+  , "statusBar.debuggingForeground"                       : "#eeeeee"
+  , "statusBar.debuggingBorder"                           : "#00000000"
 
   // Debug exception
   , "debugExceptionWidget.border"                         : "#d75f87"
-  , "debugExceptionWidget.background"                     : "#d75f8760"
+  , "debugExceptionWidget.background"                     : "#eeeeee"
 
   // Debug variables in sidebar
   , "debugConsole.infoForeground"                         : "#005f87"
@@ -419,9 +473,9 @@
   , "editorError.foreground"                              : "#d75f87"
 
   , "statusBarItem.warningBackground"                     : "#d78700"
-  , "statusBarItem.warningForeground"                     : "#e4e4e4"
+  , "statusBarItem.warningForeground"                     : "#eeeeee"
   , "statusBarItem.errorBackground"                       : "#d75f87"
-  , "statusBarItem.errorForeground"                       : "#dadada"
+  , "statusBarItem.errorForeground"                       : "#eeeeee"
 
   , "minimap.errorHighlight"                              : "#d75f87"
   , "minimap.warningHighlight"                            : "#d78700"
@@ -449,7 +503,7 @@
 
   // Exception  label in sidebar call stack
   , "debugView.exceptionLabelBackground"                  : "#d75f87"
-  , "debugView.exceptionLabelForeground"                  : "#dadada"
+  , "debugView.exceptionLabelForeground"                  : "#eeeeee"
 
   , "disabledForeground"                                  : "#87878780"
   , "list.deemphasizedForeground"                         : "#87878780"
@@ -501,8 +555,16 @@
   // MISC
   //____________________________________________________________________
 
-  // Right-click menu
-  , "menu.background"                                     : "#dadada"
+  // E.g. Right-click menu
+  , "menu.background"                                     : "#eeeeee"
+
+  // E.g. Info bubble on hover over activity bar, in line code
+  , "editorHoverWidget.background"                        : "#004d5f"
+  , "editorHoverWidget.foreground"                        : "#eeeeee"
+  , "editorHoverWidget.statusBarBackground"               : "#f8f8f8"
+  , "editorHoverWidget.border"                            : "#00000000"
+  // Not sure what this does
+  , "editorHoverWidget.highlightForeground"               : "#262626"
 
   //____________________________________________________________________
   // BRACKETS
@@ -533,7 +595,7 @@
   //____________________________________________________________________
   // Overridden by other properties
   //____________________________________________________________________
-  //, "quickInput.background"                               : "#dadada"
+  //, "quickInput.background"                               : "#eeeeee"
   //, "quickInputList.focusIconForeground"                  : "#303030"
   //, "quickInput.foreground"                               : "#262626"
   //, "settings.textInputBackground"                        : "#FFFF00"

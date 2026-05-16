@@ -34,7 +34,7 @@ let gui_mag_norm = '#872f87'
 let gui_cya_norm = '#5f8787'
 let gui_wht_norm = '#878787'
 
-let gui_bg__bold = '#dadada'
+let gui_bg__bold = '#eeeeee'
 let gui_fg__bold = '#303030'
 
 let gui_blk_bold = '#878787'
@@ -61,7 +61,7 @@ let cli_mag_norm = '90'
 let cli_cya_norm = '66'
 let cli_wht_norm = '102'
 
-let cli_bg__bold = '253'
+let cli_bg__bold = '255'
 let cli_fg__bold = '236'
 
 let cli_blk_bold = '102'
