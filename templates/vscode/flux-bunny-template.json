@@ -73,6 +73,9 @@
   // Vertical line at certain character width in editor
   , "editorRuler.foreground"                              : "#FG__NORM20"
 
+  // E.g. Right-click menu
+  , "menu.border"                                         : "#FG__NORM20"
+
   // Transparent
   , "editorStickyScroll.border"                           : "#00000000"
   , "panelStickyScroll.border"                            : "#00000000"
