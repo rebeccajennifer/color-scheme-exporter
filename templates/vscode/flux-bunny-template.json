@@ -76,6 +76,13 @@
   // E.g. Right-click menu
   , "menu.border"                                         : "#FG__NORM20"
 
+  // Not exactly sure what these are for
+  , "notifications.border"                                : "#FG__NORM20"
+  , "notificationCenter.border"                           : "#FG__NORM20"
+
+  // Bottom left pop up
+  , "notificationToast.border"                            : "#FG__NORM20"
+
   // Transparent
   , "editorStickyScroll.border"                           : "#00000000"
   , "panelStickyScroll.border"                            : "#00000000"
@@ -278,7 +285,7 @@
 
   // Dropdown for command field
   , "editorWidget.background"                             : "#BG__NORM"
-  , "editorWidget.border"                                 : "#FG__NORM10"
+  , "editorWidget.border"                                 : "#FG__NORM20"
   , "editorSuggestWidget.background"                      : "#BG__BOLD"
   , "editorSuggestWidget.foreground"                      : "#FG__NORM"
   , "editorSuggestWidget.border"                          : "#FG__NORM10"

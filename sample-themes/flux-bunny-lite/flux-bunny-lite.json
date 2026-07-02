@@ -73,6 +73,16 @@
   // Vertical line at certain character width in editor
   , "editorRuler.foreground"                              : "#26262620"
 
+  // E.g. Right-click menu
+  , "menu.border"                                         : "#26262620"
+
+  // Not exactly sure what these are for
+  , "notifications.border"                                : "#26262620"
+  , "notificationCenter.border"                           : "#26262620"
+
+  // Bottom left pop up
+  , "notificationToast.border"                            : "#26262620"
+
   // Transparent
   , "editorStickyScroll.border"                           : "#00000000"
   , "panelStickyScroll.border"                            : "#00000000"
@@ -275,7 +285,7 @@
 
   // Dropdown for command field
   , "editorWidget.background"                             : "#e4e4e4"
-  , "editorWidget.border"                                 : "#26262610"
+  , "editorWidget.border"                                 : "#26262620"
   , "editorSuggestWidget.background"                      : "#eeeeee"
   , "editorSuggestWidget.foreground"                      : "#262626"
   , "editorSuggestWidget.border"                          : "#26262610"
@@ -559,7 +569,6 @@
   // E.g. Right-click menu
   , "menu.background"                                     : "#eeeeee"
   , "menu.separatorBackground"                            : "#26262640"
-  , "menu.border"                                         : "#26262620"
 
   , "toolbar.hoverBackground"                             : "#26262640"
 
