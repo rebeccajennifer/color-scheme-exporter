@@ -10,7 +10,6 @@
   , "editor.background"                                   : "#262626"
   , "editor.foreground"                                   : "#c6c6c6"
 
-
   //____________________________________________________________________
   // TERMINAL
   //____________________________________________________________________
@@ -84,7 +83,6 @@
   // Bottom left pop up
   , "notificationToast.border"                            : "#c6c6c620"
 
-  // Transparent
 
   //____________________________________________________________________
   // TITLE BAR - Main window title bar
@@ -171,6 +169,7 @@
 
   // E.g. 'other commands', 'recently opened ' in command palette
   , "pickerGroup.foreground"                              : "#00afd7"
+  , "pickerGroup.border"                                  : "#c6c6c620"
 
   //____________________________________________________________________
   // MINIMAP - Mini version of code on right of window
@@ -199,11 +198,11 @@
   //____________________________________________________________________
   // OVERVIEW RULER - Vertical bar to right of minimap
   //____________________________________________________________________
-  , "editorOverviewRuler.addedForeground"                : "#afd787"
-  , "editorOverviewRuler.modifiedForeground"             : "#ffd787"
-  , "editorOverviewRuler.deletedForeground"              : "#d787af"
-  , "editorOverviewRuler.wordHighlightForeground"        : "#c6c6c620"
-  , "editorOverviewRuler.wordHighlightTextForeground"    : "#5f8ca2e0"
+   , "editorOverviewRuler.addedForeground"                : "#afd787"
+   , "editorOverviewRuler.modifiedForeground"             : "#ffd787"
+   , "editorOverviewRuler.deletedForeground"              : "#d787af"
+   , "editorOverviewRuler.wordHighlightForeground"        : "#c6c6c620"
+   , "editorOverviewRuler.wordHighlightTextForeground"    : "#5f8ca2e0"
 
   //____________________________________________________________________
   // GUTTER - Line numbers, etc
@@ -288,6 +287,7 @@
   // Appears on the first search of a workspace session but disappears
   // after that
   , "editor.findMatchBackground"                          : "#004d5fe0"
+
   , "searchEditor.findMatchBackground"                    : "default"
   , "terminal.findMatchBackground"                        : "default"
 
@@ -310,7 +310,6 @@
 
   , "peekViewEditor.matchHighlightBackground"             : "#5f345fe0"
   , "peekViewResult.matchHighlightBackground"             : "#004d5fe0"
-
   //____________________________________________________________________
   // LINKS
   //____________________________________________________________________
@@ -347,15 +346,15 @@
   , "editorStickyScroll.shadow"                           : "#1c1c1c"
 
   , "editorStickyScrollHover.background"                  : "#1c1c1c"
-  , "editorStickyScrollGutter.background"                 : "default"
+  , "editorStickyScrollGutter.background"                  : "#1c1c1c"
 
   , "panelStickyScroll.background"                        : "#1c1c1c"
-  , "panelStickyScroll.border"                            : "#c6c6c620"
+  , "panelStickyScroll.border"                            : "#00000000"
   , "panelStickyScroll.shadow"                            : "#1c1c1c"
 
   , "sideBarStickyScroll.background"                      : "#1c1c1c"
-  , "sideBarStickyScroll.border"                          : "default"
-  , "sideBarStickyScroll.shadow"                          : "#1c1c1c"
+  , "sideBarStickyScroll.border"                          : "#1c1c1c"
+  , "sideBarStickyScroll.shadow"                          : "#c6c6c6"
 
   , "terminalStickyScroll.background"                     : "#1c1c1c"
   , "terminalStickyScroll.border"                         : "default"
@@ -381,9 +380,6 @@
   , "peekViewResult.lineForeground"                       : "default"
   , "peekViewTitle.background"                            : "default"
   , "peekViewTitleDescription.foreground"                 : "default"
-
-
-  //, "peekViewEditorGutter.background"                     :"#1c1c1c"
 
    // Text color of header in settings
   , "settings.headerForeground"                           : "#5f9696"
@@ -441,7 +437,6 @@
   , "agentsNewSessionButton.border"                       : "#00000000"
   , "agentsUpdateButton.downloadedBackground"             : "default"
   , "agentsUpdateButton.downloadingBackground"            : "default"
-
 
   //____________________________________________________________________
   // DEBUG
@@ -524,9 +519,13 @@
   , "diffEditorGutter.removedLineBackground"              : "#ff5f87"
   , "diffEditorOverview.removedForeground"                : "#ff5f87"
   , "diffEditor.removedTextBorder"                        : "#00000000"
+  //, "inlineEdit.modifiedChangedLineBackground"            : "#ff5f8720"
+  //, "inlineEdit.originalChangedLineBackground"            : "#ffaf8720"
 
   , "scmGraph.historyItemHoverDefaultLabelBackground"     : "#d787af"
   , "scmGraph.historyItemHoverDefaultLabelForeground"     : "#262626"
+  , "scmGraph.historyItemHoverAdditionsForeground"        : "#afd787"
+  , "scmGraph.historyItemHoverDeletionsForeground"        : "#ff5f87"
   , "scmGraph.historyItemBaseRefColor"                    : "#d787af"
   , "scmGraph.historyItemRefColor"                        : "#5fafaf"
   , "scmGraph.historyItemRemoteRefColor"                  : "#d787af"
@@ -537,8 +536,6 @@
   , "scmGraph.foreground3"                                : "#ffd787"
   , "scmGraph.foreground4"                                : "#d787af"
   , "scmGraph.foreground5"                                : "#87afd7"
-  , "scmGraph.historyItemHoverAdditionsForeground"        : "#afd787"
-  , "scmGraph.historyItemHoverDeletionsForeground"        : "#ff5f87"
 
   //____________________________________________________________________
   // MARKDOWN VIEWER
@@ -551,8 +548,8 @@
   // ERRORS AND WARNINGS
   //____________________________________________________________________
   , "errorForeground"                                     : "#ff5f87"
-  , "editorWarning.foreground"                            : "#ffaf87"
   , "editorError.foreground"                              : "#ff5f87"
+  , "editorWarning.foreground"                            : "#ffaf87"
 
   , "statusBarItem.warningBackground"                     : "#ffaf87"
   , "statusBarItem.warningForeground"                     : "#1c1c1c"
@@ -587,12 +584,8 @@
   , "debugView.exceptionLabelBackground"                  : "#ff5f87"
   , "debugView.exceptionLabelForeground"                  : "#1c1c1c"
 
-  , "editorError.background"                              : "default"
-  , "editorError.border"                                  : "default"
-
   , "disabledForeground"                                  : "#5f5f5f80"
   , "list.deemphasizedForeground"                         : "#5f5f5f80"
-
 
   //____________________________________________________________________
   // ICONS
@@ -705,7 +698,7 @@
   //____________________________________________________________________
 
   , "breadcrumb.background"                               : "#1c1c1c"
-  , "breadcrumb.focusForeground"                          : "#d7d7d7"
+  , "breadcrumb.focusForeground"                          : "#eeeeee"
   , "breadcrumb.activeSelectionForeground"                : "default"
   , "breadcrumb.foreground"                               : "default"
   , "breadcrumbPicker.background"                         : "default"
@@ -1342,15 +1335,15 @@
   //____________________________________________________________________
   // Overridden by other properties
   //____________________________________________________________________
-  , "pickerGroup.border"                                  : "#c6c6c620"
+  //, "quickInput.background"                               : "#1c1c1c"
   //, "quickInputList.focusIconForeground"                  : "#eeeeee"
   //, "quickInput.foreground"                               : "#c6c6c6"
   //, "settings.textInputBackground"                        : "#FFFF00"
   }
 
-//____________________________________________________________________
+//______________________________________________________________________
 // SYNTAX HIGHLIGHTING
-//____________________________________________________________________
+//______________________________________________________________________
 , "tokenColors":
   [ { "name"  : "Foreground"
     , "scope": [ ""
@@ -1545,7 +1538,7 @@
       , "comment"
       , "punctuation.definition.comment" // Comment specifier e.g. //
       , ""
-      ], "settings": { "foreground": "#5f5f5f" }
+      ], "settings": { "foreground": "#c6c6c680" }
     }
 
   , { "name"  : "CSS property value"
