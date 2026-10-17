@@ -459,9 +459,10 @@
   , "debugIcon.pauseForeground"                           : "#VIO_NORM"
   , "debugIcon.restartForeground"                         : "#CYA_NORM"
 
-  , "editor.inlineValuesBackground"                       : "#BG__BOLD"
-  , "editor.inlineValuesForeground"                       : "#YEL_NORM"
-  , "editor.stackFrameHighlightBackground"                : "#BG__BOLD"
+  , "editor.inlineValuesBackground"                       : "#BG__BOLDe0"
+  , "editor.inlineValuesForeground"                       : "#VIO_NORM"
+  , "editor.stackFrameHighlightBackground"                : "#BG__BOLDe0"
+
   , "statusBar.debuggingBackground"                       : "#YEL_BOLD"
   , "statusBar.debuggingForeground"                       : "#BG__BOLD"
   , "statusBar.debuggingBorder"                           : "#00000000"
