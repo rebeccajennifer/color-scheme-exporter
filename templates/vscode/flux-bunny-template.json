@@ -2,16 +2,16 @@
 
   "colors"             : {
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // GENERAL
-    //____________________________________________________________________
+    //__________________________________________________________________
     "foreground"                                         : "#FG__NORM",
     "editor.background"                                  : "#BG__NORM",
     "editor.foreground"                                  : "#FG__NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // TERMINAL
-    //____________________________________________________________________
+    //__________________________________________________________________
     "terminal.background"                                : "#BG__NORM",
     "terminal.foreground"                                : "#FG__NORM",
     "terminalCursor.background"                          : "#BG__NORM",
@@ -39,9 +39,21 @@
     "terminalCommandDecoration.successBackground"        : "#GRN_NORM",
     "terminalCommandDecoration.errorBackground"          : "#RED_BOLD",
 
-    //____________________________________________________________________
+    "terminal.border"                                    : "default",
+    "terminal.dropBackground"                            : "default",
+
+    "terminal.inactiveSelectionBackground"               : "default",
+    "terminal.initialHintForeground"                     : "default",
+    "terminal.selectionBackground"                       : "default",
+    "terminal.selectionForeground"                       : "default",
+    "terminal.tab.activeBorder"                          : "default",
+    "terminalCommandGuide.foreground"                    : "default",
+    "terminalOverviewRuler.border"                       : "default",
+    "terminalOverviewRuler.cursorForeground"             : "default",
+
+    //__________________________________________________________________
     // BORDERS
-    //____________________________________________________________________
+    //__________________________________________________________________
     "titleBar.border"                                    : "#FG__NORM20",
     "statusBar.border"                                   : "#FG__NORM20",
     "activityBar.border"                                 : "#FG__NORM20",
@@ -68,17 +80,17 @@
     "notifications.border"                               : "#FG__NORM20",
     "notificationCenter.border"                          : "#FG__NORM20",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // TITLE BAR - Main window title bar
-    //____________________________________________________________________
+    //__________________________________________________________________
     "titleBar.activeBackground"                          : "#BG_BBOLD",
     "titleBar.activeForeground"                          : "#FG__BOLD",
     "titleBar.inactiveBackground"                        : "#BG__NORM",
     "titleBar.inactiveForeground"                        : "#FG__NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // STATUS BAR - Bottom of window
-    //____________________________________________________________________
+    //__________________________________________________________________
     "statusBar.background"                               : "#BG_BBOLD",
     "statusBar.foreground"                               : "#FG__BOLD",
     "statusBar.noFolderBackground"                       : "#KEY_BG_1",
@@ -93,9 +105,9 @@
     "statusBarItem.hoverForeground"                      : "default",
     "statusBar.focusBorder"                              : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // ACTIVITY BAR - Left of window
-    //____________________________________________________________________
+    //__________________________________________________________________
     "activityBar.foreground"                             : "#FG__BOLD",
     "activityBar.background"                             : "#BG__BOLD",
     "activityBar.activeBackground"                       : "#KEY_BG_0",
@@ -107,9 +119,9 @@
     "activityWarningBadge.background"                    : "#YEL_BOLD",
     "activityWarningBadge.foreground"                    : "#BG__BOLD",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // SIDEBAR - Project explorer, etc.
-    //____________________________________________________________________
+    //__________________________________________________________________
     // Lighter?
     "sideBar.background"                                 : "#BG__BOLD",
     "sideBar.foreground"                                 : "#FG__NORM",
@@ -131,9 +143,9 @@
     "list.focusForeground"                               : "#FG__BOLD",
     "list.invalidItemForeground"                         : "#RED_BOLD",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // COMMAND PALETTE - Drop down when pressing Ctrl+P or Ctrl+Shift+P
-    //____________________________________________________________________
+    //__________________________________________________________________
     "quickInput.background"                              : "#BG__BOLD",
     // E.g. Filter in Output panel
     "panelInput.border"                                  : "#FG__NORM20",
@@ -144,9 +156,9 @@
     "pickerGroup.foreground"                             : "#BLU_BOLD",
     "pickerGroup.border"                                 : "#FG__NORM20",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // MINIMAP - Mini version of code on right of window
-    //____________________________________________________________________
+    //__________________________________________________________________
     "minimap.background"                                 : "#BG__BOLD",
     "minimap.selectionHighlight"                         : "#CYA_NORM80",
     "minimapGutter.addedBackground"                      : "#GRN_NORM",
@@ -156,9 +168,9 @@
     "minimapSlider.hoverBackground"                      : "#FG__NORM80",
     "minimapSlider.activeBackground"                     : "#FG__NORMc0",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // SCROLL BAR
-    //____________________________________________________________________
+    //__________________________________________________________________
     "scrollbar.background"                               : "#FG__NORM10",
     "scrollbarSlider.background"                         : "#FG__NORM60",
     "scrollbarSlider.hoverBackground"                    : "#FG__NORM80",
@@ -167,24 +179,24 @@
     "notebookScrollbarSlider.activeBackground"           : "#FG__NORM80",
     "notebookScrollbarSlider.hoverBackground"            : "#FG__NORMa0",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // OVERVIEW RULER - Vertical bar to right of minimap
-    //____________________________________________________________________
+    //__________________________________________________________________
     "editorOverviewRuler.addedForeground"                : "#GRN_NORM",
     "editorOverviewRuler.modifiedForeground"             : "#YEL_NORM",
     "editorOverviewRuler.deletedForeground"              : "#RED_NORM",
     "editorOverviewRuler.wordHighlightForeground"        : "#FG__NORM20",
     "editorOverviewRuler.wordHighlightTextForeground"    : "#KEY_FG_2e0",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // GUTTER - Line numbers, etc
-    //____________________________________________________________________
+    //__________________________________________________________________
     "editorLineNumber.activeForeground"                  : "#RED_BOLD",
     "editorLineNumber.foreground"                        : "#BLK_BOLD",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // TABS
-    //____________________________________________________________________
+    //__________________________________________________________________
     // Dead space to right of tabs
     "editorGroupHeader.tabsBackground"                   : "#BG__NORM",
     "tab.activeBackground"                               : "#BG__NORM",
@@ -216,9 +228,9 @@
     "tab.unfocusedInactiveBackground"                    : "default",
     "tab.unfocusedInactiveModifiedBorder"                : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // HIGHLIGHTING AND SELECTION
-    //____________________________________________________________________
+    //__________________________________________________________________
     "editorCursor.background"                            : "#BG__NORM",
     "editorCursor.foreground"                            : "#GRN_NORM",
     // Current line highlight
@@ -242,12 +254,9 @@
     // Occurrences of a symbol under cursor
     "editor.wordHighlightBackground"                     : "#FG__NORM10",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // FIND MATCH
-    //____________________________________________________________________
-
-    // Highlight of search results from search bar and Vim find command
-    "editor.findMatchHighlightBackground"                : "#KEY_BG_2e0",
+    //__________________________________________________________________
 
     // Background of currently selected search result
     // Looks like this is getting overwritten by
@@ -255,37 +264,39 @@
     // Appears on the first search of a workspace session but disappears
     // after that
     "editor.findMatchBackground"                         : "#KEY_BG_2e0",
+    // Highlight of search results from search bar and Vim find command
+    "editor.findMatchBorder"                             : "default",
+    "editor.findMatchForeground"                         : "default",
+    "editor.findMatchHighlightBackground"                : "#KEY_BG_2e0",
+    "editor.findMatchHighlightBorder"                    : "#00afd7",
+    "editor.findMatchHighlightForeground"                : "default",
 
     "searchEditor.findMatchBackground"                   : "default",
-    "terminal.findMatchBackground"                       : "default",
+    "searchEditor.findMatchBorder"                       : "default",
 
     "editorOverviewRuler.findMatchForeground"            : "#KEY_FG_2e0",
-    "editor.findMatchForeground"                         : "default",
-    "terminalOverviewRuler.findMatchForeground"          : "default",
-
     "minimap.findMatchHighlight"                         : "#KEY_FG_2c0",
 
-    "editor.findMatchHighlightForeground"                : "default",
-    "terminal.findMatchHighlightBackground"              : "default",
-
-    // Find match borders
-    "editor.findMatchHighlightBorder"                    : "#00afd7",
-    "terminal.findMatchHighlightBorder"                  : "default",
-    "editor.findMatchBorder"                             : "default",
-    "searchEditor.findMatchBorder"                       : "default",
+    "terminal.findMatchBackground"                       : "default",
     "terminal.findMatchBorder"                           : "default",
-    "peekViewEditor.matchHighlightBorder"                : "default",
+    "terminal.findMatchHighlightBackground"              : "default",
+    "terminal.findMatchHighlightBorder"                  : "default",
+    "terminalOverviewRuler.findMatchForeground"          : "default",
+
     "peekViewEditor.matchHighlightBackground"            : "#KEY_BG_1e0",
+    "peekViewEditor.matchHighlightBorder"                : "default",
+
     "peekViewResult.matchHighlightBackground"            : "#KEY_BG_2e0",
-    //____________________________________________________________________
+
+    //__________________________________________________________________
     // LINKS
-    //____________________________________________________________________
+    //__________________________________________________________________
     "textLink.foreground"                                : "#BLU_BOLD",
     "textLink.activeForeground"                          : "#BLU_NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // TEXT INPUT FIELDS
-    //____________________________________________________________________
+    //__________________________________________________________________
     "input.background"                                   : "#BG__BOLD40",
     "input.foreground"                                   : "#FG__NORM",
     "input.placeholderForeground"                        : "#BLK_BOLD",
@@ -302,9 +313,9 @@
     "editorSuggestWidget.foreground"                     : "#FG__NORM",
     "editorSuggestWidget.border"                         : "#FG__NORM10",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // STICKY SCROLL - Keep current code context at top of file
-    //____________________________________________________________________
+    //__________________________________________________________________
     "editorStickyScroll.background"                      : "#BG__NORM",
     "editorStickyScroll.border"                          : "#FG__NORM20",
     "editorStickyScroll.shadow"                          : "#BLK_NORM",
@@ -329,9 +340,9 @@
 
     "outputViewStickyScroll.background"                  : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // PEEK VIEW - Displayed with right-click and "Go to *"
-    //____________________________________________________________________
+    //__________________________________________________________________
     "peekViewEditor.background"                          : "#BG__BOLD",
     "peekViewTitleLabel.foreground"                      : "#FG__NORM",
     "peekViewResult.fileForeground"                      : "#FG__NORM",
@@ -348,16 +359,16 @@
     // Text color of header in settings
     "settings.headerForeground"                          : "#KEY_FG_0",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // DROPDOWN
-    //____________________________________________________________________
+    //__________________________________________________________________
     "dropdown.background"                                : "#BG__BOLD",
     "dropdown.foreground"                                : "#FG__NORM",
     "dropdown.listBackground"                            : "#BG__NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // PANELS
-    //____________________________________________________________________
+    //__________________________________________________________________
     "panel.background"                                   : "#BG__NORM",
 
     "panelTitle.activeForeground"                        : "#FG__BOLD",
@@ -368,9 +379,9 @@
     //, "panelSectionHeader.background"                       : "#GRN_NORM"
     //, "panelTitleBadge.foreground"                          : "#BG__NORM"
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // BUTTONS & CHECKBOXES
-    //____________________________________________________________________
+    //__________________________________________________________________
     "button.background"                                  : "#KEY_BG_0",
     "button.foreground"                                  : "#FG__NORM",
     "button.hoverBackground"                             : "#KEY_BG_2",
@@ -402,9 +413,9 @@
     "agentsUpdateButton.downloadedBackground"            : "default",
     "agentsUpdateButton.downloadingBackground"           : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // DEBUG
-    //____________________________________________________________________
+    //__________________________________________________________________
 
     // Breakpoint dot
     "debugIcon.breakpointForeground"                     : "#RED_BOLD",
@@ -445,9 +456,9 @@
     "debugTokenExpression.name"                          : "#GRN_NORM",
     "debugTokenExpression.type"                          : "#BLU_NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // SOURCE CONTROL
-    //____________________________________________________________________
+    //__________________________________________________________________
     "gitDecoration.addedResourceForeground"              : "#GRN_BOLD",
     "gitDecoration.modifiedResourceForeground"           : "#YEL_NORM",
     "gitDecoration.untrackedResourceForeground"          : "#VIO_NORM",
@@ -501,16 +512,16 @@
     "scmGraph.foreground4"                               : "#RED_NORM",
     "scmGraph.foreground5"                               : "#BLU_NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // MARKDOWN VIEWER
-    //____________________________________________________________________
+    //__________________________________________________________________
     "textPreformat.background"                           : "#FG__NORM20",
     "textPreformat.border"                               : "#00000000",
     "textPreformat.foreground"                           : "#BLU_NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // ERRORS AND WARNINGS
-    //____________________________________________________________________
+    //__________________________________________________________________
     "errorForeground"                                    : "#RED_BOLD",
     "editorError.foreground"                             : "#RED_BOLD",
     "editorWarning.foreground"                           : "#YEL_BOLD",
@@ -551,9 +562,9 @@
     "disabledForeground"                                 : "#BLK_BOLD80",
     "list.deemphasizedForeground"                        : "#BLK_BOLD80",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // ICONS
-    //____________________________________________________________________
+    //__________________________________________________________________
 
     // E.g. Settings icon in debug sidebar, add file icon in explorer
     "icon.foreground"                                    : "#FG__NORMc0",
@@ -598,9 +609,9 @@
     "symbolIcon.unitForeground"                          : "#RED_NORM",
     "symbolIcon.variableForeground"                      : "#BLU_NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // MISC
-    //____________________________________________________________________
+    //__________________________________________________________________
 
     // E.g. Right-click menu
     "menu.background"                                    : "#BG__BOLD",
@@ -616,9 +627,9 @@
     // Not sure what this does
     "editorHoverWidget.highlightForeground"              : "#FG__NORM",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // BRACKETS
-    //____________________________________________________________________
+    //__________________________________________________________________
     "editorBracketHighlight.foreground1"                 : "#GRN_BOLD",
     "editorBracketHighlight.foreground2"                 : "#RED_NORM",
     "editorBracketHighlight.foreground3"                 : "#CYA_BOLD",
@@ -644,9 +655,9 @@
     "editorBracketPairGuide.background6"                 : "default",
     "editorOverviewRuler.bracketMatchForeground"         : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // WELCOME PAGE
-    //____________________________________________________________________
+    //__________________________________________________________________
 
     // welcomePage.background defaults to editor.background
     "welcomePage.background"                             : "default",
@@ -656,10 +667,10 @@
     "welcomePage.tileBorder"                             : "default",
     "welcomePage.tileHoverBackground"                    : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // BREADCRUMB
     // File navigation at top of page
-    //____________________________________________________________________
+    //__________________________________________________________________
 
     "breadcrumb.background"                              : "#BG__BOLD",
     "breadcrumb.focusForeground"                         : "#FG__BOLD",
@@ -667,9 +678,9 @@
     "breadcrumb.foreground"                              : "default",
     "breadcrumbPicker.background"                        : "default",
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // TESTING
-    //____________________________________________________________________
+    //__________________________________________________________________
 
     "actionBar.toggledBackground"                        : "default",
     "activeSessionView.background"                       : "default",
@@ -1211,18 +1222,6 @@
     "symbolIcon.snippetForeground"                       : "default",
     "symbolIcon.typeParameterForeground"                 : "default",
 
-    "terminal.border"                                    : "default",
-    "terminal.dropBackground"                            : "default",
-
-    "terminal.inactiveSelectionBackground"               : "default",
-    "terminal.initialHintForeground"                     : "default",
-    "terminal.selectionBackground"                       : "default",
-    "terminal.selectionForeground"                       : "default",
-    "terminal.tab.activeBorder"                          : "default",
-    "terminalCommandGuide.foreground"                    : "default",
-    "terminalOverviewRuler.border"                       : "default",
-    "terminalOverviewRuler.cursorForeground"             : "default",
-
     "terminalSymbolIcon.aliasForeground"                 : "default",
     "terminalSymbolIcon.argumentForeground"              : "default",
     "terminalSymbolIcon.branchForeground"                : "default",
@@ -1295,18 +1294,18 @@
     "window.activeBorder"                                : "default",
     "window.inactiveBorder"                              : "default"
 
-    //____________________________________________________________________
+    //__________________________________________________________________
     // Overridden by other properties
-    //____________________________________________________________________
+    //__________________________________________________________________
     //, "quickInput.background"                               : "#BG__BOLD"
     //, "quickInputList.focusIconForeground"                  : "#FG__BOLD"
     //, "quickInput.foreground"                               : "#FG__NORM"
     //, "settings.textInputBackground"                        : "#FFFF00"
   },
 
-  //______________________________________________________________________
+  //____________________________________________________________________
   // SYNTAX HIGHLIGHTING
-  //______________________________________________________________________
+  //____________________________________________________________________
   "tokenColors"        : [
     { "name"    : "Foreground",
       "scope"   : [
