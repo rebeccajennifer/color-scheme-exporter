@@ -1223,7 +1223,6 @@
     "terminalOverviewRuler.border"                       : "default",
     "terminalOverviewRuler.cursorForeground"             : "default",
 
-
     "terminalSymbolIcon.aliasForeground"                 : "default",
     "terminalSymbolIcon.argumentForeground"              : "default",
     "terminalSymbolIcon.branchForeground"                : "default",
@@ -1328,7 +1327,9 @@
         "string.interpolated"                       ,
         ""
       ],
-      "settings": { "foreground": "#FG__NORM" }
+      "settings": {
+        "foreground": "#FG__NORM"
+      }
     },
 
     { "name"    : "Foreground Bold",
@@ -1337,7 +1338,9 @@
         "keyword.control.ternary",  // Java - : in Circle: "circle"
         ""
       ],
-      "settings": { "foreground": "#GRN_NORM" }
+      "settings": {
+        "foreground": "#GRN_NORM"
+      }
     },
 
     { "name"    : "Color 1: Pink",
@@ -1352,12 +1355,20 @@
         "keyword.other.using"              ,
         ""
       ],
-      "settings": { "foreground": "#RED_NORM" }
+      "settings": {
+        "foreground": "#RED_NORM"
+      }
     },
 
     { "name"    : "Color 9: Pink Bold",
-      "scope"   : [ "", "invalid", "" ],
-      "settings": { "foreground": "#RED_BOLD" }
+      "scope"   : [
+        ""       ,
+        "invalid",
+        ""
+      ],
+      "settings": {
+        "foreground": "#RED_BOLD"
+      }
     },
 
     { "name"    : "Color 2: Green",
@@ -1371,7 +1382,9 @@
         "punctuation.definition.link.description",
         "punctuation.separator.annotation.result"   // -> in def f() -> int:
       ],
-      "settings": { "foreground": "#GRN_NORM" }
+      "settings": {
+        "foreground": "#GRN_NORM"
+      }
     },
 
     { "name"    : "Color 10: Green Bold",
@@ -1383,7 +1396,9 @@
         "storage.type.modifier"    ,  // public
         ""
       ],
-      "settings": { "foreground": "#GRN_BOLD" }
+      "settings": {
+        "foreground": "#GRN_BOLD"
+      }
     },
 
     { "name"    : "Color 3: Yellow",
@@ -1401,7 +1416,9 @@
         "storage.modifier"                       ,  // const, static
         "support.constant.font-name"
       ],
-      "settings": { "foreground": "#YEL_NORM" }
+      "settings": {
+        "foreground": "#YEL_NORM"
+      }
     },
 
     { "name"    : "Color 11: Yellow Bold",
@@ -1413,7 +1430,9 @@
         "keyword.other.unit"                     ,
         "punctuation.separator.continuation.line"
       ],
-      "settings": { "foreground": "#YEL_BOLD" }
+      "settings": {
+        "foreground": "#YEL_BOLD"
+      }
     },
 
     { "name"    : "Color 4: Blue",
@@ -1427,7 +1446,9 @@
         "support.type.property-name"
         //, "entity.name.variable"
       ],
-      "settings": { "foreground": "#BLU_NORM" }
+      "settings": {
+        "foreground": "#BLU_NORM"
+      }
     },
 
     { "name"    : "Color 12: Blue Bold",
@@ -1448,7 +1469,9 @@
         "storage.type.template.argument.typename",  // public
         "support.variable"
       ],
-      "settings": { "foreground": "#BLU_BOLD" }
+      "settings": {
+        "foreground": "#BLU_BOLD"
+      }
     },
 
     { "name"    : "Color 5: Violet",
@@ -1468,22 +1491,43 @@
         "entity.name.namespace"               ,
         "keyword.control.import.shortcode"
       ],
-      "settings": { "foreground": "#VIO_NORM" }
+      "settings": {
+        "foreground": "#VIO_NORM"
+      }
     },
 
     { "name"    : "Color 13: Violet Bold",
-      "scope"   : [ "constant.numeric", "constant.other.color.rgb-value", "constant.other.rgb-value", "string" ],
-      "settings": { "foreground": "#VIO_BOLD" }
+      "scope"   : [
+        "constant.numeric"              ,
+        "constant.other.color.rgb-value",
+        "constant.other.rgb-value"      ,
+        "string"
+      ],
+      "settings": {
+        "foreground": "#VIO_BOLD"
+      }
     },
 
     { "name"    : "Color 6: Cyan",
-      "scope"   : [ "entity.name.type", "entity.other" ],
-      "settings": { "foreground": "#CYA_NORM" }
+      "scope"   : [
+        "entity.name.type",
+        "entity.other"
+      ],
+      "settings": {
+        "foreground": "#CYA_NORM"
+      }
     },
 
     { "name"    : "Color 14: Cyan Bold",
-      "scope"   : [ "support.function", "entity.name.function", "meta.function-call" ],
-      "settings": { "foreground": "#CYA_BOLD" }
+      "scope"   : [
+        "support.function"    ,
+        "entity.name.function",
+        "meta.function-call"
+      ],
+
+      "settings": {
+        "foreground": "#CYA_BOLD"
+      }
     },
 
     { "name"    : "Color 0: Grey",
@@ -1492,12 +1536,19 @@
         "punctuation.definition.comment" // Comment specifier e.g. //
 
       ],
-      "settings": { "foreground": "#FG__NORM80" }
+      "settings": {
+        "foreground": "#FG__NORM80"
+      }
     },
 
     { "name"    : "CSS property value",
-      "scope"   : [ "support.constant.media-type", "support.constant.media" ],
-      "settings": { "foreground": "#BLU_BOLD" }
+      "scope"   : [
+        "support.constant.media-type",
+        "support.constant.media"
+      ],
+      "settings": {
+        "foreground": "#BLU_BOLD"
+      }
     },
 
     { "name"    : "Regular expression groups",
@@ -1510,7 +1561,9 @@
         "keyword.operator.negation.regexp"             ,
         "support.other.parenthesis.regexp"
       ],
-      "settings": { "foreground": "#VIO_NORM" }
+      "settings": {
+        "foreground": "#VIO_NORM"
+      }
     },
 
     { "scope"   : [
@@ -1519,7 +1572,9 @@
         "constant.other.character-class.regexp"    ,
         "constant.character.set.regexp"
       ],
-      "settings": { "foreground": "#RED_NORM" }
+      "settings": {
+        "foreground": "#RED_NORM"
+      }
     }
   ],
 
