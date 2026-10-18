@@ -1,12 +1,67 @@
-{ "sarif-viewer.connectToGithubCodeScanning": "off"
-, "cSpell.words":
-  [
-    "cout"
-  , "konsole"
-  , "Konsole"
-  , "KONSOLE"
-  , "Mintty"
-  , "MINTTY"
-  , "Stackframe"
-  ]
+{ "sarif-viewer.connectToGithubCodeScanning": "off",
+
+  //____________________________________________________________________
+  // JSON FORMATTER - Extension 'FracturedJson' by j-brooke
+  //____________________________________________________________________
+  "fracturedjsonvsc.TableCommaPlacement"       : "AfterPadding",  // Align ,
+  "fracturedjsonvsc.ColonBeforePropNamePadding": false         ,  // Align :
+
+  // Add a space after character
+  "fracturedjsonvsc.ColonPadding"        : true,  // :
+  "fracturedjsonvsc.SimpleBracketPadding": true,  // [
+  "fracturedjsonvsc.CommaPadding"        : true,  // ,
+  "fracturedjsonvsc.NestedBracketPadding": true,
+
+  // Space before comment
+  // Note: If both CommaPadding and CommentPadding are true, two
+  // spaces are inserted after a comma and before a comment
+  "fracturedjsonvsc.CommentPadding": true,
+
+  //--------------------------------------------------------------------
+  // Property: "fracturedjsonvsc.AllowTableSegments"
+  // Value   : true
+  // Meaning : Sub sections in table are lined up separately:
+  //--------------------------------------------------------------------
+  //"files.associations": {
+  //    "*makefile": "makefile",
+  //    "*.yapf"   : "ini"     ,
+
+  //    ".clang-format"        : "yaml"          ,
+  //    "*.{a80,z80,asm,inc,s}": "asm-collection",
+
+  //    "*.{list,lis}": "asm-collection-list",
+  //    "*.gpr"       : "ada"
+  //},
+  //--------------------------------------------------------------------
+  "fracturedjsonvsc.AllowTableSegments"            : true ,
+
+  "fracturedjsonvsc.PreserveBlankLines"            : true ,
+  "fracturedjsonvsc.SplitTableSegmentsAtBlankLines": false,
+  "fracturedjsonvsc.SplitTableSegmentsAtComments"  : false,
+  "fracturedjsonvsc.CollapseOpeningBrackets"       : true ,
+  "fracturedjsonvsc.CollapseClosingBrackets"       : false,
+
+  // Align decimal points across consecutive properties with decimal values
+  // E.g.: "property_0": 42.0,
+  //       "property_1":  3.14,
+  "fracturedjsonvsc.NumberListAlignment"           : "Decimal",
+
+  "fracturedjsonvsc.MaxPropNamePadding"            : 200,
+  "fracturedjsonvsc.MaxTotalLineLength"            : 200,
+
+  //--------------------------------------------------------------------
+  // Unsure of these settings
+  "fracturedjsonvsc.MaxInlineComplexity"           : 2,
+  "fracturedjsonvsc.MaxCompactArrayComplexity"     : 2,
+  "fracturedjsonvsc.MaxTableRowComplexity"         : 2,
+
+  "fracturedjsonvsc.AllowTrailingCommas"           : false,
+  "fracturedjsonvsc.CommentPolicyForJSONC"         : "Preserve",
+  "fracturedjsonvsc.CommentPolicyForJSON"          : "TreatAsError",
+  "fracturedjsonvsc.StringWidthPolicy"             : "EastAsianFullWidth",
+
+  "fracturedjsonvsc.AlwaysExpandDepth"             : -1,
+  "fracturedjsonvsc.MinCompactArrayRowItems"       : 3,
+
+  "cSpell.words"                                   : [ "cout", "konsole", "Konsole", "KONSOLE", "Mintty", "MINTTY", "Stackframe" ]
 }
