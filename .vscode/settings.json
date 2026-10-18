@@ -3,13 +3,13 @@
   //____________________________________________________________________
   // JSON FORMATTER - Extension 'FracturedJson' by j-brooke
   //____________________________________________________________________
-  "fracturedjsonvsc.TableCommaPlacement"       : "AfterPadding",  // Align ,
-  "fracturedjsonvsc.ColonBeforePropNamePadding": false         ,  // Align :
+  "fracturedjsonvsc.TableCommaPlacement": "AfterPadding",  // Align ,
+  "fracturedjsonvsc.ColonBeforePropNamePadding": false,  // Align :
 
   // Add a space after character
-  "fracturedjsonvsc.ColonPadding"        : true,  // :
+  "fracturedjsonvsc.ColonPadding": true,  // :
   "fracturedjsonvsc.SimpleBracketPadding": true,  // [
-  "fracturedjsonvsc.CommaPadding"        : true,  // ,
+  "fracturedjsonvsc.CommaPadding": true,  // ,
   "fracturedjsonvsc.NestedBracketPadding": true,
 
   // Space before comment
@@ -33,35 +33,40 @@
   //    "*.gpr"       : "ada"
   //},
   //--------------------------------------------------------------------
-  "fracturedjsonvsc.AllowTableSegments"            : true ,
+  "fracturedjsonvsc.AllowTableSegments": false,
 
-  "fracturedjsonvsc.PreserveBlankLines"            : true ,
-  "fracturedjsonvsc.SplitTableSegmentsAtBlankLines": false,
-  "fracturedjsonvsc.SplitTableSegmentsAtComments"  : false,
-  "fracturedjsonvsc.CollapseOpeningBrackets"       : true ,
-  "fracturedjsonvsc.CollapseClosingBrackets"       : false,
+  "fracturedjsonvsc.SplitTableSegmentsAtBlankLines": true,
+  "fracturedjsonvsc.SplitTableSegmentsAtComments": true,
+
+  "fracturedjsonvsc.PreserveBlankLines": true,
+  "fracturedjsonvsc.CollapseOpeningBrackets": true,
+  "fracturedjsonvsc.CollapseClosingBrackets": false,
 
   // Align decimal points across consecutive properties with decimal values
   // E.g.: "property_0": 42.0,
   //       "property_1":  3.14,
-  "fracturedjsonvsc.NumberListAlignment"           : "Decimal",
+  "fracturedjsonvsc.NumberListAlignment": "Decimal",
 
-  "fracturedjsonvsc.MaxPropNamePadding"            : 200,
-  "fracturedjsonvsc.MaxTotalLineLength"            : 200,
+  "fracturedjsonvsc.MaxPropNamePadding": 200,
+  "fracturedjsonvsc.MaxTotalLineLength": 200,
 
   //--------------------------------------------------------------------
   // Unsure of these settings
-  "fracturedjsonvsc.MaxInlineComplexity"           : 2,
-  "fracturedjsonvsc.MaxCompactArrayComplexity"     : 2,
-  "fracturedjsonvsc.MaxTableRowComplexity"         : 2,
+  "fracturedjsonvsc.MaxInlineComplexity": 1,
+  "fracturedjsonvsc.MaxCompactArrayComplexity": 2,
+  "fracturedjsonvsc.MaxTableRowComplexity": 2,
 
-  "fracturedjsonvsc.AllowTrailingCommas"           : false,
-  "fracturedjsonvsc.CommentPolicyForJSONC"         : "Preserve",
-  "fracturedjsonvsc.CommentPolicyForJSON"          : "TreatAsError",
-  "fracturedjsonvsc.StringWidthPolicy"             : "EastAsianFullWidth",
+  "fracturedjsonvsc.AllowTrailingCommas": false,
+  "fracturedjsonvsc.CommentPolicyForJSONC": "Preserve",
+  "fracturedjsonvsc.CommentPolicyForJSON": "TreatAsError",
+  "fracturedjsonvsc.StringWidthPolicy": "EastAsianFullWidth",
 
-  "fracturedjsonvsc.AlwaysExpandDepth"             : -1,
-  "fracturedjsonvsc.MinCompactArrayRowItems"       : 3,
+  "fracturedjsonvsc.AlwaysExpandDepth": -1,
+  "fracturedjsonvsc.MinCompactArrayRowItems": 3,
 
-  "cSpell.words"                                   : [ "cout", "konsole", "Konsole", "KONSOLE", "Mintty", "MINTTY", "Stackframe" ]
+  "cSpell.words": [
+    "cout"      , "konsole"   , "Konsole"   , "KONSOLE"   , "Mintty"    ,
+    "MINTTY"    , "Stackframe"
+  ],
+  "cSpell.ignoreWords": [ "unpulled" ]
 }
